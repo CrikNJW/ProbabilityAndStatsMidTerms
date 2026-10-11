@@ -3,5 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "scripts": {"start": "node scripts/serve.mjs", "test": "node scripts/validate.mjs"}
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node scripts/validate.mjs && node scripts/validate-math.mjs",
+    "vendor-math": "node scripts/vendor-katex.mjs"
+  },
+  "devDependencies": {
+    "katex": "0.19.0"
+  }
 }

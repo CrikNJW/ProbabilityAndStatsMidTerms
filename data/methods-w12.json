@@ -12,17 +12,20 @@
       {
         "title": "Define an outcome",
         "body": "Decide whether order is recorded. Two dice rolls are ordered pairs; a selected team is an unordered set.",
-        "formula": "Ω = all possible outcomes"
+        "formula": "Ω = all possible outcomes",
+        "mathTex": "\\Omega=\\{\\text{all possible outcomes}\\}"
       },
       {
         "title": "Translate the condition",
         "body": "'A or B' includes both. 'A and B' requires both. 'Not A' removes A from the sample space.",
-        "formula": "or → A ∪ B; and → A ∩ B; not → Aᶜ"
+        "formula": "or → A ∪ B; and → A ∩ B; not → Aᶜ",
+        "mathTex": "\\begin{aligned}\\text{or}&\\longrightarrow A\\cup B\\\\\\text{and}&\\longrightarrow A\\cap B\\\\\\text{not}&\\longrightarrow A^c\\end{aligned}"
       },
       {
         "title": "List or count carefully",
         "body": "Keep each distinct outcome once. Use a table for two dice, or positions for hit/miss strings.",
-        "formula": "(A ∪ B)ᶜ = Aᶜ ∩ Bᶜ; (A ∩ B)ᶜ = Aᶜ ∪ Bᶜ"
+        "formula": "(A ∪ B)ᶜ = Aᶜ ∩ Bᶜ; (A ∩ B)ᶜ = Aᶜ ∪ Bᶜ",
+        "mathTex": "\\begin{aligned}(A\\cup B)^c&=A^c\\cap B^c\\\\(A\\cap B)^c&=A^c\\cup B^c\\end{aligned}"
       }
     ],
     "refs": [
@@ -60,17 +63,20 @@
       {
         "title": "Identify what each count includes",
         "body": "A pairwise intersection includes members in all three groups unless the question says 'only'.",
-        "formula": "A-only = |A| − |A∩B| − |A∩C| + |A∩B∩C|"
+        "formula": "A-only = |A| − |A∩B| − |A∩C| + |A∩B∩C|",
+        "mathTex": "\\begin{aligned}\\text{A-only}&=|A|-|A\\cap B|\\\\&\\quad-|A\\cap C|+|A\\cap B\\cap C|\\end{aligned}"
       },
       {
         "title": "Repair the double counting",
         "body": "Add the group sizes, subtract every pairwise overlap, and add the triple overlap back once.",
-        "formula": "|A∪B∪C| = |A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|"
+        "formula": "|A∪B∪C| = |A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|",
+        "mathTex": "\\begin{aligned}|A\\cup B\\cup C|&=|A|+|B|+|C|\\\\&\\quad-|A\\cap B|-|A\\cap C|\\\\&\\quad-|B\\cap C|+|A\\cap B\\cap C|\\end{aligned}"
       },
       {
         "title": "Answer the actual region requested",
         "body": "For 'none', subtract the union from the population. For 'exactly one', add the three only-regions.",
-        "formula": "none = N − |union|"
+        "formula": "none = N − |union|",
+        "mathTex": "\\text{None}=N-|\\text{union}|"
       }
     ],
     "refs": [
@@ -103,17 +109,20 @@
       {
         "title": "Choose the right sample space",
         "body": "Use ordered dice pairs instead of just their maximum or sum. Derived values often have unequal probabilities.",
-        "formula": "P(A) = |A| / |Ω| for equally likely outcomes"
+        "formula": "P(A) = |A| / |Ω| for equally likely outcomes",
+        "mathTex": "\\begin{gathered}P(A)=\\frac{|A|}{|\\Omega|}\\\\\\text{for equally likely outcomes}\\end{gathered}"
       },
       {
         "title": "Count favorable outcomes or the complement",
         "body": "For repeated independent trials, no successes requires every trial to fail.",
-        "formula": "P(at least one) = 1 − (1−p)ⁿ"
+        "formula": "P(at least one) = 1 − (1−p)ⁿ",
+        "mathTex": "P(\\text{at least one})=1-(1-p)^n"
       },
       {
         "title": "Check edge cases",
         "body": "Include zero when selecting from 0 to 999: zero is divisible by every nonzero integer. Check that the answer lies between zero and one.",
-        "formula": "number of multiples of m in {0,…,N} = ⌊N/m⌋ + 1"
+        "formula": "number of multiples of m in {0,…,N} = ⌊N/m⌋ + 1",
+        "mathTex": "\\begin{gathered}\\text{Number of multiples of }m\\text{ in }\\{0,\\ldots,N\\}\\\\=\\left\\lfloor\\frac Nm\\right\\rfloor+1\\end{gathered}"
       }
     ],
     "refs": [
@@ -152,22 +161,26 @@
       {
         "title": "Describe what makes outcomes different",
         "body": "Swapping two selected objects creates a different lineup but the same team.",
-        "formula": "order matters? repetition allowed?"
+        "formula": "order matters? repetition allowed?",
+        "mathTex": "\\text{Order matters? Repetition allowed?}"
       },
       {
         "title": "Count choices at each stage",
         "body": "With replacement, choices can stay constant. Without replacement, available distinct objects decrease.",
-        "formula": "repetition allowed: nʳ; ordered distinct: P(n,r) = n!/(n−r)!"
+        "formula": "repetition allowed: nʳ; ordered distinct: P(n,r) = n!/(n−r)!",
+        "mathTex": "\\begin{aligned}\\text{Repetition allowed}:&\\ n^r\\\\\\text{Ordered distinct}:&\\ P(n,r)=\\frac{n!}{(n-r)!}\\end{aligned}"
       },
       {
         "title": "Remove order when it is irrelevant",
         "body": "Each group of r distinct objects was counted in r! orders, so divide by r!.",
-        "formula": "C(n,r) = n!/[r!(n−r)!]"
+        "formula": "C(n,r) = n!/[r!(n−r)!]",
+        "mathTex": "\\binom nr=\\frac{n!}{r!\\,(n-r)!}"
       },
       {
         "title": "Combine independent choice stages",
         "body": "Selecting an attacker subset, defender subset, and support subset are separate tasks. Multiply within one case; add disjoint cases.",
-        "formula": "total = sum over cases of (choices for each stage multiplied)"
+        "formula": "total = sum over cases of (choices for each stage multiplied)",
+        "mathTex": "\\text{Total}=\\sum_{\\text{cases}}\\left(\\prod_{\\text{stages}}\\text{number of choices}\\right)"
       }
     ],
     "refs": [
@@ -210,17 +223,20 @@
       {
         "title": "Count all unrestricted outcomes",
         "body": "Choose permutations for an ordered partial lineup or a factorial for all distinct objects.",
-        "formula": "all = P(n,r) or n!"
+        "formula": "all = P(n,r) or n!",
+        "mathTex": "\\text{All}=P(n,r)\\ \\text{or}\\ n!"
       },
       {
         "title": "Count the restriction systematically",
         "body": "For a forbidden pair in a lineup, choose remaining members then arrange them. For adjacency, treat the linked objects as one block.",
-        "formula": "both in r-lineup = C(n−2,r−2)r!; k consecutive objects among n = (n−k+1)!k!"
+        "formula": "both in r-lineup = C(n−2,r−2)r!; k consecutive objects among n = (n−k+1)!k!",
+        "mathTex": "\\begin{aligned}\\text{Both in an }r\\text{-lineup}:&\\ \\binom{n-2}{r-2}r!\\\\k\\text{ consecutive among }n:&\\ (n-k+1)!\\,k!\\end{aligned}"
       },
       {
         "title": "Subtract or use the block count directly",
         "body": "Subtract bad outcomes for a 'must not' condition. Keep the block count for a 'must be consecutive' condition.",
-        "formula": "allowed = all − forbidden"
+        "formula": "allowed = all − forbidden",
+        "mathTex": "\\text{Allowed}=\\text{all}-\\text{forbidden}"
       }
     ],
     "refs": [
@@ -257,17 +273,20 @@
       {
         "title": "Expand only needed terms",
         "body": "You do not need the full polynomials. For x², keep constant, x, and x² terms.",
-        "formula": "(1+x)ⁿ: coefficient of xʲ is C(n,j)"
+        "formula": "(1+x)ⁿ: coefficient of xʲ is C(n,j)",
+        "mathTex": "\\begin{gathered}(1+x)^n:\\\\\\text{coefficient of }x^j\\text{ is }\\binom nj\\end{gathered}"
       },
       {
         "title": "Track signs",
         "body": "A term selected from (1−x)ᵐ has a negative sign when its exponent is odd.",
-        "formula": "coefficient of xʲ in (1−x)ᵐ = (−1)ʲC(m,j)"
+        "formula": "coefficient of xʲ in (1−x)ᵐ = (−1)ʲC(m,j)",
+        "mathTex": "[x^j](1-x)^m=(-1)^j\\binom mj"
       },
       {
         "title": "Combine powers adding to the target",
         "body": "For x² use x²·1, x·x, and 1·x², then add their contributions.",
-        "formula": "[xᵏ] A(x)B(x) = Σⱼ [xʲ]A(x) · [xᵏ⁻ʲ]B(x)"
+        "formula": "[xᵏ] A(x)B(x) = Σⱼ [xʲ]A(x) · [xᵏ⁻ʲ]B(x)",
+        "mathTex": "[x^k]A(x)B(x)=\\sum_j\\big([x^j]A(x)\\big)\\cdot\\big([x^{k-j}]B(x)\\big)"
       }
     ],
     "refs": [
@@ -295,17 +314,20 @@
       {
         "title": "Name the target and the given event",
         "body": "Write A for what you want and B for what you know. The denominator is B, even when the sentence mentions A first.",
-        "formula": "target = P(A|B)"
+        "formula": "target = P(A|B)",
+        "mathTex": "\\text{Target}=P(A\\mid B)"
       },
       {
         "title": "Find outcomes satisfying both",
         "body": "The numerator is A∩B. If A is a subset of B, it is simply A.",
-        "formula": "numerator = P(A∩B)"
+        "formula": "numerator = P(A∩B)",
+        "mathTex": "\\text{Numerator}=P(A\\cap B)"
       },
       {
         "title": "Divide by the restricted total",
         "body": "For equally likely outcomes you may divide favorable counts within B by the total count in B.",
-        "formula": "P(A|B) = P(A∩B)/P(B) = |A∩B|/|B| when equally likely"
+        "formula": "P(A|B) = P(A∩B)/P(B) = |A∩B|/|B| when equally likely",
+        "mathTex": "\\begin{aligned}P(A\\mid B)&=\\frac{P(A\\cap B)}{P(B)}\\\\&=\\frac{|A\\cap B|}{|B|}\\quad\\text{when equally likely}\\end{aligned}"
       }
     ],
     "refs": [
@@ -342,22 +364,26 @@
       {
         "title": "Find the marginal probabilities",
         "body": "Calculate P(A) and P(B) using all outcomes, not conditional totals.",
-        "formula": "marginals: P(A), P(B)"
+        "formula": "marginals: P(A), P(B)",
+        "mathTex": "\\text{Marginals}:\\ P(A),\\ P(B)"
       },
       {
         "title": "Compare the joint probability with the product",
         "body": "Equality proves independence for two events. Inequality proves dependence.",
-        "formula": "P(A∩B) = P(A)P(B)"
+        "formula": "P(A∩B) = P(A)P(B)",
+        "mathTex": "P(A\\cap B)=P(A)P(B)"
       },
       {
         "title": "Use multiplication only when justified",
         "body": "For independent trials, multiply their individual probabilities. For three mutually independent events, all pairwise equalities and the triple equality are required.",
-        "formula": "P(A∩B∩C) = P(A)P(B)P(C) for mutual independence"
+        "formula": "P(A∩B∩C) = P(A)P(B)P(C) for mutual independence",
+        "mathTex": "\\begin{gathered}P(A\\cap B\\cap C)=P(A)P(B)P(C)\\\\\\text{for mutual independence}\\end{gathered}"
       },
       {
         "title": "Interpret carefully",
         "body": "Disjoint positive-probability events are dependent. An association in observational data alone does not prove cause and effect.",
-        "formula": "disjoint: P(A∩B)=0; independent: P(A∩B)=P(A)P(B)"
+        "formula": "disjoint: P(A∩B)=0; independent: P(A∩B)=P(A)P(B)",
+        "mathTex": "\\begin{aligned}\\text{Disjoint}:&\\ P(A\\cap B)=0\\\\\\text{Independent}:&\\ P(A\\cap B)=P(A)P(B)\\end{aligned}"
       }
     ],
     "refs": [
@@ -395,22 +421,26 @@
       {
         "title": "Identify the source groups and priors",
         "body": "The groups must cover the population without overlapping. Their shares sum to one.",
-        "formula": "Σᵢ P(Hᵢ) = 1"
+        "formula": "Σᵢ P(Hᵢ) = 1",
+        "mathTex": "\\sum_i P(H_i)=1"
       },
       {
         "title": "Multiply along each evidence path",
         "body": "A joint path needs every event on that path to occur. A detection path can require source, defect, then detection.",
-        "formula": "P(Hᵢ∩E) = P(Hᵢ)P(E|Hᵢ)"
+        "formula": "P(Hᵢ∩E) = P(Hᵢ)P(E|Hᵢ)",
+        "mathTex": "P(H_i\\cap E)=P(H_i)P(E\\mid H_i)"
       },
       {
         "title": "Add every way to observe the evidence",
         "body": "The denominator includes evidence from the target group and all other groups.",
-        "formula": "P(E) = Σᵢ P(Hᵢ)P(E|Hᵢ)"
+        "formula": "P(E) = Σᵢ P(Hᵢ)P(E|Hᵢ)",
+        "mathTex": "P(E)=\\sum_i P(H_i)P(E\\mid H_i)"
       },
       {
         "title": "Take the target share of the evidence",
         "body": "Divide the target evidence branch by the total evidence probability. Expected-frequency tables offer the same calculation using counts.",
-        "formula": "P(Hₖ|E) = P(Hₖ)P(E|Hₖ)/P(E)"
+        "formula": "P(Hₖ|E) = P(Hₖ)P(E|Hₖ)/P(E)",
+        "mathTex": "P(H_k\\mid E)=\\frac{P(H_k)P(E\\mid H_k)}{P(E)}"
       }
     ],
     "refs": [
@@ -453,22 +483,26 @@
       {
         "title": "List possible original values",
         "body": "Count what X measures and its smallest and largest feasible values.",
-        "formula": "range of X = {possible numerical values}"
+        "formula": "range of X = {possible numerical values}",
+        "mathTex": "\\operatorname{range}(X)=\\{\\text{possible numerical values}\\}"
       },
       {
         "title": "Normalize or compute masses",
         "body": "A valid discrete PMF has nonnegative probabilities that sum to one. Independent success counts have C(n,k) ways to place k successes.",
-        "formula": "Σₓ p(x)=1; P(X=k)=C(n,k)pᵏ(1−p)ⁿ⁻ᵏ"
+        "formula": "Σₓ p(x)=1; P(X=k)=C(n,k)pᵏ(1−p)ⁿ⁻ᵏ",
+        "mathTex": "\\begin{aligned}\\sum_x p(x)&=1\\\\P(X=k)&=\\binom nk p^k(1-p)^{n-k}\\end{aligned}"
       },
       {
         "title": "Map each value if a transformation is given",
         "body": "Make a small table x→g(x). Repeated transformed values appear only once in the range.",
-        "formula": "range of Y = {g(x): x in range of X}"
+        "formula": "range of Y = {g(x): x in range of X}",
+        "mathTex": "\\operatorname{range}(Y)=\\{g(x):x\\in\\operatorname{range}(X)\\}"
       },
       {
         "title": "Add all matching masses",
         "body": "If two original values produce the same target, include both probabilities.",
-        "formula": "P(Y=y)=Σₓ:g(x)=y P(X=x)"
+        "formula": "P(Y=y)=Σₓ:g(x)=y P(X=x)",
+        "mathTex": "P(Y=y)=\\sum_{\\substack{x\\\\g(x)=y}}P(X=x)"
       }
     ],
     "refs": [
@@ -511,22 +545,26 @@
       {
         "title": "Decode the inequality",
         "body": "The CDF includes its upper endpoint. A strict lower endpoint is removed by subtracting F at that lower value.",
-        "formula": "P(a<X≤b)=F(b)−F(a)"
+        "formula": "P(a<X≤b)=F(b)−F(a)",
+        "mathTex": "P(a<X\\le b)=F(b)-F(a)"
       },
       {
         "title": "Read point masses from jumps",
         "body": "For a discrete distribution use the value just before the jump, written F(x−).",
-        "formula": "P(X=x)=F(x)−F(x−); P(X≥a)=1−F(a−)"
+        "formula": "P(X=x)=F(x)−F(x−); P(X≥a)=1−F(a−)",
+        "mathTex": "\\begin{aligned}P(X=x)&=F(x)-F(x^-)\\\\P(X\\ge a)&=1-F(a^-)\\end{aligned}"
       },
       {
         "title": "Condition if information is given",
         "body": "After finding the event mass, divide by the mass of the given event.",
-        "formula": "P(A|B)=P(A∩B)/P(B)"
+        "formula": "P(A|B)=P(A∩B)/P(B)",
+        "mathTex": "P(A\\mid B)=\\frac{P(A\\cap B)}{P(B)}"
       },
       {
         "title": "Check validity",
         "body": "A CDF is nondecreasing, right-continuous, and tends to zero at the left end and one at the right end.",
-        "formula": "F(−∞)=0, F(+∞)=1"
+        "formula": "F(−∞)=0, F(+∞)=1",
+        "mathTex": "F(-\\infty)=0,\\qquad F(+\\infty)=1"
       }
     ],
     "refs": [
@@ -564,22 +602,26 @@
       {
         "title": "Identify p and the failure probability",
         "body": "Check independent trials and an unchanged success probability. Set q=1−p.",
-        "formula": "q=1−p"
+        "formula": "q=1−p",
+        "mathTex": "q=1-p"
       },
       {
         "title": "Choose point, tail, or interval",
         "body": "First success on n requires n−1 failures then success. No success after n requires all n failures.",
-        "formula": "P(X=n)=qⁿ⁻¹p; P(X>n)=qⁿ; P(a≤X≤b)=qᵃ⁻¹−qᵇ"
+        "formula": "P(X=n)=qⁿ⁻¹p; P(X>n)=qⁿ; P(a≤X≤b)=qᵃ⁻¹−qᵇ",
+        "mathTex": "\\begin{aligned}P(X=n)&=q^{n-1}p\\\\P(X>n)&=q^n\\\\P(a\\le X\\le b)&=q^{a-1}-q^b\\end{aligned}"
       },
       {
         "title": "Use remaining attempts after known failures",
         "body": "Past failures do not affect future independent trials. Subtract the completed attempts from the deadline.",
-        "formula": "P(X≤m+k|X>m)=1−qᵏ"
+        "formula": "P(X≤m+k|X>m)=1−qᵏ",
+        "mathTex": "P(X\\le m+k\\mid X>m)=1-q^k"
       },
       {
         "title": "Solve a target inequality",
         "body": "Take logarithms and reverse the inequality when dividing by the negative number log(q). Round up and check the neighboring integer.",
-        "formula": "1−qⁿ≥t ⇒ n≥log(1−t)/log(q)"
+        "formula": "1−qⁿ≥t ⇒ n≥log(1−t)/log(q)",
+        "mathTex": "1-q^n\\ge t\\ \\Rightarrow\\ n\\ge\\frac{\\log(1-t)}{\\log q}"
       }
     ],
     "refs": [
@@ -607,22 +649,26 @@
       {
         "title": "Identify the population and the sample",
         "body": "Let N be the population, K the target-category count, and n the sample size.",
-        "formula": "N, K, n; feasible x: max(0,n−(N−K)) ≤ x ≤ min(n,K)"
+        "formula": "N, K, n; feasible x: max(0,n−(N−K)) ≤ x ≤ min(n,K)",
+        "mathTex": "\\begin{gathered}N,\\ K,\\ n;\\quad\\text{feasible }x:\\\\\\max(0,n-(N-K))\\le x\\le\\min(n,K)\\end{gathered}"
       },
       {
         "title": "Count favorable unordered samples",
         "body": "Choose x target objects and n−x other objects. Multiply the two choice counts.",
-        "formula": "favorable = C(K,x)C(N−K,n−x)"
+        "formula": "favorable = C(K,x)C(N−K,n−x)",
+        "mathTex": "\\text{Favorable}=\\binom Kx\\binom{N-K}{n-x}"
       },
       {
         "title": "Divide by all samples",
         "body": "All n-element subsets are equally likely under uniform sampling without replacement.",
-        "formula": "P(X=x)=C(K,x)C(N−K,n−x)/C(N,n)"
+        "formula": "P(X=x)=C(K,x)C(N−K,n−x)/C(N,n)",
+        "mathTex": "P(X=x)=\\frac{\\binom Kx\\binom{N-K}{n-x}}{\\binom Nn}"
       },
       {
         "title": "Adjust for replacement or conditioning",
         "body": "Replacement restores the category chance on each draw; no replacement changes it. For a given event, restrict and divide again.",
-        "formula": "with replacement: P(X=x)=C(n,x)(K/N)ˣ(1−K/N)ⁿ⁻ˣ"
+        "formula": "with replacement: P(X=x)=C(n,x)(K/N)ˣ(1−K/N)ⁿ⁻ˣ",
+        "mathTex": "\\begin{gathered}\\text{With replacement}:\\\\P(X=x)=\\binom nx\\left(\\frac KN\\right)^x\\left(1-\\frac KN\\right)^{n-x}\\end{gathered}"
       }
     ],
     "refs": [
@@ -660,22 +706,26 @@
       {
         "title": "Identify disjoint pieces",
         "body": "Separate an event into its shared and unshared parts. For singleton outcomes, identify which outcome is the intersection.",
-        "formula": "A = (A∖B) ∪ (A∩B), with disjoint parts"
+        "formula": "A = (A∖B) ∪ (A∩B), with disjoint parts",
+        "mathTex": "\\begin{gathered}A=(A\\setminus B)\\cup(A\\cap B)\\\\\\text{with disjoint parts}\\end{gathered}"
       },
       {
         "title": "Subtract known probability",
         "body": "The total event mass equals the sum of its disjoint parts, so remove a known part to obtain the other.",
-        "formula": "P(A∖B)=P(A)−P(A∩B)"
+        "formula": "P(A∖B)=P(A)−P(A∩B)",
+        "mathTex": "P(A\\setminus B)=P(A)-P(A\\cap B)"
       },
       {
         "title": "Add the target pieces",
         "body": "Add only regions that are disjoint. For a union that overlaps, subtract its intersection once.",
-        "formula": "P(A∪B)=P(A)+P(B)−P(A∩B)"
+        "formula": "P(A∪B)=P(A)+P(B)−P(A∩B)",
+        "mathTex": "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)"
       },
       {
         "title": "Check normalization",
         "body": "All singleton masses in a finite sample space must be nonnegative and sum to one.",
-        "formula": "Σω∈Ω P({ω})=1"
+        "formula": "Σω∈Ω P({ω})=1",
+        "mathTex": "\\sum_{\\omega\\in\\Omega}P(\\{\\omega\\})=1"
       }
     ],
     "refs": [

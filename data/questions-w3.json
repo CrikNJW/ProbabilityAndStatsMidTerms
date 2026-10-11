@@ -36,7 +36,8 @@
             "page": 23,
             "label": "Find the failure chance"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}q&=1-p \\\\ &=1-0.05 \\\\ &=0.95\\end{aligned}"
       },
       {
         "title": "Describe reaching attempt 10",
@@ -48,7 +49,8 @@
             "page": 28,
             "label": "Describe reaching attempt 10"
           }
-        ]
+        ],
+        "mathTex": "\\{T=10\\}=\\{\\text{attempts }1,\\ldots,9\\text{ all fail}\\}"
       },
       {
         "title": "Multiply the independent failures",
@@ -60,7 +62,8 @@
             "page": 28,
             "label": "Multiply the independent failures"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(T=10)&=0.95^{9}\\times1 \\\\ &\\approx0.630249\\end{aligned}"
       }
     ],
     "answerText": "P(T = 10) = 0.95⁹ ≈ 0.630249, about 63.0%.",
@@ -84,6 +87,13 @@
         "page": 28,
         "label": "Multiply the independent failures"
       }
+    ],
+    "optionsTex": [
+      "1-0.95^9",
+      null,
+      "0.95^9\\times0.05",
+      "0.95^{10}",
+      "0.95^9"
     ]
   },
   {
@@ -123,7 +133,8 @@
             "page": 3,
             "label": "Identify numerator and denominator"
           }
-        ]
+        ],
+        "mathTex": "P(1\\le X\\le2\\mid X>0)=\\frac{P(1\\le X\\le2)}{P(X>0)}"
       },
       {
         "title": "Include both endpoint masses",
@@ -135,7 +146,8 @@
             "page": 12,
             "label": "Include both endpoint masses"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(1\\le X\\le2)&=F(2)-F(0) \\\\ &=0.76-0.12 \\\\ &=0.64\\end{aligned}"
       },
       {
         "title": "Find the given event",
@@ -147,7 +159,8 @@
             "page": 12,
             "label": "Find the given event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X>0)&=1-F(0) \\\\ &=1-0.12 \\\\ &=0.88\\end{aligned}"
       },
       {
         "title": "Normalize within the given event",
@@ -159,7 +172,8 @@
             "page": 3,
             "label": "Normalize within the given event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\frac{0.64}{0.88}&=\\frac{64}{88} \\\\ &=\\frac{8}{11} \\\\ &\\approx0.727273\\end{aligned}"
       }
     ],
     "answerText": "8/11 ≈ 0.727273.",
@@ -187,6 +201,32 @@
         "doc": "week2",
         "page": 3,
         "label": "Normalize within the given event"
+      }
+    ],
+    "optionsTex": [
+      "\\frac{16}{25}",
+      null,
+      "\\frac{7}{22}",
+      "\\frac{19}{25}",
+      "\\frac{8}{11}"
+    ],
+    "promptParts": [
+      {
+        "text": "The CDF of X is"
+      },
+      {
+        "tex": "F(x)=\\begin{cases}0,&x<0 \\\\ 0.12,&0\\le x<1 \\\\ 0.40,&1\\le x<2 \\\\ 0.76,&2\\le x<3 \\\\ 1,&x\\ge3\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "What is "
+      },
+      {
+        "tex": "P(1\\le X\\le2\\mid X>0)",
+        "display": false
+      },
+      {
+        "text": "?"
       }
     ]
   },
@@ -227,7 +267,8 @@
             "page": 5,
             "label": "Normalize the PMF"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}1&=c(1+3+5+7+9) \\\\ &=25c\\end{aligned}"
       },
       {
         "title": "Solve for the multiplier",
@@ -239,7 +280,8 @@
             "page": 8,
             "label": "Solve for the multiplier"
           }
-        ]
+        ],
+        "mathTex": "c=\\frac{1}{25}"
       },
       {
         "title": "Add the requested masses",
@@ -251,7 +293,8 @@
             "page": 5,
             "label": "Add the requested masses"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge3)&=c(7+9) \\\\ &=\\frac{16}{25} \\\\ &=0.64\\end{aligned}"
       }
     ],
     "answerText": "0.64, the combined probability of X = 3 or X = 4.",
@@ -274,6 +317,13 @@
         "page": 5,
         "label": "Add the requested masses"
       }
+    ],
+    "optionsTex": [
+      "0.64",
+      null,
+      "0.40",
+      "0.36",
+      "0.60"
     ]
   },
   {
@@ -313,7 +363,8 @@
             "page": 25,
             "label": "Restart after the known failures"
           }
-        ]
+        ],
+        "mathTex": "P(T\\le11\\mid T>8)=P(\\text{new waiting time}\\le3)"
       },
       {
         "title": "Describe failure in the next three",
@@ -325,7 +376,8 @@
             "page": 24,
             "label": "Describe failure in the next three"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}q&=0.75 \\\\ P(\\text{no success in next }3)&=0.75^3\\end{aligned}"
       },
       {
         "title": "Take the complement",
@@ -337,7 +389,8 @@
             "page": 24,
             "label": "Take the complement"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\text{success within next }3)&=1-0.75^3 \\\\ &=0.578125\\end{aligned}"
       }
     ],
     "answerText": "1 − 0.75³ = 0.578125.",
@@ -360,6 +413,13 @@
         "page": 24,
         "label": "Take the complement"
       }
+    ],
+    "optionsTex": [
+      "1-0.75^3",
+      "1-0.75^{11}",
+      "0.75^3",
+      "0.75^8(1-0.75^3)",
+      null
     ]
   },
   {
@@ -399,7 +459,8 @@
             "page": 24,
             "label": "Translate the lower endpoint"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(T\\ge6)&=P(T>5) \\\\ &=0.88^5\\end{aligned}"
       },
       {
         "title": "Remove successes occurring too late",
@@ -411,7 +472,8 @@
             "page": 24,
             "label": "Remove successes occurring too late"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(T\\ge11)&=P(T>10) \\\\ &=0.88^{10}\\end{aligned}"
       },
       {
         "title": "Subtract the nested tails",
@@ -423,7 +485,8 @@
             "page": 24,
             "label": "Subtract the nested tails"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(6\\le T\\le10)&=0.88^5-0.88^{10} \\\\ &\\approx0.249231\\end{aligned}"
       }
     ],
     "answerText": "0.88⁵ − 0.88¹⁰ ≈ 0.249231.",
@@ -446,6 +509,13 @@
         "page": 24,
         "label": "Subtract the nested tails"
       }
+    ],
+    "optionsTex": [
+      "0.88^5-0.88^9",
+      "0.88^5-0.88^{10}",
+      null,
+      "0.88^4-0.88^9",
+      "0.88^6-0.88^{11}"
     ]
   },
   {
@@ -485,7 +555,8 @@
             "page": 3,
             "label": "Solve for the original values"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}(x-1)^2&=1 \\\\ x-1&=\\pm1 \\\\ x&=0\\text{ or }2\\end{aligned}"
       },
       {
         "title": "Check the support",
@@ -497,7 +568,8 @@
             "page": 3,
             "label": "Check the support"
           }
-        ]
+        ],
+        "mathTex": "\\begin{array}{c|rrrr}x&0&1&2&3\\\\ \\hline (x-1)^2&1&0&1&4\\end{array}"
       },
       {
         "title": "Combine their probabilities",
@@ -509,7 +581,8 @@
             "page": 5,
             "label": "Combine their probabilities"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(Y=1)&=P(X=0)+P(X=2) \\\\ &=0.15+0.30 \\\\ &=0.45\\end{aligned}"
       }
     ],
     "answerText": "0.45.",
@@ -532,6 +605,13 @@
         "page": 5,
         "label": "Combine their probabilities"
       }
+    ],
+    "optionsTex": [
+      "0.15",
+      "0.40",
+      "0.45",
+      null,
+      "0.30"
     ]
   },
   {
@@ -571,7 +651,8 @@
             "page": 30,
             "label": "Scale the mean to the interval"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lambda&=4.8\\times\\frac{25}{60} \\\\ &=2\\end{aligned}"
       },
       {
         "title": "Write the short complement",
@@ -583,7 +664,8 @@
             "page": 31,
             "label": "Write the short complement"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge3)&=1-\\bigl[P(X=0)+P(X=1) \\\\ &\\qquad+P(X=2)\\bigr]\\end{aligned}"
       },
       {
         "title": "Evaluate the three Poisson masses",
@@ -595,7 +677,8 @@
             "page": 29,
             "label": "Evaluate the three Poisson masses"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\le2)&=e^{-2}\\left(1+2+\\frac{2^2}{2!}\\right) \\\\ &=5e^{-2}\\end{aligned}"
       },
       {
         "title": "Subtract from 1",
@@ -607,7 +690,8 @@
             "page": 31,
             "label": "Subtract from 1"
           }
-        ]
+        ],
+        "mathTex": "1-5e^{-2}\\approx0.323324"
       }
     ],
     "answerText": "1 − 5e⁻² ≈ 0.323324.",
@@ -636,6 +720,13 @@
         "page": 31,
         "label": "Subtract from 1"
       }
+    ],
+    "optionsTex": [
+      "1-3e^{-2}",
+      "1-5e^{-2}",
+      "5e^{-2}",
+      null,
+      "1-5e^{-4.8}"
     ]
   },
   {
@@ -675,7 +766,8 @@
             "page": 17,
             "label": "State the exact distribution"
           }
-        ]
+        ],
+        "mathTex": "X\\sim\\operatorname{Bin}(1200,0.0015)"
       },
       {
         "title": "Match the expected count",
@@ -687,7 +779,8 @@
             "page": 33,
             "label": "Match the expected count"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lambda&=np \\\\ &=1200\\times0.0015 \\\\ &=1.8\\end{aligned}"
       },
       {
         "title": "Include zero and one defect",
@@ -699,7 +792,8 @@
             "page": 29,
             "label": "Include zero and one defect"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\le1)&\\approx e^{-1.8}(1+1.8) \\\\ &=2.8e^{-1.8} \\\\ &\\approx0.462837\\end{aligned}"
       },
       {
         "title": "Label the approximation",
@@ -711,7 +805,8 @@
             "page": 34,
             "label": "Label the approximation"
           }
-        ]
+        ],
+        "mathTex": "\\text{Binomial probability}\\approx\\text{Poisson probability}"
       }
     ],
     "answerText": "Exact model: Bin(1200,0.0015). Approximate probability: 2.8e^(−1.8) ≈ 0.462837.",
@@ -740,6 +835,13 @@
         "page": 34,
         "label": "Label the approximation"
       }
+    ],
+    "optionsTex": [
+      "\\begin{aligned}X&\\sim\\operatorname{Pois}(1.8)\\quad\\text{exactly} \\\\ P(X\\le1)&=2.8e^{-1.8}\\end{aligned}",
+      "\\begin{aligned}X&\\sim\\operatorname{Bin}(1200,0.0015) \\\\ P(X\\le1)&\\approx2.8e^{-1.8}\\end{aligned}",
+      "\\begin{aligned}X&\\sim\\operatorname{Bin}(1200,0.0015) \\\\ P(X\\le1)&\\approx1-2.8e^{-1.8}\\end{aligned}",
+      "\\begin{aligned}X&\\sim\\operatorname{Bin}(1200,0.0015) \\\\ P(X\\le1)&\\approx1.8e^{-1.8}\\end{aligned}",
+      null
     ]
   },
   {
@@ -779,7 +881,8 @@
             "page": 3,
             "label": "Restrict the sample space"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}A&=\\{2,3,4\\} \\\\ B&=\\{0,1,2,3,4\\} \\\\ A\\cap B&=A\\end{aligned}"
       },
       {
         "title": "Form the numerator",
@@ -791,7 +894,8 @@
             "page": 18,
             "label": "Form the numerator"
           }
-        ]
+        ],
+        "mathTex": "P(A\\cap B)=b(2)+b(3)+b(4)"
       },
       {
         "title": "Form the denominator",
@@ -803,7 +907,8 @@
             "page": 18,
             "label": "Form the denominator"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(B)&=b(0)+b(1)+b(2) \\\\ &\\qquad+b(3)+b(4)\\end{aligned}"
       },
       {
         "title": "Divide",
@@ -815,7 +920,8 @@
             "page": 3,
             "label": "Divide"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(A\\mid B)&=\\frac{\\sum_{k=2}^{4}b(k)}{\\sum_{k=0}^{4}b(k)} \\\\ &\\approx0.824288\\end{aligned}"
       }
     ],
     "answerText": "[Σₖ₌₂⁴ b(k)] / [Σₖ₌₀⁴ b(k)] ≈ 0.824288.",
@@ -843,6 +949,13 @@
         "page": 3,
         "label": "Divide"
       }
+    ],
+    "optionsTex": [
+      null,
+      "\\sum_{k=2}^{4}b(k)",
+      "1-\\sum_{k=0}^{1}b(k)",
+      "\\frac{\\sum_{k=2}^{4}b(k)}{\\sum_{k=2}^{10}b(k)}",
+      "\\frac{\\sum_{k=2}^{4}b(k)}{\\sum_{k=0}^{4}b(k)}"
     ]
   },
   {
@@ -882,7 +995,8 @@
             "page": 17,
             "label": "Check the trial count and outcomes"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}&\\text{Fixed }n \\\\ &\\text{Success/failure on each trial}\\end{aligned}"
       },
       {
         "title": "Check independence",
@@ -894,7 +1008,8 @@
             "page": 17,
             "label": "Check independence"
           }
-        ]
+        ],
+        "mathTex": "\\text{Independent trials: stated in each option}"
       },
       {
         "title": "Check constant success probability",
@@ -906,7 +1021,8 @@
             "page": 17,
             "label": "Check constant success probability"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}&p_1,p_2,\\ldots,p_{10}\\text{ are different} \\\\ &\\Longrightarrow\\text{not }\\operatorname{Bin}(10,p)\\end{aligned}"
       },
       {
         "title": "Contrast with the valid counts",
@@ -918,7 +1034,8 @@
             "page": 20,
             "label": "Contrast with the valid counts"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}&\\text{Constant }p\\text{ plus the other three assumptions} \\\\ &\\Longrightarrow\\text{binomial}\\end{aligned}"
       }
     ],
     "answerText": "The successful-login count is not binomial because p differs across users.",
@@ -946,6 +1063,13 @@
         "page": 20,
         "label": "Contrast with the valid counts"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -985,7 +1109,8 @@
             "page": 5,
             "label": "List the unscaled masses"
           }
-        ]
+        ],
+        "mathTex": "\\begin{array}{c|rrrrr}x&0&1&2&3&4\\\\ \\hline \\binom{4}{x}2^x&1&8&24&32&16\\end{array}"
       },
       {
         "title": "Find c from total mass 1",
@@ -997,7 +1122,8 @@
             "page": 8,
             "label": "Find c from total mass 1"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}1&=c(1+8+24+32+16) \\\\ &=81c \\\\ c&=\\frac{1}{81}\\end{aligned}"
       },
       {
         "title": "Select and add the upper masses",
@@ -1009,7 +1135,8 @@
             "page": 5,
             "label": "Select and add the upper masses"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge3)&=\\frac{32+16}{81} \\\\ &=\\frac{48}{81} \\\\ &=\\frac{16}{27}\\end{aligned}"
       }
     ],
     "answerText": "16/27 ≈ 0.592593.",
@@ -1032,6 +1159,13 @@
         "page": 5,
         "label": "Select and add the upper masses"
       }
+    ],
+    "optionsTex": [
+      "\\frac{16}{27}",
+      "\\frac{16}{81}",
+      "\\frac{65}{81}",
+      null,
+      "\\frac{32}{81}"
     ]
   },
   {
@@ -1071,7 +1205,8 @@
             "page": 12,
             "label": "Recover the PMF from jumps"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}p(-1)&=0.10 \\\\ p(0)&=0.35-0.10=0.25 \\\\ p(2)&=0.80-0.35=0.45 \\\\ p(5)&=1-0.80=0.20\\end{aligned}"
       },
       {
         "title": "Map the support through Y",
@@ -1083,7 +1218,8 @@
             "page": 3,
             "label": "Map the support through Y"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}&\\begin{array}{c|rrrr}X&-1&0&2&5\\\\ \\hline Y&2&1&1&4\\end{array} \\\\ &Y\\ge2\\Longleftrightarrow X=-1\\text{ or }5\\end{aligned}"
       },
       {
         "title": "Intersect with the condition",
@@ -1095,7 +1231,8 @@
             "page": 3,
             "label": "Intersect with the condition"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(Y\\ge2,\\ X\\ge0)&=P(X=5) \\\\ &=0.20\\end{aligned}"
       },
       {
         "title": "Divide by the allowed mass",
@@ -1107,7 +1244,8 @@
             "page": 3,
             "label": "Divide by the allowed mass"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge0)&=0.90 \\\\ \\text{answer}&=\\frac{0.20}{0.90}=\\frac{2}{9}\\end{aligned}"
       }
     ],
     "answerText": "2/9 ≈ 0.222222.",
@@ -1135,6 +1273,39 @@
         "doc": "week2",
         "page": 3,
         "label": "Divide by the allowed mass"
+      }
+    ],
+    "optionsTex": [
+      null,
+      "\\frac{2}{9}",
+      "\\frac{7}{9}",
+      "\\frac{1}{3}",
+      "\\frac{1}{5}"
+    ],
+    "promptParts": [
+      {
+        "text": "X takes only −1, 0, 2, and 5. Its CDF is"
+      },
+      {
+        "tex": "F(x)=\\begin{cases}0,&x<-1 \\\\ 0.10,&-1\\le x<0 \\\\ 0.35,&0\\le x<2 \\\\ 0.80,&2\\le x<5 \\\\ 1,&x\\ge5\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "Define "
+      },
+      {
+        "tex": "Y=|X-1|",
+        "display": false
+      },
+      {
+        "text": ". What is "
+      },
+      {
+        "tex": "P(Y\\ge2\\mid X\\ge0)",
+        "display": false
+      },
+      {
+        "text": "?"
       }
     ]
   },
@@ -1175,7 +1346,8 @@
             "page": 17,
             "label": "Identify the distribution"
           }
-        ]
+        ],
+        "mathTex": "X\\sim\\operatorname{Bin}(15,0.10)"
       },
       {
         "title": "Evaluate exactly two failures",
@@ -1187,7 +1359,8 @@
             "page": 18,
             "label": "Evaluate exactly two failures"
           }
-        ]
+        ],
+        "mathTex": "P(X=2)=\\binom{15}{2}(0.10)^2(0.90)^{13}"
       },
       {
         "title": "Evaluate the given event by complement",
@@ -1199,7 +1372,8 @@
             "page": 19,
             "label": "Evaluate the given event by complement"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge2)&=1-(0.90)^{15} \\\\ &\\qquad-15(0.10)(0.90)^{14}\\end{aligned}"
       },
       {
         "title": "Divide by the given-event probability",
@@ -1211,7 +1385,8 @@
             "page": 3,
             "label": "Divide by the given-event probability"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X=2\\mid X\\ge2)&=\\frac{P(X=2)}{P(X\\ge2)} \\\\ &\\approx0.591843\\end{aligned}"
       }
     ],
     "answerText": "Approximately 0.591843.",
@@ -1239,6 +1414,13 @@
         "page": 3,
         "label": "Divide by the given-event probability"
       }
+    ],
+    "optionsTex": [
+      "\\binom{15}{2}(0.10)^2(0.90)^{13}",
+      null,
+      "\\frac{\\binom{15}{2}(0.10)^2(0.90)^{13}}{1-(0.90)^{15}}",
+      "\\frac{\\binom{15}{2}(0.10)^2(0.90)^{13}}{1-(0.90)^{15}-15(0.10)(0.90)^{14}}",
+      "\\frac{\\binom{15}{2}(0.10)^2(0.90)^{13}}{\\sum_{k=0}^{2}\\binom{15}{k}(0.10)^k(0.90)^{15-k}}"
     ]
   },
   {
@@ -1278,7 +1460,8 @@
             "page": 28,
             "label": "Describe the full event"
           }
-        ]
+        ],
+        "mathTex": "P(T=15)=0.92^{14}"
       },
       {
         "title": "Describe the given information",
@@ -1290,7 +1473,8 @@
             "page": 24,
             "label": "Describe the given information"
           }
-        ]
+        ],
+        "mathTex": "P(T>10)=0.92^{10}"
       },
       {
         "title": "Divide and cancel known failures",
@@ -1302,7 +1486,8 @@
             "page": 3,
             "label": "Divide and cancel known failures"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(T=15\\mid T>10)&=\\frac{0.92^{14}}{0.92^{10}} \\\\ &=0.92^4 \\\\ &\\approx0.716393\\end{aligned}"
       },
       {
         "title": "Check the final attempt",
@@ -1314,7 +1499,8 @@
             "page": 28,
             "label": "Check the final attempt"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}&\\text{Four future failures}\\times\\text{guaranteed success} \\\\ &\\qquad=0.92^4\\times1\\end{aligned}"
       }
     ],
     "answerText": "0.92⁴ ≈ 0.716393.",
@@ -1343,6 +1529,13 @@
         "page": 28,
         "label": "Check the final attempt"
       }
+    ],
+    "optionsTex": [
+      "0.92^4\\times0.08",
+      "0.92^5",
+      "0.92^4",
+      null,
+      "1-0.92^4"
     ]
   },
   {
@@ -1382,7 +1575,8 @@
             "page": 17,
             "label": "Find the exact model"
           }
-        ]
+        ],
+        "mathTex": "X\\sim\\operatorname{Bin}(900,0.002)"
       },
       {
         "title": "Set the approximation parameter",
@@ -1394,7 +1588,8 @@
             "page": 33,
             "label": "Set the approximation parameter"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lambda&=900\\times0.002=1.8 \\\\ Y&\\sim\\operatorname{Pois}(1.8)\\end{aligned}"
       },
       {
         "title": "Approximate the numerator",
@@ -1406,7 +1601,8 @@
             "page": 29,
             "label": "Approximate the numerator"
           }
-        ]
+        ],
+        "mathTex": "P(X=2)\\approx\\frac{e^{-1.8}(1.8)^2}{2!}"
       },
       {
         "title": "Approximate the denominator and divide",
@@ -1418,7 +1614,8 @@
             "page": 3,
             "label": "Approximate the denominator and divide"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge1)&\\approx1-e^{-1.8} \\\\ \\text{ratio}&\\approx0.320814\\end{aligned}"
       }
     ],
     "answerText": "[e^(−1.8)(1.8)²/2!] / [1 − e^(−1.8)] ≈ 0.320814.",
@@ -1447,6 +1644,13 @@
         "page": 3,
         "label": "Approximate the denominator and divide"
       }
+    ],
+    "optionsTex": [
+      "\\frac{e^{-0.002}(0.002)^2/2!}{1-e^{-0.002}}",
+      "\\frac{e^{-1.8}(1.8)^2}{2!}",
+      null,
+      "\\frac{e^{-1.8}(1.8)^2/2!}{1-e^{-1.8}}",
+      "\\frac{e^{-1.8}(1.8)^2/2!}{1-e^{-1.8}(1+1.8)}"
     ]
   },
   {
@@ -1485,7 +1689,8 @@
             "page": 5,
             "label": "Add every listed mass"
           }
-        ]
+        ],
+        "mathTex": "0.10+c+2c+0.15=1"
       },
       {
         "title": "Collect the unknown terms",
@@ -1497,7 +1702,8 @@
             "page": 8,
             "label": "Collect the unknown terms"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}0.25+3c&=1 \\\\ 3c&=0.75\\end{aligned}"
       },
       {
         "title": "Solve and check",
@@ -1509,7 +1715,8 @@
             "page": 5,
             "label": "Solve and check"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}c&=0.25 \\\\ \\text{masses}&=0.10,\\ 0.25,\\ 0.50,\\ 0.15 \\\\ \\text{sum}&=1\\end{aligned}"
       }
     ],
     "answerText": "c = 0.25.",
@@ -1532,6 +1739,12 @@
         "page": 5,
         "label": "Solve and check"
       }
+    ],
+    "optionsTex": [
+      "\\begin{aligned}c&=0.25 \\\\ &\\text{because all masses sum to }1\\end{aligned}",
+      "\\begin{aligned}c&=0.375 \\\\ &\\text{because the two unknown entries are equal}\\end{aligned}",
+      "\\begin{aligned}c&=0.75 \\\\ &\\text{because the known entries sum to }0.25\\end{aligned}",
+      "\\begin{aligned}c&=\\frac14 \\\\ &\\text{because all four outcomes must be equally likely}\\end{aligned}"
     ]
   },
   {
@@ -1571,7 +1784,8 @@
             "page": 5,
             "label": "Normalize the original PMF"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}c&=\\frac{1-0.10-0.15}{3} \\\\ &=0.25\\end{aligned}"
       },
       {
         "title": "Accumulate from left to right",
@@ -1583,7 +1797,8 @@
             "page": 10,
             "label": "Accumulate from left to right"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}F(0)&=0.10 \\\\ F(1)&=0.10+0.25=0.35 \\\\ F(2)&=0.85 \\\\ F(3)&=1\\end{aligned}"
       },
       {
         "title": "Fill in the intervals and tails",
@@ -1595,7 +1810,8 @@
             "page": 9,
             "label": "Fill in the intervals and tails"
           }
-        ]
+        ],
+        "mathTex": "F(x)=\\begin{cases}0,&x<0 \\\\ 0.10,&0\\le x<1 \\\\ 0.35,&1\\le x<2 \\\\ 0.85,&2\\le x<3 \\\\ 1,&x\\ge3\\end{cases}"
       }
     ],
     "answerText": "The first option is correct: cumulative levels 0,0.10,0.35,0.85,1.",
@@ -1619,6 +1835,12 @@
         "page": 9,
         "label": "Fill in the intervals and tails"
       }
+    ],
+    "optionsTex": [
+      "F(x)=\\begin{cases}0,&x<0 \\\\ 0.10,&0\\le x<1 \\\\ 0.35,&1\\le x<2 \\\\ 0.85,&2\\le x<3 \\\\ 1,&x\\ge3\\end{cases}",
+      "F(x)=\\begin{cases}0,&x<0 \\\\ 0.10,&0\\le x<1 \\\\ 0.25,&1\\le x<2 \\\\ 0.50,&2\\le x<3 \\\\ 0.15,&x\\ge3\\end{cases}",
+      "F(x)=\\begin{cases}0.10,&x<1 \\\\ 0.35,&1\\le x<2 \\\\ 0.85,&2\\le x<3 \\\\ 1,&x\\ge3\\end{cases}",
+      "F(x)=\\begin{cases}0,&x<0 \\\\ 0.10,&0<x\\le1 \\\\ 0.35,&1<x\\le2 \\\\ 0.85,&2<x\\le3 \\\\ 1,&x>3\\end{cases}"
     ]
   },
   {
@@ -1658,7 +1880,8 @@
             "page": 5,
             "label": "Find c"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}0.10+3c+0.15&=1 \\\\ c&=0.25\\end{aligned}"
       },
       {
         "title": "Use the PMF directly",
@@ -1670,7 +1893,8 @@
             "page": 5,
             "label": "Use the PMF directly"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(1<X\\le3)&=2c+0.15 \\\\ &=0.50+0.15 \\\\ &=0.65\\end{aligned}"
       },
       {
         "title": "Use the CDF independently",
@@ -1682,7 +1906,8 @@
             "page": 12,
             "label": "Use the CDF independently"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}F(3)-F(1)&=1-(0.10+0.25) \\\\ &=0.65\\end{aligned}"
       }
     ],
     "answerText": "0.65. It is both p(2) + p(3) and F(3) − F(1).",
@@ -1705,6 +1930,12 @@
         "page": 12,
         "label": "Use the CDF independently"
       }
+    ],
+    "optionsTex": [
+      "0.65=F(3)-F(1)",
+      "0.90=F(3)-F(0)",
+      "0.50=F(2)-F(1)",
+      "0.15=F(3)-F(2)"
     ]
   },
   {
@@ -1744,7 +1975,8 @@
             "page": 5,
             "label": "Find the completed PMF"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}0.10+3c+0.15&=1 \\\\ c&=0.25\\end{aligned}"
       },
       {
         "title": "Interpret F(1.5)",
@@ -1756,7 +1988,8 @@
             "page": 9,
             "label": "Interpret F(1.5)"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}F(1.5)&=P(X\\le1.5) \\\\ &=0.10+0.25 \\\\ &=0.35\\end{aligned}"
       },
       {
         "title": "Interpret the point probability",
@@ -1768,7 +2001,8 @@
             "page": 5,
             "label": "Interpret the point probability"
           }
-        ]
+        ],
+        "mathTex": "P(X=1.5)=0"
       }
     ],
     "answerText": "F(1.5) = 0.35, but P(X = 1.5) = 0.",
@@ -1791,6 +2025,12 @@
         "page": 5,
         "label": "Interpret the point probability"
       }
+    ],
+    "optionsTex": [
+      "\\begin{aligned}F(1.5)&=0.35 \\\\ P(X=1.5)&=0\\end{aligned}",
+      null,
+      null,
+      "\\begin{aligned}F(1.5)&=0.50 \\\\ P(X=1.5)&=0.50\\end{aligned}"
     ]
   },
   {
@@ -1830,7 +2070,8 @@
             "page": 17,
             "label": "Check the binomial assumptions"
           }
-        ]
+        ],
+        "mathTex": "N\\sim\\operatorname{Bin}(20,0.08)"
       },
       {
         "title": "Write one sequence probability",
@@ -1842,7 +2083,8 @@
             "page": 18,
             "label": "Write one sequence probability"
           }
-        ]
+        ],
+        "mathTex": "(0.08)^2(0.92)^{18}"
       },
       {
         "title": "Count all positions for the detections",
@@ -1854,7 +2096,8 @@
             "page": 18,
             "label": "Count all positions for the detections"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\binom{20}{2}&=\\frac{20\\times19}{2} \\\\ &=190\\end{aligned}"
       },
       {
         "title": "Multiply and calculate",
@@ -1866,7 +2109,8 @@
             "page": 18,
             "label": "Multiply and calculate"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(N=2)&=190(0.08)^2(0.92)^{18} \\\\ &\\approx0.271091\\end{aligned}"
       }
     ],
     "answerText": "N ~ Bin(20,0.08), with P(N = 2) ≈ 0.271091.",
@@ -1895,6 +2139,12 @@
         "page": 18,
         "label": "Multiply and calculate"
       }
+    ],
+    "optionsTex": [
+      "\\begin{aligned}N&\\sim\\operatorname{Bin}(20,0.08) \\\\ P(N=2)&=\\binom{20}{2}(0.08)^2(0.92)^{18} \\\\ &\\approx0.271091\\end{aligned}",
+      "\\begin{aligned}N&\\sim\\operatorname{Geom}(0.08) \\\\ P(N=2)&=0.92\\times0.08\\end{aligned}",
+      "\\begin{aligned}N&\\sim\\operatorname{Bin}(20,0.08) \\\\ P(N=2)&=(0.08)^2(0.92)^{18}\\end{aligned}",
+      "\\begin{aligned}N&\\sim\\operatorname{Pois}(0.08) \\\\ P(N=2)&=\\frac{e^{-0.08}(0.08)^2}{2!}\\end{aligned}"
     ]
   },
   {
@@ -1933,7 +2183,8 @@
             "page": 19,
             "label": "Name the complement"
           }
-        ]
+        ],
+        "mathTex": "P(N\\ge1)=1-P(N=0)"
       },
       {
         "title": "Compute zero detections",
@@ -1945,7 +2196,8 @@
             "page": 18,
             "label": "Compute zero detections"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(N=0)&=(1-0.08)^{20} \\\\ &=0.92^{20}\\end{aligned}"
       },
       {
         "title": "Subtract from 1",
@@ -1957,7 +2209,8 @@
             "page": 19,
             "label": "Subtract from 1"
           }
-        ]
+        ],
+        "mathTex": "1-0.92^{20}\\approx0.811307"
       }
     ],
     "answerText": "1 − 0.92²⁰ ≈ 0.811307, about an 81.1% chance.",
@@ -1981,6 +2234,12 @@
         "page": 19,
         "label": "Subtract from 1"
       }
+    ],
+    "optionsTex": [
+      "1-0.92^{20}\\approx0.811307",
+      "0.92^{20}\\approx0.188693",
+      "20\\times0.08=1.6",
+      "20(0.08)(0.92)^{19}"
     ]
   },
   {
@@ -2020,7 +2279,8 @@
             "page": 23,
             "label": "Choose the first-success model"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}T&\\sim\\operatorname{Geom}(0.08) \\\\ T&=1,2,3,\\ldots\\end{aligned}"
       },
       {
         "title": "Describe the survival event",
@@ -2032,7 +2292,8 @@
             "page": 24,
             "label": "Describe the survival event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(T>20)&=(0.92)^{20} \\\\ &\\approx0.188693\\end{aligned}"
       },
       {
         "title": "Connect the two questions",
@@ -2044,7 +2305,8 @@
             "page": 19,
             "label": "Connect the two questions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(T>20)&=P(N=0) \\\\ &=1-P(N\\ge1)\\end{aligned}"
       }
     ],
     "answerText": "T ~ Geom(0.08). P(T > 20) = 0.92²⁰ ≈ 0.188693.",
@@ -2067,6 +2329,12 @@
         "page": 19,
         "label": "Connect the two questions"
       }
+    ],
+    "optionsTex": [
+      "\\begin{aligned}T&\\sim\\operatorname{Geom}(0.08) \\\\ P(T>20)&=0.92^{20} \\\\ &=1-P(N\\ge1)\\end{aligned}",
+      "\\begin{aligned}T&\\sim\\operatorname{Bin}(20,0.08) \\\\ P(T>20)&=0\\end{aligned}",
+      "\\begin{aligned}T&\\sim\\operatorname{Geom}(0.08) \\\\ P(T>20)&=0.92^{19}\\times0.08\\end{aligned}",
+      "\\begin{aligned}T&\\sim\\operatorname{Geom}(0.08) \\\\ P(T>20)&=1-0.92^{20}\\end{aligned}"
     ]
   },
   {
@@ -2106,7 +2374,8 @@
             "page": 23,
             "label": "Recall the model assumptions"
           }
-        ]
+        ],
+        "mathTex": "T\\sim\\operatorname{Geom}(p)\\text{ requires the same }p\\text{ each run}"
       },
       {
         "title": "Compare the changed experiment",
@@ -2118,7 +2387,8 @@
             "page": 25,
             "label": "Compare the changed experiment"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}p_1&=0.08 \\\\ &p_2,p_3,\\ldots\\text{ increase after failures}\\end{aligned}"
       },
       {
         "title": "See what breaks in the formula",
@@ -2130,7 +2400,8 @@
             "page": 24,
             "label": "See what breaks in the formula"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(T>n)&=\\prod_{i=1}^{n}(1-p_i) \\\\ &\\text{rather than }(1-0.08)^n\\end{aligned}"
       }
     ],
     "answerText": "The constant-success-probability assumption is violated.",
@@ -2153,6 +2424,12 @@
         "page": 24,
         "label": "See what breaks in the formula"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -2191,7 +2468,8 @@
             "page": 30,
             "label": "Match time units"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}t&=\\frac{30}{60} \\\\ &=0.5\\text{ hour}\\end{aligned}"
       },
       {
         "title": "Multiply rate by time",
@@ -2203,7 +2481,8 @@
             "page": 30,
             "label": "Multiply rate by time"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lambda&=1.8\\frac{\\text{alerts}}{\\text{hour}}\\times0.5\\text{ hour} \\\\ &=0.9\\text{ alerts}\\end{aligned}"
       },
       {
         "title": "State the interval distribution",
@@ -2215,7 +2494,8 @@
             "page": 29,
             "label": "State the interval distribution"
           }
-        ]
+        ],
+        "mathTex": "Y\\sim\\operatorname{Pois}(0.9)"
       }
     ],
     "answerText": "λ = 0.9.",
@@ -2238,6 +2518,12 @@
         "page": 29,
         "label": "State the interval distribution"
       }
+    ],
+    "optionsTex": [
+      "0.9",
+      "1.8",
+      "3.6",
+      "54"
     ]
   },
   {
@@ -2277,7 +2563,8 @@
             "page": 30,
             "label": "Compute the interval mean"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lambda&=1.8\\times0.5 \\\\ &=0.9\\end{aligned}"
       },
       {
         "title": "Use the Poisson PMF at zero",
@@ -2289,7 +2576,8 @@
             "page": 29,
             "label": "Use the Poisson PMF at zero"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(Y=0)&=\\frac{e^{-0.9}(0.9)^0}{0!} \\\\ &=e^{-0.9}\\end{aligned}"
       },
       {
         "title": "Interpret the probability",
@@ -2301,7 +2589,8 @@
             "page": 31,
             "label": "Interpret the probability"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}e^{-0.9}&\\approx0.406570 \\\\ &\\Longrightarrow40.7\\%\\text{ probability of zero alerts} \\\\ &\\phantom{\\Longrightarrow}\\text{in 30 minutes}\\end{aligned}"
       }
     ],
     "answerText": "P(Y = 0) ≈ 0.406570.",
@@ -2324,6 +2613,12 @@
         "page": 31,
         "label": "Interpret the probability"
       }
+    ],
+    "optionsTex": [
+      "\\begin{aligned}e^{-0.9}&\\approx0.406570 \\\\ &\\text{about a }40.7\\%\\text{ chance of no critical alert} \\\\ &\\text{in 30 minutes}\\end{aligned}",
+      "\\begin{aligned}e^{-1.8}&\\approx0.165299 \\\\ &\\text{about a }16.5\\%\\text{ chance of no critical alert} \\\\ &\\text{in 30 minutes}\\end{aligned}",
+      "\\begin{aligned}1-e^{-0.9}&\\approx0.593430 \\\\ &\\text{about a }59.3\\%\\text{ chance of no critical alert}\\end{aligned}",
+      null
     ]
   },
   {
@@ -2363,7 +2658,8 @@
             "page": 30,
             "label": "Scale the interval"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lambda&=1.8\\times\\frac{30}{60} \\\\ &=0.9\\end{aligned}"
       },
       {
         "title": "List counts in the complement",
@@ -2375,7 +2671,8 @@
             "page": 31,
             "label": "List counts in the complement"
           }
-        ]
+        ],
+        "mathTex": "P(Y\\ge2)=1-P(Y=0)-P(Y=1)"
       },
       {
         "title": "Evaluate and simplify",
@@ -2387,7 +2684,8 @@
             "page": 29,
             "label": "Evaluate and simplify"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}1-e^{-0.9}(1+0.9)&=1-1.9e^{-0.9} \\\\ &\\approx0.227518\\end{aligned}"
       }
     ],
     "answerText": "1 − 1.9e^(−0.9) ≈ 0.227518.",
@@ -2410,6 +2708,12 @@
         "page": 29,
         "label": "Evaluate and simplify"
       }
+    ],
+    "optionsTex": [
+      "1-1.9e^{-0.9}\\approx0.227518",
+      "1-e^{-0.9}\\approx0.593430",
+      "1.9e^{-0.9}\\approx0.772482",
+      "1-2.8e^{-1.8}\\approx0.537163"
     ]
   },
   {
@@ -2449,7 +2753,8 @@
             "page": 17,
             "label": "Choose the exact model"
           }
-        ]
+        ],
+        "mathTex": "Z\\sim\\operatorname{Bin}(600,0.003)"
       },
       {
         "title": "Check and parameterize the approximation",
@@ -2461,7 +2766,8 @@
             "page": 34,
             "label": "Check and parameterize the approximation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lambda&=np \\\\ &=600\\times0.003 \\\\ &=1.8\\end{aligned}"
       },
       {
         "title": "Add counts zero and one",
@@ -2473,7 +2779,8 @@
             "page": 29,
             "label": "Add counts zero and one"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(Z\\le1)&\\approx e^{-1.8}+1.8e^{-1.8} \\\\ &=2.8e^{-1.8} \\\\ &\\approx0.462837\\end{aligned}"
       },
       {
         "title": "Keep exact and approximate claims separate",
@@ -2485,7 +2792,8 @@
             "page": 33,
             "label": "Keep exact and approximate claims separate"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}&\\text{Binomial exact model} \\\\ &\\text{Poisson approximate probability}\\end{aligned}"
       }
     ],
     "answerText": "Z ~ Bin(600,0.003), with P(Z ≤ 1) ≈ 0.462837.",
@@ -2514,6 +2822,12 @@
         "page": 33,
         "label": "Keep exact and approximate claims separate"
       }
+    ],
+    "optionsTex": [
+      "\\begin{aligned}Z&\\sim\\operatorname{Bin}(600,0.003) \\\\ P(Z\\le1)&\\approx2.8e^{-1.8}\\end{aligned}",
+      "\\begin{aligned}Z&\\sim\\operatorname{Pois}(0.003)\\quad\\text{exactly} \\\\ P(Z\\le1)&=1.003e^{-0.003}\\end{aligned}",
+      "\\begin{aligned}Z&\\sim\\operatorname{Bin}(600,0.003) \\\\ P(Z\\le1)&\\approx1-2.8e^{-1.8}\\end{aligned}",
+      "\\begin{aligned}Z&\\sim\\operatorname{Geom}(0.003) \\\\ P(Z\\le1)&=0.003\\end{aligned}"
     ]
   },
   {
@@ -2553,7 +2867,8 @@
             "page": 29,
             "label": "State what the model assumes"
           }
-        ]
+        ],
+        "mathTex": "\\text{Constant-rate independent-arrival model}"
       },
       {
         "title": "Inspect the proposed feature",
@@ -2565,7 +2880,8 @@
             "page": 29,
             "label": "Inspect the proposed feature"
           }
-        ]
+        ],
+        "mathTex": "\\text{One triggering event}\\longrightarrow\\text{a cluster of related alerts}"
       },
       {
         "title": "Distinguish normal model behavior",
@@ -2577,7 +2893,8 @@
             "page": 30,
             "label": "Distinguish normal model behavior"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\text{no alerts in 30 min})&=e^{-0.9}>0 \\\\ \\lambda_{30\\text{ min}}&=0.9\\end{aligned}"
       }
     ],
     "answerText": "A burst of dependent alerts from one attack can make the constant-rate Poisson model unreliable.",
@@ -2600,6 +2917,12 @@
         "page": 30,
         "label": "Distinguish normal model behavior"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -2639,7 +2962,8 @@
             "page": 12,
             "label": "Recover each jump mass"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}p(-2)&=0.10 \\\\ p(0)&=0.33-0.10=0.23 \\\\ p(3)&=0.61-0.33=0.28 \\\\ p(7)&=1-0.61=0.39\\end{aligned}"
       },
       {
         "title": "Translate the absolute-value event",
@@ -2651,7 +2975,8 @@
             "page": 3,
             "label": "Translate the absolute-value event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}|X-1|&\\le2 \\\\ -2&\\le X-1\\le2 \\\\ -1&\\le X\\le3\\end{aligned}"
       },
       {
         "title": "Intersect with the condition",
@@ -2663,7 +2988,8 @@
             "page": 3,
             "label": "Intersect with the condition"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Numerator}&=p(0)+p(3) \\\\ &=0.23+0.28 \\\\ &=0.51\\end{aligned}"
       },
       {
         "title": "Divide by all nonnegative mass",
@@ -2675,7 +3001,8 @@
             "page": 3,
             "label": "Divide by all nonnegative mass"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge0)&=1-0.10=0.90 \\\\ \\text{answer}&=\\frac{0.51}{0.90} \\\\ &=0.566666\\ldots \\\\ &\\approx0.567\\end{aligned}"
       }
     ],
     "answerText": "0.567 to three decimal places.",
@@ -2702,6 +3029,39 @@
         "doc": "week2",
         "page": 3,
         "label": "Divide by all nonnegative mass"
+      }
+    ],
+    "optionsTex": [
+      "0.567",
+      "0.433",
+      "0.510",
+      "0.311",
+      null
+    ],
+    "promptParts": [
+      {
+        "text": "The CDF of X is"
+      },
+      {
+        "tex": "F(x)=\\begin{cases}0,&x<-2 \\\\ 0.10,&-2\\le x<0 \\\\ 0.33,&0\\le x<3 \\\\ 0.61,&3\\le x<7 \\\\ 1,&x\\ge7\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "Define "
+      },
+      {
+        "tex": "Y=|X-1|",
+        "display": false
+      },
+      {
+        "text": ". Find "
+      },
+      {
+        "tex": "P(Y\\le2\\mid X\\ge0)",
+        "display": false
+      },
+      {
+        "text": ", to three decimal places."
       }
     ]
   },
@@ -2742,7 +3102,8 @@
             "page": 3,
             "label": "Write the conditional ratio"
           }
-        ]
+        ],
+        "mathTex": "P(X>3\\mid X\\le8)=\\frac{P(4\\le X\\le8)}{P(X\\le8)}"
       },
       {
         "title": "Use tails for the numerator",
@@ -2754,7 +3115,8 @@
             "page": 24,
             "label": "Use tails for the numerator"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(4\\le X\\le8)&=P(X>3)-P(X>8) \\\\ &=0.88^3-0.88^8\\end{aligned}"
       },
       {
         "title": "Compute the denominator",
@@ -2766,7 +3128,8 @@
             "page": 24,
             "label": "Compute the denominator"
           }
-        ]
+        ],
+        "mathTex": "P(X\\le8)=1-0.88^8"
       },
       {
         "title": "Divide and round",
@@ -2778,7 +3141,8 @@
             "page": 3,
             "label": "Divide and round"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\frac{0.88^3-0.88^8}{1-0.88^8}&\\approx0.502584 \\\\ &\\longrightarrow0.503\\end{aligned}"
       }
     ],
     "answerText": "0.503 to three decimal places.",
@@ -2807,6 +3171,13 @@
         "page": 3,
         "label": "Divide and round"
       }
+    ],
+    "optionsTex": [
+      "0.497",
+      null,
+      "0.681",
+      "0.322",
+      "0.503"
     ]
   },
   {
@@ -2846,7 +3217,8 @@
             "page": 25,
             "label": "Reset after the known failures"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}U&=X-4\\quad\\text{given }X>4 \\\\ U&\\sim\\operatorname{Geom}(0.35)\\end{aligned}"
       },
       {
         "title": "Translate the requested interval",
@@ -2858,7 +3230,8 @@
             "page": 25,
             "label": "Translate the requested interval"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}6\\le X\\le8&\\Longrightarrow2\\le U\\le4\\end{aligned}"
       },
       {
         "title": "Use the inclusive geometric range",
@@ -2870,7 +3243,8 @@
             "page": 24,
             "label": "Use the inclusive geometric range"
           }
-        ]
+        ],
+        "mathTex": "P(2\\le U\\le4)=0.65^1-0.65^4"
       },
       {
         "title": "Evaluate and cross-check with a ratio",
@@ -2882,7 +3256,8 @@
             "page": 3,
             "label": "Evaluate and cross-check with a ratio"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}0.65-0.65^4&=0.47149375 \\\\ &\\text{also }\\frac{0.65^5-0.65^8}{0.65^4}\\end{aligned}"
       }
     ],
     "answerText": "0.471 to three decimal places.",
@@ -2911,6 +3286,13 @@
         "page": 3,
         "label": "Evaluate and cross-check with a ratio"
       }
+    ],
+    "optionsTex": [
+      "0.244",
+      "0.725",
+      "0.471",
+      "0.375",
+      null
     ]
   },
   {
@@ -2950,7 +3332,8 @@
             "page": 30,
             "label": "Scale to the 90-minute interval"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lambda&=1.9\\times\\frac{90}{60} \\\\ &=2.85\\end{aligned}"
       },
       {
         "title": "Sum the desired counts",
@@ -2962,7 +3345,8 @@
             "page": 29,
             "label": "Sum the desired counts"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(2\\le Z\\le4)&=e^{-2.85}\\left[\\frac{2.85^2}{2!}+\\frac{2.85^3}{3!}\\right. \\\\ &\\qquad\\left.+\\frac{2.85^4}{4!}\\right]\\end{aligned}"
       },
       {
         "title": "Find the given-event mass",
@@ -2974,7 +3358,8 @@
             "page": 31,
             "label": "Find the given-event mass"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(Z\\ge1)&=1-P(Z=0) \\\\ &=1-e^{-2.85}\\end{aligned}"
       },
       {
         "title": "Normalize and round",
@@ -2986,7 +3371,8 @@
             "page": 3,
             "label": "Normalize and round"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(2\\le Z\\le4\\mid Z\\ge1)&\\approx0.654994 \\\\ &\\longrightarrow0.655\\end{aligned}"
       }
     ],
     "answerText": "0.655 to three decimal places.",
@@ -3015,6 +3401,13 @@
         "page": 3,
         "label": "Normalize and round"
       }
+    ],
+    "optionsTex": [
+      null,
+      "0.249",
+      "0.617",
+      "0.830",
+      "0.655"
     ]
   },
   {
@@ -3054,7 +3447,8 @@
             "page": 3,
             "label": "Set up the conditional ratio"
           }
-        ]
+        ],
+        "mathTex": "P(2\\le X\\le4\\mid X\\ge2)=\\frac{P(2\\le X\\le4)}{P(X\\ge2)}"
       },
       {
         "title": "Evaluate the range",
@@ -3066,7 +3460,8 @@
             "page": 18,
             "label": "Evaluate the range"
           }
-        ]
+        ],
+        "mathTex": "\\text{Numerator}=\\sum_{k=2}^{4}\\binom{12}{k}(0.37)^k(0.63)^{12-k}"
       },
       {
         "title": "Evaluate the denominator by complement",
@@ -3078,7 +3473,8 @@
             "page": 19,
             "label": "Evaluate the denominator by complement"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Denominator}&=1-(0.63)^{12} \\\\ &\\qquad-12(0.37)(0.63)^{11}\\end{aligned}"
       },
       {
         "title": "Divide and round",
@@ -3090,7 +3486,8 @@
             "page": 3,
             "label": "Divide and round"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Ratio}&\\approx0.509454 \\\\ &\\longrightarrow0.509\\end{aligned}"
       }
     ],
     "answerText": "0.509 to three decimal places.",
@@ -3118,6 +3515,13 @@
         "page": 3,
         "label": "Divide and round"
       }
+    ],
+    "optionsTex": [
+      null,
+      "0.418",
+      "0.493",
+      "0.0919",
+      "0.509"
     ]
   },
   {
@@ -3157,7 +3561,8 @@
             "page": 5,
             "label": "Check the PMF"
           }
-        ]
+        ],
+        "mathTex": "0.45+0.30+0.20+0.05=1"
       },
       {
         "title": "Select the support values",
@@ -3169,7 +3574,8 @@
             "page": 6,
             "label": "Select the support values"
           }
-        ]
+        ],
+        "mathTex": "\\{X\\ge2\\}=\\{X=2\\}\\cup\\{X=3\\}"
       },
       {
         "title": "Add the disjoint masses",
@@ -3181,7 +3587,8 @@
             "page": 6,
             "label": "Add the disjoint masses"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge2)&=0.20+0.05 \\\\ &=0.25\\end{aligned}"
       }
     ],
     "answerText": "0.25: a 25% chance that severity is at least 2.",
@@ -3204,6 +3611,12 @@
         "page": 6,
         "label": "Add the disjoint masses"
       }
+    ],
+    "optionsTex": [
+      "0.25",
+      "0.95",
+      "0.20",
+      "0.05"
     ]
   },
   {
@@ -3243,7 +3656,8 @@
             "page": 8,
             "label": "Normalize the PMF"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}0.18+c+2c+0.22&=1 \\\\ 3c&=0.60 \\\\ c&=0.20\\end{aligned}"
       },
       {
         "title": "Select values at least 2",
@@ -3255,7 +3669,8 @@
             "page": 8,
             "label": "Select values at least 2"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(Y\\ge2)&=2c+0.22 \\\\ &=0.40+0.22 \\\\ &=0.62\\end{aligned}"
       },
       {
         "title": "Select the even values",
@@ -3267,7 +3682,8 @@
             "page": 8,
             "label": "Select the even values"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(Y\\text{ is even})&=0.18+2c \\\\ &=0.18+0.40 \\\\ &=0.58\\end{aligned}"
       }
     ],
     "answerText": "c = 0.20, P(Y ≥ 2) = 0.62, P(Y is even) = 0.58.",
@@ -3291,6 +3707,12 @@
         "page": 8,
         "label": "Select the even values"
       }
+    ],
+    "optionsTex": [
+      "0.20,\\ 0.62,\\ 0.58",
+      "0.30,\\ 0.82,\\ 0.78",
+      "0.20,\\ 0.40,\\ 0.40",
+      "0.20,\\ 0.42,\\ 0.22"
     ]
   },
   {
@@ -3330,7 +3752,8 @@
             "page": 12,
             "label": "Find the mass at 2"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X=2)&=F(2)-F(1) \\\\ &=0.85-0.50 \\\\ &=0.35\\end{aligned}"
       },
       {
         "title": "Find the interval with strict lower endpoint",
@@ -3342,7 +3765,8 @@
             "page": 12,
             "label": "Find the interval with strict lower endpoint"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(0<X\\le2)&=F(2)-F(0) \\\\ &=0.85-0.15 \\\\ &=0.70\\end{aligned}"
       },
       {
         "title": "Find the inclusive upper tail",
@@ -3354,7 +3778,8 @@
             "page": 12,
             "label": "Find the inclusive upper tail"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge2)&=1-F(1) \\\\ &=1-0.50 \\\\ &=0.50\\end{aligned}"
       }
     ],
     "answerText": "0.35, 0.70, 0.50.",
@@ -3377,6 +3802,12 @@
         "page": 12,
         "label": "Find the inclusive upper tail"
       }
+    ],
+    "optionsTex": [
+      "0.35,\\ 0.70,\\ 0.50",
+      "0.85,\\ 0.70,\\ 0.15",
+      "0.35,\\ 0.85,\\ 0.15",
+      "0.35,\\ 0.35,\\ 0.50"
     ]
   },
   {
@@ -3416,7 +3847,8 @@
             "page": 15,
             "label": "Identify the single binary trial"
           }
-        ]
+        ],
+        "mathTex": "\\text{Support: }X\\in\\{0,1\\}"
       },
       {
         "title": "Read the success parameter",
@@ -3428,7 +3860,8 @@
             "page": 16,
             "label": "Read the success parameter"
           }
-        ]
+        ],
+        "mathTex": "p=P(X=1)=0.35"
       },
       {
         "title": "Use the complementary mass",
@@ -3440,7 +3873,8 @@
             "page": 15,
             "label": "Use the complementary mass"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X=0)&=1-p=0.65 \\\\ X&\\sim\\operatorname{Bernoulli}(0.35)\\end{aligned}"
       }
     ],
     "answerText": "X ~ Bernoulli(0.35), and P(X = 0) = 0.65.",
@@ -3463,6 +3897,12 @@
         "page": 15,
         "label": "Use the complementary mass"
       }
+    ],
+    "optionsTex": [
+      "\\begin{aligned}X&\\sim\\operatorname{Bernoulli}(0.35) \\\\ P(X=0)&=0.65\\end{aligned}",
+      "\\begin{aligned}X&\\sim\\operatorname{Geom}(0.35) \\\\ P(X=0)&=0.65\\end{aligned}",
+      "\\begin{aligned}X&\\sim\\operatorname{Bernoulli}(0.65) \\\\ P(X=0)&=0.35\\end{aligned}",
+      "\\begin{aligned}X&\\sim\\operatorname{Pois}(0.35) \\\\ P(X=0)&=e^{-0.35}\\end{aligned}"
     ]
   },
   {
@@ -3502,7 +3942,8 @@
             "page": 17,
             "label": "Choose the model"
           }
-        ]
+        ],
+        "mathTex": "X\\sim\\operatorname{Bin}(8,0.60)"
       },
       {
         "title": "List the included counts",
@@ -3514,7 +3955,8 @@
             "page": 21,
             "label": "List the included counts"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge6)&=P(X=6)+P(X=7) \\\\ &\\qquad+P(X=8)\\end{aligned}"
       },
       {
         "title": "Write each binomial term",
@@ -3526,7 +3968,8 @@
             "page": 18,
             "label": "Write each binomial term"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}&28(0.60)^6(0.40)^2 \\\\ &\\qquad+8(0.60)^7(0.40)+(0.60)^8\\end{aligned}"
       },
       {
         "title": "Add and interpret",
@@ -3538,7 +3981,8 @@
             "page": 18,
             "label": "Add and interpret"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}&0.20901888+0.08957952+0.01679616 \\\\ &\\qquad=0.31539456\\end{aligned}"
       }
     ],
     "answerText": "0.31539456, about a 31.5% chance of at least six critical hits.",
@@ -3566,6 +4010,12 @@
         "page": 18,
         "label": "Add and interpret"
       }
+    ],
+    "optionsTex": [
+      "0.31539456",
+      "0.20901888",
+      "0.83203840",
+      "0.01679616"
     ]
   },
   {
@@ -3605,7 +4055,8 @@
             "page": 26,
             "label": "Count the remaining opportunities"
           }
-        ]
+        ],
+        "mathTex": "\\text{Remaining attempts}=5-3=2"
       },
       {
         "title": "Use memorylessness",
@@ -3617,7 +4068,8 @@
             "page": 25,
             "label": "Use memorylessness"
           }
-        ]
+        ],
+        "mathTex": "P(X\\le5\\mid X>3)=P(\\text{new geometric wait}\\le2)"
       },
       {
         "title": "Take the complement of two failures",
@@ -3629,7 +4081,8 @@
             "page": 24,
             "label": "Take the complement of two failures"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}1-(0.75)^2&=1-0.5625 \\\\ &=0.4375\\end{aligned}"
       }
     ],
     "answerText": "0.4375.",
@@ -3652,6 +4105,12 @@
         "page": 24,
         "label": "Take the complement of two failures"
       }
+    ],
+    "optionsTex": [
+      "0.7626953125",
+      "0.4375",
+      "0.5625",
+      "0.1845703125"
     ]
   },
   {
@@ -3691,7 +4150,8 @@
             "page": 30,
             "label": "Scale the rate"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lambda&=2.5\\times2 \\\\ &=5\\end{aligned}"
       },
       {
         "title": "Evaluate the PMF at zero",
@@ -3703,7 +4163,8 @@
             "page": 29,
             "label": "Evaluate the PMF at zero"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X=0)&=\\frac{e^{-5}5^0}{0!} \\\\ &=e^{-5}\\end{aligned}"
       },
       {
         "title": "Interpret the result",
@@ -3715,7 +4176,8 @@
             "page": 31,
             "label": "Interpret the result"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}e^{-5}&\\approx0.006738 \\\\ &\\Longrightarrow\\text{about a }0.674\\%\\text{ chance of no alerts} \\\\ &\\phantom{\\Longrightarrow}\\text{in two hours}\\end{aligned}"
       }
     ],
     "answerText": "e⁻⁵ ≈ 0.006738.",
@@ -3738,6 +4200,12 @@
         "page": 31,
         "label": "Interpret the result"
       }
+    ],
+    "optionsTex": [
+      "e^{-5}\\approx0.006738",
+      "e^{-2.5}\\approx0.082085",
+      "1-e^{-5}\\approx0.993262",
+      "2e^{-2.5}\\approx0.164170"
     ]
   }
 ]

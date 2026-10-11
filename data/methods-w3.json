@@ -12,22 +12,26 @@
       {
         "title": "List the support",
         "body": "The support is the list of values X can actually take. Values outside it have probability 0.",
-        "formula": "S = {x : P(X = x) > 0}"
+        "formula": "S = {x : P(X = x) > 0}",
+        "mathTex": "S=\\{x:P(X=x)>0\\}"
       },
       {
         "title": "Find any missing constant",
         "body": "Add all masses and set their sum equal to 1. Check every mass is nonnegative.",
-        "formula": "Σ p(x) = 1"
+        "formula": "Σ p(x) = 1",
+        "mathTex": "\\sum_{x\\in S}p(x)=1"
       },
       {
         "title": "Translate the event",
         "body": "Write the allowed values satisfying the requested inequality before adding anything.",
-        "formula": "X ≥ a → retain each support value x ≥ a"
+        "formula": "X ≥ a → retain each support value x ≥ a",
+        "mathTex": "X\\ge a\\Longrightarrow\\text{retain each support value }x\\ge a"
       },
       {
         "title": "Add their masses",
         "body": "Different values of one random variable cannot happen together, so their probabilities add.",
-        "formula": "P(X ∈ A) = Σ over x ∈ A of p(x)"
+        "formula": "P(X ∈ A) = Σ over x ∈ A of p(x)",
+        "mathTex": "P(X\\in A)=\\sum_{x\\in A}p(x)"
       }
     ],
     "refs": [
@@ -60,22 +64,26 @@
       {
         "title": "Read the CDF carefully",
         "body": "For F(x), choose the piece whose interval contains x. At a jump use the value on the right because the CDF includes X = x.",
-        "formula": "F(x) = P(X ≤ x)"
+        "formula": "F(x) = P(X ≤ x)",
+        "mathTex": "F(x)=P(X\\le x)"
       },
       {
         "title": "Recover point masses if useful",
         "body": "Subtract the cumulative probability just before a jump from the value at the jump.",
-        "formula": "P(X = x) = F(x) − F(x⁻)"
+        "formula": "P(X = x) = F(x) − F(x⁻)",
+        "mathTex": "P(X=x)=F(x)-F(x^-)"
       },
       {
         "title": "Match the endpoints",
         "body": "Exclude a lower endpoint with F(a); include it by subtracting F(a⁻).",
-        "formula": "P(a < X ≤ b) = F(b) − F(a); P(a ≤ X ≤ b) = F(b) − F(a⁻)"
+        "formula": "P(a < X ≤ b) = F(b) − F(a); P(a ≤ X ≤ b) = F(b) − F(a⁻)",
+        "mathTex": "\\begin{aligned}P(a<X\\le b)&=F(b)-F(a) \\\\ P(a\\le X\\le b)&=F(b)-F(a^-)\\end{aligned}"
       },
       {
         "title": "Handle tails with a complement",
         "body": "To include a discrete lower endpoint, subtract only the mass strictly below it. For integer X, F(a⁻) = F(a − 1).",
-        "formula": "P(X > a) = 1 − F(a); P(X ≥ a) = 1 − F(a⁻)"
+        "formula": "P(X > a) = 1 − F(a); P(X ≥ a) = 1 − F(a⁻)",
+        "mathTex": "\\begin{aligned}P(X>a)&=1-F(a) \\\\ P(X\\ge a)&=1-F(a^-)\\end{aligned}"
       }
     ],
     "refs": [
@@ -113,22 +121,26 @@
       {
         "title": "Write the support and masses",
         "body": "If supplied a CDF, first recover each mass from its jump.",
-        "formula": "p(x) = F(x) − F(x⁻)"
+        "formula": "p(x) = F(x) − F(x⁻)",
+        "mathTex": "p(x)=F(x)-F(x^-)"
       },
       {
         "title": "Map every support value",
         "body": "Evaluate g(x) for each possible x. Do not lose values that map to the same answer.",
-        "formula": "x → g(x)"
+        "formula": "x → g(x)",
+        "mathTex": "x\\longmapsto g(x)"
       },
       {
         "title": "Select the requested event",
         "body": "Retain each x whose g(x) satisfies the condition on Y.",
-        "formula": "{Y ∈ A} = {X : g(X) ∈ A}"
+        "formula": "{Y ∈ A} = {X : g(X) ∈ A}",
+        "mathTex": "\\{Y\\in A\\}=\\{X:g(X)\\in A\\}"
       },
       {
         "title": "Add and, if needed, condition",
         "body": "Add the selected X masses. If given B, keep only selected values also in B and divide by P(B).",
-        "formula": "P(Y ∈ A | B) = Σ selected masses in B / P(B)"
+        "formula": "P(Y ∈ A | B) = Σ selected masses in B / P(B)",
+        "mathTex": "P(Y\\in A\\mid B)=\\frac{\\sum_{\\text{selected }x\\text{ in }B}p(x)}{P(B)}"
       }
     ],
     "refs": [
@@ -171,22 +183,26 @@
       {
         "title": "Check all four assumptions",
         "body": "Success is whichever event you are counting; it can be an undesirable event such as a defect.",
-        "formula": "X ~ Bin(n, p)"
+        "formula": "X ~ Bin(n, p)",
+        "mathTex": "X\\sim\\operatorname{Bin}(n,p)"
       },
       {
         "title": "Write the single-count probability",
         "body": "Choose which k trials succeed, multiply their success probabilities, and multiply failures for the remaining trials.",
-        "formula": "b(k) = C(n,k)pᵏ(1 − p)ⁿ⁻ᵏ"
+        "formula": "b(k) = C(n,k)pᵏ(1 − p)ⁿ⁻ᵏ",
+        "mathTex": "b(k)=\\binom{n}{k}p^k(1-p)^{n-k}"
       },
       {
         "title": "Translate the range",
         "body": "Sum the masses for the integer counts in the event. For at least one, subtract zero successes.",
-        "formula": "P(a ≤ X ≤ b) = Σ from k=a to b b(k); P(X ≥ 1) = 1 − (1 − p)ⁿ"
+        "formula": "P(a ≤ X ≤ b) = Σ from k=a to b b(k); P(X ≥ 1) = 1 − (1 − p)ⁿ",
+        "mathTex": "\\begin{aligned}P(a\\le X\\le b)&=\\sum_{k=a}^{b}b(k) \\\\ P(X\\ge1)&=1-(1-p)^n\\end{aligned}"
       },
       {
         "title": "Apply any given condition",
         "body": "The denominator is the probability of the stated given event. Intersect the requested event with it before summing.",
-        "formula": "P(A | B) = P(A ∩ B) / P(B)"
+        "formula": "P(A | B) = P(A ∩ B) / P(B)",
+        "mathTex": "P(A\\mid B)=\\frac{P(A\\cap B)}{P(B)}"
       }
     ],
     "refs": [
@@ -230,22 +246,26 @@
       {
         "title": "Confirm what is counted",
         "body": "This course counts the successful trial, rather than only failures before success.",
-        "formula": "T ∈ {1,2,3,…}, q = 1 − p"
+        "formula": "T ∈ {1,2,3,…}, q = 1 − p",
+        "mathTex": "\\begin{aligned}T&\\in\\{1,2,3,\\ldots\\} \\\\ q&=1-p\\end{aligned}"
       },
       {
         "title": "Describe the failure sequence",
         "body": "First success at k requires k − 1 failures then one success. Waiting beyond n requires n failures.",
-        "formula": "P(T = k) = qᵏ⁻¹p; P(T > n) = qⁿ"
+        "formula": "P(T = k) = qᵏ⁻¹p; P(T > n) = qⁿ",
+        "mathTex": "\\begin{aligned}P(T=k)&=q^{k-1}p \\\\ P(T>n)&=q^n\\end{aligned}"
       },
       {
         "title": "Convert ranges to tails",
         "body": "For an inclusive range a to b, survive through a − 1 attempts and subtract surviving through b.",
-        "formula": "P(a ≤ T ≤ b) = qᵃ⁻¹ − qᵇ"
+        "formula": "P(a ≤ T ≤ b) = qᵃ⁻¹ − qᵇ",
+        "mathTex": "P(a\\le T\\le b)=q^{a-1}-q^b"
       },
       {
         "title": "Process the given event",
         "body": "After known failures, the future is fresh if p stays constant. A condition such as T ≤ b is instead a truncation and requires a probability ratio.",
-        "formula": "P(T > s+t | T > s) = qᵗ; P(A | B) = P(A ∩ B) / P(B)"
+        "formula": "P(T > s+t | T > s) = qᵗ; P(A | B) = P(A ∩ B) / P(B)",
+        "mathTex": "\\begin{aligned}P(T>s+t\\mid T>s)&=q^t \\\\ P(A\\mid B)&=\\frac{P(A\\cap B)}{P(B)}\\end{aligned}"
       }
     ],
     "refs": [
@@ -289,22 +309,26 @@
       {
         "title": "Separate ordinary and guaranteed attempts",
         "body": "Before the cap use p; at the cap success has probability 1.",
-        "formula": "P(T = k) = qᵏ⁻¹p for k < m"
+        "formula": "P(T = k) = qᵏ⁻¹p for k < m",
+        "mathTex": "P(T=k)=q^{k-1}p\\quad\\text{for }k<m"
       },
       {
         "title": "Reach the guaranteed attempt",
         "body": "The event T = m requires all m − 1 earlier ordinary attempts to fail.",
-        "formula": "P(T = m) = qᵐ⁻¹"
+        "formula": "P(T = m) = qᵐ⁻¹",
+        "mathTex": "P(T=m)=q^{m-1}"
       },
       {
         "title": "Use the given information",
         "body": "If the first s attempts are known failures, cancel them from numerator and denominator.",
-        "formula": "P(T = m | T > s) = qᵐ⁻¹ / qˢ = qᵐ⁻¹⁻ˢ"
+        "formula": "P(T = m | T > s) = qᵐ⁻¹ / qˢ = qᵐ⁻¹⁻ˢ",
+        "mathTex": "\\begin{aligned}P(T=m\\mid T>s)&=\\frac{q^{m-1}}{q^s} \\\\ &=q^{m-1-s}\\end{aligned}"
       },
       {
         "title": "Count only failures that remain",
         "body": "Do not multiply by p on the guaranteed attempt because its success chance is 1.",
-        "formula": "Required future failures = m − 1 − s"
+        "formula": "Required future failures = m − 1 − s",
+        "mathTex": "\\text{Required future failures}=m-1-s"
       }
     ],
     "refs": [
@@ -337,22 +361,26 @@
       {
         "title": "Match the units",
         "body": "Convert the interval into the rate units before multiplying.",
-        "formula": "λ = rate × interval length"
+        "formula": "λ = rate × interval length",
+        "mathTex": "\\lambda=\\text{rate}\\times\\text{interval length}"
       },
       {
         "title": "Write one count probability",
         "body": "The count k is a nonnegative integer and 0! = 1.",
-        "formula": "P(X = k) = e⁻λ λᵏ / k!"
+        "formula": "P(X = k) = e⁻λ λᵏ / k!",
+        "mathTex": "P(X=k)=\\frac{e^{-\\lambda}\\lambda^k}{k!}"
       },
       {
         "title": "Sum a short range or use a complement",
         "body": "For at least a small number, subtract counts below it; this avoids an infinite sum.",
-        "formula": "P(X ≥ r) = 1 − Σ from k=0 to r−1 e⁻λ λᵏ/k!"
+        "formula": "P(X ≥ r) = 1 − Σ from k=0 to r−1 e⁻λ λᵏ/k!",
+        "mathTex": "P(X\\ge r)=1-\\sum_{k=0}^{r-1}\\frac{e^{-\\lambda}\\lambda^k}{k!}"
       },
       {
         "title": "Apply any condition",
         "body": "If given X ≥ 1, divide the desired positive-count mass by 1 − e⁻λ.",
-        "formula": "P(a ≤ X ≤ b | X ≥ 1) = Σ from k=a to b P(X = k) / (1 − e⁻λ), a ≥ 1"
+        "formula": "P(a ≤ X ≤ b | X ≥ 1) = Σ from k=a to b P(X = k) / (1 − e⁻λ), a ≥ 1",
+        "mathTex": "\\begin{aligned}P(a\\le X\\le b\\mid X\\ge1)&=\\frac{\\sum_{k=a}^{b}P(X=k)}{1-e^{-\\lambda}} \\\\ &\\text{for }a\\ge1\\end{aligned}"
       }
     ],
     "refs": [
@@ -395,22 +423,26 @@
       {
         "title": "State the exact model",
         "body": "Do not relabel a fixed-trial experiment as exactly Poisson.",
-        "formula": "X ~ Bin(n,p) exactly"
+        "formula": "X ~ Bin(n,p) exactly",
+        "mathTex": "X\\sim\\operatorname{Bin}(n,p)\\quad\\text{exactly}"
       },
       {
         "title": "Check whether approximation is sensible",
         "body": "The lecture gives n ≥ 50 and p ≤ 0.10 as a classroom guide, with np not too large; this is not a universal cutoff.",
-        "formula": "Large n, small p"
+        "formula": "Large n, small p",
+        "mathTex": "\\text{Large }n,\\quad\\text{small }p"
       },
       {
         "title": "Preserve the expected count",
         "body": "Use np for the new Poisson parameter, rather than p alone.",
-        "formula": "λ = np; Y ~ Pois(λ)"
+        "formula": "λ = np; Y ~ Pois(λ)",
+        "mathTex": "\\begin{aligned}\\lambda&=np \\\\ Y&\\sim\\operatorname{Pois}(\\lambda)\\end{aligned}"
       },
       {
         "title": "Use the same event and mark approximation",
         "body": "Evaluate the requested count or range under Y. For a conditional probability, approximate both numerator and denominator consistently.",
-        "formula": "P(X ∈ A) ≈ P(Y ∈ A)"
+        "formula": "P(X ∈ A) ≈ P(Y ∈ A)",
+        "mathTex": "P(X\\in A)\\approx P(Y\\in A)"
       }
     ],
     "refs": [
@@ -449,17 +481,20 @@
       {
         "title": "Choose the event called success",
         "body": "Success simply means the event coded 1, whether or not it is desirable.",
-        "formula": "X = 1 for success; X = 0 for failure"
+        "formula": "X = 1 for success; X = 0 for failure",
+        "mathTex": "\\begin{aligned}X&=1\\quad\\text{for success} \\\\ X&=0\\quad\\text{for failure}\\end{aligned}"
       },
       {
         "title": "Assign the success probability",
         "body": "Read p directly from the chance of the event coded 1.",
-        "formula": "P(X = 1) = p"
+        "formula": "P(X = 1) = p",
+        "mathTex": "P(X=1)=p"
       },
       {
         "title": "Complete the PMF",
         "body": "There are only two values, so the other mass is its complement.",
-        "formula": "P(X = 0) = 1 − p; X ~ Bernoulli(p)"
+        "formula": "P(X = 0) = 1 − p; X ~ Bernoulli(p)",
+        "mathTex": "\\begin{aligned}P(X=0)&=1-p \\\\ X&\\sim\\operatorname{Bernoulli}(p)\\end{aligned}"
       }
     ],
     "refs": [

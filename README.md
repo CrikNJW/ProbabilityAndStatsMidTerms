@@ -5,7 +5,7 @@ A static, source-based study desk for the CSD3241 midterm on 13 October 2026. Ex
 ## Use
 
 - **Question bank:** filter by lecture week, topic, source type, specific document, difficulty, and progress. Every question identifies its original document, PDF page, and question number.
-- **Guided practice:** answer first, reveal recognition cues, then follow the reason and calculation at each step. Reference buttons open the actual lecture page in a side panel.
+- **Guided practice:** answer first, reveal recognition cues, then follow the reason and calculation at each step. Workings and method recipes use typeset mathematical equations, with fractions, powers, summations, integrals, and aligned calculation lines. Reference buttons open the actual lecture page in a side panel.
 - **Method playbook:** learn the reusable process and common traps for each method.
 - **Lecture library:** original lecture, formula-sheet, and selected practice-source pages rendered as images for consistent tablet support. References use PDF page numbers. The unabridged Week 5 lecture marks MGF pages outside scope.
 - **Scratchpads:** draw with a stylus, touch, or mouse; choose pen color, erase, undo, export PNG, and add typed notes. Saved per question in this browser.
@@ -28,7 +28,9 @@ Open `http://127.0.0.1:4173/ProbabilityAndStatsMidTerms/`.
 npm test
 ```
 
-The validation checks content schema, unique IDs, source coverage, method links, slide assets, and the MGF exclusion. Numerical calculations were checked during content preparation; extracted source formulas were compared with rendered slides where ambiguous.
+The validation checks content schema, unique IDs, source coverage, method links, slide assets, and the MGF exclusion. It also parses every typeset expression and checks that mathematical presentation changes preserve all original question text, numbers, answers, references, and IDs. Numerical calculations were checked during content preparation; extracted source formulas were compared with rendered slides where ambiguous.
+
+KaTeX 0.19.0 and its fonts are bundled in the static site, so equations need no external CDN. To refresh these assets during development, run `npm ci` followed by `npm run vendor-math`. This is optional for running or hosting the site; the committed assets are ready to use.
 
 ## GitHub Pages
 

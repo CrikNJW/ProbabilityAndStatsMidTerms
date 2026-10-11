@@ -12,22 +12,26 @@
       {
         "title": "Identify the support",
         "body": "The support is the interval where the density can be nonzero. Use it as the integration limits.",
-        "formula": "f(x)=0 outside the stated interval"
+        "formula": "f(x)=0 outside the stated interval",
+        "mathTex": "f(x)=0\\quad\\text{outside the stated interval}"
       },
       {
         "title": "Check the sign",
         "body": "Show that every factor is nonnegative on the support. A total area of 1 alone is insufficient.",
-        "formula": "f(x) ≥ 0"
+        "formula": "f(x) ≥ 0",
+        "mathTex": "f(x)\\ge0"
       },
       {
         "title": "Set total area to 1",
         "body": "Pull a constant outside the integral. Find an antiderivative, evaluate upper minus lower, and solve for c.",
-        "formula": "1=∫ f(x) dx=c∫ h(x) dx; c=1/∫ h(x) dx"
+        "formula": "1=∫ f(x) dx=c∫ h(x) dx; c=1/∫ h(x) dx",
+        "mathTex": "\\begin{aligned}1 &= \\int f(x)\\,\\mathrm dx \\\\ &= c\\int h(x)\\,\\mathrm dx \\\\ c &= \\frac1{\\int h(x)\\,\\mathrm dx}\\end{aligned}"
       },
       {
         "title": "Check the result",
         "body": "Substitute c back and verify sign and total area.",
-        "formula": "∫ f(x) dx=1"
+        "formula": "∫ f(x) dx=1",
+        "mathTex": "\\int f(x)\\,\\mathrm dx=1"
       }
     ],
     "refs": [
@@ -60,22 +64,26 @@
       {
         "title": "Write the event as an interval",
         "body": "Translate words such as between, more than, and within into inequalities.",
-        "formula": "a < X ≤ b"
+        "formula": "a < X ≤ b",
+        "mathTex": "a<X\\le b"
       },
       {
         "title": "Intersect with support",
         "body": "Values outside the support contribute no probability. Split at changes in the PDF if needed.",
-        "formula": "[a,b] ∩ support"
+        "formula": "[a,b] ∩ support",
+        "mathTex": "[a,b]\\cap\\text{support}"
       },
       {
         "title": "Integrate the density",
         "body": "Find area using an antiderivative H.",
-        "formula": "P(a<X≤b)=∫ₐᵇ f(x) dx=H(b)−H(a)"
+        "formula": "P(a<X≤b)=∫ₐᵇ f(x) dx=H(b)−H(a)",
+        "mathTex": "\\begin{aligned}P(a<X\\le b) &= \\int_a^b f(x)\\,\\mathrm dx \\\\ &= H(b)-H(a)\\end{aligned}"
       },
       {
         "title": "Check the size",
         "body": "The result must lie between 0 and 1. Endpoints do not change a continuous probability.",
-        "formula": "P(X=x)=0"
+        "formula": "P(X=x)=0",
+        "mathTex": "P(X=x)=0"
       }
     ],
     "refs": [
@@ -109,22 +117,26 @@
       {
         "title": "Include outer pieces",
         "body": "Before the support the CDF is 0; after it the CDF is 1.",
-        "formula": "F(x)=0 below support; F(x)=1 above support"
+        "formula": "F(x)=0 below support; F(x)=1 above support",
+        "mathTex": "\\begin{aligned}F(x) &= 0\\quad\\text{below support} \\\\ F(x) &= 1\\quad\\text{above support}\\end{aligned}"
       },
       {
         "title": "Accumulate area inside",
         "body": "Integrate from the lower support endpoint to x; use a dummy variable t.",
-        "formula": "F(x)=∫lowerˣ f(t) dt"
+        "formula": "F(x)=∫lowerˣ f(t) dt",
+        "mathTex": "F(x)=\\int_{\\text{lower}}^x f(t)\\,\\mathrm dt"
       },
       {
         "title": "Use the correct direction",
         "body": "Integrate f to get F. Differentiate F to get f where smooth.",
-        "formula": "f(x)=F′(x)"
+        "formula": "f(x)=F′(x)",
+        "mathTex": "f(x)=F'(x)"
       },
       {
         "title": "Answer the event",
         "body": "Subtract CDF values for intervals or set F(m)=0.5 for a median.",
-        "formula": "P(a<X≤b)=F(b)−F(a)"
+        "formula": "P(a<X≤b)=F(b)−F(a)",
+        "mathTex": "P(a<X\\le b)=F(b)-F(a)"
       }
     ],
     "refs": [
@@ -162,22 +174,26 @@
       {
         "title": "Identify the full interval",
         "body": "Express the endpoints in matching units.",
-        "formula": "X∼Uniform(a,b); f(x)=1/(b−a)"
+        "formula": "X∼Uniform(a,b); f(x)=1/(b−a)",
+        "mathTex": "\\begin{aligned}X\\sim\\operatorname{Uniform}(a,b) \\\\ f(x) &= \\frac1{b-a}\\end{aligned}"
       },
       {
         "title": "Restrict if conditioned",
         "body": "Given information removes impossible values from the sample space.",
-        "formula": "P(A|B)=length(A∩B)/length(B)"
+        "formula": "P(A|B)=length(A∩B)/length(B)",
+        "mathTex": "P(A\\mid B)=\\frac{\\operatorname{length}(A\\cap B)}{\\operatorname{length}(B)}"
       },
       {
         "title": "Measure favorable length",
         "body": "For disjoint favorable intervals add their lengths.",
-        "formula": "P(c≤X≤d)=(d−c)/(b−a)"
+        "formula": "P(c≤X≤d)=(d−c)/(b−a)",
+        "mathTex": "P(c\\le X\\le d)=\\frac{d-c}{b-a}"
       },
       {
         "title": "Interpret",
         "body": "The ratio lies between 0 and 1 and represents the eligible fraction.",
-        "formula": "0≤P≤1"
+        "formula": "0≤P≤1",
+        "mathTex": "0\\le P\\le1"
       }
     ],
     "refs": [
@@ -215,22 +231,26 @@
       {
         "title": "Read μ and σ",
         "body": "The second normal parameter is variance. Take its square root if it is supplied as a number.",
-        "formula": "σ=√(σ²)"
+        "formula": "σ=√(σ²)",
+        "mathTex": "\\sigma=\\sqrt{\\sigma^2}"
       },
       {
         "title": "Standardize every boundary",
         "body": "Subtract the mean and divide by standard deviation.",
-        "formula": "z=(x−μ)/σ"
+        "formula": "z=(x−μ)/σ",
+        "mathTex": "z=\\frac{x-\\mu}{\\sigma}"
       },
       {
         "title": "Read the left-tail table",
         "body": "The supplied table is Φ(z)=P(Z≤z). For negative z, use symmetry.",
-        "formula": "Φ(−z)=1−Φ(z)"
+        "formula": "Φ(−z)=1−Φ(z)",
+        "mathTex": "\\Phi(-z)=1-\\Phi(z)"
       },
       {
         "title": "Match the event",
         "body": "Use the left tail, its complement, or the difference of two left tails.",
-        "formula": "P(X>b)=1−Φ(z_b); P(a<X<b)=Φ(z_b)−Φ(z_a)"
+        "formula": "P(X>b)=1−Φ(z_b); P(a<X<b)=Φ(z_b)−Φ(z_a)",
+        "mathTex": "\\begin{aligned}P(X>b) &= 1-\\Phi(z_b) \\\\ P(a<X<b) &= \\Phi(z_b)-\\Phi(z_a)\\end{aligned}"
       }
     ],
     "refs": [
@@ -269,22 +289,26 @@
       {
         "title": "Convert to a left-tail probability",
         "body": "A right-tail fraction α means the left-tail fraction is 1−α.",
-        "formula": "P(X≤x)=p"
+        "formula": "P(X≤x)=p",
+        "mathTex": "P(X\\le x)=p"
       },
       {
         "title": "Find the matching z",
         "body": "Locate p in the table body; its row and column give z. Interpolation or a supplied z may be used.",
-        "formula": "Φ(z_p)=p"
+        "formula": "Φ(z_p)=p",
+        "mathTex": "\\Phi(z_p)=p"
       },
       {
         "title": "Undo standardization",
         "body": "Multiply z by σ and add μ to return to the original units.",
-        "formula": "x=μ+σ z_p"
+        "formula": "x=μ+σ z_p",
+        "mathTex": "x=\\mu+\\sigma z_p"
       },
       {
         "title": "Check its position",
         "body": "A percentile above 50% should lie above the mean. If rounding a guaranteed time limit, round upward.",
-        "formula": "p>0.5 ⇒ x>μ"
+        "formula": "p>0.5 ⇒ x>μ",
+        "mathTex": "\\begin{aligned}p>0.5 \\\\ \\Rightarrow\\ x>\\mu\\end{aligned}"
       }
     ],
     "refs": [
@@ -322,22 +346,26 @@
       {
         "title": "Match units",
         "body": "Convert rate or duration so λt is dimensionless.",
-        "formula": "λ per minute = λ per hour /60"
+        "formula": "λ per minute = λ per hour /60",
+        "mathTex": "\\lambda\\text{ per minute}=\\frac{\\lambda\\text{ per hour}}{60}"
       },
       {
         "title": "Choose the event formula",
         "body": "More than is survival; within is a CDF.",
-        "formula": "P(T>t)=e^(−λt); P(T≤t)=1−e^(−λt)"
+        "formula": "P(T>t)=e^(−λt); P(T≤t)=1−e^(−λt)",
+        "mathTex": "\\begin{aligned}P(T>t) &= e^{-\\lambda t} \\\\ P(T\\le t) &= 1-e^{-\\lambda t}\\end{aligned}"
       },
       {
         "title": "For between, subtract tails",
         "body": "The probability surviving a minus surviving b is the interval area.",
-        "formula": "P(a<T≤b)=e^(−λa)−e^(−λb)"
+        "formula": "P(a<T≤b)=e^(−λa)−e^(−λb)",
+        "mathTex": "P(a<T\\le b)=e^{-\\lambda a}-e^{-\\lambda b}"
       },
       {
         "title": "Connect waiting and counts",
         "body": "No arrival during t is the same event as waiting past t.",
-        "formula": "N(t)∼Poisson(λt); P(N(t)=0)=P(T>t)"
+        "formula": "N(t)∼Poisson(λt); P(N(t)=0)=P(T>t)",
+        "mathTex": "\\begin{aligned}N(t)\\sim\\operatorname{Poisson}(\\lambda t) \\\\ P(N(t)=0) &= P(T>t)\\end{aligned}"
       }
     ],
     "refs": [
@@ -380,22 +408,26 @@
       {
         "title": "Separate elapsed and additional time",
         "body": "The total threshold is s+t; the new wait is t.",
-        "formula": "t=(total target)−s"
+        "formula": "t=(total target)−s",
+        "mathTex": "t=(\\text{total target})-s"
       },
       {
         "title": "Apply memorylessness",
         "body": "Elapsed time does not alter the additional exponential wait.",
-        "formula": "P(T>s+t|T>s)=P(T>t)"
+        "formula": "P(T>s+t|T>s)=P(T>t)",
+        "mathTex": "P(T>s+t\\mid T>s)=P(T>t)"
       },
       {
         "title": "Evaluate the new survival probability",
         "body": "Keep the rate and extra duration in matching units.",
-        "formula": "e^(−λt)"
+        "formula": "e^(−λt)",
+        "mathTex": "e^{-\\lambda t}"
       },
       {
         "title": "Check assumptions",
         "body": "Aging or time-varying rates can invalidate memorylessness.",
-        "formula": "Constant event rate is required"
+        "formula": "Constant event rate is required",
+        "mathTex": "\\text{Constant event rate is required}"
       }
     ],
     "refs": [
@@ -428,17 +460,20 @@
       {
         "title": "Check support",
         "body": "Ask whether outcomes are counts, real measurements, bounded locations, or nonnegative waiting times.",
-        "formula": "Uniform: [a,b]; Normal: ℝ; Exponential: [0,∞)"
+        "formula": "Uniform: [a,b]; Normal: ℝ; Exponential: [0,∞)",
+        "mathTex": "\\begin{aligned}\\text{Uniform: }[a,b] \\\\ \\text{Normal: }\\mathbb R \\\\ \\text{Exponential: }[0,\\infty)\\end{aligned}"
       },
       {
         "title": "Check shape",
         "body": "Flat, symmetric, or right-skewed shapes suggest different models.",
-        "formula": "Uniform flat; normal bell-shaped; exponential decreasing"
+        "formula": "Uniform flat; normal bell-shaped; exponential decreasing",
+        "mathTex": "\\text{Uniform flat; normal bell-shaped; exponential decreasing}"
       },
       {
         "title": "Check assumptions",
         "body": "Equal lengths, small additive effects, or constant independent arrival rates must be plausible.",
-        "formula": "Model assumptions must match the context"
+        "formula": "Model assumptions must match the context",
+        "mathTex": "\\text{Model assumptions must match the context}"
       }
     ],
     "refs": [
@@ -476,22 +511,26 @@
       {
         "title": "Build a valid table",
         "body": "List all values and probabilities; probabilities must sum to 1.",
-        "formula": "Σp(x)=1"
+        "formula": "Σp(x)=1",
+        "mathTex": "\\sum_xp(x)=1"
       },
       {
         "title": "Weight each value",
         "body": "More likely values contribute more to the average.",
-        "formula": "x × p(x)"
+        "formula": "x × p(x)",
+        "mathTex": "x\\times p(x)"
       },
       {
         "title": "Add the contributions",
         "body": "Include negative values and any entry cost.",
-        "formula": "E[X]=Σ x p(x)"
+        "formula": "E[X]=Σ x p(x)",
+        "mathTex": "\\mathbb E[X]=\\sum_xx\\,p(x)"
       },
       {
         "title": "Interpret the mean",
         "body": "The mean is a long-run average, not necessarily a possible or guaranteed outcome.",
-        "formula": "E[a+bX]=a+bE[X]"
+        "formula": "E[a+bX]=a+bE[X]",
+        "mathTex": "\\mathbb E[a+bX]=a+b\\mathbb E[X]"
       }
     ],
     "refs": [
@@ -529,22 +568,26 @@
       {
         "title": "Normalize the density",
         "body": "If an unknown c is present, find it using total area 1.",
-        "formula": "∫ f(x) dx=1"
+        "formula": "∫ f(x) dx=1",
+        "mathTex": "\\int f(x)\\,\\mathrm dx=1"
       },
       {
         "title": "Choose the moment",
         "body": "For the first moment use x; for the second moment use x².",
-        "formula": "E[X]=∫x f(x)dx; E[X²]=∫x² f(x)dx"
+        "formula": "E[X]=∫x f(x)dx; E[X²]=∫x² f(x)dx",
+        "mathTex": "\\begin{aligned}\\mathbb E[X] &= \\int x f(x)\\,\\mathrm dx \\\\ \\mathbb E[X^2] &= \\int x^2 f(x)\\,\\mathrm dx\\end{aligned}"
       },
       {
         "title": "Integrate over support",
         "body": "Use the same support as the PDF and evaluate upper minus lower.",
-        "formula": "∫ₐᵇ x^k f(x) dx"
+        "formula": "∫ₐᵇ x^k f(x) dx",
+        "mathTex": "\\int_a^b x^k f(x)\\,\\mathrm dx"
       },
       {
         "title": "Check units and range",
         "body": "E[X] lies within bounded support; E[X²] has squared units.",
-        "formula": "μ=E[X]"
+        "formula": "μ=E[X]",
+        "mathTex": "\\mu=\\mathbb E[X]"
       }
     ],
     "refs": [
@@ -582,22 +625,26 @@
       {
         "title": "Compute the mean",
         "body": "For discrete values use weighted sums; for continuous values use density integrals.",
-        "formula": "μ=E[X]"
+        "formula": "μ=E[X]",
+        "mathTex": "\\mu=\\mathbb E[X]"
       },
       {
         "title": "Compute the second raw moment",
         "body": "Square each possible value before weighting.",
-        "formula": "E[X²]=Σx²p(x) or ∫x²f(x)dx"
+        "formula": "E[X²]=Σx²p(x) or ∫x²f(x)dx",
+        "mathTex": "\\mathbb E[X^2]=\\sum_xx^2p(x)\\quad\\text{or}\\quad\\int x^2f(x)\\,\\mathrm dx"
       },
       {
         "title": "Subtract the squared mean",
         "body": "This removes location and leaves spread around the mean.",
-        "formula": "Var(X)=E[X²]−μ²"
+        "formula": "Var(X)=E[X²]−μ²",
+        "mathTex": "\\operatorname{Var}(X)=\\mathbb E[X^2]-\\mu^2"
       },
       {
         "title": "Take a square root if requested",
         "body": "Variance has squared units; standard deviation has original units.",
-        "formula": "σ=√Var(X)"
+        "formula": "σ=√Var(X)",
+        "mathTex": "\\sigma=\\sqrt{\\operatorname{Var}(X)}"
       }
     ],
     "refs": [
@@ -635,22 +682,26 @@
       {
         "title": "Write the function",
         "body": "Identify exactly what is being paid or measured at each outcome.",
-        "formula": "Y=g(X)"
+        "formula": "Y=g(X)",
+        "mathTex": "Y=g(X)"
       },
       {
         "title": "Transform before averaging",
         "body": "For a table compute g(x) at every listed x. For a density multiply g(x) by f(x).",
-        "formula": "E[g(X)]=Σg(x)p(x) or ∫g(x)f(x)dx"
+        "formula": "E[g(X)]=Σg(x)p(x) or ∫g(x)f(x)dx",
+        "mathTex": "\\mathbb E[g(X)]=\\sum_xg(x)p(x)\\quad\\text{or}\\quad\\int g(x)f(x)\\,\\mathrm dx"
       },
       {
         "title": "Use linearity for polynomials",
         "body": "Separate constant, linear, and quadratic terms into known moments.",
-        "formula": "E[a+bX+cX²]=a+bE[X]+cE[X²]"
+        "formula": "E[a+bX+cX²]=a+bE[X]+cE[X²]",
+        "mathTex": "\\mathbb E[a+bX+cX^2]=a+b\\mathbb E[X]+c\\mathbb E[X^2]"
       },
       {
         "title": "Compare carefully",
         "body": "Replacing X by its mean loses the variance contribution in a quadratic.",
-        "formula": "E[X²]=(E[X])²+Var(X)"
+        "formula": "E[X²]=(E[X])²+Var(X)",
+        "mathTex": "\\mathbb E[X^2]=(\\mathbb E[X])^2+\\operatorname{Var}(X)"
       }
     ],
     "refs": [
@@ -688,22 +739,26 @@
       {
         "title": "Identify the shift and scale",
         "body": "Write the transformation as a+bX.",
-        "formula": "Y=a+bX"
+        "formula": "Y=a+bX",
+        "mathTex": "Y=a+bX"
       },
       {
         "title": "Transform or reverse the mean",
         "body": "Use the first power of b for expectation.",
-        "formula": "E[Y]=a+bE[X]"
+        "formula": "E[Y]=a+bE[X]",
+        "mathTex": "\\mathbb E[Y]=a+b\\mathbb E[X]"
       },
       {
         "title": "Transform or reverse variance",
         "body": "Use the square of b; the constant a contributes no variance.",
-        "formula": "Var(Y)=b²Var(X)"
+        "formula": "Var(Y)=b²Var(X)",
+        "mathTex": "\\operatorname{Var}(Y)=b^2\\operatorname{Var}(X)"
       },
       {
         "title": "If averaging squared distance",
         "body": "Distance from a target c includes spread plus squared bias.",
-        "formula": "E[(X−c)²]=Var(X)+(E[X]−c)²"
+        "formula": "E[(X−c)²]=Var(X)+(E[X]−c)²",
+        "mathTex": "\\mathbb E[(X-c)^2]=\\operatorname{Var}(X)+(\\mathbb E[X]-c)^2"
       }
     ],
     "refs": [
@@ -741,22 +796,26 @@
       {
         "title": "Combine means",
         "body": "Independence is unnecessary for this step.",
-        "formula": "E[aX+bY]=aE[X]+bE[Y]"
+        "formula": "E[aX+bY]=aE[X]+bE[Y]",
+        "mathTex": "\\mathbb E[aX+bY]=a\\mathbb E[X]+b\\mathbb E[Y]"
       },
       {
         "title": "Read dependence information",
         "body": "Independence gives covariance 0. Otherwise retain the covariance term.",
-        "formula": "Var(aX+bY)=a²Var(X)+b²Var(Y)+2abCov(X,Y)"
+        "formula": "Var(aX+bY)=a²Var(X)+b²Var(Y)+2abCov(X,Y)",
+        "mathTex": "\\begin{aligned}\\operatorname{Var}(aX+bY)&=a^2\\operatorname{Var}(X)\\\\&\\quad+b^2\\operatorname{Var}(Y)\\\\&\\quad+2ab\\operatorname{Cov}(X,Y)\\end{aligned}"
       },
       {
         "title": "Square weights for variance",
         "body": "For n independent identically distributed outcomes, multiply variance by n.",
-        "formula": "E[S_n]=nμ; Var(S_n)=nσ²"
+        "formula": "E[S_n]=nμ; Var(S_n)=nσ²",
+        "mathTex": "\\begin{aligned}\\mathbb E[S_n] &= n\\mu \\\\ \\operatorname{Var}(S_n) &= n\\sigma^2\\end{aligned}"
       },
       {
         "title": "Compute the standard deviation last",
         "body": "It is the square root of the total variance.",
-        "formula": "SD(S_n)=√n σ"
+        "formula": "SD(S_n)=√n σ",
+        "mathTex": "\\operatorname{SD}(S_n)=\\sqrt n\\,\\sigma"
       }
     ],
     "refs": [
@@ -799,17 +858,20 @@
       {
         "title": "Define the union",
         "body": "At least one means membership in A∪B∪C.",
-        "formula": "|A∪B∪C|"
+        "formula": "|A∪B∪C|",
+        "mathTex": "|A\\cup B\\cup C|"
       },
       {
         "title": "Correct overlap counts",
         "body": "Add singles, subtract all pair overlaps, then add the triple.",
-        "formula": "|A∪B∪C|=|A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|"
+        "formula": "|A∪B∪C|=|A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|",
+        "mathTex": "\\begin{aligned}|A\\cup B\\cup C|&=|A|+|B|+|C|\\\\&\\quad-|A\\cap B|-|A\\cap C|\\\\&\\quad-|B\\cap C|+|A\\cap B\\cap C|\\end{aligned}"
       },
       {
         "title": "Take the complement",
         "body": "Remove everyone using at least one from the full population.",
-        "formula": "none=N−|A∪B∪C|"
+        "formula": "none=N−|A∪B∪C|",
+        "mathTex": "\\text{none}=N-|A\\cup B\\cup C|"
       }
     ],
     "refs": [
@@ -836,17 +898,20 @@
       {
         "title": "Form one block",
         "body": "Collapse k designated items into one super-item.",
-        "formula": "n−k+1 objects"
+        "formula": "n−k+1 objects",
+        "mathTex": "n-k+1\\text{ objects}"
       },
       {
         "title": "Arrange all units",
         "body": "The block can occupy any unit position.",
-        "formula": "(n−k+1)!"
+        "formula": "(n−k+1)!",
+        "mathTex": "(n-k+1)!"
       },
       {
         "title": "Arrange inside the block",
         "body": "The k distinct designated items have k! orders.",
-        "formula": "total=(n−k+1)!k!"
+        "formula": "total=(n−k+1)!k!",
+        "mathTex": "\\text{total}=(n-k+1)!\\,k!"
       }
     ],
     "refs": [
@@ -883,22 +948,26 @@
       {
         "title": "Choose combinations",
         "body": "Sampling without replacement with no order uses C(n,r).",
-        "formula": "C(n,r)=n!/[r!(n−r)!]"
+        "formula": "C(n,r)=n!/[r!(n−r)!]",
+        "mathTex": "C(n,r)=\\frac{n!}{r!(n-r)!}"
       },
       {
         "title": "Count the conditional denominator",
         "body": "Subtract samples excluded by the given event.",
-        "formula": "eligible=total−excluded"
+        "formula": "eligible=total−excluded",
+        "mathTex": "\\text{eligible}=\\text{total}-\\text{excluded}"
       },
       {
         "title": "Count the numerator within the condition",
         "body": "For exactly two red and one blue multiply the separate choices.",
-        "formula": "C(R,2)C(B,1)"
+        "formula": "C(R,2)C(B,1)",
+        "mathTex": "\\binom R2\\binom B1"
       },
       {
         "title": "Divide",
         "body": "All unordered samples are equally likely, so counts give the conditional ratio.",
-        "formula": "P(A|B)=count(A∩B)/count(B)"
+        "formula": "P(A|B)=count(A∩B)/count(B)",
+        "mathTex": "P(A\\mid B)=\\frac{\\operatorname{count}(A\\cap B)}{\\operatorname{count}(B)}"
       }
     ],
     "refs": [
@@ -931,22 +1000,26 @@
       {
         "title": "Define the groups",
         "body": "D means having the condition; Dᶜ means not having it.",
-        "formula": "P(D)=prevalence"
+        "formula": "P(D)=prevalence",
+        "mathTex": "P(D)=\\text{prevalence}"
       },
       {
         "title": "Multiply within each group",
         "body": "Conditional independence allows two positive-test likelihoods to multiply.",
-        "formula": "P(++|D)=s²; P(++|Dᶜ)=f²"
+        "formula": "P(++|D)=s²; P(++|Dᶜ)=f²",
+        "mathTex": "\\begin{aligned}P(++\\mid D) &= s^2 \\\\ P(++\\mid D^c) &= f^2\\end{aligned}"
       },
       {
         "title": "Weight by prevalence",
         "body": "Compute joint positive probabilities in both groups.",
-        "formula": "P(D∩++)=P(D)s²"
+        "formula": "P(D∩++)=P(D)s²",
+        "mathTex": "P(D\\cap++)=P(D)s^2"
       },
       {
         "title": "Normalize with Bayes",
         "body": "Divide the condition-positive joint event by all ways of obtaining two positives.",
-        "formula": "P(D|++)=P(D)s²/[P(D)s²+P(Dᶜ)f²]"
+        "formula": "P(D|++)=P(D)s²/[P(D)s²+P(Dᶜ)f²]",
+        "mathTex": "P(D\\mid++)=\\frac{P(D)s^2}{P(D)s^2+P(D^c)f^2}"
       }
     ],
     "refs": [
@@ -979,22 +1052,26 @@
       {
         "title": "Set q=1−p",
         "body": "Surviving k attempts means k failures.",
-        "formula": "P(X>k)=q^k"
+        "formula": "P(X>k)=q^k",
+        "mathTex": "P(X>k)=q^k"
       },
       {
         "title": "Translate endpoints carefully",
         "body": "Including attempt a means X>a−1, while excluding after b means X>b.",
-        "formula": "P(a≤X≤b)=q^(a−1)−q^b"
+        "formula": "P(a≤X≤b)=q^(a−1)−q^b",
+        "mathTex": "P(a\\le X\\le b)=q^{a-1}-q^b"
       },
       {
         "title": "Apply the condition",
         "body": "Divide by its probability or reset after known failures.",
-        "formula": "P(A|B)=P(A∩B)/P(B); X>s ⇒ X−s is a fresh geometric wait"
+        "formula": "P(A|B)=P(A∩B)/P(B); X>s ⇒ X−s is a fresh geometric wait",
+        "mathTex": "\\begin{aligned}P(A\\mid B) &= \\frac{P(A\\cap B)}{P(B)} \\\\ X>s \\\\ \\Rightarrow\\ X-s\\text{ is a fresh geometric wait}\\end{aligned}"
       },
       {
         "title": "Check indexing",
         "body": "The first success trial count starts at 1, not 0.",
-        "formula": "P(X=1)=p"
+        "formula": "P(X=1)=p",
+        "mathTex": "P(X=1)=p"
       }
     ],
     "refs": [
@@ -1036,17 +1113,20 @@
       {
         "title": "Recover masses",
         "body": "Subtract the CDF immediately before each value from the CDF at that value.",
-        "formula": "P(X=x)=F(x)−F(x−)"
+        "formula": "P(X=x)=F(x)−F(x−)",
+        "mathTex": "P(X=x)=F(x)-F(x^-)"
       },
       {
         "title": "Apply the transformation",
         "body": "Make a table of x and g(x) to see which x values satisfy the requested Y event.",
-        "formula": "Y=g(X)"
+        "formula": "Y=g(X)",
+        "mathTex": "Y=g(X)"
       },
       {
         "title": "Restrict to the condition",
         "body": "Only x values allowed by the given event enter the denominator.",
-        "formula": "P(A|B)=Σeligible favorable p(x)/Σeligible p(x)"
+        "formula": "P(A|B)=Σeligible favorable p(x)/Σeligible p(x)",
+        "mathTex": "P(A\\mid B)=\\frac{\\sum_{\\text{eligible, favorable }x}p(x)}{\\sum_{\\text{eligible }x}p(x)}"
       }
     ],
     "refs": [
@@ -1083,22 +1163,26 @@
       {
         "title": "Identify n and p",
         "body": "Confirm fixed trials, independent outcomes, and constant p.",
-        "formula": "X∼Binomial(n,p)"
+        "formula": "X∼Binomial(n,p)",
+        "mathTex": "X\\sim\\operatorname{Binomial}(n,p)"
       },
       {
         "title": "Compute the favorable counts",
         "body": "Use the binomial PMF for each requested integer value.",
-        "formula": "P(X=j)=C(n,j)p^j(1−p)^(n−j)"
+        "formula": "P(X=j)=C(n,j)p^j(1−p)^(n−j)",
+        "mathTex": "P(X=j)=\\binom njp^j(1-p)^{n-j}"
       },
       {
         "title": "Compute the eligible probability",
         "body": "A lower-tail exclusion often gives a shorter calculation.",
-        "formula": "P(X≥k)=1−Σ(j<k)P(X=j)"
+        "formula": "P(X≥k)=1−Σ(j<k)P(X=j)",
+        "mathTex": "P(X\\ge k)=1-\\sum_{j<k}P(X=j)"
       },
       {
         "title": "Divide",
         "body": "The favorable event must also satisfy the condition.",
-        "formula": "P(A|B)=P(A∩B)/P(B)"
+        "formula": "P(A|B)=P(A∩B)/P(B)",
+        "mathTex": "P(A\\mid B)=\\frac{P(A\\cap B)}{P(B)}"
       }
     ],
     "refs": [
@@ -1135,22 +1219,26 @@
       {
         "title": "Scale the mean",
         "body": "Rate times duration gives expected count for this interval.",
-        "formula": "λ=rate×duration"
+        "formula": "λ=rate×duration",
+        "mathTex": "\\lambda=\\text{rate}\\times\\text{duration}"
       },
       {
         "title": "Use the count PMF",
         "body": "Insert λ and integer count j.",
-        "formula": "P(N=j)=e^(−λ)λ^j/j!"
+        "formula": "P(N=j)=e^(−λ)λ^j/j!",
+        "mathTex": "P(N=j)=\\frac{e^{-\\lambda}\\lambda^j}{j!}"
       },
       {
         "title": "Use complements for tails",
         "body": "At least one excludes only zero; at least three excludes 0,1,2.",
-        "formula": "P(N≥1)=1−e^(−λ)"
+        "formula": "P(N≥1)=1−e^(−λ)",
+        "mathTex": "P(N\\ge1)=1-e^{-\\lambda}"
       },
       {
         "title": "Condition if needed",
         "body": "Divide favorable probability by eligible probability.",
-        "formula": "P(A|N≥1)=P(A∩{N≥1})/[1−e^(−λ)]"
+        "formula": "P(A|N≥1)=P(A∩{N≥1})/[1−e^(−λ)]",
+        "mathTex": "P(A\\mid N\\ge1)=\\frac{P(A\\cap\\{N\\ge1\\})}{1-e^{-\\lambda}}"
       }
     ],
     "refs": [
@@ -1187,22 +1275,26 @@
       {
         "title": "Find no failures",
         "body": "Independence allows all survival probabilities to multiply.",
-        "formula": "P(none)=∏(1−p_i)"
+        "formula": "P(none)=∏(1−p_i)",
+        "mathTex": "P(\\text{none})=\\prod_i(1-p_i)"
       },
       {
         "title": "Take the complement",
         "body": "At least one is every case except none.",
-        "formula": "P(at least one)=1−P(none)"
+        "formula": "P(at least one)=1−P(none)",
+        "mathTex": "P(\\text{at least one})=1-P(\\text{none})"
       },
       {
         "title": "Enumerate exactly one",
         "body": "Each case has one failure and all other components surviving. These cases are disjoint.",
-        "formula": "P(exactly one)=Σ p_i∏(j≠i)(1−p_j)"
+        "formula": "P(exactly one)=Σ p_i∏(j≠i)(1−p_j)",
+        "mathTex": "P(\\text{exactly one})=\\sum_ip_i\\prod_{j\\ne i}(1-p_j)"
       },
       {
         "title": "Condition",
         "body": "Exactly one is a subset of at least one.",
-        "formula": "conditional=exactly-one probability / at-least-one probability"
+        "formula": "conditional=exactly-one probability / at-least-one probability",
+        "mathTex": "\\text{conditional}=\\frac{\\text{exactly-one probability}}{\\text{at-least-one probability}}"
       }
     ],
     "refs": [
@@ -1239,17 +1331,20 @@
       {
         "title": "List support values",
         "body": "Only stated integer values have probability.",
-        "formula": "x=0,1,…,n"
+        "formula": "x=0,1,…,n",
+        "mathTex": "x=0,1,\\ldots,n"
       },
       {
         "title": "Set total mass to 1",
         "body": "Sum h(x) and solve for c.",
-        "formula": "1=cΣh(x)"
+        "formula": "1=cΣh(x)",
+        "mathTex": "1=c\\sum_xh(x)"
       },
       {
         "title": "Sum the requested event",
         "body": "Add its point probabilities, or subtract excluded ones from 1.",
-        "formula": "P(X≥k)=cΣ(x≥k)h(x)"
+        "formula": "P(X≥k)=cΣ(x≥k)h(x)",
+        "mathTex": "P(X\\ge k)=c\\sum_{x\\ge k}h(x)"
       }
     ],
     "refs": [
@@ -1276,22 +1371,26 @@
       {
         "title": "Identify the parameter convention",
         "body": "Read the distribution name, support, and units. For N(μ,σ²), the second parameter is variance.",
-        "formula": "Exp(λ): λ is rate; Geometric(p): X=1,2,…"
+        "formula": "Exp(λ): λ is rate; Geometric(p): X=1,2,…",
+        "mathTex": "\\begin{aligned}\\operatorname{Exp}(\\lambda):\\ \\lambda\\text{ is rate} \\\\ \\operatorname{Geometric}(p):\\ X &= 1,2,\\ldots\\end{aligned}"
       },
       {
         "title": "Choose the matching row",
         "body": "Use the supplied formula sheet rather than integrating or summing from scratch.",
-        "formula": "U(a,b): mean=(a+b)/2, variance=(b−a)²/12; Exp(λ): mean=1/λ, variance=1/λ²"
+        "formula": "U(a,b): mean=(a+b)/2, variance=(b−a)²/12; Exp(λ): mean=1/λ, variance=1/λ²",
+        "mathTex": "\\begin{aligned}U(a,b):\\quad\\text{mean}&=\\frac{a+b}{2},\\\\\\text{variance}&=\\frac{(b-a)^2}{12}\\\\\\operatorname{Exp}(\\lambda):\\quad\\text{mean}&=\\frac1\\lambda,\\\\\\text{variance}&=\\frac1{\\lambda^2}\\end{aligned}"
       },
       {
         "title": "Substitute and take a square root if needed",
         "body": "Variance has squared units. SD returns to the original units.",
-        "formula": "SD=√variance"
+        "formula": "SD=√variance",
+        "mathTex": "\\operatorname{SD}=\\sqrt{\\text{variance}}"
       },
       {
         "title": "Check discrete formulas",
         "body": "Binomial counts fixed trials; geometric counts trials until first success; Poisson counts events in an interval.",
-        "formula": "Bin(n,p): mean=np, variance=np(1−p); Geom(p): mean=1/p, variance=(1−p)/p²; Pois(λ): mean=variance=λ"
+        "formula": "Bin(n,p): mean=np, variance=np(1−p); Geom(p): mean=1/p, variance=(1−p)/p²; Pois(λ): mean=variance=λ",
+        "mathTex": "\\begin{aligned}\\operatorname{Bin}(n,p):\\quad\\text{mean}&=np,\\\\\\text{variance}&=np(1-p)\\\\\\operatorname{Geom}(p):\\quad\\text{mean}&=\\frac1p,\\\\\\text{variance}&=\\frac{1-p}{p^2}\\\\\\operatorname{Pois}(\\lambda):\\quad\\text{mean}&=\\text{variance}=\\lambda\\end{aligned}"
       }
     ],
     "refs": [

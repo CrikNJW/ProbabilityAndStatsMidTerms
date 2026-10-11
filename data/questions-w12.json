@@ -41,7 +41,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "68-31-26+12=23"
       },
       {
         "title": "Find B-only and C-only",
@@ -58,7 +59,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{B-only}&=57-31-22+12=16\\\\\\text{C-only}&=49-26-22+12=13\\end{aligned}"
       },
       {
         "title": "Add the disjoint only-regions",
@@ -75,7 +77,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "23+16+13=52"
       }
     ],
     "answerText": "52 players earned exactly one achievement.",
@@ -143,7 +146,8 @@
             "page": 13,
             "label": "Independent blind boxes and at least one secret"
           }
-        ]
+        ],
+        "mathTex": "|\\Omega|=6\\times6=36"
       },
       {
         "title": "Count the complement",
@@ -165,7 +169,8 @@
             "page": 13,
             "label": "Independent blind boxes and at least one secret"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\max\\le4)&=\\left(\\frac46\\right)^2\\\\&=\\frac{16}{36}=\\frac49\\end{aligned}"
       },
       {
         "title": "Subtract from one",
@@ -187,7 +192,8 @@
             "page": 13,
             "label": "Independent blind boxes and at least one secret"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\max\\in\\{5,6\\})&=1-\\frac49\\\\&=\\frac59\\end{aligned}"
       }
     ],
     "answerText": "5/9 ≈ 0.5556.",
@@ -210,6 +216,13 @@
         "page": 13,
         "label": "Independent blind boxes and at least one secret"
       }
+    ],
+    "optionsTex": [
+      "\\frac23",
+      "\\frac59",
+      "\\frac49",
+      "\\frac13",
+      null
     ]
   },
   {
@@ -249,7 +262,8 @@
             "page": 38,
             "label": "Finite additivity and probability axioms"
           }
-        ]
+        ],
+        "mathTex": "P(\\{b\\})=0.27"
       },
       {
         "title": "Subtract to find the other masses",
@@ -261,7 +275,8 @@
             "page": 38,
             "label": "Finite additivity and probability axioms"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\{a\\})&=0.62-0.27=0.35\\\\P(\\{c\\})&=0.55-0.27=0.28\\end{aligned}"
       },
       {
         "title": "Evaluate the requested statement",
@@ -273,7 +288,8 @@
             "page": 38,
             "label": "Finite additivity and probability axioms"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\{a,c\\})&=0.35+0.28=0.63\\\\\\text{Total}&=0.35+0.27+0.28+0.10=1\\end{aligned}"
       }
     ],
     "answerText": "P({a,c})=0.63.",
@@ -286,6 +302,13 @@
         "page": 38,
         "label": "Finite additivity and probability axioms"
       }
+    ],
+    "optionsTex": [
+      "P(\\{c\\})=0.45",
+      "P(\\{a\\})=0.27",
+      "P(\\{b,d\\})=0.65",
+      null,
+      "P(\\{a,c\\})=0.63"
     ]
   },
   {
@@ -341,7 +364,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}&(1,1,3),\\ (1,2,2),\\ (1,3,1),\\\\&(2,1,2),\\ (2,2,1),\\ (3,1,1)\\end{aligned}"
       },
       {
         "title": "Count each composition",
@@ -368,7 +392,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "\\binom5a\\binom4d\\binom3s\\times a"
       },
       {
         "title": "Evaluate the six cases",
@@ -395,7 +420,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}&20+90+60+240+360+360\\\\&\\qquad=1{,}130\\end{aligned}"
       }
     ],
     "answerText": "1,130 configurations.",
@@ -473,7 +499,8 @@
             "page": 64,
             "label": "Choosing remaining members"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(8,4)&=8\\times7\\times6\\times5\\\\&=1{,}680\\end{aligned}"
       },
       {
         "title": "Count forbidden lineups",
@@ -495,7 +522,8 @@
             "page": 64,
             "label": "Choosing remaining members"
           }
-        ]
+        ],
+        "mathTex": "\\binom62\\times4!=15\\times24=360"
       },
       {
         "title": "Subtract the forbidden cases",
@@ -517,7 +545,8 @@
             "page": 64,
             "label": "Choosing remaining members"
           }
-        ]
+        ],
+        "mathTex": "1{,}680-360=1{,}320"
       }
     ],
     "answerText": "1,320 valid lineups.",
@@ -579,7 +608,8 @@
             "page": 66,
             "label": "Binomial coefficients and binomial theorem"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}(1+x)^6&=1+6x+15x^2+\\cdots\\\\(1-x)^4&=1-4x+6x^2+\\cdots\\end{aligned}"
       },
       {
         "title": "Combine terms with total exponent two",
@@ -591,7 +621,8 @@
             "page": 66,
             "label": "Binomial coefficients and binomial theorem"
           }
-        ]
+        ],
+        "mathTex": "15\\times1+6\\times(-4)+1\\times6"
       },
       {
         "title": "Add and compare with the options",
@@ -603,7 +634,8 @@
             "page": 66,
             "label": "Binomial coefficients and binomial theorem"
           }
-        ]
+        ],
+        "mathTex": "15-24+6=-3\\ \\Rightarrow\\ \\text{None of These}"
       }
     ],
     "answerText": "The coefficient is −3, so choose None of These.",
@@ -616,6 +648,23 @@
         "doc": "week1",
         "page": 66,
         "label": "Binomial coefficients and binomial theorem"
+      }
+    ],
+    "promptParts": [
+      {
+        "text": "What is the coefficient of "
+      },
+      {
+        "tex": "x^2"
+      },
+      {
+        "text": " in "
+      },
+      {
+        "tex": "(1+x)^6(1-x)^4"
+      },
+      {
+        "text": "?"
       }
     ]
   },
@@ -666,7 +715,8 @@
             "page": 64,
             "label": "Choosing remaining members"
           }
-        ]
+        ],
+        "mathTex": "7!=5{,}040"
       },
       {
         "title": "Count queues with adjacent healers",
@@ -688,7 +738,8 @@
             "page": 64,
             "label": "Choosing remaining members"
           }
-        ]
+        ],
+        "mathTex": "6!\\times2!=720\\times2=1{,}440"
       },
       {
         "title": "Remove adjacent cases",
@@ -710,7 +761,8 @@
             "page": 64,
             "label": "Choosing remaining members"
           }
-        ]
+        ],
+        "mathTex": "5{,}040-1{,}440=3{,}600"
       }
     ],
     "answerText": "3,600 valid queues.",
@@ -782,7 +834,8 @@
             "page": 13,
             "label": "Independent blind boxes and at least one secret"
           }
-        ]
+        ],
+        "mathTex": "P(0)=\\left(\\frac{71}{72}\\right)^{72}"
       },
       {
         "title": "Count exactly one secret",
@@ -804,7 +857,8 @@
             "page": 13,
             "label": "Independent blind boxes and at least one secret"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(1)&=72\\times\\frac1{72}\\times\\left(\\frac{71}{72}\\right)^{71}\\\\&=\\left(\\frac{71}{72}\\right)^{71}\\end{aligned}"
       },
       {
         "title": "Subtract both disjoint cases",
@@ -826,7 +880,8 @@
             "page": 13,
             "label": "Independent blind boxes and at least one secret"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\text{at least }2)&=1-\\left(\\frac{71}{72}\\right)^{72}\\\\&\\quad-\\left(\\frac{71}{72}\\right)^{71}\\end{aligned}"
       }
     ],
     "answerText": "1−(71/72)⁷²−(71/72)⁷¹.",
@@ -850,6 +905,13 @@
         "page": 13,
         "label": "Independent blind boxes and at least one secret"
       }
+    ],
+    "optionsTex": [
+      "1-\\left(\\frac{71}{72}\\right)^{72}-\\left(\\frac{71}{72}\\right)^{71}",
+      null,
+      "1-72\\left(\\frac1{72}\\right)\\left(\\frac{71}{72}\\right)^{71}",
+      "1-\\left(\\frac{71}{72}\\right)^{72}",
+      "\\left(\\frac1{72}\\right)^2\\left(\\frac{71}{72}\\right)^{70}"
     ]
   },
   {
@@ -904,7 +966,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "\\binom63=20\\ \\text{teams}"
       },
       {
         "title": "Count orders within one team",
@@ -931,7 +994,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "3!=6\\ \\text{orders per team}"
       },
       {
         "title": "Multiply the two stages",
@@ -958,7 +1022,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\binom63\\times3!&=20\\times6\\\\&=P(6,3)=120\\end{aligned}"
       }
     ],
     "answerText": "The count ignored order; multiply by 3! to obtain 120.",
@@ -986,6 +1051,13 @@
         "page": 64,
         "label": "Number of r-combinations"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      "\\begin{gathered}\\text{Use }6^3\\text{ because a hero may}\\\\\\text{occupy any position.}\\end{gathered}",
+      null
     ]
   },
   {
@@ -1030,7 +1102,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "|A^c|=2^3=8"
       },
       {
         "title": "Count B and the intersection",
@@ -1047,7 +1120,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}|B|&=\\binom42=6\\\\|A^c\\cap B|&=\\binom32=3\\end{aligned}"
       },
       {
         "title": "Apply inclusion–exclusion",
@@ -1064,7 +1138,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "|A^c\\cup B|=8+6-3=11"
       }
     ],
     "answerText": "11 outcomes.",
@@ -1131,7 +1206,8 @@
             "page": 12,
             "label": "At least one 6 gives 11 ordered outcomes"
           }
-        ]
+        ],
+        "mathTex": "P(X=3)=0.8^3=0.512"
       },
       {
         "title": "Find the conditioning mass",
@@ -1153,7 +1229,8 @@
             "page": 12,
             "label": "At least one 6 gives 11 ordered outcomes"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge2)&=\\binom32(0.8)^2(0.2)+(0.8)^3\\\\&=0.384+0.512=0.896\\end{aligned}"
       },
       {
         "title": "Divide within the restricted space",
@@ -1175,7 +1252,8 @@
             "page": 12,
             "label": "At least one 6 gives 11 ordered outcomes"
           }
-        ]
+        ],
+        "mathTex": "P(X=3\\mid X\\ge2)=\\frac{0.512}{0.896}=\\frac47"
       }
     ],
     "answerText": "4/7 ≈ 0.5714.",
@@ -1198,6 +1276,13 @@
         "page": 12,
         "label": "At least one 6 gives 11 ordered outcomes"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      "\\frac47",
+      null
     ]
   },
   {
@@ -1247,7 +1332,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "b=P(B)"
       },
       {
         "title": "Write the union with its overlap",
@@ -1269,7 +1355,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}0.70&=0.40+b-0.40b\\\\&=0.40+0.60b\\end{aligned}"
       },
       {
         "title": "Solve the linear equation",
@@ -1291,7 +1378,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "b=\\frac{0.70-0.40}{0.60}=0.50"
       }
     ],
     "answerText": "P(B)=0.50.",
@@ -1368,7 +1456,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "P(D\\cap\\text{Positive})=0.02\\times0.90=0.018"
       },
       {
         "title": "Express all positive results",
@@ -1395,7 +1484,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\text{Positive})&=0.018+0.98q\\\\0.60&=\\frac{0.018}{0.018+0.98q}\\end{aligned}"
       },
       {
         "title": "Solve and convert to a percentage",
@@ -1422,7 +1512,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}0.98q&=0.030-0.018=0.012\\\\q&=\\frac{0.012}{0.98}\\\\&\\approx0.0122449=1.22449\\%\\end{aligned}"
       }
     ],
     "answerText": "Approximately 1.224%.",
@@ -1505,7 +1596,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}A:&\\ 0.50\\times0.01=0.005\\\\B:&\\ 0.30\\times0.02=0.006\\\\C:&\\ 0.20\\times0.05=0.010\\end{aligned}"
       },
       {
         "title": "Add all error paths",
@@ -1532,7 +1624,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "P(\\text{error})=0.005+0.006+0.010=0.021"
       },
       {
         "title": "Find C's share among errors",
@@ -1559,7 +1652,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "P(C\\mid\\text{error})=\\frac{0.010}{0.021}=\\frac{10}{21}"
       }
     ],
     "answerText": "10/21 ≈ 0.4762.",
@@ -1587,6 +1681,13 @@
         "page": 31,
         "label": "Total probability and general Bayes’ rule"
       }
+    ],
+    "optionsTex": [
+      "\\frac{10}{21}",
+      "\\frac37",
+      "\\frac27",
+      "\\frac5{21}",
+      null
     ]
   },
   {
@@ -1641,7 +1742,8 @@
             "page": 46,
             "label": "Three independent delivery probabilities"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}X:&\\ 0,1,2,3\\\\Y:&\\ 1,0,1,4\\\\\\operatorname{range}(Y)&=\\{0,1,4\\}\\end{aligned}"
       },
       {
         "title": "Solve the target-value equation",
@@ -1668,7 +1770,8 @@
             "page": 46,
             "label": "Three independent delivery probabilities"
           }
-        ]
+        ],
+        "mathTex": "(X-1)^2=1\\ \\Rightarrow\\ X=0\\ \\text{or}\\ X=2"
       },
       {
         "title": "Add the matching masses",
@@ -1695,7 +1798,8 @@
             "page": 46,
             "label": "Three independent delivery probabilities"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(Y=1)&=(0.2)^3+\\binom32(0.8)^2(0.2)\\\\&=0.008+0.384=0.392\\end{aligned}"
       }
     ],
     "answerText": "Range {0,1,4}, with P(Y=1)=0.392.",
@@ -1723,6 +1827,30 @@
         "doc": "week2",
         "page": 46,
         "label": "Three independent delivery probabilities"
+      }
+    ],
+    "optionsTex": [
+      null,
+      "\\operatorname{range}(Y)=\\{0,1,4\\};\\quad P(Y=1)=0.392",
+      "\\operatorname{range}(Y)=\\{0,1,4\\};\\quad P(Y=1)=0.488",
+      "\\operatorname{range}(Y)=\\{0,1,4\\};\\quad P(Y=1)=0.384",
+      "\\operatorname{range}(Y)=\\{0,1,2,4\\};\\quad P(Y=1)=0.392"
+    ],
+    "promptParts": [
+      {
+        "text": "Let X be the number of on-time deliveries among three independent packages, each on time with probability 0.80. Define "
+      },
+      {
+        "tex": "Y=(X-1)^2"
+      },
+      {
+        "text": ". Which pair gives the range of Y and "
+      },
+      {
+        "tex": "P(Y=1)"
+      },
+      {
+        "text": "?"
       }
     ]
   },
@@ -1773,7 +1901,8 @@
             "page": 12,
             "label": "CDF intervals and jump probabilities"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(1<X\\le3)&=F(3)-F(1)\\\\&=0.80-0.25=0.55\\end{aligned}"
       },
       {
         "title": "Identify the denominator",
@@ -1795,7 +1924,8 @@
             "page": 12,
             "label": "CDF intervals and jump probabilities"
           }
-        ]
+        ],
+        "mathTex": "P(X\\le3)=F(3)=0.80"
       },
       {
         "title": "Divide",
@@ -1817,7 +1947,8 @@
             "page": 12,
             "label": "CDF intervals and jump probabilities"
           }
-        ]
+        ],
+        "mathTex": "\\frac{0.55}{0.80}=0.6875"
       }
     ],
     "answerText": "0.6875.",
@@ -1840,6 +1971,29 @@
         "doc": "week3",
         "page": 12,
         "label": "CDF intervals and jump probabilities"
+      }
+    ],
+    "promptParts": [
+      {
+        "text": "A random variable X has "
+      },
+      {
+        "tex": "F_X(1)=0.25"
+      },
+      {
+        "text": " and "
+      },
+      {
+        "tex": "F_X(3)=0.80"
+      },
+      {
+        "text": ". What is "
+      },
+      {
+        "tex": "P(1<X\\le3\\mid X\\le3)"
+      },
+      {
+        "text": "?"
       }
     ]
   },
@@ -1880,7 +2034,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "15-10=5\\ \\text{trials remain}"
       },
       {
         "title": "Count no defect in those trials",
@@ -1892,7 +2047,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "P(\\text{no future defect})=0.92^5"
       },
       {
         "title": "Take the complement",
@@ -1904,7 +2060,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}&P(\\text{defect by }15\\mid\\text{first }10\\text{ acceptable})\\\\&\\qquad=1-0.92^5\\approx0.3409185\\end{aligned}"
       }
     ],
     "answerText": "1−0.92⁵ ≈ 0.3409.",
@@ -1918,6 +2075,13 @@
         "page": 48,
         "label": "Waiting for the first defect: PMF and by-n probability"
       }
+    ],
+    "optionsTex": [
+      "0.92^5",
+      "1-0.92^{15}",
+      "1-0.92^5",
+      "0.08(0.92)^4",
+      null
     ]
   },
   {
@@ -1972,7 +2136,8 @@
             "page": 46,
             "label": "Three independent delivery probabilities"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}c(1+2+3+4)&=10c=1\\\\&\\Rightarrow c=0.10\\end{aligned}"
       },
       {
         "title": "Add the requested masses",
@@ -1999,7 +2164,8 @@
             "page": 46,
             "label": "Three independent delivery probabilities"
           }
-        ]
+        ],
+        "mathTex": "P(X\\ge2)=0.10\\times3+0.10\\times4=0.70"
       },
       {
         "title": "Compare the complete pair",
@@ -2026,7 +2192,8 @@
             "page": 46,
             "label": "Three independent delivery probabilities"
           }
-        ]
+        ],
+        "mathTex": "(c,P(X\\ge2))=(0.10,0.70)\\ \\Rightarrow\\ \\text{None of These}"
       }
     ],
     "answerText": "c=0.10 and P(X≥2)=0.70; choose None of These.",
@@ -2054,6 +2221,36 @@
         "doc": "week2",
         "page": 46,
         "label": "Three independent delivery probabilities"
+      }
+    ],
+    "optionsTex": [
+      "c=0.10,\\quad P(X\\ge2)=0.30",
+      "c=0.25,\\quad P(X\\ge2)=0.70",
+      "c=0.40,\\quad P(X\\ge2)=0.70",
+      "c=0.10,\\quad P(X\\ge2)=0.60",
+      null
+    ],
+    "promptParts": [
+      {
+        "text": "A discrete random variable "
+      },
+      {
+        "tex": "X\\in\\{0,1,2,3\\}"
+      },
+      {
+        "text": " has "
+      },
+      {
+        "tex": "P(X=x)=c(x+1)"
+      },
+      {
+        "text": ". Which pair gives c and "
+      },
+      {
+        "tex": "P(X\\ge2)"
+      },
+      {
+        "text": "?"
       }
     ]
   },
@@ -2104,7 +2301,8 @@
             "page": 64,
             "label": "Combination formula"
           }
-        ]
+        ],
+        "mathTex": "|A|=\\binom41\\binom{48}4"
       },
       {
         "title": "Count at-least-one-ace hands",
@@ -2126,7 +2324,8 @@
             "page": 64,
             "label": "Combination formula"
           }
-        ]
+        ],
+        "mathTex": "|B|=\\binom{52}5-\\binom{48}5"
       },
       {
         "title": "Divide the counts",
@@ -2148,7 +2347,8 @@
             "page": 64,
             "label": "Combination formula"
           }
-        ]
+        ],
+        "mathTex": "P(A\\mid B)=\\frac{\\binom41\\binom{48}4}{\\binom{52}5-\\binom{48}5}"
       }
     ],
     "answerText": "C(4,1)C(48,4)/[C(52,5)−C(48,5)].",
@@ -2171,6 +2371,13 @@
         "page": 64,
         "label": "Combination formula"
       }
+    ],
+    "optionsTex": [
+      "\\frac{\\binom41\\binom{48}4}{\\binom{52}5}",
+      null,
+      "1-\\frac{\\binom{48}5}{\\binom{52}5}",
+      "\\frac{\\binom41\\binom{48}4}{\\binom{52}5-\\binom{48}5}",
+      "\\frac{\\binom41\\binom{48}4+\\binom42\\binom{48}3}{\\binom{52}5}"
     ]
   },
   {
@@ -2220,7 +2427,8 @@
             "page": 12,
             "label": "CDF intervals and jump probabilities"
           }
-        ]
+        ],
+        "mathTex": "F\\ \\text{must be nondecreasing}"
       },
       {
         "title": "Check end behavior",
@@ -2242,7 +2450,8 @@
             "page": 12,
             "label": "CDF intervals and jump probabilities"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lim_{x\\to-\\infty}F(x)&=0\\\\\\lim_{x\\to+\\infty}F(x)&=1\\end{aligned}"
       },
       {
         "title": "Verify the step function",
@@ -2264,7 +2473,8 @@
             "page": 12,
             "label": "CDF intervals and jump probabilities"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X=0)&=0.3\\\\P(X=2)&=0.7\\\\\\text{Total}&=1\\end{aligned}"
       }
     ],
     "answerText": "The step function with jumps at 0 and 2 is valid.",
@@ -2288,6 +2498,13 @@
         "page": 12,
         "label": "CDF intervals and jump probabilities"
       }
+    ],
+    "optionsTex": [
+      "F(x)=\\frac1{1+e^x},\\quad x\\in\\mathbb R",
+      "F(x)=\\begin{cases}0,&x<0\\\\0.3,&0\\le x<2\\\\1,&x\\ge2\\end{cases}",
+      null,
+      "F(x)=\\begin{cases}0,&x<0\\\\0.6,&0\\le x<1\\\\0.4,&1\\le x<2\\\\1,&x\\ge2\\end{cases}",
+      "F(x)=0.5,\\quad x\\in\\mathbb R"
     ]
   },
   {
@@ -2337,7 +2554,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "P(A)=P(B)=P(C)=\\frac12"
       },
       {
         "title": "Check every pair",
@@ -2359,7 +2577,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "\\text{Each pair intersection}=\\frac14=\\left(\\frac12\\right)\\left(\\frac12\\right)"
       },
       {
         "title": "Check the triple",
@@ -2381,7 +2600,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(A\\cap B\\cap C)&=\\frac14\\\\&\\ne\\left(\\frac12\\right)^3=\\frac18\\end{aligned}"
       }
     ],
     "answerText": "They are pairwise independent, but not mutually independent.",
@@ -2453,7 +2673,8 @@
             "page": 12,
             "label": "CDF intervals and jump probabilities"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X=1)&=0.35-0.10=0.25\\\\P(X=4)&=1-0.80=0.20\\end{aligned}"
       },
       {
         "title": "Find the conditioning mass",
@@ -2475,7 +2696,8 @@
             "page": 12,
             "label": "CDF intervals and jump probabilities"
           }
-        ]
+        ],
+        "mathTex": "P(X\\ge1)=1-0.10=0.90"
       },
       {
         "title": "Divide",
@@ -2497,7 +2719,8 @@
             "page": 12,
             "label": "CDF intervals and jump probabilities"
           }
-        ]
+        ],
+        "mathTex": "\\frac{0.25+0.20}{0.90}=0.50\\ \\Rightarrow\\ \\text{None of These}"
       }
     ],
     "answerText": "0.50; choose None of These.",
@@ -2519,6 +2742,24 @@
         "doc": "week3",
         "page": 12,
         "label": "CDF intervals and jump probabilities"
+      }
+    ],
+    "promptParts": [
+      {
+        "text": "A discrete X has CDF "
+      },
+      {
+        "tex": "F(x)=\\begin{cases}0,&x<0\\\\0.10,&0\\le x<1\\\\0.35,&1\\le x<2\\\\0.80,&2\\le x<4\\\\1,&x\\ge4\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "What is "
+      },
+      {
+        "tex": "P(X\\in\\{1,4\\}\\mid X\\ge1)"
+      },
+      {
+        "text": "?"
       }
     ]
   },
@@ -2569,7 +2810,8 @@
             "page": 12,
             "label": "At least one 6 gives 11 ordered outcomes"
           }
-        ]
+        ],
+        "mathTex": "P(X=4)=0.75^4=0.31640625"
       },
       {
         "title": "Find at-least-three probability",
@@ -2591,7 +2833,8 @@
             "page": 12,
             "label": "At least one 6 gives 11 ordered outcomes"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge3)&=4(0.75)^3(0.25)+(0.75)^4\\\\&=0.421875+0.31640625\\\\&=0.73828125\\end{aligned}"
       },
       {
         "title": "Condition",
@@ -2613,7 +2856,8 @@
             "page": 12,
             "label": "At least one 6 gives 11 ordered outcomes"
           }
-        ]
+        ],
+        "mathTex": "\\frac{0.31640625}{0.73828125}=\\frac37"
       }
     ],
     "answerText": "3/7 ≈ 0.4286.",
@@ -2636,6 +2880,13 @@
         "page": 12,
         "label": "At least one 6 gives 11 ordered outcomes"
       }
+    ],
+    "optionsTex": [
+      "\\frac25",
+      "\\frac37",
+      null,
+      "\\frac38",
+      "\\frac14"
     ]
   },
   {
@@ -2675,7 +2926,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "1-0.97^n\\ge0.90\\ \\Rightarrow\\ 0.97^n\\le0.10"
       },
       {
         "title": "Solve for n",
@@ -2687,7 +2939,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "n\\ge\\frac{\\log(0.10)}{\\log(0.97)}\\approx75.5957"
       },
       {
         "title": "Check the neighboring integers",
@@ -2699,7 +2952,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\text{at least one at }75)&\\approx0.89817\\\\P(\\text{at least one at }76)&\\approx0.90122\\end{aligned}"
       }
     ],
     "answerText": "76 inspections.",
@@ -2766,7 +3020,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}A:&\\ 0.50\\times0.02\\times0.90=0.009\\\\B:&\\ 0.30\\times0.04\\times0.80=0.0096\\\\C:&\\ 0.20\\times0.05\\times0.70=0.007\\end{aligned}"
       },
       {
         "title": "Add the evidence paths",
@@ -2793,7 +3048,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\text{defective and detected})&=0.009+0.0096+0.007\\\\&=0.0256\\end{aligned}"
       },
       {
         "title": "Take C's evidence share",
@@ -2820,7 +3076,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\frac{0.007}{0.0256}=\\frac{35}{128}=0.2734375"
       }
     ],
     "answerText": "35/128 ≈ 0.2734.",
@@ -2849,6 +3106,13 @@
         "page": 31,
         "label": "Total probability and general Bayes’ rule"
       }
+    ],
+    "optionsTex": [
+      "\\frac7{20}",
+      null,
+      "\\frac5{16}",
+      "\\frac{35}{128}",
+      "\\frac7{25}"
     ]
   },
   {
@@ -2893,7 +3157,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "46+53+38=137"
       },
       {
         "title": "Repair overlaps",
@@ -2910,7 +3175,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "|A\\cup B\\cup C|=137-20-19-20+9=87"
       },
       {
         "title": "Subtract from the population",
@@ -2927,7 +3193,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "117-87=30"
       }
     ],
     "answerText": "30 students.",
@@ -2999,7 +3266,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\text{++}\\mid D)&=0.96^2=0.9216\\\\P(\\text{++}\\mid D^c)&=0.18^2=0.0324\\end{aligned}"
       },
       {
         "title": "Multiply by the priors and total evidence",
@@ -3026,7 +3294,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(D\\cap\\text{++})&=0.10\\times0.9216=0.09216\\\\P(D^c\\cap\\text{++})&=0.90\\times0.0324=0.02916\\\\P(\\text{++})&=0.12132\\end{aligned}"
       },
       {
         "title": "Reverse the conditioning",
@@ -3053,7 +3322,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "P(D\\mid\\text{++})=\\frac{0.09216}{0.12132}\\approx0.759644"
       }
     ],
     "answerText": "Approximately 0.760.",
@@ -3131,7 +3401,8 @@
             "page": 12,
             "label": "At least one 6 gives 11 ordered outcomes"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\text{exactly }1)&=0.26\\times0.74\\times0.86\\\\&\\quad+0.74\\times0.26\\times0.86\\\\&\\quad+0.74^2\\times0.14\\\\&=0.407588\\end{aligned}"
       },
       {
         "title": "Count at least one failure",
@@ -3153,7 +3424,8 @@
             "page": 12,
             "label": "At least one 6 gives 11 ordered outcomes"
           }
-        ]
+        ],
+        "mathTex": "P(\\text{at least }1)=1-0.74^2\\times0.86=0.529064"
       },
       {
         "title": "Condition and compare options",
@@ -3175,7 +3447,8 @@
             "page": 12,
             "label": "At least one 6 gives 11 ordered outcomes"
           }
-        ]
+        ],
+        "mathTex": "\\frac{0.407588}{0.529064}\\approx0.770402\\ \\Rightarrow\\ \\text{None of These}"
       }
     ],
     "answerText": "Approximately 0.7704; choose None of These.",
@@ -3248,7 +3521,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "\\binom82\\binom{10}1=28\\times10=280"
       },
       {
         "title": "Count samples with both colors",
@@ -3270,7 +3544,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\binom{18}3-\\binom83-\\binom{10}3&=816-56-120\\\\&=640\\end{aligned}"
       },
       {
         "title": "Divide in the restricted sample space",
@@ -3292,7 +3567,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "\\frac{280}{640}=\\frac7{16}=0.4375\\approx0.438"
       }
     ],
     "answerText": "0.438 after rounding.",
@@ -3364,7 +3640,8 @@
             "page": 64,
             "label": "Choosing remaining members"
           }
-        ]
+        ],
+        "mathTex": "12-4+1=9\\ \\text{objects}"
       },
       {
         "title": "Arrange the objects and the block interior",
@@ -3386,7 +3663,8 @@
             "page": 64,
             "label": "Choosing remaining members"
           }
-        ]
+        ],
+        "mathTex": "9!\\times4!=362{,}880\\times24"
       },
       {
         "title": "Compute and inspect the choices",
@@ -3408,7 +3686,8 @@
             "page": 64,
             "label": "Choosing remaining members"
           }
-        ]
+        ],
+        "mathTex": "9!\\times4!=8{,}709{,}120\\ \\Rightarrow\\ \\text{None of These}"
       }
     ],
     "answerText": "8,709,120; choose None of These.",
@@ -3482,7 +3761,8 @@
             "page": 27,
             "label": "De Morgan’s laws"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\Omega&=\\{(x,y):x,y\\in\\{1,\\ldots,6\\}\\}\\\\|\\Omega|&=6^2=36\\end{aligned}"
       },
       {
         "title": "List by total",
@@ -3504,7 +3784,8 @@
             "page": 27,
             "label": "De Morgan’s laws"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Sum }9:&\\ 4\\ \\text{pairs}\\\\\\text{Sum }10:&\\ 3\\ \\text{pairs}\\\\\\text{Sum }11:&\\ 2\\ \\text{pairs}\\\\\\text{Sum }12:&\\ 1\\ \\text{pair}\\end{aligned}"
       },
       {
         "title": "Add the disjoint totals",
@@ -3526,7 +3807,8 @@
             "page": 27,
             "label": "De Morgan’s laws"
           }
-        ]
+        ],
+        "mathTex": "|A|=4+3+2+1=10"
       }
     ],
     "answerText": "36 ordered outcomes and 10 with total at least 9.",
@@ -3594,7 +3876,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "|B|=6+6-1=11"
       },
       {
         "title": "Count the intersection",
@@ -3611,7 +3894,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}A\\cap B=\\{&(3,6),(4,6),(5,6),(6,6),\\\\&(6,3),(6,4),(6,5)\\}\\\\|A\\cap B|&=7\\end{aligned}"
       },
       {
         "title": "Count the union",
@@ -3628,7 +3912,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "|A\\cup B|=10+11-7=14"
       }
     ],
     "answerText": "|B|=11, |A∩B|=7, |A∪B|=14.",
@@ -3691,7 +3976,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "|V\\cup M|=70+55-30=95"
       },
       {
         "title": "Count neither",
@@ -3708,7 +3994,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "120-95=25"
       },
       {
         "title": "Check disjointness",
@@ -3725,7 +4012,8 @@
             "page": 46,
             "label": "Three activity groups"
           }
-        ]
+        ],
+        "mathTex": "|V\\cap M|=30>0\\ \\Rightarrow\\ \\text{not disjoint}"
       }
     ],
     "answerText": "95 in at least one, 25 in neither; V and M are not disjoint.",
@@ -3798,7 +4086,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "26\\times26\\times10^3=676{,}000"
       },
       {
         "title": "Fix both letters of a prefix",
@@ -3825,7 +4114,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "1\\times1\\times10^3=1{,}000"
       },
       {
         "title": "Find the specified-first-letter probability",
@@ -3852,7 +4142,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "\\frac{26{,}000}{676{,}000}=\\frac1{26}"
       }
     ],
     "answerText": "676,000 codes; 1,000 with a specified two-letter prefix; a specified first letter has probability 1/26.",
@@ -3881,6 +4172,12 @@
         "page": 64,
         "label": "Number of r-combinations"
       }
+    ],
+    "optionsTex": [
+      "\\begin{gathered}676{,}000\\ \\text{total};\\ 1{,}000\\ \\text{with specified}\\\\\\text{two-letter prefix};\\ \\text{first-letter probability }\\frac1{26}\\end{gathered}",
+      "\\begin{gathered}676{,}000\\ \\text{total};\\ 26{,}000\\ \\text{with specified}\\\\\\text{two-letter prefix};\\ \\text{first-letter probability }\\frac1{26}\\end{gathered}",
+      "\\begin{gathered}67{,}600\\ \\text{total};\\ 1{,}000\\ \\text{with specified}\\\\\\text{two-letter prefix};\\ \\text{first-letter probability }\\frac1{26}\\end{gathered}",
+      "\\begin{gathered}676{,}000\\ \\text{total};\\ 1{,}000\\ \\text{with specified}\\\\\\text{two-letter prefix};\\ \\text{first-letter probability }\\frac1{676}\\end{gathered}"
     ]
   },
   {
@@ -3936,7 +4233,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "\\binom85=\\frac{8!}{5!\\,3!}=56"
       },
       {
         "title": "Count role assignments",
@@ -3963,7 +4261,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "P(8,2)=8\\times7=56"
       },
       {
         "title": "Count the second group",
@@ -3990,7 +4289,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "\\binom63=\\frac{6!}{3!\\,3!}=20"
       }
     ],
     "answerText": "56, 56, and 20.",
@@ -4073,7 +4373,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "P(10,4)=10\\times9\\times8\\times7=5{,}040"
       },
       {
         "title": "Count codes excluding 7",
@@ -4100,7 +4401,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "P(9,4)=9\\times8\\times7\\times6=3{,}024"
       },
       {
         "title": "Subtract and divide",
@@ -4127,7 +4429,8 @@
             "page": 64,
             "label": "Number of r-combinations"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Contains }7&=5{,}040-3{,}024=2{,}016\\\\P&=\\frac{2{,}016}{5{,}040}=0.40\\end{aligned}"
       }
     ],
     "answerText": "5,040 codes; 2,016 contain 7; probability 0.40.",
@@ -4156,6 +4459,12 @@
         "page": 64,
         "label": "Number of r-combinations"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      "\\begin{gathered}4{,}536\\ \\text{total};\\ 2{,}016\\ \\text{contain }7;\\\\\\text{probability }\\frac49\\end{gathered}"
     ]
   },
   {
@@ -4205,7 +4514,8 @@
             "page": 12,
             "label": "At least one 6 gives 11 ordered outcomes"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(A)&=\\frac{500}{1{,}000}=0.50\\\\P(B)&=\\frac{540}{1{,}000}=0.54\\end{aligned}"
       },
       {
         "title": "Read the joint cell",
@@ -4227,7 +4537,8 @@
             "page": 12,
             "label": "At least one 6 gives 11 ordered outcomes"
           }
-        ]
+        ],
+        "mathTex": "P(A\\cap B)=\\frac{300}{1{,}000}=0.30"
       },
       {
         "title": "Restrict to the enabled row",
@@ -4249,7 +4560,8 @@
             "page": 12,
             "label": "At least one 6 gives 11 ordered outcomes"
           }
-        ]
+        ],
+        "mathTex": "P(B\\mid A)=\\frac{300}{500}=0.60"
       }
     ],
     "answerText": "0.50, 0.54, 0.30, and 0.60.",
@@ -4321,7 +4633,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "P(A)P(B)=0.50\\times0.54=0.27\\ne0.30"
       },
       {
         "title": "Compare conditional with marginal",
@@ -4343,7 +4656,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "P(B\\mid A)=\\frac{0.30}{0.50}=0.60\\ne P(B)=0.54"
       },
       {
         "title": "Interpret",
@@ -4365,7 +4679,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "A\\ \\text{and}\\ B\\ \\text{are not independent}"
       }
     ],
     "answerText": "The events are dependent by both tests.",
@@ -4388,6 +4703,12 @@
         "page": 19,
         "label": "When disjoint events can be independent"
       }
+    ],
+    "optionsTex": [
+      "\\begin{gathered}\\text{Dependent: }0.30\\ne0.50\\times0.54\\\\\\text{and }P(B\\mid A)=0.60\\ne0.54\\end{gathered}",
+      null,
+      null,
+      null
     ]
   },
   {
@@ -4437,7 +4758,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Enabled return rate}&=\\frac{300}{500}=0.60\\\\\\text{Disabled return rate}&=\\frac{240}{500}=0.48\\end{aligned}"
       },
       {
         "title": "Identify the evidence",
@@ -4459,7 +4781,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "0.60-0.48=0.12,\\ \\text{or }12\\ \\text{percentage points}"
       },
       {
         "title": "Identify the missing causal link",
@@ -4481,7 +4804,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "\\begin{gathered}\\text{A table alone does not separate}\\\\\\text{the notification effect from confounding}\\end{gathered}"
       }
     ],
     "answerText": "Association is shown; causation is not established by this table alone.",
@@ -4553,7 +4877,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "P(A\\cap B^c)=P(A)-P(A\\cap B)"
       },
       {
         "title": "Substitute independence",
@@ -4575,7 +4900,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(A\\cap B^c)&=P(A)-P(A)P(B)\\\\&=P(A)[1-P(B)]\\end{aligned}"
       },
       {
         "title": "Use the complement rule",
@@ -4597,7 +4923,8 @@
             "page": 19,
             "label": "When disjoint events can be independent"
           }
-        ]
+        ],
+        "mathTex": "P(A\\cap B^c)=P(A)P(B^c)"
       }
     ],
     "answerText": "A and Bᶜ are independent.",
@@ -4620,6 +4947,12 @@
         "page": 19,
         "label": "When disjoint events can be independent"
       }
+    ],
+    "optionsTex": [
+      "\\begin{aligned}P(A\\cap B^c)&=P(A)-P(A\\cap B)\\\\&=P(A)[1-P(B)]\\\\&=P(A)P(B^c)\\end{aligned}",
+      "\\begin{gathered}P(A\\cap B^c)=0\\ \\text{because complements}\\\\\\text{are disjoint from every event.}\\end{gathered}",
+      "P(A\\cap B^c)=P(A)+P(B^c)",
+      "P(A\\mid B^c)=1-P(A)"
     ]
   },
   {
@@ -4674,7 +5007,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(M)&=0.05\\\\P(M^c)&=0.95\\end{aligned}"
       },
       {
         "title": "Label flag and non-flag branches",
@@ -4701,7 +5035,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(F\\mid M)&=0.92,&P(F^c\\mid M)&=0.08\\\\P(F\\mid M^c)&=0.08,&P(F^c\\mid M^c)&=0.92\\end{aligned}"
       },
       {
         "title": "Multiply along paths, then by 10,000",
@@ -4728,7 +5063,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}10{,}000(0.05\\times0.92)&=460\\\\10{,}000(0.05\\times0.08)&=40\\\\10{,}000(0.95\\times0.08)&=760\\\\10{,}000(0.95\\times0.92)&=8{,}740\\end{aligned}"
       },
       {
         "title": "Check table totals",
@@ -4755,7 +5091,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Flagged total}&=1{,}220\\\\\\text{Unflagged total}&=8{,}780\\end{aligned}"
       }
     ],
     "answerText": "Expected cells: 460, 40, 760, and 8,740. Row totals 500 and 9,500; column totals 1,220 and 8,780.",
@@ -4837,7 +5174,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Malicious flagged}&=0.05\\times0.92=0.046\\\\\\text{Legitimate flagged}&=0.95\\times0.08=0.076\\end{aligned}"
       },
       {
         "title": "Total the flag evidence",
@@ -4864,7 +5202,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "P(F)=0.046+0.076=0.122"
       },
       {
         "title": "Apply Bayes",
@@ -4891,7 +5230,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "P(M\\mid F)=\\frac{0.046}{0.122}=\\frac{23}{61}\\approx0.377049"
       }
     ],
     "answerText": "12.2% are flagged; about 37.7% of flagged requests are malicious.",
@@ -4919,6 +5259,12 @@
         "page": 31,
         "label": "Total probability and general Bayes’ rule"
       }
+    ],
+    "optionsTex": [
+      "0.122\\quad\\text{and}\\quad\\frac{23}{61}\\approx0.3770",
+      null,
+      null,
+      null
     ]
   },
   {
@@ -4973,7 +5319,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(F^c\\mid M)&=0.08\\\\P(F^c\\mid M^c)&=0.92\\end{aligned}"
       },
       {
         "title": "Total non-flag paths",
@@ -5000,7 +5347,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(M\\cap F^c)&=0.05\\times0.08=0.004\\\\P(M^c\\cap F^c)&=0.95\\times0.92=0.874\\\\P(F^c)&=0.878\\end{aligned}"
       },
       {
         "title": "Divide",
@@ -5027,7 +5375,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(M^c\\mid F^c)&=\\frac{0.874}{0.878}\\\\&=\\frac{8{,}740}{8{,}780}\\approx0.995444\\end{aligned}"
       }
     ],
     "answerText": "Approximately 99.544% of unflagged requests are legitimate.",
@@ -5055,6 +5404,12 @@
         "page": 31,
         "label": "Total probability and general Bayes’ rule"
       }
+    ],
+    "optionsTex": [
+      "\\frac{8{,}740}{8{,}780}\\approx0.99544",
+      null,
+      null,
+      "\\frac{40}{8{,}780}\\approx0.00456"
     ]
   },
   {
@@ -5109,7 +5464,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Expected flags}&=0.122\\times10{,}000\\\\&=1{,}220\\\\\\text{Capacity}&=0.10\\times10{,}000\\\\&=1{,}000\\end{aligned}"
       },
       {
         "title": "Find the expected gap",
@@ -5136,7 +5492,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}1{,}220-1{,}000&=220\\ \\text{excess flags}\\\\12.2\\%&>10\\%\\end{aligned}"
       },
       {
         "title": "Draw the constrained conclusion",
@@ -5163,7 +5520,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{gathered}\\text{Investigating every expected flag}\\\\\\text{exceeds capacity}\\end{gathered}"
       }
     ],
     "answerText": "Expected flag volume exceeds capacity by 220 per 10,000 requests.",
@@ -5246,7 +5604,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Shares}&=(0.60,0.25,0.15)\\\\\\text{Defective}&=(0.01,0.03,0.07)\\\\\\text{Non-defective}&=(0.99,0.97,0.93)\\end{aligned}"
       },
       {
         "title": "Multiply each defect path",
@@ -5273,7 +5632,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(A\\cap D)&=0.60\\times0.01=0.006\\\\P(B\\cap D)&=0.25\\times0.03=0.0075\\\\P(C\\cap D)&=0.15\\times0.07=0.0105\\end{aligned}"
       },
       {
         "title": "Add the disjoint paths",
@@ -5300,7 +5660,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "P(D)=0.006+0.0075+0.0105=0.024"
       }
     ],
     "answerText": "The overall defect rate is 2.4%.",
@@ -5382,7 +5743,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}&(P(A\\cap D),P(B\\cap D),P(C\\cap D))\\\\&\\qquad=(0.006,0.0075,0.0105)\\end{aligned}"
       },
       {
         "title": "Normalize by total defects",
@@ -5409,7 +5771,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(A\\mid D)&=\\frac{0.006}{0.024}=0.25\\\\P(B\\mid D)&=\\frac{0.0075}{0.024}=0.3125\\\\P(C\\mid D)&=\\frac{0.0105}{0.024}=0.4375\\end{aligned}"
       },
       {
         "title": "Check the posterior total",
@@ -5436,7 +5799,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "0.25+0.3125+0.4375=1"
       }
     ],
     "answerText": "25%, 31.25%, and 43.75%; they sum to 100%.",
@@ -5518,7 +5882,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\text{New C contribution}=0.15\\times0.02=0.003"
       },
       {
         "title": "Recalculate total probability",
@@ -5545,7 +5910,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "P_{\\text{new}}(D)=0.006+0.0075+0.003=0.0165"
       },
       {
         "title": "Find the relative decrease",
@@ -5572,7 +5938,8 @@
             "page": 31,
             "label": "Total probability and general Bayes’ rule"
           }
-        ]
+        ],
+        "mathTex": "\\frac{0.024-0.0165}{0.024}\\times100\\%=31.25\\%"
       }
     ],
     "answerText": "New defect rate 1.65%; relative decrease 31.25% (absolute decrease 0.75 percentage points).",
@@ -5640,7 +6007,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "p=0.10,\\qquad q=0.90"
       },
       {
         "title": "Describe first success on x",
@@ -5652,7 +6020,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "\\underbrace{\\text{failure},\\ldots,\\text{failure}}_{\\text{preceding failures}},\\ \\text{success}"
       },
       {
         "title": "Multiply the required sequence",
@@ -5664,7 +6033,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "P(X=x)=0.9^{x-1}\\times0.1,\\quad x=1,2,\\ldots"
       }
     ],
     "answerText": "X is geometric with p=0.10 and support starting at 1.",
@@ -5678,6 +6048,12 @@
         "page": 48,
         "label": "Waiting for the first defect: PMF and by-n probability"
       }
+    ],
+    "optionsTex": [
+      "\\begin{gathered}\\text{Geometric on }\\{1,2,\\ldots\\}\\\\P(X=x)=0.9^{x-1}\\times0.1\\end{gathered}",
+      "\\begin{gathered}\\text{Binomial on }\\{0,1,\\ldots,10\\}\\\\P(X=x)=\\binom{10}x(0.1)^x(0.9)^{10-x}\\end{gathered}",
+      "\\begin{gathered}\\text{Geometric on }\\{1,2,\\ldots\\}\\\\P(X=x)=0.9^x\\times0.1\\end{gathered}",
+      "\\begin{gathered}\\text{Uniform on }\\{1,\\ldots,10\\}\\\\P(X=x)=0.1\\end{gathered}"
     ]
   },
   {
@@ -5717,7 +6093,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "P(\\text{first three ordinary})=0.9^3"
       },
       {
         "title": "Require success in box four",
@@ -5729,7 +6106,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "P(\\text{rare at }4\\mid\\text{earlier ordinary})=0.1"
       },
       {
         "title": "Multiply",
@@ -5741,7 +6119,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "0.9^3\\times0.1=0.0729"
       }
     ],
     "answerText": "0.0729, or 7.29%.",
@@ -5794,7 +6173,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "P(X>4)=0.9^4"
       },
       {
         "title": "Remove successes after the deadline",
@@ -5806,7 +6186,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "P(X>10)=0.9^{10}"
       },
       {
         "title": "Subtract nested tails",
@@ -5818,7 +6199,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "P(5\\le X\\le10)=0.9^4-0.9^{10}\\approx0.30742156"
       }
     ],
     "answerText": "Approximately 0.30742.",
@@ -5831,6 +6213,12 @@
         "page": 48,
         "label": "Waiting for the first defect: PMF and by-n probability"
       }
+    ],
+    "optionsTex": [
+      "0.9^4-0.9^{10}\\approx0.30742",
+      "0.9^5-0.9^{10}\\approx0.24181",
+      "1-0.9^{10}\\approx0.65132",
+      "0.9^4\\approx0.6561"
     ]
   },
   {
@@ -5870,7 +6258,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "P(X\\le10\\mid X>6)"
       },
       {
         "title": "Count the remaining boxes",
@@ -5882,7 +6271,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "10-6=4\\ \\text{trials}"
       },
       {
         "title": "Use the same future trial model",
@@ -5894,7 +6284,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\le10\\mid X>6)&=1-0.9^4\\\\&=0.3439=P(X\\le4)\\end{aligned}"
       }
     ],
     "answerText": "0.3439. This is memorylessness: the additional wait has the same distribution as a fresh wait.",
@@ -5907,6 +6298,12 @@
         "page": 48,
         "label": "Waiting for the first defect: PMF and by-n probability"
       }
+    ],
+    "optionsTex": [
+      "\\begin{gathered}1-0.9^4=0.3439;\\\\\\text{four future independent trials remain,}\\\\\\text{unaffected by the six failures.}\\end{gathered}",
+      "\\begin{gathered}1-0.9^{10}\\approx0.6513;\\\\\\text{all ten trials remain uncertain.}\\end{gathered}",
+      "\\begin{gathered}0.9^6(1-0.9^4);\\\\\\text{the six failures must be multiplied}\\\\\\text{into the conditional answer.}\\end{gathered}",
+      null
     ]
   },
   {
@@ -5946,7 +6343,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "1-0.9^n\\ge0.95\\ \\Rightarrow\\ 0.9^n\\le0.05"
       },
       {
         "title": "Solve using logarithms",
@@ -5958,7 +6356,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "n\\ge\\frac{\\log(0.05)}{\\log(0.9)}\\approx28.4332"
       },
       {
         "title": "Round up and check",
@@ -5970,7 +6369,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\le28)&\\approx0.94767\\\\P(X\\le29)&\\approx0.95290\\end{aligned}"
       }
     ],
     "answerText": "29 boxes.",
@@ -6022,7 +6422,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "P(Y=x)=0.9^{x-1}\\times0.1,\\quad 1\\le x\\le19"
       },
       {
         "title": "Collect the tail at twenty",
@@ -6034,7 +6435,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "P(Y=20)=0.9^{19}\\times1"
       },
       {
         "title": "Check the total and model",
@@ -6046,7 +6448,8 @@
             "page": 48,
             "label": "Waiting for the first defect: PMF and by-n probability"
           }
-        ]
+        ],
+        "mathTex": "\\sum_{x=1}^{19}0.9^{x-1}(0.1)+0.9^{19}=1"
       }
     ],
     "answerText": "The last mass is 0.9¹⁹, not 0.9¹⁹×0.1. The waiting time is a geometric wait capped at 20, not an ordinary geometric variable.",
@@ -6059,6 +6462,12 @@
         "page": 48,
         "label": "Waiting for the first defect: PMF and by-n probability"
       }
+    ],
+    "optionsTex": [
+      "P(Y=x)=\\begin{cases}0.9^{x-1}(0.1),&x=1,\\ldots,19\\\\0.9^{19},&x=20\\\\0,&\\text{otherwise}\\end{cases}",
+      "P(Y=x)=\\begin{cases}0.9^{x-1}(0.1),&x=1,\\ldots,20\\\\0,&\\text{otherwise}\\end{cases}",
+      "\\begin{gathered}P(Y=20)=1\\\\P(Y=x)=0\\ \\text{for }x<20\\end{gathered}",
+      "P(Y=x)=0.05,\\quad x=1,\\ldots,20"
     ]
   },
   {
@@ -6108,7 +6517,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\min X&=0\\\\\\max X&=\\min(3,4)=3\\end{aligned}"
       },
       {
         "title": "Read the first defect chance",
@@ -6130,7 +6540,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "P(\\text{first defective})=\\frac4{12}=\\frac13"
       },
       {
         "title": "Show how conditioning changes the next chance",
@@ -6152,7 +6563,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}&P(\\text{second defective}\\mid\\text{first defective})=\\frac3{11}\\\\&P(\\text{second defective}\\mid\\text{first good})=\\frac4{11}\\end{aligned}"
       }
     ],
     "answerText": "Range {0,1,2,3}; the draws are dependent.",
@@ -6176,6 +6588,12 @@
         "page": 3,
         "label": "Conditional probability"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      "\\begin{gathered}X\\in\\{0,1,2,3\\};\\ \\text{each draw has conditional}\\\\\\text{defect probability }\\frac13\\\\\\text{regardless of earlier results.}\\end{gathered}"
     ]
   },
   {
@@ -6225,7 +6643,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "\\binom{12}3=220"
       },
       {
         "title": "Count each favorable composition",
@@ -6247,7 +6666,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "P(X=x)=\\frac{\\binom4x\\binom8{3-x}}{220}"
       },
       {
         "title": "Evaluate every feasible value",
@@ -6269,7 +6689,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Numerators}&=\\left(\\binom83,\\ 4\\binom82,\\ 6\\binom81,\\ \\binom43\\right)\\\\&=(56,112,48,4)\\end{aligned}"
       },
       {
         "title": "Check normalization and decimals",
@@ -6291,7 +6712,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Sum}&=\\frac{220}{220}=1\\\\\\text{Decimals}&=(0.254545,0.509091,\\\\&\\qquad0.218182,0.018182)\\end{aligned}"
       }
     ],
     "answerText": "The PMF is C(4,x)C(8,3−x)/C(12,3). Its exact masses are 14/55, 28/55, 12/55, 1/55.",
@@ -6314,6 +6736,12 @@
         "page": 3,
         "label": "Conditional probability"
       }
+    ],
+    "optionsTex": [
+      "\\frac{56}{220},\\ \\frac{112}{220},\\ \\frac{48}{220},\\ \\frac4{220}",
+      "\\frac{64}{216},\\ \\frac{96}{216},\\ \\frac{48}{216},\\ \\frac8{216}",
+      "\\frac8{12},\\ \\frac4{12},\\ 0,\\ 0",
+      "\\frac{56}{220},\\ \\frac{112}{220},\\ \\frac{52}{220},\\ 0"
     ]
   },
   {
@@ -6363,7 +6791,8 @@
             "page": 12,
             "label": "CDF intervals and jump probabilities"
           }
-        ]
+        ],
+        "mathTex": "F(t)=0,\\quad t<0"
       },
       {
         "title": "Add each mass as its point is reached",
@@ -6385,7 +6814,8 @@
             "page": 12,
             "label": "CDF intervals and jump probabilities"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}F(0)&=\\frac{14}{55}\\\\F(1)&=\\frac{42}{55}\\\\F(2)&=\\frac{54}{55}\\\\F(3)&=\\frac{55}{55}=1\\end{aligned}"
       },
       {
         "title": "Assign flat intervals with included left endpoints",
@@ -6407,7 +6837,8 @@
             "page": 12,
             "label": "CDF intervals and jump probabilities"
           }
-        ]
+        ],
+        "mathTex": "F(t)=\\begin{cases}\\frac{14}{55},&0\\le t<1\\\\\\frac{42}{55},&1\\le t<2\\\\\\frac{54}{55},&2\\le t<3\\\\1,&t\\ge3\\end{cases}"
       }
     ],
     "answerText": "The CDF levels are 0, 14/55, 42/55, 54/55, and 1 on the stated intervals.",
@@ -6430,6 +6861,28 @@
         "doc": "week3",
         "page": 12,
         "label": "CDF intervals and jump probabilities"
+      }
+    ],
+    "optionsTex": [
+      "F(t)=\\begin{cases}0,&t<0\\\\\\frac{14}{55},&0\\le t<1\\\\\\frac{42}{55},&1\\le t<2\\\\\\frac{54}{55},&2\\le t<3\\\\1,&t\\ge3\\end{cases}",
+      "\\frac{14}{55},\\ \\frac{28}{55},\\ \\frac{12}{55},\\ \\frac1{55}\\quad\\text{on successive intervals}",
+      "F(t)=\\begin{cases}0,&t\\le0\\\\\\frac{14}{55},&0<t\\le1\\\\\\frac{42}{55},&1<t\\le2\\\\\\frac{54}{55},&2<t\\le3\\\\1,&t>3\\end{cases}",
+      "F(t)=\\begin{cases}0,&t<0\\\\\\frac t3,&0\\le t<3\\\\1,&t\\ge3\\end{cases}"
+    ],
+    "promptParts": [
+      {
+        "text": "X has masses "
+      },
+      {
+        "tex": "P(X=0)=\\frac{14}{55},\\quad P(X=1)=\\frac{28}{55}",
+        "display": true
+      },
+      {
+        "tex": "P(X=2)=\\frac{12}{55},\\quad P(X=3)=\\frac1{55}",
+        "display": true
+      },
+      {
+        "text": "Which CDF is correct?"
       }
     ]
   },
@@ -6480,7 +6933,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "48+4=52"
       },
       {
         "title": "Count the restricted space",
@@ -6502,7 +6956,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "220-56=164"
       },
       {
         "title": "Divide",
@@ -6524,7 +6979,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge2\\mid X\\ge1)&=\\frac{\\frac{52}{220}}{\\frac{164}{220}}\\\\&=\\frac{52}{164}=\\frac{13}{41}\\end{aligned}"
       }
     ],
     "answerText": "13/41 ≈ 0.31707.",
@@ -6547,6 +7003,12 @@
         "page": 3,
         "label": "Conditional probability"
       }
+    ],
+    "optionsTex": [
+      "\\frac{13}{41}\\approx0.31707",
+      "\\frac{13}{55}\\approx0.23636",
+      "\\frac{41}{55}\\approx0.74545",
+      "\\frac3{11}\\approx0.27273"
     ]
   },
   {
@@ -6596,7 +7058,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "p=\\frac4{12}=\\frac13,\\qquad q=\\frac23"
       },
       {
         "title": "Count placements of x defective draws",
@@ -6618,7 +7081,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "\\binom3x\\ \\text{patterns}"
       },
       {
         "title": "Multiply sequence probabilities",
@@ -6640,7 +7104,8 @@
             "page": 3,
             "label": "Conditional probability"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X=x)&=\\binom3x\\left(\\frac13\\right)^x\\left(\\frac23\\right)^{3-x}\\\\\\text{Masses}&=\\frac{(8,12,6,1)}{27}\\end{aligned}"
       }
     ],
     "answerText": "Binomial with n=3 and p=1/3, rather than the without-replacement hypergeometric model.",
@@ -6663,6 +7128,12 @@
         "page": 3,
         "label": "Conditional probability"
       }
+    ],
+    "optionsTex": [
+      "\\begin{gathered}X\\text{ is binomial}\\\\P(X=x)=\\binom3x\\left(\\frac13\\right)^x\\left(\\frac23\\right)^{3-x}\\\\x=0,1,2,3\\end{gathered}",
+      "P(X=x)=\\frac{\\binom4x\\binom8{3-x}}{\\binom{12}3}",
+      "\\begin{gathered}X\\text{ is geometric}\\\\P(X=x)=\\frac{\\left(\\frac23\\right)^{x-1}}3,\\quad x\\ge1\\end{gathered}",
+      "P(X=x)=\\frac14,\\quad x=0,1,2,3"
     ]
   },
   {
@@ -6707,7 +7178,8 @@
             "page": 14,
             "label": "Definition of a sample space"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Positions}&=\\{1,\\ldots,7\\}\\\\\\text{Recorded letters}&=\\{\\mathrm P,\\mathrm O,\\mathrm K,\\mathrm E,\\mathrm M,\\mathrm N\\}\\end{aligned}"
       },
       {
         "title": "Build the sample space",
@@ -6724,7 +7196,8 @@
             "page": 14,
             "label": "Definition of a sample space"
           }
-        ]
+        ],
+        "mathTex": "\\Omega=\\{\\mathrm P,\\mathrm O,\\mathrm K,\\mathrm E,\\mathrm M,\\mathrm N\\}"
       },
       {
         "title": "Find O's probability from positions",
@@ -6741,7 +7214,8 @@
             "page": 14,
             "label": "Definition of a sample space"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\mathrm O)&=\\frac27\\\\\\text{Each other letter has probability }&\\frac17\\end{aligned}"
       }
     ],
     "answerText": "The letter sample space has six distinct values; O has probability 2/7.",
@@ -6759,6 +7233,12 @@
         "page": 14,
         "label": "Definition of a sample space"
       }
+    ],
+    "optionsTex": [
+      "\\{\\mathrm P,\\mathrm O,\\mathrm K,\\mathrm E,\\mathrm M,\\mathrm N\\};\\quad P(\\mathrm O)=\\frac27",
+      "\\{\\mathrm P,\\mathrm O,\\mathrm K,\\mathrm E,\\mathrm M,\\mathrm O,\\mathrm N\\};\\quad P(\\mathrm O)=\\frac17",
+      "\\{\\mathrm P,\\mathrm O,\\mathrm K,\\mathrm E,\\mathrm M,\\mathrm N\\};\\quad P(\\mathrm O)=\\frac16",
+      "\\{1,2,3,4,5,6,7\\};\\quad P(\\mathrm O)=\\frac27"
     ]
   },
   {
@@ -6803,7 +7283,8 @@
             "page": 20,
             "label": "Theoretical probability 1/54"
           }
-        ]
+        ],
+        "mathTex": "|\\Omega|=6^3=216"
       },
       {
         "title": "List qualifying triples",
@@ -6820,7 +7301,8 @@
             "page": 20,
             "label": "Theoretical probability 1/54"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}A&=\\{(5,6,6),(6,5,6),\\\\&\\qquad(6,6,5),(6,6,6)\\}\\\\|A|&=4\\end{aligned}"
       },
       {
         "title": "Divide",
@@ -6837,7 +7319,8 @@
             "page": 20,
             "label": "Theoretical probability 1/54"
           }
-        ]
+        ],
+        "mathTex": "P(A)=\\frac4{216}=\\frac1{54}\\approx0.0185185"
       }
     ],
     "answerText": "1/54, about 1.85%.",
@@ -6855,6 +7338,12 @@
         "page": 20,
         "label": "Theoretical probability 1/54"
       }
+    ],
+    "optionsTex": [
+      "\\frac1{54}",
+      "\\frac1{18}",
+      "\\frac1{36}",
+      "\\frac2{216}"
     ]
   },
   {
@@ -6899,7 +7388,8 @@
             "page": 34,
             "label": "Attack example verifies De Morgan’s laws"
           }
-        ]
+        ],
+        "mathTex": "A\\cup B=\\{\\text{first misses or third misses}\\}"
       },
       {
         "title": "Negate the whole condition",
@@ -6916,7 +7406,8 @@
             "page": 34,
             "label": "Attack example verifies De Morgan’s laws"
           }
-        ]
+        ],
+        "mathTex": "\\begin{gathered}\\text{not(first misses or third misses)}\\\\=\\text{first hits and third hits}\\end{gathered}"
       },
       {
         "title": "Write the set identity",
@@ -6933,7 +7424,8 @@
             "page": 34,
             "label": "Attack example verifies De Morgan’s laws"
           }
-        ]
+        ],
+        "mathTex": "(A\\cup B)^c=A^c\\cap B^c"
       }
     ],
     "answerText": "Both the first and third attacks hit; Aᶜ∩Bᶜ.",
@@ -6952,6 +7444,12 @@
         "page": 34,
         "label": "Attack example verifies De Morgan’s laws"
       }
+    ],
+    "optionsTex": [
+      "\\begin{gathered}\\text{Both the first and third attacks hit:}\\\\A^c\\cap B^c\\end{gathered}",
+      "\\begin{gathered}\\text{At least one of the first and third attacks hits:}\\\\A^c\\cup B^c\\end{gathered}",
+      "\\begin{gathered}\\text{Both the first and third attacks miss:}\\\\A\\cap B\\end{gathered}",
+      null
     ]
   },
   {
@@ -6996,7 +7494,8 @@
             "page": 28,
             "label": "Inclusion–exclusion"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}11:&\\ \\left\\lfloor\\frac{999}{11}\\right\\rfloor+1=90+1=91\\\\13:&\\ \\left\\lfloor\\frac{999}{13}\\right\\rfloor+1=76+1=77\\end{aligned}"
       },
       {
         "title": "Count the overlap",
@@ -7013,7 +7512,8 @@
             "page": 28,
             "label": "Inclusion–exclusion"
           }
-        ]
+        ],
+        "mathTex": "\\text{Both}:\\ \\left\\lfloor\\frac{999}{143}\\right\\rfloor+1=6+1=7"
       },
       {
         "title": "Use inclusion–exclusion and divide by 1,000",
@@ -7030,7 +7530,8 @@
             "page": 28,
             "label": "Inclusion–exclusion"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Union count}&=91+77-7=161\\\\\\text{Probabilities}&=\\frac{91}{1{,}000},\\ \\frac{77}{1{,}000},\\ \\frac{161}{1{,}000}\\end{aligned}"
       }
     ],
     "answerText": "0.091, 0.077, and 0.161.",
@@ -7093,7 +7594,8 @@
             "page": 28,
             "label": "Three-set inclusion–exclusion"
           }
-        ]
+        ],
+        "mathTex": "800=500+400+300-220-180-100+t"
       },
       {
         "title": "Combine the known terms",
@@ -7110,7 +7612,8 @@
             "page": 28,
             "label": "Three-set inclusion–exclusion"
           }
-        ]
+        ],
+        "mathTex": "800=1{,}200-500+t=700+t"
       },
       {
         "title": "Solve and interpret",
@@ -7127,7 +7630,8 @@
             "page": 28,
             "label": "Three-set inclusion–exclusion"
           }
-        ]
+        ],
+        "mathTex": "t=800-700=100"
       }
     ],
     "answerText": "100 players joined all three and receive the gift.",
@@ -7194,7 +7698,8 @@
             "page": 55,
             "label": "Character customization solution"
           }
-        ]
+        ],
+        "mathTex": "\\text{Stage choices}=(5,4,3)"
       },
       {
         "title": "Multiply rather than add",
@@ -7216,7 +7721,8 @@
             "page": 55,
             "label": "Character customization solution"
           }
-        ]
+        ],
+        "mathTex": "5\\times4\\times3"
       },
       {
         "title": "Calculate",
@@ -7238,7 +7744,8 @@
             "page": 55,
             "label": "Character customization solution"
           }
-        ]
+        ],
+        "mathTex": "5\\times4\\times3=60"
       }
     ],
     "answerText": "60 designs.",
@@ -7310,7 +7817,8 @@
             "page": 65,
             "label": "Unordered team from six heroes"
           }
-        ]
+        ],
+        "mathTex": "P(6,3)=6\\times5\\times4=120"
       },
       {
         "title": "Count unordered teams",
@@ -7332,7 +7840,8 @@
             "page": 65,
             "label": "Unordered team from six heroes"
           }
-        ]
+        ],
+        "mathTex": "\\binom63=\\frac{P(6,3)}{3!}=\\frac{120}{6}=20"
       },
       {
         "title": "Use the wording to choose",
@@ -7354,7 +7863,8 @@
             "page": 65,
             "label": "Unordered team from six heroes"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Ordered}&\\longrightarrow\\text{permutation}\\\\\\text{Unordered}&\\longrightarrow\\text{combination}\\end{aligned}"
       }
     ],
     "answerText": "120 ordered lineups; 20 unordered teams.",
@@ -7426,7 +7936,8 @@
             "page": 38,
             "label": "Complement rule"
           }
-        ]
+        ],
+        "mathTex": "\\text{Total}=\\binom{52}{13}"
       },
       {
         "title": "Count the two complement cases",
@@ -7448,7 +7959,8 @@
             "page": 38,
             "label": "Complement rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Zero}&=\\binom{48}{13}\\\\\\text{One}&=\\binom41\\binom{48}{12}=4\\binom{48}{12}\\end{aligned}"
       },
       {
         "title": "Subtract the complement probability",
@@ -7470,7 +7982,8 @@
             "page": 38,
             "label": "Complement rule"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\text{at least }2)&=1-\\frac{\\binom{48}{13}+4\\binom{48}{12}}{\\binom{52}{13}}\\\\&\\approx0.257334934\\end{aligned}"
       }
     ],
     "answerText": "Approximately 25.733%.",
@@ -7493,6 +8006,12 @@
         "page": 38,
         "label": "Complement rule"
       }
+    ],
+    "optionsTex": [
+      "1-\\frac{\\binom{48}{13}+4\\binom{48}{12}}{\\binom{52}{13}}\\approx0.25733",
+      "1-\\frac{\\binom{48}{13}}{\\binom{52}{13}}",
+      "\\frac{4\\binom{48}{12}}{\\binom{52}{13}}",
+      "\\frac{\\binom42\\binom{48}{11}}{\\binom{52}{13}}"
     ]
   },
   {
@@ -7537,7 +8056,8 @@
             "page": 13,
             "label": "Repeated attempts and why expectation is not a guarantee"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\text{specific regular})&=\\frac{71}{72}\\times\\frac1{12}\\\\&=\\frac{71}{864}\\approx0.0821759\\end{aligned}"
       },
       {
         "title": "Find no secrets in 72 boxes",
@@ -7554,7 +8074,8 @@
             "page": 13,
             "label": "Repeated attempts and why expectation is not a guarantee"
           }
-        ]
+        ],
+        "mathTex": "P(\\text{no secrets})=\\left(\\frac{71}{72}\\right)^{72}"
       },
       {
         "title": "Take the complement",
@@ -7571,7 +8092,8 @@
             "page": 13,
             "label": "Repeated attempts and why expectation is not a guarantee"
           }
-        ]
+        ],
+        "mathTex": "P(\\text{at least one})=1-\\left(\\frac{71}{72}\\right)^{72}\\approx0.634690"
       }
     ],
     "answerText": "About 8.218% for a particular regular design, and 63.469% for at least one secret in 72 boxes.",
@@ -7590,6 +8112,12 @@
         "page": 13,
         "label": "Repeated attempts and why expectation is not a guarantee"
       }
+    ],
+    "optionsTex": [
+      "\\frac{71}{864}\\quad\\text{and}\\quad 1-\\left(\\frac{71}{72}\\right)^{72}\\approx0.63469",
+      "\\frac1{13}\\quad\\text{and}\\quad1",
+      "\\frac1{12}\\quad\\text{and}\\quad1-\\left(\\frac1{72}\\right)^{72}",
+      "\\frac{71}{72}\\quad\\text{and}\\quad1-\\frac{71}{72}"
     ]
   },
   {
@@ -7634,7 +8162,8 @@
             "page": 3,
             "label": "Conditional probability formula"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Target}&=P(A\\mid B)\\\\\\text{Denominator}&=P(B)=0.40\\end{aligned}"
       },
       {
         "title": "Identify the joint event",
@@ -7651,7 +8180,8 @@
             "page": 3,
             "label": "Conditional probability formula"
           }
-        ]
+        ],
+        "mathTex": "\\text{Numerator}=P(A\\cap B)=0.28"
       },
       {
         "title": "Divide",
@@ -7668,7 +8198,8 @@
             "page": 3,
             "label": "Conditional probability formula"
           }
-        ]
+        ],
+        "mathTex": "P(A\\mid B)=\\frac{0.28}{0.40}=0.70"
       }
     ],
     "answerText": "70% of the sleeping Pokémon are caught under this probability model.",
@@ -7730,7 +8261,8 @@
             "page": 13,
             "label": "Why the exact given information matters"
           }
-        ]
+        ],
+        "mathTex": "|\\text{at least one }6|=6+6-1=11"
       },
       {
         "title": "Find the qualifying pair",
@@ -7747,7 +8279,8 @@
             "page": 13,
             "label": "Why the exact given information matters"
           }
-        ]
+        ],
+        "mathTex": "P(\\text{both}\\mid\\text{at least one})=\\frac1{11}"
       },
       {
         "title": "Compare with a specified-roll condition",
@@ -7764,7 +8297,8 @@
             "page": 13,
             "label": "Why the exact given information matters"
           }
-        ]
+        ],
+        "mathTex": "P(\\text{both}\\mid\\text{first }6)=\\frac16"
       }
     ],
     "answerText": "1/11 given at least one six; 1/6 given the first roll is six.",
@@ -7782,6 +8316,12 @@
         "page": 13,
         "label": "Why the exact given information matters"
       }
+    ],
+    "optionsTex": [
+      "\\frac1{11}\\quad\\text{and}\\quad\\frac16",
+      "\\frac16\\quad\\text{and}\\quad\\frac16",
+      "\\frac1{36}\\quad\\text{and}\\quad\\frac16",
+      "\\frac1{11}\\quad\\text{and}\\quad\\frac1{11}"
     ]
   },
   {
@@ -7836,7 +8376,8 @@
             "page": 29,
             "label": "Negative-result calculation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(+\\mid D)&=0.95,&P(+\\mid D^c)&=0.02\\\\P(-\\mid D)&=0.05,&P(-\\mid D^c)&=0.98\\end{aligned}"
       },
       {
         "title": "Total positive evidence",
@@ -7863,7 +8404,8 @@
             "page": 29,
             "label": "Negative-result calculation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(+)&=0.01\\times0.95+0.99\\times0.02\\\\&=0.0095+0.0198=0.0293\\end{aligned}"
       },
       {
         "title": "Find the positive posterior",
@@ -7890,7 +8432,8 @@
             "page": 29,
             "label": "Negative-result calculation"
           }
-        ]
+        ],
+        "mathTex": "P(D\\mid+)=\\frac{0.0095}{0.0293}\\approx0.324232"
       },
       {
         "title": "Total negative evidence and condition",
@@ -7917,7 +8460,8 @@
             "page": 29,
             "label": "Negative-result calculation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(-)&=0.01\\times0.05+0.99\\times0.98\\\\&=0.9707\\\\P(D^c\\mid-)&=\\frac{0.9702}{0.9707}\\approx0.9994849\\end{aligned}"
       }
     ],
     "answerText": "About 32.42% after a positive result and 99.9485% no disease after a negative result.",
@@ -7990,7 +8534,8 @@
             "page": 33,
             "label": "Spam filtering solution"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Spam and link}&=0.20\\times0.80=0.16\\\\\\text{Non-spam and link}&=0.80\\times0.10=0.08\\end{aligned}"
       },
       {
         "title": "Find total link probability",
@@ -8007,7 +8552,8 @@
             "page": 33,
             "label": "Spam filtering solution"
           }
-        ]
+        ],
+        "mathTex": "P(\\text{link})=0.16+0.08=0.24"
       },
       {
         "title": "Apply Bayes",
@@ -8024,7 +8570,8 @@
             "page": 33,
             "label": "Spam filtering solution"
           }
-        ]
+        ],
+        "mathTex": "P(\\text{spam}\\mid\\text{link})=\\frac{0.16}{0.24}=\\frac23\\approx0.666667"
       }
     ],
     "answerText": "2/3, about 66.7%.",
@@ -8042,6 +8589,12 @@
         "page": 33,
         "label": "Spam filtering solution"
       }
+    ],
+    "optionsTex": [
+      "\\frac23",
+      null,
+      null,
+      null
     ]
   },
   {
@@ -8086,7 +8639,8 @@
             "page": 46,
             "label": "Delivery probability exercise"
           }
-        ]
+        ],
+        "mathTex": "P(X=3)=0.8^3=0.512"
       },
       {
         "title": "At most one on time",
@@ -8103,7 +8657,8 @@
             "page": 46,
             "label": "Delivery probability exercise"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\le1)&=0.2^3+\\binom31(0.8)(0.2)^2\\\\&=0.008+0.096=0.104\\end{aligned}"
       },
       {
         "title": "Not exactly two on time",
@@ -8120,7 +8675,8 @@
             "page": 46,
             "label": "Delivery probability exercise"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ne2)&=1-\\binom32(0.8)^2(0.2)\\\\&=1-0.384=0.616\\end{aligned}"
       }
     ],
     "answerText": "0.512, 0.104, and 0.616.",
@@ -8187,7 +8743,8 @@
             "page": 52,
             "label": "Discrete or continuous classification exercise"
           }
-        ]
+        ],
+        "mathTex": "\\{0,1,2,\\ldots\\}\\ \\text{or a finite subset}\\ \\longrightarrow\\ \\text{discrete}"
       },
       {
         "title": "Identify measurements",
@@ -8209,7 +8766,8 @@
             "page": 52,
             "label": "Discrete or continuous classification exercise"
           }
-        ]
+        ],
+        "mathTex": "\\text{Interval of real numbers}\\ \\longrightarrow\\ \\text{continuous model}"
       },
       {
         "title": "Classify by possible values, not randomness",
@@ -8231,7 +8789,8 @@
             "page": 52,
             "label": "Discrete or continuous classification exercise"
           }
-        ]
+        ],
+        "mathTex": "\\mathrm D,\\mathrm C,\\mathrm D,\\mathrm C,\\mathrm D,\\mathrm C"
       }
     ],
     "answerText": "Discrete, continuous, discrete, continuous, discrete, continuous.",

@@ -35,7 +35,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}0\\le x\\le 2 \\\\ \\Rightarrow\\ 1+x\\ge 1\\end{aligned}"
       },
       {
         "title": "Set total area to 1",
@@ -47,7 +48,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "1=c\\int_0^2(1+x)\\,\\mathrm dx"
       },
       {
         "title": "Evaluate the integral",
@@ -59,7 +61,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\int_0^2(1+x)\\,\\mathrm dx &= \\left[x+\\frac{x^2}{2}\\right]_0^2 \\\\ &= 2+2 \\\\ &= 4\\end{aligned}"
       },
       {
         "title": "Solve and verify",
@@ -71,7 +74,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}c &= \\frac14 \\\\ f(x)\\ge 0,\\quad \\int f(x)\\,\\mathrm dx &= 1\\end{aligned}"
       }
     ],
     "answerText": "c=1/4.",
@@ -89,6 +93,24 @@
         "doc": "week3",
         "page": 39,
         "label": "Essential antiderivatives"
+      }
+    ],
+    "optionsTex": [
+      "\\frac{1}{3}",
+      "1",
+      "\\frac{1}{2}",
+      "\\frac{1}{4}"
+    ],
+    "promptParts": [
+      {
+        "text": "Let "
+      },
+      {
+        "tex": "f(x)=\\begin{cases}c(1+x),&0\\le x\\le2,\\\\0,&\\text{otherwise.}\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "Which value of c makes f a valid PDF?"
       }
     ]
   },
@@ -128,7 +150,8 @@
             "page": 6,
             "label": "Probability is area"
           }
-        ]
+        ],
+        "mathTex": "P(X>1)=P(1<X\\le 2)"
       },
       {
         "title": "Set up its area",
@@ -140,7 +163,8 @@
             "page": 6,
             "label": "Probability is area"
           }
-        ]
+        ],
+        "mathTex": "P(X>1)=\\frac14\\int_1^2(1+x)\\,\\mathrm dx"
       },
       {
         "title": "Evaluate upper minus lower",
@@ -152,7 +176,8 @@
             "page": 6,
             "label": "Probability is area"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\frac14\\left[x+\\frac{x^2}{2}\\right]_1^2 &= \\frac14\\left(4-\\frac32\\right) \\\\ &= \\frac58\\end{aligned}"
       }
     ],
     "answerText": "P(X>1)=5/8=0.625.",
@@ -170,6 +195,31 @@
         "doc": "week4",
         "page": 7,
         "label": "Density versus point probability"
+      }
+    ],
+    "optionsTex": [
+      "\\frac{5}{8}",
+      "\\frac{3}{4}",
+      "\\frac{1}{2}",
+      "\\frac{3}{8}"
+    ],
+    "promptParts": [
+      {
+        "text": "Let "
+      },
+      {
+        "tex": "f(x)=\\begin{cases}\\frac{1+x}{4},&0\\le x\\le2,\\\\0,&\\text{otherwise.}\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "Find "
+      },
+      {
+        "tex": "P(X>1)",
+        "display": false
+      },
+      {
+        "text": "."
       }
     ]
   },
@@ -209,7 +259,8 @@
             "page": 17,
             "label": "Differentiate a CDF or subtract its values"
           }
-        ]
+        ],
+        "mathTex": "f(x)=F'(x)"
       },
       {
         "title": "Apply the chain rule",
@@ -221,7 +272,8 @@
             "page": 17,
             "label": "Differentiate a CDF or subtract its values"
           }
-        ]
+        ],
+        "mathTex": "\\frac{\\mathrm d}{\\mathrm dx}\\left[1-e^{-3x}\\right]=3e^{-3x}"
       },
       {
         "title": "State the support",
@@ -233,7 +285,8 @@
             "page": 16,
             "label": "CDF definition and properties"
           }
-        ]
+        ],
+        "mathTex": "f(x)=\\begin{cases}3e^{-3x},&x\\ge 0,\\\\0,&x<0.\\end{cases}"
       }
     ],
     "answerText": "f(x)=3e^(−3x) on x≥0 and 0 otherwise.",
@@ -256,6 +309,24 @@
         "doc": "week4",
         "page": 19,
         "label": "Piecewise CDF outer cases"
+      }
+    ],
+    "optionsTex": [
+      "f(x)=\\begin{cases}e^{-3x},&x\\ge0,\\\\0,&\\text{otherwise.}\\end{cases}",
+      "f(x)=\\begin{cases}1-3e^{-3x},&x\\ge0,\\\\0,&\\text{otherwise.}\\end{cases}",
+      "f(x)=\\begin{cases}3e^{-3x},&x\\ge0,\\\\0,&\\text{otherwise.}\\end{cases}",
+      "f(x)=\\begin{cases}3e^{3x},&x\\ge0,\\\\0,&\\text{otherwise.}\\end{cases}"
+    ],
+    "promptParts": [
+      {
+        "text": "A continuous variable has "
+      },
+      {
+        "tex": "F(x)=\\begin{cases}0,&x<0,\\\\1-e^{-3x},&x\\ge0.\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "Which is its PDF?"
       }
     ]
   },
@@ -295,7 +366,8 @@
             "page": 16,
             "label": "CDF definition and properties"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}F(5) &= P(X\\le 5) \\\\ &= 0.82\\end{aligned}"
       },
       {
         "title": "Remove values at or below 2",
@@ -307,7 +379,8 @@
             "page": 17,
             "label": "Differentiate a CDF or subtract its values"
           }
-        ]
+        ],
+        "mathTex": "P(2<X\\le 5)=F(5)-F(2)"
       },
       {
         "title": "Calculate and check",
@@ -319,7 +392,8 @@
             "page": 17,
             "label": "Differentiate a CDF or subtract its values"
           }
-        ]
+        ],
+        "mathTex": "0.82-0.31=0.51"
       }
     ],
     "answerText": "P(2<X≤5)=0.51.",
@@ -343,6 +417,12 @@
         "page": 19,
         "label": "Piecewise CDF outer cases"
       }
+    ],
+    "optionsTex": [
+      "0.31",
+      "0.49",
+      "0.51",
+      "0.82"
     ]
   },
   {
@@ -381,7 +461,8 @@
             "page": 26,
             "label": "Uniform probability by length"
           }
-        ]
+        ],
+        "mathTex": "X\\sim\\operatorname{Uniform}(0,18)"
       },
       {
         "title": "Use the information already known",
@@ -393,7 +474,8 @@
             "page": 26,
             "label": "Uniform probability by length"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Eligible interval} &= (5,18] \\\\ \\text{length} &= 18-5 \\\\ &= 13\\end{aligned}"
       },
       {
         "title": "Find the favorable interval",
@@ -405,7 +487,8 @@
             "page": 26,
             "label": "Uniform probability by length"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Favorable interval} &= (5,12] \\\\ \\text{length} &= 7\\end{aligned}"
       },
       {
         "title": "Divide the lengths",
@@ -417,7 +500,8 @@
             "page": 26,
             "label": "Uniform probability by length"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(5<X\\le 12\\mid X>5) &= \\frac7{13} \\\\ &\\approx 0.5385\\end{aligned}"
       }
     ],
     "answerText": "7/13, about 53.85%.",
@@ -441,6 +525,12 @@
         "page": 3,
         "label": "Conditional probability"
       }
+    ],
+    "optionsTex": [
+      "\\frac{12}{18}",
+      "\\frac{5}{13}",
+      "\\frac{7}{18}",
+      "\\frac{7}{13}"
     ]
   },
   {
@@ -479,7 +569,8 @@
             "page": 35,
             "label": "Standardization by standard deviation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mu &= 70 \\\\ \\sigma &= 8\\end{aligned}"
       },
       {
         "title": "Standardize the endpoints",
@@ -491,7 +582,8 @@
             "page": 35,
             "label": "Standardization by standard deviation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}z_1 &= \\frac{62-70}{8} \\\\ &= -1 \\\\ z_2 &= \\frac{82-70}{8} \\\\ &= 1.5\\end{aligned}"
       },
       {
         "title": "Subtract the left tails",
@@ -508,7 +600,8 @@
             "page": 2,
             "label": "Left-tail normal table and complements"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(62<X<82) &= \\Phi(1.5)-\\Phi(-1) \\\\ &\\approx 0.7745\\end{aligned}"
       }
     ],
     "answerText": "Φ(1.5)−Φ(−1), about 77.45%.",
@@ -533,6 +626,12 @@
         "page": 2,
         "label": "Standard normal left-tail table"
       }
+    ],
+    "optionsTex": [
+      "\\Phi(82)-\\Phi(62)",
+      "\\Phi(1.5)-\\Phi(-1)",
+      "1-\\Phi(1.5)+\\Phi(-1)",
+      "\\Phi(1)-\\Phi(-1.5)"
     ]
   },
   {
@@ -576,7 +675,8 @@
             "page": 2,
             "label": "Normal percentiles from the table"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\le x) &= 1-0.025 \\\\ &= 0.975\\end{aligned}"
       },
       {
         "title": "Identify the standard normal percentile",
@@ -593,7 +693,8 @@
             "page": 2,
             "label": "Normal percentiles from the table"
           }
-        ]
+        ],
+        "mathTex": "z_{0.975}=1.96"
       },
       {
         "title": "Return to sensor units",
@@ -610,7 +711,8 @@
             "page": 2,
             "label": "Normal percentiles from the table"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}x &= \\mu+\\sigma z \\\\ &= 100+15(1.96) \\\\ &= 129.4\\end{aligned}"
       }
     ],
     "answerText": "The threshold is 129.4; approximately 97.5% lie below it.",
@@ -634,6 +736,12 @@
         "page": 2,
         "label": "Normal table"
       }
+    ],
+    "optionsTex": [
+      "129.4",
+      "70.6",
+      "101.96",
+      "115.0"
     ]
   },
   {
@@ -672,7 +780,8 @@
             "page": 54,
             "label": "Poisson counts and exponential waits"
           }
-        ]
+        ],
+        "mathTex": "T\\text{ in hours}\\sim\\operatorname{Exponential}(2.4)"
       },
       {
         "title": "Convert the duration",
@@ -684,7 +793,8 @@
             "page": 47,
             "label": "Match rate and time units"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}20\\text{ minutes} &= \\frac{20}{60} \\\\ &= \\frac13\\text{ hour}\\end{aligned}"
       },
       {
         "title": "Use survival for more than",
@@ -696,7 +806,8 @@
             "page": 46,
             "label": "Exponential CDF and survival"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(T>20\\text{ min}) &= e^{-2.4\\cdot\\frac13} \\\\ &= e^{-0.8} \\\\ &\\approx 0.4493\\end{aligned}"
       }
     ],
     "answerText": "e^(−0.8)≈0.4493.",
@@ -725,6 +836,12 @@
         "page": 54,
         "label": "Poisson counts and waits"
       }
+    ],
+    "optionsTex": [
+      "e^{-48}",
+      "e^{-2.4}",
+      "1-e^{-0.8}",
+      "e^{-0.8}"
     ]
   },
   {
@@ -763,7 +880,8 @@
             "page": 50,
             "label": "Reset the exponential waiting time"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}s &= 30 \\\\ t &= 50-30 \\\\ &= 20\\end{aligned}"
       },
       {
         "title": "Reset the waiting clock",
@@ -775,7 +893,8 @@
             "page": 50,
             "label": "Reset the exponential waiting time"
           }
-        ]
+        ],
+        "mathTex": "P(T>50\\mid T>30)=P(T>20)"
       },
       {
         "title": "Evaluate survival",
@@ -787,7 +906,8 @@
             "page": 46,
             "label": "Exponential survival"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(T>20) &= e^{-0.05\\cdot20} \\\\ &= e^{-1} \\\\ &\\approx 0.3679\\end{aligned}"
       }
     ],
     "answerText": "e^(−1)≈0.3679.",
@@ -806,6 +926,12 @@
         "page": 53,
         "label": "Worked memoryless wait"
       }
+    ],
+    "optionsTex": [
+      "e^{-1}",
+      "e^{-2.5}",
+      "1-e^{-1}",
+      "e^{-1.5}"
     ]
   },
   {
@@ -844,7 +970,8 @@
             "page": 42,
             "label": "When normal modeling is reasonable"
           }
-        ]
+        ],
+        "mathTex": "P(T>s+t\\mid T>s)=P(T>t)"
       },
       {
         "title": "Compare the situations",
@@ -856,7 +983,8 @@
             "page": 42,
             "label": "When normal modeling is reasonable"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Aging}&\\Rightarrow\\text{future risk depends}\\\\&\\quad\\text{on elapsed lifetime}\\end{aligned}"
       },
       {
         "title": "Select the least suitable case",
@@ -868,7 +996,8 @@
             "page": 42,
             "label": "When normal modeling is reasonable"
           }
-        ]
+        ],
+        "mathTex": "\\text{Least suitable: increasing failure risk with age}"
       }
     ],
     "answerText": "A sharply aging component is least suitable.",
@@ -892,6 +1021,12 @@
         "page": 55,
         "label": "Choosing a continuous distribution"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -930,7 +1065,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}0\\le x\\le 2 \\\\ \\Rightarrow\\ 2-x\\ge0\\end{aligned}"
       },
       {
         "title": "Normalize the area",
@@ -942,7 +1078,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "1=c\\int_0^2(2-x)\\,\\mathrm dx"
       },
       {
         "title": "Evaluate and solve",
@@ -954,7 +1091,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}1 &= c\\left[2x-\\frac{x^2}{2}\\right]_0^2 \\\\ &= 2c \\\\ \\Rightarrow\\ c &= \\frac12\\end{aligned}"
       },
       {
         "title": "Verify both conditions",
@@ -966,7 +1104,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "f\\ge0\\quad\\text{and}\\quad\\int_0^2\\frac{2-x}{2}\\,\\mathrm dx=1"
       }
     ],
     "answerText": "c=1/2 and both density conditions hold.",
@@ -984,6 +1123,24 @@
         "doc": "week3",
         "page": 39,
         "label": "Essential antiderivatives"
+      }
+    ],
+    "optionsTex": [
+      "c=\\frac12,\\quad f(x)\\ge0,\\quad\\int f(x)\\,\\mathrm dx=1",
+      "c=\\frac14,\\quad\\text{total area }1",
+      null,
+      null
+    ],
+    "promptParts": [
+      {
+        "text": "Battery charging time X in hours has density "
+      },
+      {
+        "tex": "f(x)=\\begin{cases}c(2-x),&0\\le x\\le2,\\\\0,&\\text{otherwise.}\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "Which statement correctly validates the PDF?"
       }
     ]
   },
@@ -1023,7 +1180,8 @@
             "page": 19,
             "label": "Complete piecewise CDF"
           }
-        ]
+        ],
+        "mathTex": "F(x)=0\\quad\\text{for }x<0"
       },
       {
         "title": "Accumulate inside the support",
@@ -1035,7 +1193,8 @@
             "page": 16,
             "label": "CDF definition and properties"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}F(x) &= \\int_0^x\\left(1-\\frac t2\\right)\\,\\mathrm dt \\\\ &= \\left[t-\\frac{t^2}{4}\\right]_0^x \\\\ &= x-\\frac{x^2}{4}\\end{aligned}"
       },
       {
         "title": "Write the upper outer case",
@@ -1047,7 +1206,8 @@
             "page": 19,
             "label": "Complete piecewise CDF"
           }
-        ]
+        ],
+        "mathTex": "F(x)=1\\quad\\text{for }x>2"
       },
       {
         "title": "Check the joins",
@@ -1059,7 +1219,8 @@
             "page": 19,
             "label": "Complete piecewise CDF"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}F(0) &= 0 \\\\ F(2) &= 2-1 \\\\ &= 1\\end{aligned}"
       }
     ],
     "answerText": "F(x)=0 below 0; x−x²/4 on [0,2]; 1 above 2.",
@@ -1082,6 +1243,24 @@
         "doc": "week4",
         "page": 19,
         "label": "Piecewise CDF outer cases"
+      }
+    ],
+    "optionsTex": [
+      "F(x)=\\begin{cases}0,&x<0,\\\\x-\\frac{x^2}{4},&0\\le x\\le2,\\\\1,&x>2,\\end{cases}",
+      "F(x)=\\begin{cases}0,&x<0,\\\\1-\\frac{x^2}{4},&0\\le x\\le2,\\\\1,&x>2,\\end{cases}",
+      "F(x)=\\begin{cases}0,&x<0,\\\\\\frac{2-x}{2},&0\\le x\\le2,\\\\1,&x>2,\\end{cases}",
+      "F(x)=\\begin{cases}0,&x<0,\\\\x-\\frac{x^2}{4},&0\\le x\\le2,\\\\0,&x>2.\\end{cases}"
+    ],
+    "promptParts": [
+      {
+        "text": "X has "
+      },
+      {
+        "tex": "f(x)=\\begin{cases}\\frac{2-x}{2},&0\\le x\\le2,\\\\0,&\\text{otherwise.}\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "Which expression gives its CDF for every real x?"
       }
     ]
   },
@@ -1121,7 +1300,8 @@
             "page": 16,
             "label": "CDF definition and properties"
           }
-        ]
+        ],
+        "mathTex": "P=\\int_{0.5}^{1.5}\\left(1-\\frac x2\\right)\\,\\mathrm dx"
       },
       {
         "title": "Evaluate by the PDF",
@@ -1133,7 +1313,8 @@
             "page": 16,
             "label": "CDF definition and properties"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &= \\left[x-\\frac{x^2}{4}\\right]_{0.5}^{1.5} \\\\ &= \\frac{15}{16}-\\frac7{16} \\\\ &= \\frac12\\end{aligned}"
       },
       {
         "title": "Verify by the CDF",
@@ -1145,7 +1326,8 @@
             "page": 17,
             "label": "Differentiate a CDF or subtract its values"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &= F(1.5)-F(0.5) \\\\ &= 0.9375-0.4375 \\\\ &= 0.5\\end{aligned}"
       }
     ],
     "answerText": "Both PDF integration and CDF subtraction give 1/2.",
@@ -1168,6 +1350,38 @@
         "doc": "week4",
         "page": 19,
         "label": "Piecewise CDF outer cases"
+      }
+    ],
+    "optionsTex": [
+      "\\frac{1}{4}",
+      "\\frac{1}{2}",
+      "\\frac{3}{4}",
+      "\\frac{5}{8}"
+    ],
+    "promptParts": [
+      {
+        "text": "X has "
+      },
+      {
+        "tex": "f(x)=\\frac{2-x}{2},\\quad0\\le x\\le2",
+        "display": false
+      },
+      {
+        "text": " and "
+      },
+      {
+        "tex": "F(x)=x-\\frac{x^2}{4}",
+        "display": false
+      },
+      {
+        "text": " there. Find "
+      },
+      {
+        "tex": "P(0.5<X\\le1.5)",
+        "display": false
+      },
+      {
+        "text": "."
       }
     ]
   },
@@ -1207,7 +1421,8 @@
             "page": 16,
             "label": "CDF definition and properties"
           }
-        ]
+        ],
+        "mathTex": "F(m)=0.5"
       },
       {
         "title": "Set up and rearrange",
@@ -1219,7 +1434,8 @@
             "page": 16,
             "label": "CDF definition and properties"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}m-\\frac{m^2}{4} &= \\frac12 \\\\ \\Rightarrow\\ m^2-4m+2 &= 0\\end{aligned}"
       },
       {
         "title": "Solve the quadratic",
@@ -1231,7 +1447,8 @@
             "page": 16,
             "label": "CDF definition and properties"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}m &= \\frac{4\\pm\\sqrt{16-8}}2 \\\\ &= 2\\pm\\sqrt2\\end{aligned}"
       },
       {
         "title": "Keep the valid root",
@@ -1243,7 +1460,8 @@
             "page": 16,
             "label": "CDF definition and properties"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}m &= 2-\\sqrt2 \\\\ &\\approx 0.5858\\text{ hours}\\end{aligned}"
       }
     ],
     "answerText": "The median is 2−√2≈0.5858 hours.",
@@ -1266,6 +1484,24 @@
         "doc": "week4",
         "page": 19,
         "label": "Piecewise CDF outer cases"
+      }
+    ],
+    "optionsTex": [
+      "1\\text{ hour}",
+      "(2-\\sqrt2)\\text{ hours}",
+      "\\sqrt2\\text{ hours}",
+      "(2+\\sqrt2)\\text{ hours}"
+    ],
+    "promptParts": [
+      {
+        "text": "Charging time X has CDF "
+      },
+      {
+        "tex": "F(x)=x-\\frac{x^2}{4},\\quad0\\le x\\le2",
+        "display": false
+      },
+      {
+        "text": ". What is the median?"
       }
     ]
   },
@@ -1305,7 +1541,8 @@
             "page": 6,
             "label": "Probability is area"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}f(1) &= \\frac{2-1}{2} \\\\ &= 0.5\\end{aligned}"
       },
       {
         "title": "Express point probability as area",
@@ -1317,7 +1554,8 @@
             "page": 6,
             "label": "Probability is area"
           }
-        ]
+        ],
+        "mathTex": "P(X=1)=\\int_1^1 f(x)\\,\\mathrm dx"
       },
       {
         "title": "Conclude zero probability",
@@ -1329,7 +1567,8 @@
             "page": 6,
             "label": "Probability is area"
           }
-        ]
+        ],
+        "mathTex": "P(X=1)=0"
       }
     ],
     "answerText": "The density height is 0.5, but P(X=1)=0.",
@@ -1347,6 +1586,31 @@
         "doc": "week4",
         "page": 7,
         "label": "Density versus point probability"
+      }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "promptParts": [
+      {
+        "text": "For the continuous density "
+      },
+      {
+        "tex": "f(x)=\\frac{2-x}{2}",
+        "display": false
+      },
+      {
+        "text": " on [0,2], a colleague says "
+      },
+      {
+        "tex": "f(1)=P(X=1)=0.5",
+        "display": false
+      },
+      {
+        "text": ". Which correction is right?"
       }
     ]
   },
@@ -1386,7 +1650,8 @@
             "page": 35,
             "label": "Standardization by standard deviation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mu &= 42 \\\\ \\sigma &= 6\\end{aligned}"
       },
       {
         "title": "Convert the boundary",
@@ -1398,7 +1663,8 @@
             "page": 35,
             "label": "Standardization by standard deviation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}z &= \\frac{50-42}{6} \\\\ &= 1.333\\ldots \\\\ &\\approx 1.33\\end{aligned}"
       },
       {
         "title": "Take the upper tail",
@@ -1415,7 +1681,8 @@
             "page": 2,
             "label": "Left-tail normal table and complements"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X>50) &\\approx 1-\\Phi(1.33) \\\\ &= 1-0.9082 \\\\ &= 0.0918\\end{aligned}"
       }
     ],
     "answerText": "Using the two-decimal z table, about 0.0918 (9.18%). A calculator without rounding z gives about 0.0912.",
@@ -1440,6 +1707,12 @@
         "page": 2,
         "label": "Standard normal left-tail table"
       }
+    ],
+    "optionsTex": [
+      "0.9082",
+      "0.0918",
+      "0.5000",
+      "0.1330"
     ]
   },
   {
@@ -1478,7 +1751,8 @@
             "page": 35,
             "label": "Standardization by standard deviation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}z_1 &= \\frac{35-42}{6} \\\\ &\\approx -1.17 \\\\ z_2 &= \\frac{48-42}{6} \\\\ &= 1\\end{aligned}"
       },
       {
         "title": "Read the negative left tail",
@@ -1495,7 +1769,8 @@
             "page": 2,
             "label": "Left-tail normal table and complements"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\Phi(-1.17) &= 1-\\Phi(1.17) \\\\ &= 1-0.8790 \\\\ &= 0.1210\\end{aligned}"
       },
       {
         "title": "Subtract endpoint CDF values",
@@ -1512,7 +1787,8 @@
             "page": 2,
             "label": "Left-tail normal table and complements"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &\\approx \\Phi(1)-\\Phi(-1.17) \\\\ &= 0.8413-0.1210 \\\\ &= 0.7203\\end{aligned}"
       }
     ],
     "answerText": "About 0.7203 using rounded z and the supplied table; full-precision calculation is about 0.7197.",
@@ -1537,6 +1813,12 @@
         "page": 2,
         "label": "Standard normal left-tail table"
       }
+    ],
+    "optionsTex": [
+      "0.7203",
+      "0.2797",
+      "0.8413",
+      "0.9623"
     ]
   },
   {
@@ -1580,7 +1862,8 @@
             "page": 2,
             "label": "Normal percentiles from the table"
           }
-        ]
+        ],
+        "mathTex": "P(X\\le L)=0.90"
       },
       {
         "title": "Find its standardized value",
@@ -1597,7 +1880,8 @@
             "page": 2,
             "label": "Normal percentiles from the table"
           }
-        ]
+        ],
+        "mathTex": "\\frac{L-42}{6}=1.2816"
       },
       {
         "title": "Undo standardization",
@@ -1614,7 +1898,8 @@
             "page": 2,
             "label": "Normal percentiles from the table"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}L &= 42+6(1.2816) \\\\ &= 49.6896\\text{ minutes}\\end{aligned}"
       },
       {
         "title": "Interpret rounding",
@@ -1631,7 +1916,8 @@
             "page": 2,
             "label": "Normal percentiles from the table"
           }
-        ]
+        ],
+        "mathTex": "\\left\\lceil49.6896\\right\\rceil=50\\text{ minutes}"
       }
     ],
     "answerText": "Approximately 49.69 minutes; a whole-minute promise should be 50 minutes.",
@@ -1655,6 +1941,12 @@
         "page": 2,
         "label": "Normal table"
       }
+    ],
+    "optionsTex": [
+      "34.31\\text{ minutes}",
+      "43.28\\text{ minutes}",
+      "49.69\\text{ minutes}",
+      "55.00\\text{ minutes}"
     ]
   },
   {
@@ -1693,7 +1985,8 @@
             "page": 40,
             "label": "Interpret a percentile"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}p &= 1-0.90 \\\\ &= 0.10\\end{aligned}"
       },
       {
         "title": "Define the count",
@@ -1705,7 +1998,8 @@
             "page": 21,
             "label": "Counts as sums of indicators"
           }
-        ]
+        ],
+        "mathTex": "N=I_1+\\cdots+I_{200}"
       },
       {
         "title": "Apply expectation linearity",
@@ -1717,7 +2011,8 @@
             "page": 18,
             "label": "Expected count from linearity"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[N] &= 200(0.10) \\\\ &= 20\\end{aligned}"
       },
       {
         "title": "Explain variation",
@@ -1734,7 +2029,8 @@
             "page": 18,
             "label": "Binomial count variance"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}N\\sim\\operatorname{Binomial}(200,0.10) \\\\ \\operatorname{Var}(N) &= 18\\end{aligned}"
       }
     ],
     "answerText": "20 deliveries are expected to exceed the limit; any one batch can have a different count.",
@@ -1753,6 +2049,12 @@
         "page": 21,
         "label": "Expected count np"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -1791,7 +2093,8 @@
             "page": 42,
             "label": "When normal modeling is reasonable"
           }
-        ]
+        ],
+        "mathTex": "\\text{Normal density is symmetric about }\\mu"
       },
       {
         "title": "Compare observed delays",
@@ -1803,7 +2106,8 @@
             "page": 42,
             "label": "When normal modeling is reasonable"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Strong right skew} \\\\ \\Rightarrow\\ \\text{asymmetry}\\end{aligned}"
       },
       {
         "title": "State the practical consequence",
@@ -1815,7 +2119,8 @@
             "page": 42,
             "label": "When normal modeling is reasonable"
           }
-        ]
+        ],
+        "mathTex": "\\text{Check data shape before trusting normal percentiles}"
       }
     ],
     "answerText": "Strong right skew conflicts with the normal symmetry assumption and may distort delay-tail estimates.",
@@ -1839,6 +2144,12 @@
         "page": 55,
         "label": "Choosing a continuous distribution"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -1877,7 +2188,8 @@
             "page": 54,
             "label": "Poisson counts and exponential waits"
           }
-        ]
+        ],
+        "mathTex": "T\\sim\\operatorname{Exponential}(\\text{rate})"
       },
       {
         "title": "Convert the rate",
@@ -1889,7 +2201,8 @@
             "page": 47,
             "label": "Match rate and time units"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lambda &= \\frac4{60} \\\\ &= \\frac1{15}\\text{ requests per minute}\\end{aligned}"
       },
       {
         "title": "State the model",
@@ -1901,7 +2214,8 @@
             "page": 46,
             "label": "Exponential CDF and survival"
           }
-        ]
+        ],
+        "mathTex": "T\\sim\\operatorname{Exponential}\\left(\\frac1{15}\\right),\\quad T\\text{ measured in minutes}"
       }
     ],
     "answerText": "T∼Exponential(1/15) with rate 1/15 per minute.",
@@ -1930,6 +2244,12 @@
         "page": 54,
         "label": "Poisson counts and waits"
       }
+    ],
+    "optionsTex": [
+      "\\operatorname{Exponential}(4),\\quad\\text{rate per minute}",
+      "\\operatorname{Poisson}\\!\\left(\\frac4{60}\\right)\\text{ minutes}",
+      "\\operatorname{Exponential}\\!\\left(\\frac1{15}\\right),\\quad\\text{rate per minute}",
+      "\\operatorname{Uniform}(0,15)\\text{ minutes}"
     ]
   },
   {
@@ -1968,7 +2288,8 @@
             "page": 47,
             "label": "Match rate and time units"
           }
-        ]
+        ],
+        "mathTex": "\\lambda=\\frac1{15}"
       },
       {
         "title": "Choose the CDF",
@@ -1980,7 +2301,8 @@
             "page": 46,
             "label": "Exponential CDF and survival"
           }
-        ]
+        ],
+        "mathTex": "P(T\\le10)=1-e^{-\\lambda\\cdot10}"
       },
       {
         "title": "Evaluate",
@@ -1992,7 +2314,8 @@
             "page": 46,
             "label": "Exponential CDF and survival"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lambda\\cdot10 &= \\frac{10}{15} \\\\ &= \\frac23 \\\\ \\Rightarrow\\ P &= 1-e^{-\\frac{2}{3}} \\\\ &\\approx 0.4866\\end{aligned}"
       }
     ],
     "answerText": "About 48.66%.",
@@ -2021,6 +2344,12 @@
         "page": 54,
         "label": "Poisson counts and waits"
       }
+    ],
+    "optionsTex": [
+      "e^{-\\frac23}\\approx0.5134",
+      "1-e^{-\\frac23}\\approx0.4866",
+      "1-e^{-40}\\approx1",
+      "e^{-\\frac16}\\approx0.8465"
     ]
   },
   {
@@ -2059,7 +2388,8 @@
             "page": 47,
             "label": "Match rate and time units"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lambda &= \\frac4{60} \\\\ &= \\frac1{15}\\end{aligned}"
       },
       {
         "title": "Write the event as a tail difference",
@@ -2071,7 +2401,8 @@
             "page": 46,
             "label": "Exponential CDF and survival"
           }
-        ]
+        ],
+        "mathTex": "P(5<T\\le20)=P(T>5)-P(T>20)"
       },
       {
         "title": "Evaluate each exponent",
@@ -2083,7 +2414,8 @@
             "page": 46,
             "label": "Exponential CDF and survival"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &= e^{-\\frac{1}{3}}-e^{-\\frac{4}{3}} \\\\ &\\approx 0.7165-0.2636 \\\\ &= 0.4529\\end{aligned}"
       }
     ],
     "answerText": "About 45.29%.",
@@ -2112,6 +2444,12 @@
         "page": 54,
         "label": "Poisson counts and waits"
       }
+    ],
+    "optionsTex": [
+      "e^{-\\frac13}-e^{-\\frac43}\\approx0.4529",
+      "1-e^{-\\frac43}\\approx0.7364",
+      "e^{-\\frac43}\\approx0.2636",
+      "1-e^{-\\frac13}\\approx0.2835"
     ]
   },
   {
@@ -2150,7 +2488,8 @@
             "page": 50,
             "label": "Reset the exponential waiting time"
           }
-        ]
+        ],
+        "mathTex": "P(T>25\\mid T>15)"
       },
       {
         "title": "Reset the exponential clock",
@@ -2162,7 +2501,8 @@
             "page": 50,
             "label": "Reset the exponential waiting time"
           }
-        ]
+        ],
+        "mathTex": "P(T>25\\mid T>15)=P(T>10)"
       },
       {
         "title": "Evaluate the additional wait",
@@ -2174,7 +2514,8 @@
             "page": 46,
             "label": "Exponential survival"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}e^{-\\frac1{15}10} &= e^{-\\frac{2}{3}} \\\\ &\\approx 0.5134\\end{aligned}"
       }
     ],
     "answerText": "e^(−2/3)≈0.5134, using memorylessness. Exact endpoints have zero probability.",
@@ -2193,6 +2534,12 @@
         "page": 53,
         "label": "Worked memoryless wait"
       }
+    ],
+    "optionsTex": [
+      "e^{-\\frac23}\\approx0.5134,\\ \\text{by memorylessness}",
+      "e^{-\\frac53}\\approx0.1889,\\ \\text{by memorylessness}",
+      "1-e^{-\\frac23}\\approx0.4866,\\ \\text{by normal symmetry}",
+      "e^{-1}\\approx0.3679,\\ \\text{by uniformity}"
     ]
   },
   {
@@ -2231,7 +2578,8 @@
             "page": 54,
             "label": "Poisson counts and exponential waits"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lambda_{\\text{count}} &= 4(0.5) \\\\ &= 2 \\\\ N\\sim\\operatorname{Poisson}(2)\\end{aligned}"
       },
       {
         "title": "Calculate the zero-count probability",
@@ -2243,7 +2591,8 @@
             "page": 54,
             "label": "Poisson counts and exponential waits"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(N=0) &= e^{-2}\\frac{2^0}{0!} \\\\ &= e^{-2}\\end{aligned}"
       },
       {
         "title": "Express the same event as a wait",
@@ -2255,7 +2604,8 @@
             "page": 54,
             "label": "Poisson counts and exponential waits"
           }
-        ]
+        ],
+        "mathTex": "\\{N=0\\}=\\{T>30\\}"
       },
       {
         "title": "Verify with exponential survival",
@@ -2267,7 +2617,8 @@
             "page": 46,
             "label": "Exponential CDF and survival"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(T>30) &= e^{-\\frac4{60}30} \\\\ &= e^{-2} \\\\ &\\approx 0.1353\\end{aligned}"
       }
     ],
     "answerText": "N∼Poisson(2); both probabilities equal e^(−2)≈0.1353.",
@@ -2296,6 +2647,12 @@
         "page": 54,
         "label": "Poisson counts and waits"
       }
+    ],
+    "optionsTex": [
+      "N\\sim\\operatorname{Poisson}(2),\\quad P(N=0)=P(T>30)=e^{-2}",
+      "N\\sim\\operatorname{Poisson}(4),\\quad P(N=0)=e^{-4}",
+      "N\\sim\\operatorname{Exponential}(2),\\quad P(N=0)=0",
+      "N\\sim\\operatorname{Poisson}(120),\\quad P(N=0)=e^{-120}"
     ]
   },
   {
@@ -2334,7 +2691,8 @@
             "page": 42,
             "label": "When normal modeling is reasonable"
           }
-        ]
+        ],
+        "mathTex": "N(t)\\sim\\operatorname{Poisson}(\\lambda t)\\quad\\text{for a constant }\\lambda"
       },
       {
         "title": "Compare the lunch behavior",
@@ -2346,7 +2704,8 @@
             "page": 42,
             "label": "When normal modeling is reasonable"
           }
-        ]
+        ],
+        "mathTex": "\\begin{gathered}\\text{Clustering or changing }\\lambda\\\\\\text{breaks the simple model assumptions}\\end{gathered}"
       },
       {
         "title": "State the consequence",
@@ -2358,7 +2717,8 @@
             "page": 42,
             "label": "When normal modeling is reasonable"
           }
-        ]
+        ],
+        "mathTex": "\\text{Reassess assumptions before using }e^{-\\lambda t}"
       }
     ],
     "answerText": "Constant rate and independence become questionable, reducing reliability of the simple model.",
@@ -2382,6 +2742,12 @@
         "page": 55,
         "label": "Choosing a continuous distribution"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -2421,7 +2787,8 @@
             "page": 28,
             "label": "Three-set inclusion–exclusion"
           }
-        ]
+        ],
+        "mathTex": "U=A\\cup B\\cup C"
       },
       {
         "title": "Correct overlaps",
@@ -2433,7 +2800,8 @@
             "page": 28,
             "label": "Three-set inclusion–exclusion"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}|U|&=56+37+50\\\\&\\quad-19-21-14+10\\\\&=99\\end{aligned}"
       },
       {
         "title": "Count the complement",
@@ -2445,7 +2813,8 @@
             "page": 28,
             "label": "Three-set inclusion–exclusion"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{none} &= 117-99 \\\\ &= 18\\end{aligned}"
       }
     ],
     "answerText": "18 students use no platform.",
@@ -2458,6 +2827,12 @@
         "page": 28,
         "label": "Three-set inclusion–exclusion"
       }
+    ],
+    "optionsTex": [
+      "18",
+      "28",
+      "99",
+      "127"
     ]
   },
   {
@@ -2497,7 +2872,8 @@
             "page": 28,
             "label": "Three-set inclusion–exclusion"
           }
-        ]
+        ],
+        "mathTex": "36+38+35=109"
       },
       {
         "title": "Correct the overlaps",
@@ -2509,7 +2885,8 @@
             "page": 28,
             "label": "Three-set inclusion–exclusion"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}|A\\cup B\\cup C| &= 109-11-10-10+4 \\\\ &= 82\\end{aligned}"
       },
       {
         "title": "Subtract from the total",
@@ -2521,7 +2898,8 @@
             "page": 28,
             "label": "Three-set inclusion–exclusion"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{none} &= 114-82 \\\\ &= 32\\end{aligned}"
       }
     ],
     "answerText": "32 students use no platform.",
@@ -2534,6 +2912,12 @@
         "page": 28,
         "label": "Three-set inclusion–exclusion"
       }
+    ],
+    "optionsTex": [
+      "32",
+      "28",
+      "82",
+      "109"
     ]
   },
   {
@@ -2573,7 +2957,8 @@
             "page": 23,
             "label": "Geometric distribution"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}q &= 1-0.16 \\\\ &= 0.84\\end{aligned}"
       },
       {
         "title": "Reset after six failures",
@@ -2585,7 +2970,8 @@
             "page": 23,
             "label": "Geometric distribution"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}W &= X-6 \\\\ 9\\le X\\le12\\ \\Leftrightarrow\\ 3\\le W\\le6\\end{aligned}"
       },
       {
         "title": "Write an inclusive interval as tail difference",
@@ -2597,7 +2983,8 @@
             "page": 23,
             "label": "Geometric distribution"
           }
-        ]
+        ],
+        "mathTex": "P(3\\le W\\le6)=P(W>2)-P(W>6)"
       },
       {
         "title": "Evaluate the tails",
@@ -2609,7 +2996,8 @@
             "page": 23,
             "label": "Geometric distribution"
           }
-        ]
+        ],
+        "mathTex": "0.84^2-0.84^6\\approx0.354302"
       }
     ],
     "answerText": "Approximately 0.354.",
@@ -2637,6 +3025,12 @@
         "page": 3,
         "label": "Conditional probability"
       }
+    ],
+    "optionsTex": [
+      "0.354",
+      "0.499",
+      "0.164",
+      "0.706"
     ]
   },
   {
@@ -2676,7 +3070,8 @@
             "page": 23,
             "label": "Geometric distribution"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}q &= 1-0.35 \\\\ &= 0.65\\end{aligned}"
       },
       {
         "title": "Translate into remaining attempts",
@@ -2688,7 +3083,8 @@
             "page": 23,
             "label": "Geometric distribution"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}W &= X-4 \\\\ 6\\le X\\le11\\ \\Leftrightarrow\\ 2\\le W\\le7\\end{aligned}"
       },
       {
         "title": "Subtract the correct tails",
@@ -2700,7 +3096,8 @@
             "page": 23,
             "label": "Geometric distribution"
           }
-        ]
+        ],
+        "mathTex": "P(2\\le W\\le7)=q^1-q^7"
       },
       {
         "title": "Evaluate",
@@ -2712,7 +3109,8 @@
             "page": 23,
             "label": "Geometric distribution"
           }
-        ]
+        ],
+        "mathTex": "0.65-0.65^7\\approx0.600978"
       }
     ],
     "answerText": "Approximately 0.601.",
@@ -2740,6 +3138,12 @@
         "page": 3,
         "label": "Conditional probability"
       }
+    ],
+    "optionsTex": [
+      "0.601",
+      "0.350",
+      "0.650",
+      "0.949"
     ]
   },
   {
@@ -2779,7 +3183,8 @@
             "page": 23,
             "label": "Geometric distribution"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}q &= 1-0.34 \\\\ &= 0.66\\end{aligned}"
       },
       {
         "title": "Construct the intersection",
@@ -2791,7 +3196,8 @@
             "page": 23,
             "label": "Geometric distribution"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(5<X\\le9) &= P(X>5)-P(X>9) \\\\ &= 0.66^5-0.66^9\\end{aligned}"
       },
       {
         "title": "Compute the eligible probability",
@@ -2803,7 +3209,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "P(X\\le9)=1-0.66^9"
       },
       {
         "title": "Normalize",
@@ -2815,7 +3222,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &= \\frac{0.66^5-0.66^9}{1-0.66^9} \\\\ &\\approx 0.103940\\end{aligned}"
       }
     ],
     "answerText": "Approximately 0.104.",
@@ -2843,6 +3251,12 @@
         "page": 3,
         "label": "Conditional probability"
       }
+    ],
+    "optionsTex": [
+      "0.104",
+      "0.660",
+      "0.125",
+      "0.896"
     ]
   },
   {
@@ -2882,7 +3296,8 @@
             "page": 23,
             "label": "Geometric distribution"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}q &= 1-0.24 \\\\ &= 0.76\\end{aligned}"
       },
       {
         "title": "Find the favorable joint event",
@@ -2894,7 +3309,8 @@
             "page": 23,
             "label": "Geometric distribution"
           }
-        ]
+        ],
+        "mathTex": "P(5<X\\le11)=0.76^5-0.76^{11}"
       },
       {
         "title": "Find the condition probability",
@@ -2906,7 +3322,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "P(X\\le11)=1-0.76^{11}"
       },
       {
         "title": "Divide",
@@ -2918,7 +3335,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &= \\frac{0.76^5-0.76^{11}}{1-0.76^{11}} \\\\ &\\approx 0.215208\\end{aligned}"
       }
     ],
     "answerText": "Approximately 0.215.",
@@ -2946,6 +3364,12 @@
         "page": 3,
         "label": "Conditional probability"
       }
+    ],
+    "optionsTex": [
+      "0.215",
+      "0.760",
+      "0.253",
+      "0.785"
     ]
   },
   {
@@ -2985,7 +3409,8 @@
             "page": 24,
             "label": "Bayes two-case form"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(D) &= 0.02 \\\\ P(D^c) &= 0.98\\end{aligned}"
       },
       {
         "title": "Use conditional independence",
@@ -2997,7 +3422,8 @@
             "page": 24,
             "label": "Bayes two-case form"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(++\\mid D) &= 0.84^2 \\\\ &= 0.7056 \\\\ P(++\\mid D^c) &= 0.15^2 \\\\ &= 0.0225\\end{aligned}"
       },
       {
         "title": "Weight both explanations",
@@ -3009,7 +3435,8 @@
             "page": 24,
             "label": "Bayes two-case form"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(D\\cap++) &= 0.02(0.7056) \\\\ &= 0.014112 \\\\ P(D^c\\cap++) &= 0.98(0.0225) \\\\ &= 0.02205\\end{aligned}"
       },
       {
         "title": "Normalize with Bayes",
@@ -3021,7 +3448,8 @@
             "page": 24,
             "label": "Bayes two-case form"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(D\\mid++) &= \\frac{0.014112}{0.014112+0.02205} \\\\ &\\approx 0.390244\\end{aligned}"
       }
     ],
     "answerText": "Approximately 0.390, or 39.0%.",
@@ -3040,6 +3468,12 @@
         "page": 17,
         "label": "Independence"
       }
+    ],
+    "optionsTex": [
+      "0.840",
+      "0.390",
+      "0.020",
+      "0.706"
     ]
   },
   {
@@ -3079,7 +3513,8 @@
             "page": 24,
             "label": "Bayes two-case form"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(D) &= 0.06 \\\\ P(D^c) &= 0.94\\end{aligned}"
       },
       {
         "title": "Compute evidence likelihoods",
@@ -3091,7 +3526,8 @@
             "page": 24,
             "label": "Bayes two-case form"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(++\\mid D) &= 0.87^2 \\\\ &= 0.7569 \\\\ P(++\\mid D^c) &= 0.09^2 \\\\ &= 0.0081\\end{aligned}"
       },
       {
         "title": "Weight by group prevalence",
@@ -3103,7 +3539,8 @@
             "page": 24,
             "label": "Bayes two-case form"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{condition-positive joint} &= 0.06(0.7569) \\\\ &= 0.045414 \\\\ \\text{other joint} &= 0.94(0.0081) \\\\ &= 0.007614\\end{aligned}"
       },
       {
         "title": "Apply Bayes",
@@ -3115,7 +3552,8 @@
             "page": 24,
             "label": "Bayes two-case form"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(D\\mid++) &= \\frac{0.045414}{0.045414+0.007614} \\\\ &\\approx 0.856415\\end{aligned}"
       }
     ],
     "answerText": "Approximately 0.856, or 85.6%.",
@@ -3134,6 +3572,12 @@
         "page": 17,
         "label": "Independence"
       }
+    ],
+    "optionsTex": [
+      "0.870",
+      "0.060",
+      "0.856",
+      "0.757"
     ]
   },
   {
@@ -3173,7 +3617,8 @@
             "page": 57,
             "label": "Permutations"
           }
-        ]
+        ],
+        "mathTex": "11-4+1=8\\text{ units}"
       },
       {
         "title": "Arrange the units",
@@ -3185,7 +3630,8 @@
             "page": 57,
             "label": "Permutations"
           }
-        ]
+        ],
+        "mathTex": "8!=40320"
       },
       {
         "title": "Arrange the four books inside",
@@ -3197,7 +3643,8 @@
             "page": 57,
             "label": "Permutations"
           }
-        ]
+        ],
+        "mathTex": "4!=24"
       },
       {
         "title": "Multiply independent choices",
@@ -3209,7 +3656,8 @@
             "page": 57,
             "label": "Permutations"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}8!\\,4! &= 40320\\times24 \\\\ &= 967680\\end{aligned}"
       }
     ],
     "answerText": "967680 arrangements.",
@@ -3232,6 +3680,12 @@
         "page": 1,
         "label": "Factorials and permutations"
       }
+    ],
+    "optionsTex": [
+      "967680",
+      "40320",
+      "79833600",
+      "24"
     ]
   },
   {
@@ -3271,7 +3725,8 @@
             "page": 57,
             "label": "Permutations"
           }
-        ]
+        ],
+        "mathTex": "13-3+1=11\\text{ units}"
       },
       {
         "title": "Arrange all units",
@@ -3283,7 +3738,8 @@
             "page": 57,
             "label": "Permutations"
           }
-        ]
+        ],
+        "mathTex": "11!=39916800"
       },
       {
         "title": "Arrange inside the block",
@@ -3295,7 +3751,8 @@
             "page": 57,
             "label": "Permutations"
           }
-        ]
+        ],
+        "mathTex": "3!=6"
       },
       {
         "title": "Multiply",
@@ -3307,7 +3764,8 @@
             "page": 57,
             "label": "Permutations"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}11!\\,3! &= 39916800\\times6 \\\\ &= 239500800\\end{aligned}"
       }
     ],
     "answerText": "239500800 arrangements.",
@@ -3330,6 +3788,12 @@
         "page": 1,
         "label": "Factorials and permutations"
       }
+    ],
+    "optionsTex": [
+      "239500800",
+      "39916800",
+      "6227020800",
+      "6"
     ]
   },
   {
@@ -3369,7 +3833,8 @@
             "page": 10,
             "label": "Discrete CDF"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}p(-2) &= 0.08 \\\\ p(0) &= 0.24-0.08 \\\\ &= 0.16 \\\\ p(3) &= 0.53-0.24 \\\\ &= 0.29 \\\\ p(7) &= 1-0.53 \\\\ &= 0.47\\end{aligned}"
       },
       {
         "title": "Restrict to X≥0",
@@ -3381,7 +3846,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge0) &= 0.16+0.29+0.47 \\\\ &= 0.92\\end{aligned}"
       },
       {
         "title": "Transform eligible values",
@@ -3393,7 +3859,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{array}{c|ccc}x&0&3&7\\\\\\hline Y&2&1&5\\end{array}"
       },
       {
         "title": "Divide",
@@ -3405,7 +3872,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &= \\frac{0.47}{0.92} \\\\ &\\approx 0.510870\\end{aligned}"
       }
     ],
     "answerText": "Approximately 0.511.",
@@ -3428,6 +3896,12 @@
         "page": 3,
         "label": "Conditioning"
       }
+    ],
+    "optionsTex": [
+      "0.470",
+      "0.511",
+      "0.920",
+      "0.080"
     ]
   },
   {
@@ -3467,7 +3941,8 @@
             "page": 10,
             "label": "Discrete CDF"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}p(-2) &= 0.13 \\\\ p(0) &= 0.27 \\\\ p(3) &= 0.35 \\\\ p(7) &= 0.25\\end{aligned}"
       },
       {
         "title": "Find the eligible mass",
@@ -3479,7 +3954,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge0) &= 0.27+0.35+0.25 \\\\ &= 0.87\\end{aligned}"
       },
       {
         "title": "Check the transformed event",
@@ -3491,7 +3967,8 @@
             "page": 10,
             "label": "Discrete CDF"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{favorable mass} &= 0.27+0.35 \\\\ &= 0.62\\end{aligned}"
       },
       {
         "title": "Normalize",
@@ -3503,7 +3980,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &= \\frac{0.62}{0.87} \\\\ &\\approx 0.712644\\end{aligned}"
       }
     ],
     "answerText": "Approximately 0.713.",
@@ -3526,6 +4004,12 @@
         "page": 3,
         "label": "Conditioning"
       }
+    ],
+    "optionsTex": [
+      "0.620",
+      "0.713",
+      "0.870",
+      "0.750"
     ]
   },
   {
@@ -3565,7 +4049,8 @@
             "page": 17,
             "label": "Binomial assumptions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X=2) &= \\binom{12}{2}(0.33)^2(0.67)^{10} \\\\ &\\approx 0.131015\\end{aligned}"
       },
       {
         "title": "Compute excluded lower counts",
@@ -3577,7 +4062,8 @@
             "page": 17,
             "label": "Binomial assumptions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X=0) &= 0.67^{12} \\\\ &\\approx 0.008183 \\\\ P(X=1) &= 12(0.33)(0.67)^{11} \\\\ &\\approx 0.048364\\end{aligned}"
       },
       {
         "title": "Take the complement",
@@ -3589,7 +4075,8 @@
             "page": 17,
             "label": "Binomial assumptions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge2) &= 1-0.008183-0.048364 \\\\ &\\approx 0.943453\\end{aligned}"
       },
       {
         "title": "Divide",
@@ -3601,7 +4088,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &\\approx \\frac{0.131015}{0.943453} \\\\ &\\approx 0.138867\\end{aligned}"
       }
     ],
     "answerText": "Approximately 0.139.",
@@ -3624,6 +4112,12 @@
         "page": 3,
         "label": "Conditional probability"
       }
+    ],
+    "optionsTex": [
+      "0.131",
+      "0.139",
+      "0.943",
+      "0.330"
     ]
   },
   {
@@ -3663,7 +4157,8 @@
             "page": 17,
             "label": "Binomial assumptions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}A &= \\sum_{k=2}^{4}\\binom{13}{k}(0.32)^k(0.68)^{13-k} \\\\ &\\approx 0.545993\\end{aligned}"
       },
       {
         "title": "Find the eligible probability",
@@ -3675,7 +4170,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}B &= 1-0.68^{13}-13(0.32)(0.68)^{12} \\\\ &\\approx 0.952690\\end{aligned}"
       },
       {
         "title": "Normalize",
@@ -3687,7 +4183,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &= \\frac AB \\\\ &\\approx \\frac{0.545993}{0.952690} \\\\ &\\approx 0.573106\\end{aligned}"
       },
       {
         "title": "Check direction",
@@ -3699,7 +4196,8 @@
             "page": 17,
             "label": "Binomial assumptions"
           }
-        ]
+        ],
+        "mathTex": "0.5731>0.5460"
       }
     ],
     "answerText": "Approximately 0.573.",
@@ -3722,6 +4220,12 @@
         "page": 3,
         "label": "Conditional probability"
       }
+    ],
+    "optionsTex": [
+      "0.546",
+      "0.573",
+      "0.953",
+      "0.427"
     ]
   },
   {
@@ -3761,7 +4265,8 @@
             "page": 29,
             "label": "Poisson PMF"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}90\\text{ min} &= 1.5\\text{ h} \\\\ \\lambda &= 2(1.5) \\\\ &= 3\\end{aligned}"
       },
       {
         "title": "Compute the numerator by complement",
@@ -3773,7 +4278,8 @@
             "page": 29,
             "label": "Poisson PMF"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(N\\ge3) &= 1-e^{-3}\\left[1+3+\\frac{3^2}{2!}\\right] \\\\ &\\approx 0.576810\\end{aligned}"
       },
       {
         "title": "Compute the condition probability",
@@ -3785,7 +4291,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(N\\ge1) &= 1-e^{-3} \\\\ &\\approx 0.950213\\end{aligned}"
       },
       {
         "title": "Divide",
@@ -3797,7 +4304,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &\\approx \\frac{0.576810}{0.950213} \\\\ &\\approx 0.607032\\end{aligned}"
       }
     ],
     "answerText": "Approximately 0.607.",
@@ -3820,6 +4328,12 @@
         "page": 1,
         "label": "Poisson distribution"
       }
+    ],
+    "optionsTex": [
+      "0.577",
+      "0.607",
+      "0.950",
+      "0.393"
     ]
   },
   {
@@ -3859,7 +4373,8 @@
             "page": 29,
             "label": "Poisson PMF"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\lambda &= 1.2(0.5) \\\\ &= 0.6 \\\\ N\\sim\\operatorname{Poisson}(0.6)\\end{aligned}"
       },
       {
         "title": "Sum the favorable count probabilities",
@@ -3871,7 +4386,8 @@
             "page": 29,
             "label": "Poisson PMF"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}A &= e^{-0.6}\\left[\\frac{0.6^2}{2!}+\\frac{0.6^3}{3!}+\\frac{0.6^4}{4!}\\right] \\\\ &\\approx 0.121507\\end{aligned}"
       },
       {
         "title": "Find the eligible probability",
@@ -3883,7 +4399,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}B &= 1-e^{-0.6} \\\\ &\\approx 0.451188\\end{aligned}"
       },
       {
         "title": "Normalize",
@@ -3895,7 +4412,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &= \\frac AB \\\\ &\\approx 0.269304\\end{aligned}"
       }
     ],
     "answerText": "Approximately 0.269.",
@@ -3918,6 +4436,12 @@
         "page": 1,
         "label": "Poisson distribution"
       }
+    ],
+    "optionsTex": [
+      "0.122",
+      "0.269",
+      "0.451",
+      "0.731"
     ]
   },
   {
@@ -3957,7 +4481,8 @@
             "page": 65,
             "label": "Combinations"
           }
-        ]
+        ],
+        "mathTex": "\\binom{33}{3}=5456"
       },
       {
         "title": "Remove excluded all-blue samples",
@@ -3969,7 +4494,8 @@
             "page": 65,
             "label": "Combinations"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{eligible} &= \\binom{33}{3}-\\binom{18}{3} \\\\ &= 5456-816 \\\\ &= 4640\\end{aligned}"
       },
       {
         "title": "Count exactly two red",
@@ -3981,7 +4507,8 @@
             "page": 65,
             "label": "Combinations"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{favorable} &= \\binom{15}{2}\\binom{18}{1} \\\\ &= 105(18) \\\\ &= 1890\\end{aligned}"
       },
       {
         "title": "Divide eligible counts",
@@ -3993,7 +4520,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &= \\frac{1890}{4640} \\\\ &\\approx 0.407328\\end{aligned}"
       }
     ],
     "answerText": "Approximately 0.407.",
@@ -4012,6 +4540,12 @@
         "page": 3,
         "label": "Conditional probability"
       }
+    ],
+    "optionsTex": [
+      "0.346",
+      "0.407",
+      "0.593",
+      "0.750"
     ]
   },
   {
@@ -4051,7 +4585,8 @@
             "page": 65,
             "label": "Combinations"
           }
-        ]
+        ],
+        "mathTex": "\\binom{23}{3}=1771"
       },
       {
         "title": "Apply the condition",
@@ -4063,7 +4598,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{eligible} &= 1771-\\binom{15}{3}-\\binom{8}{3} \\\\ &= 1771-455-56 \\\\ &= 1260\\end{aligned}"
       },
       {
         "title": "Count exactly two red and one blue",
@@ -4075,7 +4611,8 @@
             "page": 65,
             "label": "Combinations"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{favorable} &= \\binom{15}{2}\\binom{8}{1} \\\\ &= 105(8) \\\\ &= 840\\end{aligned}"
       },
       {
         "title": "Divide",
@@ -4087,7 +4624,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &= \\frac{840}{1260} \\\\ &= \\frac23 \\\\ &\\approx 0.666667\\end{aligned}"
       }
     ],
     "answerText": "2/3, approximately 0.667.",
@@ -4106,6 +4644,12 @@
         "page": 3,
         "label": "Conditional probability"
       }
+    ],
+    "optionsTex": [
+      "0.474",
+      "0.667",
+      "0.333",
+      "0.840"
     ]
   },
   {
@@ -4145,7 +4689,8 @@
             "page": 6,
             "label": "PMF validity and probabilities"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}1 &= c(1+2+\\cdots+9) \\\\ &= 45c\\end{aligned}"
       },
       {
         "title": "Solve the normalizer",
@@ -4157,7 +4702,8 @@
             "page": 6,
             "label": "PMF validity and probabilities"
           }
-        ]
+        ],
+        "mathTex": "c=\\frac1{45}"
       },
       {
         "title": "Sum the event masses",
@@ -4169,7 +4715,8 @@
             "page": 6,
             "label": "PMF validity and probabilities"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X\\ge2) &= \\frac{45-1-2}{45} \\\\ &= \\frac{42}{45} \\\\ &= \\frac{14}{15}\\end{aligned}"
       },
       {
         "title": "Check the complement",
@@ -4181,7 +4728,8 @@
             "page": 6,
             "label": "PMF validity and probabilities"
           }
-        ]
+        ],
+        "mathTex": "P(X<2)=\\frac1{15}"
       }
     ],
     "answerText": "14/15≈0.933.",
@@ -4194,6 +4742,12 @@
         "page": 6,
         "label": "PMF validity and probabilities"
       }
+    ],
+    "optionsTex": [
+      "\\frac{14}{15}\\approx 0.933",
+      "\\frac{2}{3}\\approx 0.667",
+      "\\frac{1}{45}\\approx 0.022",
+      "\\frac{1}{15}\\approx 0.067"
     ]
   },
   {
@@ -4233,7 +4787,8 @@
             "page": 17,
             "label": "Independence"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\text{none}) &= 0.86\\times0.72\\times0.73 \\\\ &= 0.452016\\end{aligned}"
       },
       {
         "title": "Find the eligible probability",
@@ -4245,7 +4800,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(E) &= 1-0.452016 \\\\ &= 0.547984\\end{aligned}"
       },
       {
         "title": "Enumerate exactly one failure",
@@ -4257,7 +4813,8 @@
             "page": 17,
             "label": "Independence"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(\\text{exactly one})&=0.14(0.72)(0.73)\\\\&\\quad+0.86(0.28)(0.73)\\\\&\\quad+0.86(0.72)(0.27)\\\\&=0.416552\\end{aligned}"
       },
       {
         "title": "Condition on at least one",
@@ -4269,7 +4826,8 @@
             "page": 3,
             "label": "Restrict and normalize a conditional event"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &= \\frac{0.416552}{0.547984} \\\\ &\\approx 0.760154\\end{aligned}"
       }
     ],
     "answerText": "Approximately 0.760.",
@@ -4292,6 +4850,12 @@
         "page": 39,
         "label": "Complement probability"
       }
+    ],
+    "optionsTex": [
+      "0.417",
+      "0.548",
+      "0.760",
+      "0.690"
     ]
   },
   {
@@ -4330,7 +4894,8 @@
             "page": 18,
             "label": "Transform a mean using linearity"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}29 &= 5+2\\mathbb E[X] \\\\ \\Rightarrow\\ \\mathbb E[X] &= 12\\end{aligned}"
       },
       {
         "title": "Recover the variance",
@@ -4342,7 +4907,8 @@
             "page": 30,
             "label": "Shift and scale means and variances"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}36 &= 2^2\\operatorname{Var}(X) \\\\ \\Rightarrow\\ \\operatorname{Var}(X) &= 9\\end{aligned}"
       },
       {
         "title": "Separate spread and bias",
@@ -4354,7 +4920,8 @@
             "page": 26,
             "label": "Variance and second-moment identity"
           }
-        ]
+        ],
+        "mathTex": "\\mathbb E[(X-10)^2]=\\operatorname{Var}(X)+(\\mathbb E[X]-10)^2"
       },
       {
         "title": "Substitute",
@@ -4366,7 +4933,8 @@
             "page": 26,
             "label": "Variance and second-moment identity"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}9+(12-10)^2 &= 9+4 \\\\ &= 13\\end{aligned}"
       }
     ],
     "answerText": "E[(X−10)²]=13.",
@@ -4390,6 +4958,12 @@
         "page": 26,
         "label": "Variance identity"
       }
+    ],
+    "optionsTex": [
+      "13",
+      "4",
+      "36",
+      "9"
     ]
   },
   {
@@ -4429,7 +5003,8 @@
             "page": 37,
             "label": "Continuous expectation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}1 &= c\\int_0^2x\\,\\mathrm dx \\\\ &= c\\left[\\frac{x^2}{2}\\right]_0^2 \\\\ &= 2c \\\\ \\Rightarrow\\ c &= \\frac12\\end{aligned}"
       },
       {
         "title": "Set up the weighted average",
@@ -4441,7 +5016,8 @@
             "page": 37,
             "label": "Continuous expectation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X] &= \\int_0^2x\\left(\\frac x2\\right)\\,\\mathrm dx \\\\ &= \\frac12\\int_0^2x^2\\,\\mathrm dx\\end{aligned}"
       },
       {
         "title": "Integrate and evaluate",
@@ -4453,7 +5029,8 @@
             "page": 37,
             "label": "Continuous expectation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X] &= \\frac12\\left[\\frac{x^3}{3}\\right]_0^2 \\\\ &= \\frac12\\left(\\frac83\\right) \\\\ &= \\frac43\\end{aligned}"
       },
       {
         "title": "Check the range",
@@ -4465,7 +5042,8 @@
             "page": 37,
             "label": "Continuous expectation"
           }
-        ]
+        ],
+        "mathTex": "0<\\frac43<2"
       }
     ],
     "answerText": "E[X]=4/3. The original homework chose None of These because 4/3 was absent from its numerical choices.",
@@ -4488,6 +5066,31 @@
         "doc": "week3",
         "page": 39,
         "label": "Antiderivative checklist"
+      }
+    ],
+    "optionsTex": [
+      "2",
+      "1",
+      "\\frac{4}{3}",
+      "\\frac{3}{2}"
+    ],
+    "promptParts": [
+      {
+        "text": "A continuous variable has "
+      },
+      {
+        "tex": "f(x)=\\begin{cases}cx,&0\\le x\\le2,\\\\0,&\\text{otherwise.}\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "Find "
+      },
+      {
+        "tex": "\\mathbb E[X]",
+        "display": false
+      },
+      {
+        "text": "."
       }
     ]
   },
@@ -4527,7 +5130,8 @@
             "page": 25,
             "label": "Variance and standard deviation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}-4p+2(0.50)+10(0.50-p) &= 2.5 \\\\ \\Rightarrow\\ 6-14p &= 2.5 \\\\ \\Rightarrow\\ p &= 0.25\\end{aligned}"
       },
       {
         "title": "Check the probability table",
@@ -4539,7 +5143,8 @@
             "page": 25,
             "label": "Variance and standard deviation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}p(-4) &= 0.25 \\\\ p(2) &= 0.50 \\\\ p(10) &= 0.25\\end{aligned}"
       },
       {
         "title": "Compute the second moment",
@@ -4551,7 +5156,8 @@
             "page": 26,
             "label": "Variance equals second moment minus mean squared"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X^2] &= 16(0.25)+4(0.50)+100(0.25) \\\\ &= 31\\end{aligned}"
       },
       {
         "title": "Subtract the squared mean",
@@ -4563,7 +5169,8 @@
             "page": 26,
             "label": "Variance equals second moment minus mean squared"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{Var}(X) &= 31-(2.5)^2 \\\\ &= 24.75\\end{aligned}"
       }
     ],
     "answerText": "Var(X)=24.75 (thousand dollars)².",
@@ -4587,6 +5194,12 @@
         "page": 49,
         "label": "Raw versus central moments"
       }
+    ],
+    "optionsTex": [
+      "28.50",
+      "18.75",
+      "31.00",
+      "24.75"
     ]
   },
   {
@@ -4625,7 +5238,8 @@
             "page": 32,
             "label": "Variance and covariance of sums"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{Var}(X+Y)&=\\operatorname{Var}(X)+\\operatorname{Var}(Y)\\\\&\\quad+2\\operatorname{Cov}(X,Y)\\end{aligned}"
       },
       {
         "title": "Substitute the covariance sign",
@@ -4637,7 +5251,8 @@
             "page": 32,
             "label": "Variance and covariance of sums"
           }
-        ]
+        ],
+        "mathTex": "\\operatorname{Var}(X+Y)=4+9+2(-2)"
       },
       {
         "title": "Calculate",
@@ -4649,7 +5264,8 @@
             "page": 32,
             "label": "Variance and covariance of sums"
           }
-        ]
+        ],
+        "mathTex": "13-4=9"
       }
     ],
     "answerText": "Var(X+Y)=9.",
@@ -4678,6 +5294,12 @@
         "page": 1,
         "label": "Means and variances"
       }
+    ],
+    "optionsTex": [
+      "9",
+      "17",
+      "5",
+      "13"
     ]
   },
   {
@@ -4716,7 +5338,8 @@
             "page": 14,
             "label": "Transform values before averaging"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}g(1) &= 1 \\\\ g(2) &= 0 \\\\ g(4) &= 4\\end{aligned}"
       },
       {
         "title": "Weight by the original probabilities",
@@ -4728,7 +5351,8 @@
             "page": 14,
             "label": "Transform values before averaging"
           }
-        ]
+        ],
+        "mathTex": "\\mathbb E[g(X)]=1(0.50)+0(0.30)+4(0.20)"
       },
       {
         "title": "Sum and distinguish the mean substitution",
@@ -4745,7 +5369,8 @@
             "page": 26,
             "label": "Second moment includes variance"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[g(X)] &= 1.30 \\\\ g(\\mathbb E[X]) &= (1.90-2)^2 \\\\ &= 0.01\\end{aligned}"
       }
     ],
     "answerText": "E[g(X)]=1.30 seconds² under this penalty definition.",
@@ -4769,6 +5394,12 @@
         "page": 38,
         "label": "Continuous functions"
       }
+    ],
+    "optionsTex": [
+      "1.90",
+      "1.30",
+      "1.00",
+      "0.01"
     ]
   },
   {
@@ -4807,7 +5438,8 @@
             "page": 38,
             "label": "Continuous function expectation"
           }
-        ]
+        ],
+        "mathTex": "\\mathbb E[C]=\\int_0^1(100x^2)(2x)\\,\\mathrm dx"
       },
       {
         "title": "Simplify the integrand",
@@ -4819,7 +5451,8 @@
             "page": 38,
             "label": "Continuous function expectation"
           }
-        ]
+        ],
+        "mathTex": "\\mathbb E[C]=200\\int_0^1x^3\\,\\mathrm dx"
       },
       {
         "title": "Evaluate",
@@ -4831,7 +5464,8 @@
             "page": 38,
             "label": "Continuous function expectation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}200\\left[\\frac{x^4}{4}\\right]_0^1 &= \\frac{200}{4} \\\\ &= 50\\end{aligned}"
       }
     ],
     "answerText": "Expected compensation is 50 dollars.",
@@ -4854,6 +5488,38 @@
         "doc": "week5",
         "page": 38,
         "label": "Continuous functions"
+      }
+    ],
+    "optionsTex": [
+      "100\\text{ dollars}",
+      "50\\text{ dollars}",
+      "\\frac{200}{3}\\text{ dollars}",
+      "\\frac{400}{9}\\text{ dollars}"
+    ],
+    "promptParts": [
+      {
+        "text": "A delivery-delay proportion has density "
+      },
+      {
+        "tex": "f(x)=2x,\\quad0\\le x\\le1",
+        "display": false
+      },
+      {
+        "text": ". Compensation is "
+      },
+      {
+        "tex": "C=100X^2",
+        "display": false
+      },
+      {
+        "text": " dollars. Find "
+      },
+      {
+        "tex": "\\mathbb E[C]",
+        "display": false
+      },
+      {
+        "text": "."
       }
     ]
   },
@@ -4893,7 +5559,8 @@
             "page": 32,
             "label": "Variance and covariance of sums"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X] &= \\operatorname{Var}(X) \\\\ &= 2 \\\\ \\mathbb E[Y] &= \\operatorname{Var}(Y) \\\\ &= 3\\end{aligned}"
       },
       {
         "title": "Combine means",
@@ -4905,7 +5572,8 @@
             "page": 18,
             "label": "Linearity without independence"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[W] &= 2\\mathbb E[X]+\\mathbb E[Y] \\\\ &= 2(2)+3 \\\\ &= 7\\end{aligned}"
       },
       {
         "title": "Combine variances using independence",
@@ -4917,7 +5585,8 @@
             "page": 32,
             "label": "Variance and covariance of sums"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{Var}(W) &= 2^2\\operatorname{Var}(X)+\\operatorname{Var}(Y) \\\\ &= 4(2)+3 \\\\ &= 11\\end{aligned}"
       },
       {
         "title": "Compare units of spread",
@@ -4929,7 +5598,8 @@
             "page": 32,
             "label": "Variance and covariance of sums"
           }
-        ]
+        ],
+        "mathTex": "(\\mathbb E[W],\\operatorname{Var}(W))=(7,11)"
       }
     ],
     "answerText": "The pair is (7,11).",
@@ -4958,6 +5628,12 @@
         "page": 1,
         "label": "Means and variances"
       }
+    ],
+    "optionsTex": [
+      "(5,5)",
+      "(8,11)",
+      "(7,11)",
+      "(7,7)"
     ]
   },
   {
@@ -4996,7 +5672,8 @@
             "page": 25,
             "label": "Variance and standard deviation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[A] &= 12 \\\\ \\mathbb E[B] &= 0(0.5)+24(0.5) \\\\ &= 12\\end{aligned}"
       },
       {
         "title": "Find constant-reward variance",
@@ -5008,7 +5685,8 @@
             "page": 25,
             "label": "Variance, SD, and units"
           }
-        ]
+        ],
+        "mathTex": "\\operatorname{Var}(A)=0"
       },
       {
         "title": "Find risky-reward variance",
@@ -5020,7 +5698,8 @@
             "page": 25,
             "label": "Variance, SD, and units"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{Var}(B) &= 0.5(0-12)^2+0.5(24-12)^2 \\\\ &= 144\\end{aligned}"
       },
       {
         "title": "Interpret",
@@ -5032,7 +5711,8 @@
             "page": 25,
             "label": "Variance, SD, and units"
           }
-        ]
+        ],
+        "mathTex": "\\text{Same mean; }B\\text{ has larger variance}"
       }
     ],
     "answerText": "Both means are 12; Var(A)=0 and Var(B)=144 tokens².",
@@ -5056,6 +5736,12 @@
         "page": 49,
         "label": "Raw versus central moments"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -5094,7 +5780,8 @@
             "page": 30,
             "label": "Shift and scale means and variances"
           }
-        ]
+        ],
+        "mathTex": "X=R-6"
       },
       {
         "title": "Transform each value",
@@ -5106,7 +5793,8 @@
             "page": 30,
             "label": "Shift and scale means and variances"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}R &= 0,10,30 \\\\ \\Rightarrow\\ X &= -6,4,24\\end{aligned}"
       },
       {
         "title": "Carry over the probabilities",
@@ -5118,7 +5806,8 @@
             "page": 30,
             "label": "Shift and scale means and variances"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X=-6) &= 0.60 \\\\ P(X=4) &= 0.35 \\\\ P(X=24) &= 0.05\\end{aligned}"
       }
     ],
     "answerText": "Net outcomes are −6, 4, 24 with the original probabilities.",
@@ -5142,6 +5831,12 @@
         "page": 26,
         "label": "Variance identity"
       }
+    ],
+    "optionsTex": [
+      "-6,4,24\\text{ with probabilities }0.60,0.35,0.05",
+      "0,10,30\\text{ with probabilities }0.60,0.35,0.05",
+      "-6,4,24\\text{ with probabilities }\\frac13,\\frac13,\\frac13",
+      "6,16,36\\text{ with probabilities }0.60,0.35,0.05"
     ]
   },
   {
@@ -5180,7 +5875,8 @@
             "page": 6,
             "label": "Discrete expected value"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}X &= -6,4,24\\quad\\text{with }p \\\\ &= 0.60,0.35,0.05\\end{aligned}"
       },
       {
         "title": "Compute a weighted mean",
@@ -5192,7 +5888,8 @@
             "page": 6,
             "label": "Discrete expected value"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X] &= -6(0.60)+4(0.35)+24(0.05) \\\\ &= -3.6+1.4+1.2 \\\\ &= -1\\end{aligned}"
       },
       {
         "title": "Interpret the sign",
@@ -5204,7 +5901,8 @@
             "page": 6,
             "label": "Discrete expected value"
           }
-        ]
+        ],
+        "mathTex": "\\text{Expected long-run net loss}=1\\text{ token per play}"
       }
     ],
     "answerText": "E[X]=−1 token, an average loss of 1 token per play.",
@@ -5228,6 +5926,12 @@
         "page": 18,
         "label": "Linearity of expectation"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -5266,7 +5970,8 @@
             "page": 25,
             "label": "Variance and standard deviation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mu &= -6(0.60)+4(0.35)+24(0.05) \\\\ &= -1\\end{aligned}"
       },
       {
         "title": "Compute the second moment",
@@ -5278,7 +5983,8 @@
             "page": 26,
             "label": "Variance equals second moment minus mean squared"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X^2] &= 36(0.60)+16(0.35)+576(0.05) \\\\ &= 21.6+5.6+28.8 \\\\ &= 56\\end{aligned}"
       },
       {
         "title": "Subtract squared mean",
@@ -5290,7 +5996,8 @@
             "page": 26,
             "label": "Variance equals second moment minus mean squared"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{Var}(X) &= 56-(-1)^2 \\\\ &= 55\\text{ tokens}^2\\end{aligned}"
       },
       {
         "title": "Take the square root",
@@ -5302,7 +6009,8 @@
             "page": 25,
             "label": "Variance, SD, and units"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{SD}(X) &= \\sqrt{55} \\\\ &\\approx 7.416\\text{ tokens}\\end{aligned}"
       }
     ],
     "answerText": "Var(X)=55 tokens² and SD(X)=√55≈7.416 tokens.",
@@ -5326,6 +6034,12 @@
         "page": 49,
         "label": "Raw versus central moments"
       }
+    ],
+    "optionsTex": [
+      "\\operatorname{Var}=55\\text{ tokens}^2;\\quad\\operatorname{SD}\\approx7.416\\text{ tokens}",
+      "\\operatorname{Var}=56\\text{ tokens}^2;\\quad\\operatorname{SD}\\approx7.483\\text{ tokens}",
+      null,
+      "\\operatorname{Var}=55\\text{ tokens}^2;\\quad\\operatorname{SD}=55\\text{ tokens}"
     ]
   },
   {
@@ -5364,7 +6078,8 @@
             "page": 30,
             "label": "Shift and scale means and variances"
           }
-        ]
+        ],
+        "mathTex": "R=X+6"
       },
       {
         "title": "Apply expectation linearity",
@@ -5376,7 +6091,8 @@
             "page": 18,
             "label": "Transform a mean using linearity"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[R] &= \\mathbb E[X]+6 \\\\ &= -1+6 \\\\ &= 5\\text{ tokens}\\end{aligned}"
       },
       {
         "title": "Use shift-invariance of variance",
@@ -5388,7 +6104,8 @@
             "page": 30,
             "label": "Shift and scale means and variances"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{Var}(R) &= \\operatorname{Var}(X+6) \\\\ &= \\operatorname{Var}(X) \\\\ &= 55\\text{ tokens}^2\\end{aligned}"
       }
     ],
     "answerText": "E[R]=5 tokens and Var(R)=55 tokens².",
@@ -5412,6 +6129,12 @@
         "page": 26,
         "label": "Variance identity"
       }
+    ],
+    "optionsTex": [
+      "\\mathbb E[R]=5,\\quad\\operatorname{Var}(R)=55",
+      "\\mathbb E[R]=-7,\\quad\\operatorname{Var}(R)=55",
+      "\\mathbb E[R]=5,\\quad\\operatorname{Var}(R)=61",
+      "\\mathbb E[R]=6,\\quad\\operatorname{Var}(R)=36"
     ]
   },
   {
@@ -5450,7 +6173,8 @@
             "page": 18,
             "label": "Linearity without independence"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[S] &= 100(-1) \\\\ &= -100\\text{ tokens}\\end{aligned}"
       },
       {
         "title": "Add variances using independence",
@@ -5462,7 +6186,8 @@
             "page": 32,
             "label": "Variance and covariance of sums"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{Var}(S) &= 100(55) \\\\ &= 5500\\text{ tokens}^2\\end{aligned}"
       },
       {
         "title": "Calculate the standard deviation",
@@ -5474,7 +6199,8 @@
             "page": 32,
             "label": "Variance and covariance of sums"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{SD}(S) &= \\sqrt{5500} \\\\ &= 10\\sqrt{55} \\\\ &\\approx 74.16\\text{ tokens}\\end{aligned}"
       },
       {
         "title": "Interpret the expected result",
@@ -5486,7 +6212,8 @@
             "page": 18,
             "label": "Linearity without independence"
           }
-        ]
+        ],
+        "mathTex": "\\text{Expected net loss per 100-play batch}=100\\text{ tokens}"
       }
     ],
     "answerText": "E[S]=−100, Var(S)=5500, SD(S)≈74.16.",
@@ -5515,6 +6242,12 @@
         "page": 1,
         "label": "Means and variances"
       }
+    ],
+    "optionsTex": [
+      "-100\\text{ tokens};\\quad5500\\text{ tokens}^2;\\quad\\text{about }74.16\\text{ tokens}",
+      "-100\\text{ tokens};\\quad55\\text{ tokens}^2;\\quad\\text{about }7.42\\text{ tokens}",
+      "-100\\text{ tokens};\\quad550000\\text{ tokens}^2;\\quad\\text{about }741.62\\text{ tokens}",
+      "100\\text{ tokens};\\quad5500\\text{ tokens}^2;\\quad\\text{about }74.16\\text{ tokens}"
     ]
   },
   {
@@ -5553,7 +6286,8 @@
             "page": 6,
             "label": "Discrete expected value"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X>0) &= 0.35+0.05 \\\\ &= 0.40\\end{aligned}"
       },
       {
         "title": "Weight the sizes as well as chances",
@@ -5565,7 +6299,8 @@
             "page": 6,
             "label": "Discrete expected value"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X] &= -6(0.60)+4(0.35)+24(0.05) \\\\ &= -1\\end{aligned}"
       },
       {
         "title": "Interpret favorability",
@@ -5577,7 +6312,8 @@
             "page": 6,
             "label": "Discrete expected value"
           }
-        ]
+        ],
+        "mathTex": "\\text{Long-run expected loss}=1\\text{ token per play}"
       }
     ],
     "answerText": "Gain sizes and loss sizes are essential; this event has mean net gain −1 token.",
@@ -5601,6 +6337,12 @@
         "page": 18,
         "label": "Linearity of expectation"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -5639,7 +6381,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}0\\le x\\le4 \\\\ \\Rightarrow\\ 4-x\\ge0\\end{aligned}"
       },
       {
         "title": "Set the total area",
@@ -5651,7 +6394,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "1=c\\int_0^4(4-x)\\,\\mathrm dx"
       },
       {
         "title": "Integrate and solve",
@@ -5663,7 +6407,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}1 &= c(16-8) \\\\ &= 8c \\\\ \\Rightarrow\\ c &= \\frac18\\end{aligned}"
       },
       {
         "title": "Verify",
@@ -5675,7 +6420,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}f(x) &= \\frac{4-x}{8} \\\\ \\int_0^4f(x)\\,\\mathrm dx &= 1\\end{aligned}"
       }
     ],
     "answerText": "c=1/8, and the density is nonnegative with total area 1.",
@@ -5693,6 +6439,24 @@
         "doc": "week3",
         "page": 39,
         "label": "Essential antiderivatives"
+      }
+    ],
+    "optionsTex": [
+      "\\frac{1}{8}",
+      "\\frac{1}{4}",
+      "\\frac{1}{16}",
+      "\\frac{1}{2}"
+    ],
+    "promptParts": [
+      {
+        "text": "Extra delivery delay X in hours has "
+      },
+      {
+        "tex": "f(x)=\\begin{cases}c(4-x),&0\\le x\\le4,\\\\0,&\\text{otherwise.}\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "Which value of c makes this a valid PDF?"
       }
     ]
   },
@@ -5732,7 +6496,8 @@
             "page": 37,
             "label": "Continuous expectation"
           }
-        ]
+        ],
+        "mathTex": "\\mathbb E[X]=\\frac18\\int_0^4x(4-x)\\,\\mathrm dx"
       },
       {
         "title": "Integrate the mean",
@@ -5744,7 +6509,8 @@
             "page": 37,
             "label": "Continuous expectation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X] &= \\frac18\\left[2x^2-\\frac{x^3}{3}\\right]_0^4 \\\\ &= \\frac18\\left(32-\\frac{64}{3}\\right) \\\\ &= \\frac43\\end{aligned}"
       },
       {
         "title": "Set up and integrate the second moment",
@@ -5756,7 +6522,8 @@
             "page": 37,
             "label": "Continuous expectation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X^2] &= \\frac18\\int_0^4x^2(4-x)\\,\\mathrm dx \\\\ &= \\frac18\\left[\\frac{4x^3}{3}-\\frac{x^4}{4}\\right]_0^4\\end{aligned}"
       },
       {
         "title": "Evaluate",
@@ -5768,7 +6535,8 @@
             "page": 37,
             "label": "Continuous expectation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X^2] &= \\frac18\\left(\\frac{256}{3}-64\\right) \\\\ &= \\frac83\\text{ hours}^2\\end{aligned}"
       }
     ],
     "answerText": "E[X]=4/3 hours and E[X²]=8/3 hours².",
@@ -5791,6 +6559,38 @@
         "doc": "week3",
         "page": 39,
         "label": "Antiderivative checklist"
+      }
+    ],
+    "optionsTex": [
+      "\\mathbb E[X]=\\frac43\\text{ hours};\\quad\\mathbb E[X^2]=\\frac83\\text{ hours}^2",
+      "\\mathbb E[X]=2\\text{ hours};\\quad\\mathbb E[X^2]=4\\text{ hours}^2",
+      "\\mathbb E[X]=\\frac43\\text{ hours};\\quad\\mathbb E[X^2]=\\frac{16}{9}\\text{ hours}^2",
+      "\\mathbb E[X]=\\frac83\\text{ hours};\\quad\\mathbb E[X^2]=\\frac43\\text{ hours}^2"
+    ],
+    "promptParts": [
+      {
+        "text": "X has density "
+      },
+      {
+        "tex": "f(x)=\\frac{4-x}{8},\\quad0\\le x\\le4",
+        "display": false
+      },
+      {
+        "text": ". Find "
+      },
+      {
+        "tex": "\\mathbb E[X]",
+        "display": false
+      },
+      {
+        "text": " and "
+      },
+      {
+        "tex": "\\mathbb E[X^2]",
+        "display": false
+      },
+      {
+        "text": "."
       }
     ]
   },
@@ -5830,7 +6630,8 @@
             "page": 26,
             "label": "Variance equals second moment minus mean squared"
           }
-        ]
+        ],
+        "mathTex": "\\operatorname{Var}(X)=\\mathbb E[X^2]-(\\mathbb E[X])^2"
       },
       {
         "title": "Substitute and simplify",
@@ -5842,7 +6643,8 @@
             "page": 25,
             "label": "Variance and standard deviation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{Var}(X) &= \\frac83-\\left(\\frac43\\right)^2 \\\\ &= \\frac{24}{9}-\\frac{16}{9} \\\\ &= \\frac89\\text{ hours}^2\\end{aligned}"
       },
       {
         "title": "Take the square root",
@@ -5854,7 +6656,8 @@
             "page": 25,
             "label": "Variance, SD, and units"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{SD}(X) &= \\sqrt{\\frac89} \\\\ &= \\frac{2\\sqrt2}{3} \\\\ &\\approx 0.9428\\text{ hours}\\end{aligned}"
       }
     ],
     "answerText": "Var(X)=8/9 hours²; SD(X)=2√2/3≈0.943 hours.",
@@ -5878,6 +6681,12 @@
         "page": 49,
         "label": "Raw versus central moments"
       }
+    ],
+    "optionsTex": [
+      "\\frac89\\text{ hours}^2;\\quad\\frac{2\\sqrt2}{3}\\approx0.943\\text{ hours}",
+      "\\frac83\\text{ hours}^2;\\quad\\sqrt{\\frac83}\\approx1.633\\text{ hours}",
+      "\\frac89\\text{ hours};\\quad\\frac{2\\sqrt2}{3}\\text{ hours}^2",
+      "\\frac{16}{9}\\text{ hours}^2;\\quad\\frac43\\text{ hours}"
     ]
   },
   {
@@ -5921,7 +6730,8 @@
             "page": 38,
             "label": "Expected second moment"
           }
-        ]
+        ],
+        "mathTex": "\\mathbb E[C]=20+15\\mathbb E[X]+10\\mathbb E[X^2]"
       },
       {
         "title": "Insert the moments",
@@ -5933,7 +6743,8 @@
             "page": 38,
             "label": "Continuous function expectation"
           }
-        ]
+        ],
+        "mathTex": "\\mathbb E[C]=20+15\\left(\\frac43\\right)+10\\left(\\frac83\\right)"
       },
       {
         "title": "Evaluate",
@@ -5945,7 +6756,8 @@
             "page": 38,
             "label": "Continuous function expectation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[C] &= 20+20+\\frac{80}{3} \\\\ &= \\frac{200}{3} \\\\ &\\approx 66.67\\text{ dollars}\\end{aligned}"
       }
     ],
     "answerText": "Expected compensation is 200/3≈66.67 dollars.",
@@ -5969,6 +6781,12 @@
         "page": 38,
         "label": "Continuous functions"
       }
+    ],
+    "optionsTex": [
+      "\\frac{200}{3}\\approx66.67\\text{ dollars}",
+      "\\frac{520}{9}\\approx57.78\\text{ dollars}",
+      "40\\text{ dollars}",
+      "80\\text{ dollars}"
     ]
   },
   {
@@ -6012,7 +6830,8 @@
             "page": 26,
             "label": "Second moment includes variance"
           }
-        ]
+        ],
+        "mathTex": "g(\\mathbb E[X])=20+15\\left(\\frac43\\right)+10\\left(\\frac43\\right)^2"
       },
       {
         "title": "Simplify",
@@ -6024,7 +6843,8 @@
             "page": 38,
             "label": "Continuous function expectation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}g(\\mathbb E[X]) &= 40+\\frac{160}{9} \\\\ &= \\frac{520}{9} \\\\ &\\approx 57.78\\end{aligned}"
       },
       {
         "title": "Compare the true expected compensation",
@@ -6041,7 +6861,8 @@
             "page": 26,
             "label": "Second moment includes variance"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[C]-g(\\mathbb E[X]) &= \\frac{200}{3}-\\frac{520}{9} \\\\ &= \\frac{80}{9} \\\\ &\\approx 8.89\\end{aligned}"
       },
       {
         "title": "Explain why",
@@ -6053,7 +6874,8 @@
             "page": 38,
             "label": "Continuous function expectation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{difference} &= 10[\\mathbb E[X^2]-(\\mathbb E[X])^2] \\\\ &= 10\\operatorname{Var}(X) \\\\ &= \\frac{80}{9}\\end{aligned}"
       }
     ],
     "answerText": "Compensation at the mean is about 57.78 dollars, 8.89 dollars below the true expected cost.",
@@ -6077,6 +6899,12 @@
         "page": 38,
         "label": "Continuous functions"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -6120,7 +6948,8 @@
             "page": 26,
             "label": "Second moment includes variance"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[C] &= 20+15\\mu+10\\mathbb E[X^2] \\\\ C(\\mu) &= 20+15\\mu+10\\mu^2\\end{aligned}"
       },
       {
         "title": "Subtract to isolate the missing spread",
@@ -6137,7 +6966,8 @@
             "page": 26,
             "label": "Second moment includes variance"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[C]-C(\\mu) &= 10(\\mathbb E[X^2]-\\mu^2) \\\\ &= 10\\operatorname{Var}(X)\\end{aligned}"
       },
       {
         "title": "Evaluate and interpret the sign",
@@ -6149,7 +6979,8 @@
             "page": 38,
             "label": "Continuous function expectation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}10\\left(\\frac89\\right) &= \\frac{80}{9} \\\\ &\\approx 8.89>0 \\\\ \\Rightarrow\\ \\text{underestimate}\\end{aligned}"
       }
     ],
     "answerText": "It underestimates the expected cost by about 8.89 dollars.",
@@ -6173,6 +7004,12 @@
         "page": 38,
         "label": "Continuous functions"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -6212,7 +7049,8 @@
             "page": 32,
             "label": "Variance and covariance of sums"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X] &= \\operatorname{Var}(X) \\\\ &= 5 \\\\ \\mathbb E[Y] &= \\operatorname{Var}(Y) \\\\ &= 3\\end{aligned}"
       },
       {
         "title": "Combine weighted means",
@@ -6224,7 +7062,8 @@
             "page": 18,
             "label": "Linearity without independence"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[W] &= 2(5)+3 \\\\ &= 13\\text{ workload units}\\end{aligned}"
       },
       {
         "title": "Combine weighted variances",
@@ -6236,7 +7075,8 @@
             "page": 32,
             "label": "Variance and covariance of sums"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{Var}(W) &= 2^2(5)+3 \\\\ &= 23\\text{ workload units}^2\\end{aligned}"
       }
     ],
     "answerText": "E[W]=13 workload units; Var(W)=23 workload units².",
@@ -6265,6 +7105,12 @@
         "page": 1,
         "label": "Means and variances"
       }
+    ],
+    "optionsTex": [
+      "13\\text{ and }23",
+      "8\\text{ and }8",
+      "13\\text{ and }13",
+      "10\\text{ and }20"
     ]
   },
   {
@@ -6304,7 +7150,8 @@
             "page": 26,
             "label": "Variance equals second moment minus mean squared"
           }
-        ]
+        ],
+        "mathTex": "\\operatorname{Var}(W)=23\\text{ workload units}^2"
       },
       {
         "title": "Take its square root",
@@ -6316,7 +7163,8 @@
             "page": 25,
             "label": "Variance, SD, and units"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{SD}(W) &= \\sqrt{23} \\\\ &\\approx 4.7958\\text{ workload units}\\end{aligned}"
       },
       {
         "title": "Interpret spread",
@@ -6328,7 +7176,8 @@
             "page": 25,
             "label": "Variance, SD, and units"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\text{Mean} &= 13 \\\\ \\operatorname{SD} &\\approx 4.796\\end{aligned}"
       }
     ],
     "answerText": "SD(W)≈4.796 workload units, measuring spread around mean 13.",
@@ -6352,6 +7201,12 @@
         "page": 49,
         "label": "Raw versus central moments"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -6391,7 +7246,8 @@
             "page": 29,
             "label": "Nonnegative Poisson count support"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}2X+Y &= 0\\ \\Leftrightarrow\\ X \\\\ &= 0\\text{ and }Y \\\\ &= 0\\end{aligned}"
       },
       {
         "title": "Compute zero probabilities",
@@ -6408,7 +7264,8 @@
             "page": 1,
             "label": "Poisson PMF"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X=0) &= e^{-5} \\\\ P(Y=0) &= e^{-3}\\end{aligned}"
       },
       {
         "title": "Multiply by independence",
@@ -6420,7 +7277,8 @@
             "page": 17,
             "label": "Multiply independent events"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(W=0) &= e^{-5}e^{-3} \\\\ &= e^{-8} \\\\ &\\approx 0.0003355\\end{aligned}"
       },
       {
         "title": "Interpret the tiny probability",
@@ -6432,7 +7290,8 @@
             "page": 29,
             "label": "Interpret Poisson count probability"
           }
-        ]
+        ],
+        "mathTex": "100\\times0.0003355\\approx0.03355\\%"
       }
     ],
     "answerText": "P(W=0)=e^(−8)≈0.0003355.",
@@ -6456,6 +7315,12 @@
         "page": 17,
         "label": "Independence"
       }
+    ],
+    "optionsTex": [
+      "e^{-8}\\approx0.0003355",
+      "e^{-13}\\approx0.00000226",
+      "0",
+      "e^{-5}+e^{-3}\\approx0.0565"
     ]
   },
   {
@@ -6494,7 +7359,8 @@
             "page": 6,
             "label": "Probability is area"
           }
-        ]
+        ],
+        "mathTex": "f(x)\\ge0"
       },
       {
         "title": "Check total area",
@@ -6506,7 +7372,8 @@
             "page": 6,
             "label": "Probability is area"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\int_0^{0.5}2\\,\\mathrm dx &= 2(0.5) \\\\ &= 1\\end{aligned}"
       },
       {
         "title": "Find interval area",
@@ -6518,7 +7385,8 @@
             "page": 6,
             "label": "Probability is area"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(0.1\\le X\\le0.3) &= \\int_{0.1}^{0.3}2\\,\\mathrm dx \\\\ &= 2(0.3-0.1) \\\\ &= 0.4\\end{aligned}"
       }
     ],
     "answerText": "It is a valid PDF and the probability is 0.4.",
@@ -6536,6 +7404,31 @@
         "doc": "week4",
         "page": 6,
         "label": "PDF conditions"
+      }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "promptParts": [
+      {
+        "text": "Let "
+      },
+      {
+        "tex": "f(x)=\\begin{cases}2,&0\\le x\\le\\frac12,\\\\0,&\\text{otherwise.}\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "Is this a valid PDF, and what is "
+      },
+      {
+        "tex": "P(0.1\\le X\\le0.3)",
+        "display": false
+      },
+      {
+        "text": "?"
       }
     ]
   },
@@ -6575,7 +7468,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "x(2-x)\\ge0"
       },
       {
         "title": "Set up normalization",
@@ -6587,7 +7481,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "1=c\\int_0^2(2x-x^2)\\,\\mathrm dx"
       },
       {
         "title": "Evaluate area",
@@ -6599,7 +7494,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\int_0^2(2x-x^2)\\,\\mathrm dx &= \\left[x^2-\\frac{x^3}{3}\\right]_0^2 \\\\ &= 4-\\frac83 \\\\ &= \\frac43\\end{aligned}"
       },
       {
         "title": "Solve and verify",
@@ -6611,7 +7507,8 @@
             "page": 6,
             "label": "The two PDF conditions"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}c &= \\frac34 \\\\ \\frac34\\cdot\\frac43 &= 1\\end{aligned}"
       }
     ],
     "answerText": "c=3/4.",
@@ -6629,6 +7526,24 @@
         "doc": "week4",
         "page": 11,
         "label": "Normalization solution"
+      }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "promptParts": [
+      {
+        "text": "Let "
+      },
+      {
+        "tex": "f(x)=\\begin{cases}cx(2-x),&0\\le x\\le2,\\\\0,&\\text{otherwise.}\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "Find c and verify density validity."
       }
     ]
   },
@@ -6668,7 +7583,8 @@
             "page": 19,
             "label": "Complete piecewise CDF"
           }
-        ]
+        ],
+        "mathTex": "F(x)=0\\quad\\text{for }x<0"
       },
       {
         "title": "Inside support",
@@ -6680,7 +7596,8 @@
             "page": 16,
             "label": "CDF definition and properties"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}F(x) &= \\int_0^x3t^2\\,\\mathrm dt \\\\ &= [t^3]_0^x \\\\ &= x^3\\end{aligned}"
       },
       {
         "title": "After support",
@@ -6692,7 +7609,8 @@
             "page": 19,
             "label": "Complete piecewise CDF"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}F(x) &= 1\\quad\\text{for }x>1 \\\\ F(1) &= 1\\end{aligned}"
       }
     ],
     "answerText": "F(x)=0, x³, 1 across the three support regions.",
@@ -6710,6 +7628,24 @@
         "doc": "week4",
         "page": 19,
         "label": "Piecewise CDF solution"
+      }
+    ],
+    "optionsTex": [
+      "F(x)=\\begin{cases}0,&x<0,\\\\x^3,&0\\le x\\le1,\\\\1,&x>1,\\end{cases}",
+      "F(x)=\\begin{cases}0,&x<0,\\\\3x^2,&0\\le x\\le1,\\\\1,&x>1,\\end{cases}",
+      "F(x)=\\begin{cases}0,&x<0,\\\\x^3,&0\\le x\\le1,\\\\0,&x>1,\\end{cases}",
+      "F(x)=\\begin{cases}0,&x<0,\\\\1-x^3,&0\\le x\\le1,\\\\1,&x>1.\\end{cases}"
+    ],
+    "promptParts": [
+      {
+        "text": "X has "
+      },
+      {
+        "tex": "f(x)=\\begin{cases}3x^2,&0\\le x\\le1,\\\\0,&\\text{otherwise.}\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "Which is its complete CDF?"
       }
     ]
   },
@@ -6749,7 +7685,8 @@
             "page": 26,
             "label": "Uniform probability by length"
           }
-        ]
+        ],
+        "mathTex": "X\\sim\\operatorname{Uniform}(0,40)"
       },
       {
         "title": "Describe both favorable regions",
@@ -6761,7 +7698,8 @@
             "page": 26,
             "label": "Uniform probability by length"
           }
-        ]
+        ],
+        "mathTex": "\\text{favorable}=[0,6]\\cup[34,40]"
       },
       {
         "title": "Add lengths and divide",
@@ -6773,7 +7711,8 @@
             "page": 26,
             "label": "Uniform probability by length"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P &= \\frac{6+6}{40} \\\\ &= \\frac{12}{40} \\\\ &= 0.30\\end{aligned}"
       }
     ],
     "answerText": "Probability 0.30, assuming every equal-length section is equally likely.",
@@ -6792,6 +7731,12 @@
         "page": 31,
         "label": "Disjoint favorable intervals"
       }
+    ],
+    "optionsTex": [
+      "0.15",
+      "0.30",
+      "0.60",
+      "0.85"
     ]
   },
   {
@@ -6830,7 +7775,8 @@
             "page": 35,
             "label": "Standardization by standard deviation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}z &= \\frac{280-220}{35} \\\\ &= 1.714\\ldots \\\\ &\\approx 1.71\\end{aligned}"
       },
       {
         "title": "Read the table direction",
@@ -6847,7 +7793,8 @@
             "page": 2,
             "label": "Left-tail normal table and complements"
           }
-        ]
+        ],
+        "mathTex": "P(X\\le280)\\approx0.9564"
       },
       {
         "title": "Take the complement",
@@ -6864,7 +7811,8 @@
             "page": 2,
             "label": "Left-tail normal table and complements"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}P(X>280) &\\approx 1-0.9564 \\\\ &= 0.0436\\end{aligned}"
       }
     ],
     "answerText": "About 4.36% using the two-decimal table; full-precision calculation is about 4.32%.",
@@ -6889,6 +7837,12 @@
         "page": 2,
         "label": "Normal table"
       }
+    ],
+    "optionsTex": [
+      "0.9564",
+      "0.0436",
+      "0.1710",
+      "0.5000"
     ]
   },
   {
@@ -6927,7 +7881,8 @@
             "page": 18,
             "label": "Linearity without independence"
           }
-        ]
+        ],
+        "mathTex": "\\mathbb E[I_i]=0.012"
       },
       {
         "title": "Add expected indicators",
@@ -6939,7 +7894,8 @@
             "page": 18,
             "label": "Linearity without independence"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[N] &= \\sum_{i=1}^{500}\\mathbb E[I_i] \\\\ &= 500(0.012) \\\\ &= 6\\end{aligned}"
       },
       {
         "title": "Scale by cost per report",
@@ -6951,7 +7907,8 @@
             "page": 18,
             "label": "Linearity without independence"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[18N] &= 18\\mathbb E[N] \\\\ &= 18(6) \\\\ &= 108\\text{ dollars}\\end{aligned}"
       },
       {
         "title": "Separate mean from spread",
@@ -6963,7 +7920,8 @@
             "page": 32,
             "label": "Variance and covariance of sums"
           }
-        ]
+        ],
+        "mathTex": "\\text{Mean calculation valid without independence}"
       }
     ],
     "answerText": "Expected count 6 and expected investigation cost $108; independence is unnecessary.",
@@ -6982,6 +7940,12 @@
         "page": 22,
         "label": "Bug report exercise"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -7025,7 +7989,8 @@
             "page": 43,
             "label": "Normalization and mean"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\int_2^{10}\\frac{25}{3x^3}\\,\\mathrm dx &= \\frac{25}{3}\\left[-\\frac1{2x^2}\\right]_2^{10} \\\\ &= 1\\end{aligned}"
       },
       {
         "title": "Compute the mean",
@@ -7037,7 +8002,8 @@
             "page": 37,
             "label": "Continuous expectation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X] &= \\frac{25}{3}\\int_2^{10}x^{-2}\\,\\mathrm dx \\\\ &= \\frac{25}{3}\\left[-\\frac1x\\right]_2^{10} \\\\ &= \\frac{10}{3}\\end{aligned}"
       },
       {
         "title": "Compute the second moment",
@@ -7049,7 +8015,8 @@
             "page": 37,
             "label": "Continuous expectation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X^2] &= \\frac{25}{3}\\int_2^{10}\\frac1x\\,\\mathrm dx \\\\ &= \\frac{25}{3}[\\ln x]_2^{10} \\\\ &= \\frac{25}{3}\\ln5\\end{aligned}"
       },
       {
         "title": "Subtract the squared mean",
@@ -7061,7 +8028,8 @@
             "page": 44,
             "label": "Variance solution"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{Var}(X) &= \\frac{25}{3}\\ln5-\\left(\\frac{10}{3}\\right)^2 \\\\ &\\approx 2.30087\\end{aligned}"
       },
       {
         "title": "Find SD if desired",
@@ -7073,7 +8041,8 @@
             "page": 37,
             "label": "Continuous expectation"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{SD}(X) &\\approx \\sqrt{2.30087} \\\\ &\\approx 1.51686\\end{aligned}"
       }
     ],
     "answerText": "E[X]=10/3; Var(X)≈2.301; SD(X)≈1.517.",
@@ -7096,6 +8065,38 @@
         "doc": "week5",
         "page": 44,
         "label": "Second moment and variance"
+      }
+    ],
+    "optionsTex": [
+      "\\mathbb E[X]=\\frac{10}{3};\\quad\\operatorname{Var}(X)=\\frac{25}{3}\\ln5-\\frac{100}{9}\\approx2.301",
+      "\\mathbb E[X]=\\frac{10}{3};\\quad\\operatorname{Var}(X)=\\frac{100}{9}",
+      "\\mathbb E[X]=5;\\quad\\operatorname{Var}(X)=\\frac{16}{3}",
+      "\\mathbb E[X]=\\frac{25}{3}\\ln5;\\quad\\operatorname{Var}(X)=\\frac{10}{3}"
+    ],
+    "promptParts": [
+      {
+        "text": "Let "
+      },
+      {
+        "tex": "f(x)=\\begin{cases}\\frac{25}{3x^3},&2<x<10,\\\\0,&\\text{otherwise.}\\end{cases}",
+        "display": true
+      },
+      {
+        "text": "Which gives "
+      },
+      {
+        "tex": "\\mathbb E[X]",
+        "display": false
+      },
+      {
+        "text": " and "
+      },
+      {
+        "tex": "\\operatorname{Var}(X)",
+        "display": false
+      },
+      {
+        "text": "?"
       }
     ]
   },
@@ -7135,7 +8136,8 @@
             "page": 1,
             "label": "Distribution means and variances"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}a &= 2 \\\\ b &= 8\\end{aligned}"
       },
       {
         "title": "Find the midpoint mean",
@@ -7147,7 +8149,8 @@
             "page": 1,
             "label": "Distribution means and variances"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X] &= \\frac{a+b}{2} \\\\ &= \\frac{2+8}{2} \\\\ &= 5\\text{ hours}\\end{aligned}"
       },
       {
         "title": "Find squared-width variance",
@@ -7159,7 +8162,8 @@
             "page": 1,
             "label": "Distribution means and variances"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{Var}(X) &= \\frac{(b-a)^2}{12} \\\\ &= \\frac{6^2}{12} \\\\ &= 3\\text{ hours}^2\\end{aligned}"
       },
       {
         "title": "Optional integral check for the mean",
@@ -7171,7 +8175,8 @@
             "page": 1,
             "label": "Distribution means and variances"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X] &= \\frac16\\int_2^8x\\,\\mathrm dx \\\\ &= \\left[\\frac{x^2}{12}\\right]_2^8 \\\\ &= 5\\text{ hours}\\end{aligned}"
       }
     ],
     "answerText": "E[X]=5 hours and Var(X)=3 hours².",
@@ -7201,6 +8206,12 @@
         "page": 1,
         "label": "Distribution means and variances"
       }
+    ],
+    "optionsTex": [
+      "5\\text{ hours and }3\\text{ hours}^2",
+      "5\\text{ hours and }6\\text{ hours}^2",
+      "6\\text{ hours and }3\\text{ hours}^2",
+      "5\\text{ hours and }25\\text{ hours}^2"
     ]
   },
   {
@@ -7239,7 +8250,8 @@
             "page": 1,
             "label": "Distribution means and variances"
           }
-        ]
+        ],
+        "mathTex": "\\lambda=0.25\\text{ per minute}"
       },
       {
         "title": "Find mean waiting time",
@@ -7251,7 +8263,8 @@
             "page": 1,
             "label": "Distribution means and variances"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\mathbb E[X] &= \\frac1\\lambda \\\\ &= \\frac1{0.25} \\\\ &= 4\\text{ minutes}\\end{aligned}"
       },
       {
         "title": "Find variance and SD",
@@ -7263,7 +8276,8 @@
             "page": 1,
             "label": "Distribution means and variances"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{Var}(X) &= \\frac1{(0.25)^2} \\\\ &= 16\\text{ minutes}^2 \\\\ \\operatorname{SD}(X) &= \\sqrt{16} \\\\ &= 4\\text{ minutes}\\end{aligned}"
       },
       {
         "title": "Interpret the mean",
@@ -7275,7 +8289,8 @@
             "page": 1,
             "label": "Distribution means and variances"
           }
-        ]
+        ],
+        "mathTex": "\\text{Average wait over many intervals}\\approx4\\text{ minutes}"
       }
     ],
     "answerText": "Mean 4 minutes, variance 16 minutes², and SD 4 minutes.",
@@ -7300,6 +8315,12 @@
         "page": 1,
         "label": "Exponential moments"
       }
+    ],
+    "optionsTex": [
+      "4\\text{ minutes};\\quad16\\text{ minutes}^2;\\quad4\\text{ minutes}",
+      "0.25\\text{ minutes};\\quad0.0625\\text{ minutes}^2;\\quad0.25\\text{ minutes}",
+      "4\\text{ minutes};\\quad4\\text{ minutes}^2;\\quad2\\text{ minutes}",
+      "16\\text{ minutes};\\quad4\\text{ minutes}^2;\\quad2\\text{ minutes}"
     ]
   },
   {
@@ -7339,7 +8360,8 @@
             "page": 25,
             "label": "Variance and standard deviation"
           }
-        ]
+        ],
+        "mathTex": "\\text{Second raw moment}=14"
       },
       {
         "title": "Identify the central moment",
@@ -7351,7 +8373,8 @@
             "page": 25,
             "label": "Variance and standard deviation"
           }
-        ]
+        ],
+        "mathTex": "\\mathbb E[(X-3)^2]=\\operatorname{Var}(X)"
       },
       {
         "title": "Use the variance identity",
@@ -7363,7 +8386,8 @@
             "page": 26,
             "label": "Variance equals second moment minus mean squared"
           }
-        ]
+        ],
+        "mathTex": "\\begin{aligned}\\operatorname{Var}(X) &= \\mathbb E[X^2]-(\\mathbb E[X])^2 \\\\ &= 14-9 \\\\ &= 5\\end{aligned}"
       }
     ],
     "answerText": "The second central moment is 5.",
@@ -7382,6 +8406,12 @@
         "page": 26,
         "label": "Variance identity"
       }
+    ],
+    "optionsTex": [
+      null,
+      null,
+      null,
+      null
     ]
   }
 ]
