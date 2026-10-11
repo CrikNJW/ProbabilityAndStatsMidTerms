@@ -1,0 +1,703 @@
+[
+  {
+    "id": "w1-events",
+    "title": "Translate words into events",
+    "week": 1,
+    "description": "Start by deciding what a single outcome records. Then build the event from the outcomes satisfying the words in the question.",
+    "recognize": [
+      "The question asks for a sample space, union, intersection, complement, or event.",
+      "Words such as 'both', 'either', 'none', and 'at least one' describe set operations."
+    ],
+    "recipe": [
+      {
+        "title": "Define an outcome",
+        "body": "Decide whether order is recorded. Two dice rolls are ordered pairs; a selected team is an unordered set.",
+        "formula": "Ω = all possible outcomes"
+      },
+      {
+        "title": "Translate the condition",
+        "body": "'A or B' includes both. 'A and B' requires both. 'Not A' removes A from the sample space.",
+        "formula": "or → A ∪ B; and → A ∩ B; not → Aᶜ"
+      },
+      {
+        "title": "List or count carefully",
+        "body": "Keep each distinct outcome once. Use a table for two dice, or positions for hit/miss strings.",
+        "formula": "(A ∪ B)ᶜ = Aᶜ ∩ Bᶜ; (A ∩ B)ᶜ = Aᶜ ∪ Bᶜ"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week1",
+        "page": 14,
+        "label": "Experiments, sample spaces, and events"
+      },
+      {
+        "doc": "week1",
+        "page": 21,
+        "label": "Union, intersection, and complement"
+      },
+      {
+        "doc": "week1",
+        "page": 27,
+        "label": "De Morgan’s laws"
+      }
+    ],
+    "pitfalls": [
+      "A set lists distinct outcomes once, but distinct values need not be equally likely.",
+      "Inclusive 'or' includes the intersection."
+    ]
+  },
+  {
+    "id": "w1-inclusion",
+    "title": "Count overlapping groups",
+    "week": 1,
+    "description": "When groups overlap, adding their sizes counts shared members more than once. Inclusion–exclusion repairs this.",
+    "recognize": [
+      "Several achievement, platform, or activity groups have pairwise overlaps.",
+      "The target is 'either', 'none', 'exactly one', or a missing triple overlap."
+    ],
+    "recipe": [
+      {
+        "title": "Identify what each count includes",
+        "body": "A pairwise intersection includes members in all three groups unless the question says 'only'.",
+        "formula": "A-only = |A| − |A∩B| − |A∩C| + |A∩B∩C|"
+      },
+      {
+        "title": "Repair the double counting",
+        "body": "Add the group sizes, subtract every pairwise overlap, and add the triple overlap back once.",
+        "formula": "|A∪B∪C| = |A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|"
+      },
+      {
+        "title": "Answer the actual region requested",
+        "body": "For 'none', subtract the union from the population. For 'exactly one', add the three only-regions.",
+        "formula": "none = N − |union|"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week1",
+        "page": 28,
+        "label": "Inclusion–exclusion for two and three sets"
+      },
+      {
+        "doc": "week1",
+        "page": 46,
+        "label": "Three activity groups"
+      }
+    ],
+    "pitfalls": [
+      "Do not interpret |A∩B| as exactly two groups.",
+      "The population size matters for 'none', but not when only-region counts are already available."
+    ]
+  },
+  {
+    "id": "w1-equal-outcomes",
+    "title": "Count equally likely outcomes or use a complement",
+    "week": 1,
+    "description": "Probability is favorable outcomes divided by total outcomes only when the individual outcomes being counted are equally likely.",
+    "recognize": [
+      "Fair dice, uniform integer choices, or uniformly dealt card hands give a natural equal-outcome model.",
+      "'At least one' or 'at least two' may be easier through 'none' or 'zero or one'."
+    ],
+    "recipe": [
+      {
+        "title": "Choose the right sample space",
+        "body": "Use ordered dice pairs instead of just their maximum or sum. Derived values often have unequal probabilities.",
+        "formula": "P(A) = |A| / |Ω| for equally likely outcomes"
+      },
+      {
+        "title": "Count favorable outcomes or the complement",
+        "body": "For repeated independent trials, no successes requires every trial to fail.",
+        "formula": "P(at least one) = 1 − (1−p)ⁿ"
+      },
+      {
+        "title": "Check edge cases",
+        "body": "Include zero when selecting from 0 to 999: zero is divisible by every nonzero integer. Check that the answer lies between zero and one.",
+        "formula": "number of multiples of m in {0,…,N} = ⌊N/m⌋ + 1"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week1",
+        "page": 38,
+        "label": "Complement rule"
+      },
+      {
+        "doc": "week1",
+        "page": 48,
+        "label": "Uniform sample-space probability"
+      },
+      {
+        "doc": "week1",
+        "page": 13,
+        "label": "Independent blind boxes and at least one secret"
+      }
+    ],
+    "pitfalls": [
+      "Six possible maxima do not mean each maximum has probability 1/6.",
+      "At least two requires subtracting both zero and exactly one."
+    ]
+  },
+  {
+    "id": "w1-counting",
+    "title": "Choose multiplication, permutation, or combination",
+    "week": 1,
+    "description": "Ask whether order matters and whether repetition is allowed before choosing a counting formula.",
+    "recognize": [
+      "Codes, lineups, rankings, and positions are ordered.",
+      "Teams, committees, and card hands are usually unordered.",
+      "Several choice stages can be multiplied when every counted combination is allowed."
+    ],
+    "recipe": [
+      {
+        "title": "Describe what makes outcomes different",
+        "body": "Swapping two selected objects creates a different lineup but the same team.",
+        "formula": "order matters? repetition allowed?"
+      },
+      {
+        "title": "Count choices at each stage",
+        "body": "With replacement, choices can stay constant. Without replacement, available distinct objects decrease.",
+        "formula": "repetition allowed: nʳ; ordered distinct: P(n,r) = n!/(n−r)!"
+      },
+      {
+        "title": "Remove order when it is irrelevant",
+        "body": "Each group of r distinct objects was counted in r! orders, so divide by r!.",
+        "formula": "C(n,r) = n!/[r!(n−r)!]"
+      },
+      {
+        "title": "Combine independent choice stages",
+        "body": "Selecting an attacker subset, defender subset, and support subset are separate tasks. Multiply within one case; add disjoint cases.",
+        "formula": "total = sum over cases of (choices for each stage multiplied)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week1",
+        "page": 51,
+        "label": "Multiplication rule"
+      },
+      {
+        "doc": "week1",
+        "page": 58,
+        "label": "Number of r-permutations"
+      },
+      {
+        "doc": "week1",
+        "page": 62,
+        "label": "Permutation versus combination"
+      },
+      {
+        "doc": "week1",
+        "page": 64,
+        "label": "Number of r-combinations"
+      }
+    ],
+    "pitfalls": [
+      "Using C(n,r) for a lineup ignores order.",
+      "Using nʳ when objects cannot repeat counts invalid outcomes.",
+      "A captain must be selected from the chosen eligible members."
+    ]
+  },
+  {
+    "id": "w1-restricted",
+    "title": "Handle forbidden pairs and consecutive blocks",
+    "week": 1,
+    "description": "Count unrestricted arrangements, then subtract forbidden arrangements. For adjacent objects, merge them into a block first.",
+    "recognize": [
+      "Two rivals may not both appear, two people may not be adjacent, or designated books must be consecutive."
+    ],
+    "recipe": [
+      {
+        "title": "Count all unrestricted outcomes",
+        "body": "Choose permutations for an ordered partial lineup or a factorial for all distinct objects.",
+        "formula": "all = P(n,r) or n!"
+      },
+      {
+        "title": "Count the restriction systematically",
+        "body": "For a forbidden pair in a lineup, choose remaining members then arrange them. For adjacency, treat the linked objects as one block.",
+        "formula": "both in r-lineup = C(n−2,r−2)r!; k consecutive objects among n = (n−k+1)!k!"
+      },
+      {
+        "title": "Subtract or use the block count directly",
+        "body": "Subtract bad outcomes for a 'must not' condition. Keep the block count for a 'must be consecutive' condition.",
+        "formula": "allowed = all − forbidden"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week1",
+        "page": 58,
+        "label": "Ordered arrangements"
+      },
+      {
+        "doc": "week1",
+        "page": 51,
+        "label": "Multiplication of choice stages"
+      },
+      {
+        "doc": "week1",
+        "page": 64,
+        "label": "Choosing remaining members"
+      }
+    ],
+    "pitfalls": [
+      "A block has internal arrangements: multiply by k! when its members may be reordered.",
+      "Selecting both rivals does not determine their positions; arrange the whole selected lineup."
+    ]
+  },
+  {
+    "id": "w1-coefficient",
+    "title": "Extract a coefficient from a product",
+    "week": 1,
+    "description": "Find all pairs of powers that add to the target exponent and add their coefficient products.",
+    "recognize": [
+      "The question asks for the coefficient of xᵏ in a product of binomial powers."
+    ],
+    "recipe": [
+      {
+        "title": "Expand only needed terms",
+        "body": "You do not need the full polynomials. For x², keep constant, x, and x² terms.",
+        "formula": "(1+x)ⁿ: coefficient of xʲ is C(n,j)"
+      },
+      {
+        "title": "Track signs",
+        "body": "A term selected from (1−x)ᵐ has a negative sign when its exponent is odd.",
+        "formula": "coefficient of xʲ in (1−x)ᵐ = (−1)ʲC(m,j)"
+      },
+      {
+        "title": "Combine powers adding to the target",
+        "body": "For x² use x²·1, x·x, and 1·x², then add their contributions.",
+        "formula": "[xᵏ] A(x)B(x) = Σⱼ [xʲ]A(x) · [xᵏ⁻ʲ]B(x)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week1",
+        "page": 66,
+        "label": "Binomial coefficients and binomial theorem"
+      }
+    ],
+    "pitfalls": [
+      "The x·x cross term is essential.",
+      "Odd powers from (1−x)ᵐ carry a minus sign."
+    ]
+  },
+  {
+    "id": "w2-conditional",
+    "title": "Restrict the sample space for 'given that'",
+    "week": 2,
+    "description": "The event after the vertical bar becomes the denominator. Count only outcomes consistent with the information supplied.",
+    "recognize": [
+      "The wording says 'given', 'among', or 'conditional on'.",
+      "The requested event may already imply the conditioning event."
+    ],
+    "recipe": [
+      {
+        "title": "Name the target and the given event",
+        "body": "Write A for what you want and B for what you know. The denominator is B, even when the sentence mentions A first.",
+        "formula": "target = P(A|B)"
+      },
+      {
+        "title": "Find outcomes satisfying both",
+        "body": "The numerator is A∩B. If A is a subset of B, it is simply A.",
+        "formula": "numerator = P(A∩B)"
+      },
+      {
+        "title": "Divide by the restricted total",
+        "body": "For equally likely outcomes you may divide favorable counts within B by the total count in B.",
+        "formula": "P(A|B) = P(A∩B)/P(B) = |A∩B|/|B| when equally likely"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Conditional probability definition"
+      },
+      {
+        "doc": "week2",
+        "page": 4,
+        "label": "Restricting the sample space"
+      },
+      {
+        "doc": "week2",
+        "page": 12,
+        "label": "At least one 6 gives 11 ordered outcomes"
+      }
+    ],
+    "pitfalls": [
+      "P(A|B) generally differs from P(B|A).",
+      "The old sample-space denominator is inappropriate once information is given."
+    ]
+  },
+  {
+    "id": "w2-independent",
+    "title": "Test independence and multiply probabilities",
+    "week": 2,
+    "description": "Independence means that knowing one event occurred does not change the probability of the other.",
+    "recognize": [
+      "The question states independent trials, asks whether events are independent, or contrasts pairwise and mutual independence."
+    ],
+    "recipe": [
+      {
+        "title": "Find the marginal probabilities",
+        "body": "Calculate P(A) and P(B) using all outcomes, not conditional totals.",
+        "formula": "marginals: P(A), P(B)"
+      },
+      {
+        "title": "Compare the joint probability with the product",
+        "body": "Equality proves independence for two events. Inequality proves dependence.",
+        "formula": "P(A∩B) = P(A)P(B)"
+      },
+      {
+        "title": "Use multiplication only when justified",
+        "body": "For independent trials, multiply their individual probabilities. For three mutually independent events, all pairwise equalities and the triple equality are required.",
+        "formula": "P(A∩B∩C) = P(A)P(B)P(C) for mutual independence"
+      },
+      {
+        "title": "Interpret carefully",
+        "body": "Disjoint positive-probability events are dependent. An association in observational data alone does not prove cause and effect.",
+        "formula": "disjoint: P(A∩B)=0; independent: P(A∩B)=P(A)P(B)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week2",
+        "page": 17,
+        "label": "Equivalent independence tests"
+      },
+      {
+        "doc": "week2",
+        "page": 18,
+        "label": "Independence, disjointness, and causality"
+      },
+      {
+        "doc": "week2",
+        "page": 19,
+        "label": "When disjoint events can be independent"
+      }
+    ],
+    "pitfalls": [
+      "Pairwise independence alone does not establish mutual independence.",
+      "Do not multiply dependent draw probabilities without updating the second probability."
+    ]
+  },
+  {
+    "id": "w2-bayes",
+    "title": "Follow a tree, total the evidence, then use Bayes",
+    "week": 2,
+    "description": "Bayes reverses the direction from 'evidence given cause' to 'cause given evidence'. Multiply along each branch, add all evidence branches, and divide.",
+    "recognize": [
+      "You know source shares or prevalence and an error/detection rate for each source.",
+      "The question reveals an error, defect, positive result, or flag and asks where it came from."
+    ],
+    "recipe": [
+      {
+        "title": "Identify the source groups and priors",
+        "body": "The groups must cover the population without overlapping. Their shares sum to one.",
+        "formula": "Σᵢ P(Hᵢ) = 1"
+      },
+      {
+        "title": "Multiply along each evidence path",
+        "body": "A joint path needs every event on that path to occur. A detection path can require source, defect, then detection.",
+        "formula": "P(Hᵢ∩E) = P(Hᵢ)P(E|Hᵢ)"
+      },
+      {
+        "title": "Add every way to observe the evidence",
+        "body": "The denominator includes evidence from the target group and all other groups.",
+        "formula": "P(E) = Σᵢ P(Hᵢ)P(E|Hᵢ)"
+      },
+      {
+        "title": "Take the target share of the evidence",
+        "body": "Divide the target evidence branch by the total evidence probability. Expected-frequency tables offer the same calculation using counts.",
+        "formula": "P(Hₖ|E) = P(Hₖ)P(E|Hₖ)/P(E)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week2",
+        "page": 24,
+        "label": "Two-case Bayes’ rule"
+      },
+      {
+        "doc": "week2",
+        "page": 25,
+        "label": "Prior, likelihood, evidence, and posterior"
+      },
+      {
+        "doc": "week2",
+        "page": 28,
+        "label": "Natural-frequency table"
+      },
+      {
+        "doc": "week2",
+        "page": 31,
+        "label": "Total probability and general Bayes’ rule"
+      }
+    ],
+    "pitfalls": [
+      "Sensitivity is P(positive|disease), not P(disease|positive).",
+      "Specificity is P(negative|no disease); its complement is the false-positive rate.",
+      "Conditionally independent repeated tests must be multiplied within each true-status group, then Bayes applied."
+    ]
+  },
+  {
+    "id": "w2-discrete",
+    "title": "Build a discrete distribution and transform values",
+    "week": 2,
+    "description": "A random variable maps outcomes to numbers. For a transformed value, add probabilities of all original values that map to it.",
+    "recognize": [
+      "The question asks for a range, a PMF normalization constant, or the probability of Y=g(X)."
+    ],
+    "recipe": [
+      {
+        "title": "List possible original values",
+        "body": "Count what X measures and its smallest and largest feasible values.",
+        "formula": "range of X = {possible numerical values}"
+      },
+      {
+        "title": "Normalize or compute masses",
+        "body": "A valid discrete PMF has nonnegative probabilities that sum to one. Independent success counts have C(n,k) ways to place k successes.",
+        "formula": "Σₓ p(x)=1; P(X=k)=C(n,k)pᵏ(1−p)ⁿ⁻ᵏ"
+      },
+      {
+        "title": "Map each value if a transformation is given",
+        "body": "Make a small table x→g(x). Repeated transformed values appear only once in the range.",
+        "formula": "range of Y = {g(x): x in range of X}"
+      },
+      {
+        "title": "Add all matching masses",
+        "body": "If two original values produce the same target, include both probabilities.",
+        "formula": "P(Y=y)=Σₓ:g(x)=y P(X=x)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week2",
+        "page": 39,
+        "label": "Random variables and ranges"
+      },
+      {
+        "doc": "week2",
+        "page": 40,
+        "label": "Different outcomes can have the same value"
+      },
+      {
+        "doc": "week2",
+        "page": 45,
+        "label": "Point and set probabilities"
+      },
+      {
+        "doc": "week2",
+        "page": 46,
+        "label": "Three independent delivery probabilities"
+      }
+    ],
+    "pitfalls": [
+      "Do not include impossible values in the range.",
+      "A square transformation is often many-to-one.",
+      "Normalize before adding the requested masses."
+    ]
+  },
+  {
+    "id": "w2-cdf",
+    "title": "Read a CDF using endpoints and jumps",
+    "week": 2,
+    "description": "A CDF accumulates probability up to and including its input. A jump at a discrete value gives the probability at that value.",
+    "recognize": [
+      "F(x)=P(X≤x) is supplied, or a question asks whether a function can be a CDF."
+    ],
+    "recipe": [
+      {
+        "title": "Decode the inequality",
+        "body": "The CDF includes its upper endpoint. A strict lower endpoint is removed by subtracting F at that lower value.",
+        "formula": "P(a<X≤b)=F(b)−F(a)"
+      },
+      {
+        "title": "Read point masses from jumps",
+        "body": "For a discrete distribution use the value just before the jump, written F(x−).",
+        "formula": "P(X=x)=F(x)−F(x−); P(X≥a)=1−F(a−)"
+      },
+      {
+        "title": "Condition if information is given",
+        "body": "After finding the event mass, divide by the mass of the given event.",
+        "formula": "P(A|B)=P(A∩B)/P(B)"
+      },
+      {
+        "title": "Check validity",
+        "body": "A CDF is nondecreasing, right-continuous, and tends to zero at the left end and one at the right end.",
+        "formula": "F(−∞)=0, F(+∞)=1"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week2",
+        "page": 45,
+        "label": "Definition of the cumulative distribution function"
+      },
+      {
+        "doc": "week3",
+        "page": 9,
+        "label": "CDF properties: monotonicity, right-continuity, and limits"
+      },
+      {
+        "doc": "week3",
+        "page": 12,
+        "label": "CDF intervals and jump probabilities"
+      }
+    ],
+    "pitfalls": [
+      "P(X≥1) is 1−F(1−), not generally 1−F(1).",
+      "A CDF may have flat parts and jumps; it may never decrease."
+    ]
+  },
+  {
+    "id": "w2-waiting",
+    "title": "Wait for the first success",
+    "week": 2,
+    "description": "Independent trials with a constant success probability give a geometric waiting time counted from trial one.",
+    "recognize": [
+      "The variable is the number of attempts until the first defect, rare item, or success.",
+      "The question asks 'by attempt n', an interval, or how many attempts meet a target probability."
+    ],
+    "recipe": [
+      {
+        "title": "Identify p and the failure probability",
+        "body": "Check independent trials and an unchanged success probability. Set q=1−p.",
+        "formula": "q=1−p"
+      },
+      {
+        "title": "Choose point, tail, or interval",
+        "body": "First success on n requires n−1 failures then success. No success after n requires all n failures.",
+        "formula": "P(X=n)=qⁿ⁻¹p; P(X>n)=qⁿ; P(a≤X≤b)=qᵃ⁻¹−qᵇ"
+      },
+      {
+        "title": "Use remaining attempts after known failures",
+        "body": "Past failures do not affect future independent trials. Subtract the completed attempts from the deadline.",
+        "formula": "P(X≤m+k|X>m)=1−qᵏ"
+      },
+      {
+        "title": "Solve a target inequality",
+        "body": "Take logarithms and reverse the inequality when dividing by the negative number log(q). Round up and check the neighboring integer.",
+        "formula": "1−qⁿ≥t ⇒ n≥log(1−t)/log(q)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week2",
+        "page": 48,
+        "label": "Waiting for the first defect: PMF and by-n probability"
+      }
+    ],
+    "pitfalls": [
+      "Exactly the nth trial and by the nth trial are different events.",
+      "A guarantee or changing chance breaks the ordinary geometric model.",
+      "After m known failures, a deadline of n leaves n−m attempts."
+    ]
+  },
+  {
+    "id": "w2-sampling",
+    "title": "Count categories in a sample",
+    "week": 2,
+    "description": "Without replacement, count unordered samples using combinations. With replacement, independent draws can use the binomial formula.",
+    "recognize": [
+      "A fixed finite batch contains known category counts and a fixed-size sample is drawn."
+    ],
+    "recipe": [
+      {
+        "title": "Identify the population and the sample",
+        "body": "Let N be the population, K the target-category count, and n the sample size.",
+        "formula": "N, K, n; feasible x: max(0,n−(N−K)) ≤ x ≤ min(n,K)"
+      },
+      {
+        "title": "Count favorable unordered samples",
+        "body": "Choose x target objects and n−x other objects. Multiply the two choice counts.",
+        "formula": "favorable = C(K,x)C(N−K,n−x)"
+      },
+      {
+        "title": "Divide by all samples",
+        "body": "All n-element subsets are equally likely under uniform sampling without replacement.",
+        "formula": "P(X=x)=C(K,x)C(N−K,n−x)/C(N,n)"
+      },
+      {
+        "title": "Adjust for replacement or conditioning",
+        "body": "Replacement restores the category chance on each draw; no replacement changes it. For a given event, restrict and divide again.",
+        "formula": "with replacement: P(X=x)=C(n,x)(K/N)ˣ(1−K/N)ⁿ⁻ˣ"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week1",
+        "page": 64,
+        "label": "Combinations for unordered selections"
+      },
+      {
+        "doc": "week2",
+        "page": 17,
+        "label": "Independence criterion"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Conditional probability"
+      }
+    ],
+    "pitfalls": [
+      "Without replacement, the draws are generally dependent.",
+      "Use the same counting convention in numerator and denominator."
+    ]
+  },
+  {
+    "id": "w1-probability-masses",
+    "title": "Recover probabilities from disjoint pieces",
+    "week": 1,
+    "description": "Break events into disjoint regions. Their probabilities add; subtract known pieces to recover unknown masses.",
+    "recognize": [
+      "Probabilities of overlapping events and their intersection are supplied.",
+      "The sample-space outcomes are not equally likely, so counting alone cannot give event probabilities."
+    ],
+    "recipe": [
+      {
+        "title": "Identify disjoint pieces",
+        "body": "Separate an event into its shared and unshared parts. For singleton outcomes, identify which outcome is the intersection.",
+        "formula": "A = (A∖B) ∪ (A∩B), with disjoint parts"
+      },
+      {
+        "title": "Subtract known probability",
+        "body": "The total event mass equals the sum of its disjoint parts, so remove a known part to obtain the other.",
+        "formula": "P(A∖B)=P(A)−P(A∩B)"
+      },
+      {
+        "title": "Add the target pieces",
+        "body": "Add only regions that are disjoint. For a union that overlaps, subtract its intersection once.",
+        "formula": "P(A∪B)=P(A)+P(B)−P(A∩B)"
+      },
+      {
+        "title": "Check normalization",
+        "body": "All singleton masses in a finite sample space must be nonnegative and sum to one.",
+        "formula": "Σω∈Ω P({ω})=1"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week1",
+        "page": 37,
+        "label": "Probability axioms"
+      },
+      {
+        "doc": "week1",
+        "page": 38,
+        "label": "Finite additivity and complement rule"
+      },
+      {
+        "doc": "week1",
+        "page": 39,
+        "label": "Inclusion–exclusion for probabilities"
+      }
+    ],
+    "pitfalls": [
+      "Do not assign equal masses merely because there are finitely many outcomes.",
+      "Adding overlapping event probabilities without subtracting the overlap double counts its mass."
+    ]
+  }
+]

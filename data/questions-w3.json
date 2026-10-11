@@ -1,0 +1,3743 @@
+[
+  {
+    "id": "w3-hw-1",
+    "week": 3,
+    "title": "A guaranteed tenth reward",
+    "topic": "Geometric and guaranteed attempts",
+    "method": "w3-pity",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Homework",
+      "title": "Week 3 Homework",
+      "page": 1,
+      "question": "Q1"
+    },
+    "prompt": "A reward system gives an item independently with probability 0.05 on each of the first nine attempts. If the item has not appeared, it is guaranteed on attempt 10. Let T be the attempt on which the item first appears. What is P(T = 10)?",
+    "options": [
+      "1 − 0.95⁹",
+      "None of these",
+      "0.95⁹ × 0.05",
+      "0.95¹⁰",
+      "0.95⁹"
+    ],
+    "answer": 4,
+    "recognize": [
+      "The final success is guaranteed, so this is a capped first-success process.",
+      "T = 10 means every one of the first nine attempts failed."
+    ],
+    "steps": [
+      {
+        "title": "Find the failure chance",
+        "why": "A trial either gives the item or does not. The failure chance is the complement of 0.05.",
+        "math": "q = 1 − p = 1 − 0.05 = 0.95",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 23,
+            "label": "Find the failure chance"
+          }
+        ]
+      },
+      {
+        "title": "Describe reaching attempt 10",
+        "why": "A previous success would stop the process. Exactly nine failures are needed to reach the guaranteed attempt.",
+        "math": "{T = 10} = {attempts 1,…,9 all fail}",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 28,
+            "label": "Describe reaching attempt 10"
+          }
+        ]
+      },
+      {
+        "title": "Multiply the independent failures",
+        "why": "Independent events multiply; attempt 10 contributes a factor of 1 because success is guaranteed.",
+        "math": "P(T = 10) = 0.95⁹ × 1 ≈ 0.630249",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 28,
+            "label": "Multiply the independent failures"
+          }
+        ]
+      }
+    ],
+    "answerText": "P(T = 10) = 0.95⁹ ≈ 0.630249, about 63.0%.",
+    "pitfalls": [
+      "Do not multiply by 0.05 on attempt 10.",
+      "There are nine failures, not ten."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 23,
+        "label": "Find the failure chance"
+      },
+      {
+        "doc": "week3",
+        "page": 28,
+        "label": "Describe reaching attempt 10"
+      },
+      {
+        "doc": "week3",
+        "page": 28,
+        "label": "Multiply the independent failures"
+      }
+    ]
+  },
+  {
+    "id": "w3-hw-2",
+    "week": 3,
+    "title": "Condition on a staircase CDF",
+    "topic": "Discrete CDF and conditional probability",
+    "method": "w3-cdf",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Homework",
+      "title": "Week 3 Homework",
+      "page": 2,
+      "question": "Q2"
+    },
+    "prompt": "The CDF is F(x) = 0 for x < 0; 0.12 for 0 ≤ x < 1; 0.40 for 1 ≤ x < 2; 0.76 for 2 ≤ x < 3; 1 for x ≥ 3. What is P(1 ≤ X ≤ 2 | X > 0)?",
+    "options": [
+      "16/25",
+      "None of these",
+      "7/22",
+      "19/25",
+      "8/11"
+    ],
+    "answer": 4,
+    "recognize": [
+      "The CDF gives cumulative masses, so subtract to isolate an interval.",
+      "The word given or the vertical bar means divide by the probability of the given event."
+    ],
+    "steps": [
+      {
+        "title": "Identify numerator and denominator",
+        "why": "The event 1 ≤ X ≤ 2 already lies inside X > 0, so their intersection is the same interval.",
+        "math": "P(1 ≤ X ≤ 2 | X > 0) = P(1 ≤ X ≤ 2) / P(X > 0)",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Identify numerator and denominator"
+          }
+        ]
+      },
+      {
+        "title": "Include both endpoint masses",
+        "why": "The support is {0,1,2,3}. To include 1, subtract the CDF at 0, which removes only values below 1.",
+        "math": "P(1 ≤ X ≤ 2) = F(2) − F(0) = 0.76 − 0.12 = 0.64",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 12,
+            "label": "Include both endpoint masses"
+          }
+        ]
+      },
+      {
+        "title": "Find the given event",
+        "why": "X > 0 excludes exactly the mass at 0.",
+        "math": "P(X > 0) = 1 − F(0) = 1 − 0.12 = 0.88",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 12,
+            "label": "Find the given event"
+          }
+        ]
+      },
+      {
+        "title": "Normalize within the given event",
+        "why": "Among the probability mass remaining above 0, 0.64 is in the desired interval.",
+        "math": "0.64 / 0.88 = 64/88 = 8/11 ≈ 0.727273",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Normalize within the given event"
+          }
+        ]
+      }
+    ],
+    "answerText": "8/11 ≈ 0.727273.",
+    "pitfalls": [
+      "Subtracting F(1) would wrongly exclude X = 1.",
+      "The denominator is 0.88, not 1."
+    ],
+    "refs": [
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Identify numerator and denominator"
+      },
+      {
+        "doc": "week3",
+        "page": 12,
+        "label": "Include both endpoint masses"
+      },
+      {
+        "doc": "week3",
+        "page": 12,
+        "label": "Find the given event"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Normalize within the given event"
+      }
+    ]
+  },
+  {
+    "id": "w3-hw-3",
+    "week": 3,
+    "title": "Normalize a linear PMF",
+    "topic": "PMF normalization",
+    "method": "w3-pmf",
+    "difficulty": "Foundation",
+    "source": {
+      "kind": "Homework",
+      "title": "Week 3 Homework",
+      "page": 3,
+      "question": "Q3"
+    },
+    "prompt": "P(X = x) = c(2x + 1) for x ∈ {0,1,2,3,4}, and is 0 otherwise. What is P(X ≥ 3)?",
+    "options": [
+      "0.64",
+      "None of these",
+      "0.40",
+      "0.36",
+      "0.60"
+    ],
+    "answer": 0,
+    "recognize": [
+      "An unknown PMF constant c requires total mass 1.",
+      "X ≥ 3 retains only x = 3 and x = 4 from this support."
+    ],
+    "steps": [
+      {
+        "title": "Normalize the PMF",
+        "why": "Every possible value must be included when finding c.",
+        "math": "1 = c(1 + 3 + 5 + 7 + 9) = 25c",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 5,
+            "label": "Normalize the PMF"
+          }
+        ]
+      },
+      {
+        "title": "Solve for the multiplier",
+        "why": "The unscaled weights add to 25, so each weight is divided by 25.",
+        "math": "c = 1/25",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 8,
+            "label": "Solve for the multiplier"
+          }
+        ]
+      },
+      {
+        "title": "Add the requested masses",
+        "why": "Only 3 and 4 satisfy the inclusive inequality.",
+        "math": "P(X ≥ 3) = c(7 + 9) = 16/25 = 0.64",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 5,
+            "label": "Add the requested masses"
+          }
+        ]
+      }
+    ],
+    "answerText": "0.64, the combined probability of X = 3 or X = 4.",
+    "pitfalls": [
+      "Do not use c = 1/5: the five values have unequal weights."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "Normalize the PMF"
+      },
+      {
+        "doc": "week3",
+        "page": 8,
+        "label": "Solve for the multiplier"
+      },
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "Add the requested masses"
+      }
+    ]
+  },
+  {
+    "id": "w3-hw-4",
+    "week": 3,
+    "title": "Eight failed reconnect attempts",
+    "topic": "Geometric memorylessness",
+    "method": "w3-geometric",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Homework",
+      "title": "Week 3 Homework",
+      "page": 4,
+      "question": "Q4"
+    },
+    "prompt": "A game server reconnects successfully on each attempt with probability 0.25, independently of previous attempts. Eight attempts have already failed. What is the probability that reconnection occurs within the next three attempts?",
+    "options": [
+      "1 − 0.75³",
+      "1 − 0.75¹¹",
+      "0.75³",
+      "0.75⁸[1 − 0.75³]",
+      "None of these"
+    ],
+    "answer": 0,
+    "recognize": [
+      "Constant success chance and independent attempts give a geometric waiting time.",
+      "The eight failures are already known; only the next three attempts are uncertain."
+    ],
+    "steps": [
+      {
+        "title": "Restart after the known failures",
+        "why": "Memorylessness means the remaining attempts have the original first-success distribution.",
+        "math": "P(T ≤ 11 | T > 8) = P(new waiting time ≤ 3)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 25,
+            "label": "Restart after the known failures"
+          }
+        ]
+      },
+      {
+        "title": "Describe failure in the next three",
+        "why": "No reconnection within three attempts means all three future attempts fail.",
+        "math": "q = 0.75; P(no success in next 3) = 0.75³",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 24,
+            "label": "Describe failure in the next three"
+          }
+        ]
+      },
+      {
+        "title": "Take the complement",
+        "why": "Success at least once is everything except all failures.",
+        "math": "P(success within next 3) = 1 − 0.75³ = 0.578125",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 24,
+            "label": "Take the complement"
+          }
+        ]
+      }
+    ],
+    "answerText": "1 − 0.75³ = 0.578125.",
+    "pitfalls": [
+      "Do not multiply by 0.75⁸: those failures are already part of the condition."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 25,
+        "label": "Restart after the known failures"
+      },
+      {
+        "doc": "week3",
+        "page": 24,
+        "label": "Describe failure in the next three"
+      },
+      {
+        "doc": "week3",
+        "page": 24,
+        "label": "Take the complement"
+      }
+    ]
+  },
+  {
+    "id": "w3-hw-5",
+    "week": 3,
+    "title": "First fault between inspections 6 and 10",
+    "topic": "Geometric range endpoints",
+    "method": "w3-geometric",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Homework",
+      "title": "Week 3 Homework",
+      "page": 5,
+      "question": "Q5"
+    },
+    "prompt": "Each inspection independently discovers a fault with probability 0.12. Let T be the number of inspections required to discover the first fault. Which expression equals P(6 ≤ T ≤ 10)?",
+    "options": [
+      "0.88⁵ − 0.88⁹",
+      "0.88⁵ − 0.88¹⁰",
+      "None of these",
+      "0.88⁴ − 0.88⁹",
+      "0.88⁶ − 0.88¹¹"
+    ],
+    "answer": 1,
+    "recognize": [
+      "T counts trials until first success, beginning at 1.",
+      "An inclusive first-success range is a difference between two survival probabilities."
+    ],
+    "steps": [
+      {
+        "title": "Translate the lower endpoint",
+        "why": "To have T ≥ 6, the first five inspections must fail.",
+        "math": "P(T ≥ 6) = P(T > 5) = 0.88⁵",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 24,
+            "label": "Translate the lower endpoint"
+          }
+        ]
+      },
+      {
+        "title": "Remove successes occurring too late",
+        "why": "T ≥ 11 is outside the requested range and requires ten failures.",
+        "math": "P(T ≥ 11) = P(T > 10) = 0.88¹⁰",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 24,
+            "label": "Remove successes occurring too late"
+          }
+        ]
+      },
+      {
+        "title": "Subtract the nested tails",
+        "why": "Starting with all T ≥ 6 and removing T ≥ 11 leaves exactly 6 through 10.",
+        "math": "P(6 ≤ T ≤ 10) = 0.88⁵ − 0.88¹⁰ ≈ 0.249231",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 24,
+            "label": "Subtract the nested tails"
+          }
+        ]
+      }
+    ],
+    "answerText": "0.88⁵ − 0.88¹⁰ ≈ 0.249231.",
+    "pitfalls": [
+      "The exponent for T ≥ a is a − 1; the upper subtraction here uses 10."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 24,
+        "label": "Translate the lower endpoint"
+      },
+      {
+        "doc": "week3",
+        "page": 24,
+        "label": "Remove successes occurring too late"
+      },
+      {
+        "doc": "week3",
+        "page": 24,
+        "label": "Subtract the nested tails"
+      }
+    ]
+  },
+  {
+    "id": "w3-hw-6",
+    "week": 3,
+    "title": "A squared transformation",
+    "topic": "Transforming a discrete random variable",
+    "method": "w3-transformation",
+    "difficulty": "Foundation",
+    "source": {
+      "kind": "Homework",
+      "title": "Week 3 Homework",
+      "page": 6,
+      "question": "Q6"
+    },
+    "prompt": "X takes values 0,1,2,3 with respective probabilities 0.15,0.25,0.30,0.30. Define Y = (X − 1)². What is P(Y = 1)?",
+    "options": [
+      "0.15",
+      "0.40",
+      "0.45",
+      "None of these",
+      "0.30"
+    ],
+    "answer": 2,
+    "recognize": [
+      "A function Y = g(X) can map more than one X value to the same result.",
+      "Solve (X − 1)² = 1 before adding original PMF masses."
+    ],
+    "steps": [
+      {
+        "title": "Solve for the original values",
+        "why": "Both positive and negative square roots are possible.",
+        "math": "(x − 1)² = 1 → x − 1 = ±1 → x = 0 or 2",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 3,
+            "label": "Solve for the original values"
+          }
+        ]
+      },
+      {
+        "title": "Check the support",
+        "why": "Both 0 and 2 are allowed values, and no other support value produces Y = 1.",
+        "math": "0 → 1; 1 → 0; 2 → 1; 3 → 4",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 3,
+            "label": "Check the support"
+          }
+        ]
+      },
+      {
+        "title": "Combine their probabilities",
+        "why": "The events X = 0 and X = 2 are disjoint, so their masses add.",
+        "math": "P(Y = 1) = P(X = 0) + P(X = 2) = 0.15 + 0.30 = 0.45",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 5,
+            "label": "Combine their probabilities"
+          }
+        ]
+      }
+    ],
+    "answerText": "0.45.",
+    "pitfalls": [
+      "Do not keep only the positive square-root solution."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 3,
+        "label": "Solve for the original values"
+      },
+      {
+        "doc": "week3",
+        "page": 3,
+        "label": "Check the support"
+      },
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "Combine their probabilities"
+      }
+    ]
+  },
+  {
+    "id": "w3-hw-7",
+    "week": 3,
+    "title": "Requests in 25 minutes",
+    "topic": "Poisson rate scaling and complement",
+    "method": "w3-poisson",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Homework",
+      "title": "Week 3 Homework",
+      "page": 7,
+      "question": "Q7"
+    },
+    "prompt": "Critical support requests follow a Poisson model at a mean rate of 4.8 per hour. What is the probability of receiving at least three critical requests during the next 25 minutes?",
+    "options": [
+      "1 − 3e⁻²",
+      "1 − 5e⁻²",
+      "5e⁻²",
+      "None of these",
+      "1 − 5e^(−4.8)"
+    ],
+    "answer": 1,
+    "recognize": [
+      "A Poisson count is over a 25-minute interval, while the given rate is hourly.",
+      "At least three is easiest as 1 minus counts 0, 1, and 2."
+    ],
+    "steps": [
+      {
+        "title": "Scale the mean to the interval",
+        "why": "Convert 25 minutes to hours before multiplying the hourly rate.",
+        "math": "λ = 4.8 × (25/60) = 2",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 30,
+            "label": "Scale the mean to the interval"
+          }
+        ]
+      },
+      {
+        "title": "Write the short complement",
+        "why": "Exactly the counts below 3 are excluded.",
+        "math": "P(X ≥ 3) = 1 − [P(X = 0) + P(X = 1) + P(X = 2)]",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 31,
+            "label": "Write the short complement"
+          }
+        ]
+      },
+      {
+        "title": "Evaluate the three Poisson masses",
+        "why": "The common e⁻² factor simplifies the arithmetic, and 0! = 1.",
+        "math": "P(X ≤ 2) = e⁻²(1 + 2 + 2²/2!) = 5e⁻²",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 29,
+            "label": "Evaluate the three Poisson masses"
+          }
+        ]
+      },
+      {
+        "title": "Subtract from 1",
+        "why": "The result is the chance of three or more requests in these 25 minutes.",
+        "math": "1 − 5e⁻² ≈ 0.323324",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 31,
+            "label": "Subtract from 1"
+          }
+        ]
+      }
+    ],
+    "answerText": "1 − 5e⁻² ≈ 0.323324.",
+    "pitfalls": [
+      "Using λ = 4.8 ignores the shorter interval.",
+      "At least three includes 3; subtract only counts 0 through 2."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 30,
+        "label": "Scale the mean to the interval"
+      },
+      {
+        "doc": "week3",
+        "page": 31,
+        "label": "Write the short complement"
+      },
+      {
+        "doc": "week3",
+        "page": 29,
+        "label": "Evaluate the three Poisson masses"
+      },
+      {
+        "doc": "week3",
+        "page": 31,
+        "label": "Subtract from 1"
+      }
+    ]
+  },
+  {
+    "id": "w3-hw-8",
+    "week": 3,
+    "title": "Rare defects in 1,200 chips",
+    "topic": "Poisson approximation",
+    "method": "w3-approximation",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Homework",
+      "title": "Week 3 Homework",
+      "page": 8,
+      "question": "Q8"
+    },
+    "prompt": "Each of 1,200 independently produced microchips is defective with probability 0.0015. X is the number of defective chips. Which statement correctly gives the exact model and a Poisson approximation to P(X ≤ 1)?",
+    "options": [
+      "X ~ Pois(1.8) exactly; P(X ≤ 1) = 2.8e^(−1.8)",
+      "X ~ Bin(1200,0.0015); P(X ≤ 1) ≈ 2.8e^(−1.8)",
+      "X ~ Bin(1200,0.0015); P(X ≤ 1) ≈ 1 − 2.8e^(−1.8)",
+      "X ~ Bin(1200,0.0015); P(X ≤ 1) ≈ 1.8e^(−1.8)",
+      "None of these"
+    ],
+    "answer": 1,
+    "recognize": [
+      "There are a fixed number of independent chips with one constant defect chance, so binomial is exact.",
+      "Large n and small p support a Poisson approximation."
+    ],
+    "steps": [
+      {
+        "title": "State the exact distribution",
+        "why": "X counts defects among 1,200 independent binary outcomes.",
+        "math": "X ~ Bin(1200, 0.0015)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 17,
+            "label": "State the exact distribution"
+          }
+        ]
+      },
+      {
+        "title": "Match the expected count",
+        "why": "The approximating Poisson parameter is the binomial mean np.",
+        "math": "λ = np = 1200 × 0.0015 = 1.8",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 33,
+            "label": "Match the expected count"
+          }
+        ]
+      },
+      {
+        "title": "Include zero and one defect",
+        "why": "At most one means counts 0 or 1, not a tail above 1.",
+        "math": "P(X ≤ 1) ≈ e^(−1.8)(1 + 1.8) = 2.8e^(−1.8) ≈ 0.462837",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 29,
+            "label": "Include zero and one defect"
+          }
+        ]
+      },
+      {
+        "title": "Label the approximation",
+        "why": "The fixed-trial model remains binomial; only the evaluation was approximated.",
+        "math": "Binomial probability ≈ Poisson probability",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 34,
+            "label": "Label the approximation"
+          }
+        ]
+      }
+    ],
+    "answerText": "Exact model: Bin(1200,0.0015). Approximate probability: 2.8e^(−1.8) ≈ 0.462837.",
+    "pitfalls": [
+      "The Poisson model is not exact here.",
+      "P(X ≤ 1) includes zero defects."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 17,
+        "label": "State the exact distribution"
+      },
+      {
+        "doc": "week3",
+        "page": 33,
+        "label": "Match the expected count"
+      },
+      {
+        "doc": "week3",
+        "page": 29,
+        "label": "Include zero and one defect"
+      },
+      {
+        "doc": "week3",
+        "page": 34,
+        "label": "Label the approximation"
+      }
+    ]
+  },
+  {
+    "id": "w3-hw-9",
+    "week": 3,
+    "title": "A conditional binomial range",
+    "topic": "Conditional binomial probability",
+    "method": "w3-binomial",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Homework",
+      "title": "Week 3 Homework",
+      "page": 9,
+      "question": "Q9"
+    },
+    "prompt": "Let X ~ Bin(10,0.30), and write b(k) = C(10,k)(0.30)ᵏ(0.70)¹⁰⁻ᵏ. Which expression equals P(2 ≤ X ≤ 4 | X ≤ 4)?",
+    "options": [
+      "None of these",
+      "Σₖ₌₂⁴ b(k)",
+      "1 − Σₖ₌₀¹ b(k)",
+      "[Σₖ₌₂⁴ b(k)] / [Σₖ₌₂¹⁰ b(k)]",
+      "[Σₖ₌₂⁴ b(k)] / [Σₖ₌₀⁴ b(k)]"
+    ],
+    "answer": 4,
+    "recognize": [
+      "The given event X ≤ 4 restricts the possible counts to 0,1,2,3,4.",
+      "The requested range already lies within the given range."
+    ],
+    "steps": [
+      {
+        "title": "Restrict the sample space",
+        "why": "Conditional probability compares the overlap to the given event, rather than the full distribution.",
+        "math": "A = {2,3,4}; B = {0,1,2,3,4}; A ∩ B = A",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Restrict the sample space"
+          }
+        ]
+      },
+      {
+        "title": "Form the numerator",
+        "why": "Add exactly the masses at counts 2, 3, and 4.",
+        "math": "P(A ∩ B) = b(2) + b(3) + b(4)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 18,
+            "label": "Form the numerator"
+          }
+        ]
+      },
+      {
+        "title": "Form the denominator",
+        "why": "All counts allowed by the given event belong in the denominator.",
+        "math": "P(B) = b(0) + b(1) + b(2) + b(3) + b(4)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 18,
+            "label": "Form the denominator"
+          }
+        ]
+      },
+      {
+        "title": "Divide",
+        "why": "This rescales the allowed probability mass so the given event has conditional probability 1.",
+        "math": "P(A | B) = [Σₖ₌₂⁴ b(k)] / [Σₖ₌₀⁴ b(k)] ≈ 0.824288",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Divide"
+          }
+        ]
+      }
+    ],
+    "answerText": "[Σₖ₌₂⁴ b(k)] / [Σₖ₌₀⁴ b(k)] ≈ 0.824288.",
+    "pitfalls": [
+      "The denominator comes from the given condition X ≤ 4, not from the target range."
+    ],
+    "refs": [
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Restrict the sample space"
+      },
+      {
+        "doc": "week3",
+        "page": 18,
+        "label": "Form the numerator"
+      },
+      {
+        "doc": "week3",
+        "page": 18,
+        "label": "Form the denominator"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Divide"
+      }
+    ]
+  },
+  {
+    "id": "w3-hw-10",
+    "week": 3,
+    "title": "Which model is not binomial?",
+    "topic": "Binomial assumptions",
+    "method": "w3-binomial",
+    "difficulty": "Foundation",
+    "source": {
+      "kind": "Homework",
+      "title": "Week 3 Homework",
+      "page": 10,
+      "question": "Q10"
+    },
+    "prompt": "Which random variable is not binomial under the assumptions stated?",
+    "options": [
+      "None of these",
+      "Number of defective sensors among 30 independent sensors, each with defect probability 0.02",
+      "Number of successful logins among 10 independent users who have different login-success probabilities",
+      "Number of heads in 20 independent tosses of the same coin",
+      "Number of clicks among 100 independent ad impressions, each with click probability 0.04"
+    ],
+    "answer": 2,
+    "recognize": [
+      "Model selection requires all four binomial assumptions.",
+      "Independent trials can still fail the model if their success probabilities differ."
+    ],
+    "steps": [
+      {
+        "title": "Check the trial count and outcomes",
+        "why": "Each proposed count has a fixed number of binary trials. These checks alone do not settle the question.",
+        "math": "Fixed n; success/failure on each trial",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 17,
+            "label": "Check the trial count and outcomes"
+          }
+        ]
+      },
+      {
+        "title": "Check independence",
+        "why": "Independence is explicitly stated for the candidate models.",
+        "math": "Independent trials: stated in each option",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 17,
+            "label": "Check independence"
+          }
+        ]
+      },
+      {
+        "title": "Check constant success probability",
+        "why": "The users have different login probabilities, violating the same-p requirement.",
+        "math": "p₁,p₂,…,p₁₀ are different → not Bin(10,p)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 17,
+            "label": "Check constant success probability"
+          }
+        ]
+      },
+      {
+        "title": "Contrast with the valid counts",
+        "why": "Defects, heads, and clicks each use one common probability across the independent trials.",
+        "math": "Constant p plus the other three assumptions → binomial",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 20,
+            "label": "Contrast with the valid counts"
+          }
+        ]
+      }
+    ],
+    "answerText": "The successful-login count is not binomial because p differs across users.",
+    "pitfalls": [
+      "Do not accept a binomial model from independence alone."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 17,
+        "label": "Check the trial count and outcomes"
+      },
+      {
+        "doc": "week3",
+        "page": 17,
+        "label": "Check independence"
+      },
+      {
+        "doc": "week3",
+        "page": 17,
+        "label": "Check constant success probability"
+      },
+      {
+        "doc": "week3",
+        "page": 20,
+        "label": "Contrast with the valid counts"
+      }
+    ]
+  },
+  {
+    "id": "w3-pop-1",
+    "week": 3,
+    "title": "A weighted PMF and the binomial theorem",
+    "topic": "PMF normalization",
+    "method": "w3-pmf",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Quiz",
+      "title": "Week 3 Pop Quiz",
+      "page": 1,
+      "question": "Q1"
+    },
+    "prompt": "P(X = x) = c C(4,x)2ˣ for x ∈ {0,1,2,3,4}, and is 0 otherwise. What is P(X ≥ 3)?",
+    "options": [
+      "16/27",
+      "16/81",
+      "65/81",
+      "None of these",
+      "32/81"
+    ],
+    "answer": 0,
+    "recognize": [
+      "An unknown PMF constant must be found before using the weights.",
+      "The coefficients C(4,x)2ˣ sum to (1 + 2)⁴ by the binomial theorem; listing the five terms also works."
+    ],
+    "steps": [
+      {
+        "title": "List the unscaled masses",
+        "why": "Evaluate each formula once, so every possible value is accounted for.",
+        "math": "For x = 0,1,2,3,4: C(4,x)2ˣ = 1,8,24,32,16",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 5,
+            "label": "List the unscaled masses"
+          }
+        ]
+      },
+      {
+        "title": "Find c from total mass 1",
+        "why": "A valid PMF is normalized by dividing the weights by their total.",
+        "math": "1 = c(1 + 8 + 24 + 32 + 16) = 81c → c = 1/81",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 8,
+            "label": "Find c from total mass 1"
+          }
+        ]
+      },
+      {
+        "title": "Select and add the upper masses",
+        "why": "X ≥ 3 includes only values 3 and 4.",
+        "math": "P(X ≥ 3) = (32 + 16)/81 = 48/81 = 16/27",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 5,
+            "label": "Select and add the upper masses"
+          }
+        ]
+      }
+    ],
+    "answerText": "16/27 ≈ 0.592593.",
+    "pitfalls": [
+      "32/81 includes only X = 3; 16/81 includes only X = 4."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "List the unscaled masses"
+      },
+      {
+        "doc": "week3",
+        "page": 8,
+        "label": "Find c from total mass 1"
+      },
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "Select and add the upper masses"
+      }
+    ]
+  },
+  {
+    "id": "w3-pop-2",
+    "week": 3,
+    "title": "Absolute value with a conditional CDF",
+    "topic": "CDF transformations and conditioning",
+    "method": "w3-transformation",
+    "difficulty": "Stretch",
+    "source": {
+      "kind": "Quiz",
+      "title": "Week 3 Pop Quiz",
+      "page": 2,
+      "question": "Q2"
+    },
+    "prompt": "X takes only −1,0,2,5. Its CDF is 0 for x < −1; 0.10 for −1 ≤ x < 0; 0.35 for 0 ≤ x < 2; 0.80 for 2 ≤ x < 5; 1 for x ≥ 5. Define Y = |X − 1|. What is P(Y ≥ 2 | X ≥ 0)?",
+    "options": [
+      "None of these",
+      "2/9",
+      "7/9",
+      "1/3",
+      "1/5"
+    ],
+    "answer": 1,
+    "recognize": [
+      "First turn the staircase into individual masses.",
+      "Y ≥ 2 picks original X values; the given event then removes any negative values."
+    ],
+    "steps": [
+      {
+        "title": "Recover the PMF from jumps",
+        "why": "Each mass is the amount by which the CDF rises at that support value.",
+        "math": "p(−1)=0.10; p(0)=0.35−0.10=0.25; p(2)=0.80−0.35=0.45; p(5)=1−0.80=0.20",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 12,
+            "label": "Recover the PMF from jumps"
+          }
+        ]
+      },
+      {
+        "title": "Map the support through Y",
+        "why": "Absolute value measures distance from 1.",
+        "math": "X = −1,0,2,5 → Y = 2,1,1,4; Y ≥ 2 means X = −1 or 5",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 3,
+            "label": "Map the support through Y"
+          }
+        ]
+      },
+      {
+        "title": "Intersect with the condition",
+        "why": "Given X ≥ 0 excludes X = −1, so only X = 5 remains in the numerator.",
+        "math": "P(Y ≥ 2 and X ≥ 0) = P(X = 5) = 0.20",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Intersect with the condition"
+          }
+        ]
+      },
+      {
+        "title": "Divide by the allowed mass",
+        "why": "The condition keeps masses at 0, 2, and 5.",
+        "math": "P(X ≥ 0) = 0.90; answer = 0.20/0.90 = 2/9",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Divide by the allowed mass"
+          }
+        ]
+      }
+    ],
+    "answerText": "2/9 ≈ 0.222222.",
+    "pitfalls": [
+      "Adding the mass at X = −1 ignores the given event.",
+      "F(0) = 0.35 includes X = 0, so 1 − F(0) would exclude a permitted point."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 12,
+        "label": "Recover the PMF from jumps"
+      },
+      {
+        "doc": "week3",
+        "page": 3,
+        "label": "Map the support through Y"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Intersect with the condition"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Divide by the allowed mass"
+      }
+    ]
+  },
+  {
+    "id": "w3-pop-3",
+    "week": 3,
+    "title": "Exactly two failed patches, given at least two",
+    "topic": "Conditional binomial probability",
+    "method": "w3-binomial",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Quiz",
+      "title": "Week 3 Pop Quiz",
+      "page": 3,
+      "question": "Q3"
+    },
+    "prompt": "Each of 15 independently deployed software patches fails with probability 0.10. Given that at least two patches fail, what is the probability that exactly two patches fail?",
+    "options": [
+      "C(15,2)(0.10)²(0.90)¹³",
+      "None of these",
+      "C(15,2)(0.10)²(0.90)¹³ / [1 − (0.90)¹⁵]",
+      "C(15,2)(0.10)²(0.90)¹³ / [1 − (0.90)¹⁵ − 15(0.10)(0.90)¹⁴]",
+      "C(15,2)(0.10)²(0.90)¹³ / [Σₖ₌₀² C(15,k)(0.10)ᵏ(0.90)¹⁵⁻ᵏ]"
+    ],
+    "answer": 3,
+    "recognize": [
+      "Count failures as successes in a Bin(15,0.10) model.",
+      "The target X = 2 is a subset of the given X ≥ 2."
+    ],
+    "steps": [
+      {
+        "title": "Identify the distribution",
+        "why": "Fifteen fixed independent binary trials share p = 0.10.",
+        "math": "X ~ Bin(15,0.10)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 17,
+            "label": "Identify the distribution"
+          }
+        ]
+      },
+      {
+        "title": "Evaluate exactly two failures",
+        "why": "Choose the two failed patches, then account for two failures and thirteen nonfailures.",
+        "math": "P(X = 2) = C(15,2)(0.10)²(0.90)¹³",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 18,
+            "label": "Evaluate exactly two failures"
+          }
+        ]
+      },
+      {
+        "title": "Evaluate the given event by complement",
+        "why": "At least two excludes zero failures and one failure.",
+        "math": "P(X ≥ 2) = 1 − (0.90)¹⁵ − 15(0.10)(0.90)¹⁴",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 19,
+            "label": "Evaluate the given event by complement"
+          }
+        ]
+      },
+      {
+        "title": "Divide by the given-event probability",
+        "why": "The numerator already satisfies X ≥ 2; normalize by that event.",
+        "math": "P(X = 2 | X ≥ 2) = P(X = 2) / P(X ≥ 2) ≈ 0.591843",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Divide by the given-event probability"
+          }
+        ]
+      }
+    ],
+    "answerText": "Approximately 0.591843.",
+    "pitfalls": [
+      "Subtracting only zero failures gives X ≥ 1, which is the wrong condition."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 17,
+        "label": "Identify the distribution"
+      },
+      {
+        "doc": "week3",
+        "page": 18,
+        "label": "Evaluate exactly two failures"
+      },
+      {
+        "doc": "week3",
+        "page": 19,
+        "label": "Evaluate the given event by complement"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Divide by the given-event probability"
+      }
+    ]
+  },
+  {
+    "id": "w3-pop-4",
+    "week": 3,
+    "title": "A guaranteed fifteenth reward after ten failures",
+    "topic": "Guaranteed-attempt conditional probability",
+    "method": "w3-pity",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Quiz",
+      "title": "Week 3 Pop Quiz",
+      "page": 3,
+      "question": "Q4"
+    },
+    "prompt": "A reward appears independently with probability 0.08 on each of the first 14 attempts. If it has not appeared earlier, it is guaranteed on attempt 15. T is the attempt on which it first appears. Given T > 10, what is P(T = 15 | T > 10)?",
+    "options": [
+      "0.92⁴ × 0.08",
+      "0.92⁵",
+      "0.92⁴",
+      "None of these",
+      "1 − 0.92⁴"
+    ],
+    "answer": 2,
+    "recognize": [
+      "Success at 15 is guaranteed, so its factor is 1.",
+      "T > 10 tells us failures 1 through 10 have already happened."
+    ],
+    "steps": [
+      {
+        "title": "Describe the full event",
+        "why": "First success at 15 requires failures on all fourteen ordinary attempts.",
+        "math": "P(T = 15) = 0.92¹⁴",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 28,
+            "label": "Describe the full event"
+          }
+        ]
+      },
+      {
+        "title": "Describe the given information",
+        "why": "T > 10 is exactly ten failures.",
+        "math": "P(T > 10) = 0.92¹⁰",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 24,
+            "label": "Describe the given information"
+          }
+        ]
+      },
+      {
+        "title": "Divide and cancel known failures",
+        "why": "Only failures on attempts 11,12,13,14 remain uncertain.",
+        "math": "P(T = 15 | T > 10) = 0.92¹⁴ / 0.92¹⁰ = 0.92⁴ ≈ 0.716393",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Divide and cancel known failures"
+          }
+        ]
+      },
+      {
+        "title": "Check the final attempt",
+        "why": "Once attempt 15 is reached, the reward appears with probability 1.",
+        "math": "Four future failures × guaranteed success: 0.92⁴ × 1",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 28,
+            "label": "Check the final attempt"
+          }
+        ]
+      }
+    ],
+    "answerText": "0.92⁴ ≈ 0.716393.",
+    "pitfalls": [
+      "There are four remaining random failures, not five.",
+      "Do not multiply by 0.08 at the guaranteed attempt."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 28,
+        "label": "Describe the full event"
+      },
+      {
+        "doc": "week3",
+        "page": 24,
+        "label": "Describe the given information"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Divide and cancel known failures"
+      },
+      {
+        "doc": "week3",
+        "page": 28,
+        "label": "Check the final attempt"
+      }
+    ]
+  },
+  {
+    "id": "w3-pop-5",
+    "week": 3,
+    "title": "Lost packets: conditional Poisson approximation",
+    "topic": "Conditional Poisson approximation",
+    "method": "w3-approximation",
+    "difficulty": "Stretch",
+    "source": {
+      "kind": "Quiz",
+      "title": "Week 3 Pop Quiz",
+      "page": 4,
+      "question": "Q5"
+    },
+    "prompt": "Each of 900 independently transmitted packets is lost with probability 0.002. X is the number of lost packets. Using a Poisson approximation, estimate P(X = 2 | X ≥ 1).",
+    "options": [
+      "[e^(−0.002)(0.002)²/2!] / [1 − e^(−0.002)]",
+      "e^(−1.8)(1.8)²/2!",
+      "None of these",
+      "[e^(−1.8)(1.8)²/2!] / [1 − e^(−1.8)]",
+      "[e^(−1.8)(1.8)²/2!] / [1 − e^(−1.8)(1 + 1.8)]"
+    ],
+    "answer": 3,
+    "recognize": [
+      "The exact fixed-trial model is binomial with rare packet loss.",
+      "The given event X ≥ 1 requires a denominator; it cannot be ignored after approximation."
+    ],
+    "steps": [
+      {
+        "title": "Find the exact model",
+        "why": "Each packet is a binary independent trial with common loss probability.",
+        "math": "X ~ Bin(900,0.002)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 17,
+            "label": "Find the exact model"
+          }
+        ]
+      },
+      {
+        "title": "Set the approximation parameter",
+        "why": "Use the expected lost-packet count np.",
+        "math": "λ = 900 × 0.002 = 1.8; Y ~ Pois(1.8)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 33,
+            "label": "Set the approximation parameter"
+          }
+        ]
+      },
+      {
+        "title": "Approximate the numerator",
+        "why": "The event of exactly two lost packets is contained in at least one.",
+        "math": "P(X = 2) ≈ e^(−1.8)(1.8)²/2!",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 29,
+            "label": "Approximate the numerator"
+          }
+        ]
+      },
+      {
+        "title": "Approximate the denominator and divide",
+        "why": "At least one is the complement of zero losses. Use the same Poisson model in both places.",
+        "math": "P(X ≥ 1) ≈ 1 − e^(−1.8); ratio ≈ 0.320814",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Approximate the denominator and divide"
+          }
+        ]
+      }
+    ],
+    "answerText": "[e^(−1.8)(1.8)²/2!] / [1 − e^(−1.8)] ≈ 0.320814.",
+    "pitfalls": [
+      "λ = 1.8, not 0.002.",
+      "The denominator excludes zero only, not zero and one."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 17,
+        "label": "Find the exact model"
+      },
+      {
+        "doc": "week3",
+        "page": 33,
+        "label": "Set the approximation parameter"
+      },
+      {
+        "doc": "week3",
+        "page": 29,
+        "label": "Approximate the numerator"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Approximate the denominator and divide"
+      }
+    ]
+  },
+  {
+    "id": "w3-tut-1a",
+    "week": 3,
+    "title": "Delivery rating: find the missing mass",
+    "topic": "PMF normalization",
+    "method": "w3-pmf",
+    "difficulty": "Foundation",
+    "source": {
+      "kind": "Tutorial",
+      "title": "Week 3 Tutorial 2026",
+      "page": 1,
+      "question": "Q1 part 1",
+      "adapted": true
+    },
+    "prompt": "A delivery platform rates orders as X = 0 (early), 1 (on time), 2 (delayed less than 15 minutes), or 3 (delayed at least 15 minutes). The PMF at 0,1,2,3 is respectively 0.10,c,2c,0.15. Find c using the PMF property.",
+    "options": [
+      "c = 0.25 because all masses sum to 1",
+      "c = 0.375 because the two unknown entries are equal",
+      "c = 0.75 because the known entries sum to 0.25",
+      "c = 1/4 because all four outcomes must be equally likely"
+    ],
+    "answer": 0,
+    "recognize": [
+      "The PMF contains a shared constant c and total probability must be 1."
+    ],
+    "steps": [
+      {
+        "title": "Add every listed mass",
+        "why": "These four values exhaust the support, so their probabilities total 1.",
+        "math": "0.10 + c + 2c + 0.15 = 1",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 5,
+            "label": "Add every listed mass"
+          }
+        ]
+      },
+      {
+        "title": "Collect the unknown terms",
+        "why": "c and 2c represent different masses, and add to 3c.",
+        "math": "0.25 + 3c = 1 → 3c = 0.75",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 8,
+            "label": "Collect the unknown terms"
+          }
+        ]
+      },
+      {
+        "title": "Solve and check",
+        "why": "Substitute c back and verify nonnegativity as well as normalization.",
+        "math": "c = 0.25; masses = 0.10,0.25,0.50,0.15; sum = 1",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 5,
+            "label": "Solve and check"
+          }
+        ]
+      }
+    ],
+    "answerText": "c = 0.25.",
+    "pitfalls": [
+      "c and 2c are not equal entries."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "Add every listed mass"
+      },
+      {
+        "doc": "week3",
+        "page": 8,
+        "label": "Collect the unknown terms"
+      },
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "Solve and check"
+      }
+    ]
+  },
+  {
+    "id": "w3-tut-1b",
+    "week": 3,
+    "title": "Delivery rating: build the CDF",
+    "topic": "Constructing a discrete CDF",
+    "method": "w3-cdf",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Tutorial",
+      "title": "Week 3 Tutorial 2026",
+      "page": 1,
+      "question": "Q1 part 2",
+      "adapted": true
+    },
+    "prompt": "A delivery platform rates orders as X = 0 (early), 1 (on time), 2 (delayed less than 15 minutes), or 3 (delayed at least 15 minutes). The PMF at 0,1,2,3 is respectively 0.10,c,2c,0.15. Which is the correct CDF for all real x?",
+    "options": [
+      "0 for x < 0; 0.10 for 0 ≤ x < 1; 0.35 for 1 ≤ x < 2; 0.85 for 2 ≤ x < 3; 1 for x ≥ 3",
+      "0 for x < 0; 0.10 for 0 ≤ x < 1; 0.25 for 1 ≤ x < 2; 0.50 for 2 ≤ x < 3; 0.15 for x ≥ 3",
+      "0.10 for x < 1; 0.35 for 1 ≤ x < 2; 0.85 for 2 ≤ x < 3; 1 for x ≥ 3",
+      "0 for x < 0; 0.10 for 0 < x ≤ 1; 0.35 for 1 < x ≤ 2; 0.85 for 2 < x ≤ 3; 1 for x > 3"
+    ],
+    "answer": 0,
+    "recognize": [
+      "F(x) adds every PMF mass at values no larger than x.",
+      "The CDF has a jump at each support value and is flat between them."
+    ],
+    "steps": [
+      {
+        "title": "Normalize the original PMF",
+        "why": "The cumulative sums require the completed individual masses.",
+        "math": "c = (1 − 0.10 − 0.15)/3 = 0.25",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 5,
+            "label": "Normalize the original PMF"
+          }
+        ]
+      },
+      {
+        "title": "Accumulate from left to right",
+        "why": "Each support value contributes its mass to all later CDF values.",
+        "math": "F(0)=0.10; F(1)=0.10+0.25=0.35; F(2)=0.85; F(3)=1",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 10,
+            "label": "Accumulate from left to right"
+          }
+        ]
+      },
+      {
+        "title": "Fill in the intervals and tails",
+        "why": "Below the support the CDF is 0; above the support it is 1. A jump value belongs to the interval beginning at that point.",
+        "math": "F(x)=0 if x<0; 0.10 if 0≤x<1; 0.35 if 1≤x<2; 0.85 if 2≤x<3; 1 if x≥3",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 9,
+            "label": "Fill in the intervals and tails"
+          }
+        ]
+      }
+    ],
+    "answerText": "The first option is correct: cumulative levels 0,0.10,0.35,0.85,1.",
+    "pitfalls": [
+      "PMF masses are not the CDF levels.",
+      "A discrete CDF is right-continuous, so F(1) includes the mass at 1."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "Normalize the original PMF"
+      },
+      {
+        "doc": "week3",
+        "page": 10,
+        "label": "Accumulate from left to right"
+      },
+      {
+        "doc": "week3",
+        "page": 9,
+        "label": "Fill in the intervals and tails"
+      }
+    ]
+  },
+  {
+    "id": "w3-tut-1cd",
+    "week": 3,
+    "title": "Delivery rating: one event, two methods",
+    "topic": "PMF and CDF interval probability",
+    "method": "w3-cdf",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Tutorial",
+      "title": "Week 3 Tutorial 2026",
+      "page": 1,
+      "question": "Q1 parts 3–4",
+      "adapted": true
+    },
+    "prompt": "A delivery platform rates orders as X = 0 (early), 1 (on time), 2 (delayed less than 15 minutes), or 3 (delayed at least 15 minutes). The PMF at 0,1,2,3 is respectively 0.10,c,2c,0.15. Find P(1 < X ≤ 3), and identify the equivalent CDF calculation.",
+    "options": [
+      "0.65 = F(3) − F(1)",
+      "0.90 = F(3) − F(0)",
+      "0.50 = F(2) − F(1)",
+      "0.15 = F(3) − F(2)"
+    ],
+    "answer": 0,
+    "recognize": [
+      "The strict lower endpoint excludes X = 1; only ratings 2 and 3 remain.",
+      "The standard CDF difference F(b) − F(a) computes a < X ≤ b."
+    ],
+    "steps": [
+      {
+        "title": "Find c",
+        "why": "Normalize before using the unknown masses.",
+        "math": "0.10 + 3c + 0.15 = 1 → c = 0.25",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 5,
+            "label": "Find c"
+          }
+        ]
+      },
+      {
+        "title": "Use the PMF directly",
+        "why": "Only x = 2 and x = 3 satisfy the event.",
+        "math": "P(1 < X ≤ 3) = 2c + 0.15 = 0.50 + 0.15 = 0.65",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 5,
+            "label": "Use the PMF directly"
+          }
+        ]
+      },
+      {
+        "title": "Use the CDF independently",
+        "why": "F(3) includes everything; subtract F(1) to remove both early and on-time ratings.",
+        "math": "F(3) − F(1) = 1 − (0.10 + 0.25) = 0.65",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 12,
+            "label": "Use the CDF independently"
+          }
+        ]
+      }
+    ],
+    "answerText": "0.65. It is both p(2) + p(3) and F(3) − F(1).",
+    "pitfalls": [
+      "Do not include the on-time rating X = 1."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "Find c"
+      },
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "Use the PMF directly"
+      },
+      {
+        "doc": "week3",
+        "page": 12,
+        "label": "Use the CDF independently"
+      }
+    ]
+  },
+  {
+    "id": "w3-tut-1e",
+    "week": 3,
+    "title": "A CDF value at a non-support point",
+    "topic": "Interpreting a discrete CDF",
+    "method": "w3-cdf",
+    "difficulty": "Foundation",
+    "source": {
+      "kind": "Tutorial",
+      "title": "Week 3 Tutorial 2026",
+      "page": 1,
+      "question": "Q1 part 5",
+      "adapted": true
+    },
+    "prompt": "A delivery platform rates orders as X = 0 (early), 1 (on time), 2 (delayed less than 15 minutes), or 3 (delayed at least 15 minutes). The PMF at 0,1,2,3 is respectively 0.10,c,2c,0.15. A manager claims F(1.5) = P(X = 1.5). Which statement is correct?",
+    "options": [
+      "F(1.5) = 0.35 and P(X = 1.5) = 0",
+      "Both are 0.35",
+      "Both are 0",
+      "F(1.5) = 0.50 and P(X = 1.5) = 0.50"
+    ],
+    "answer": 0,
+    "recognize": [
+      "A CDF is cumulative even when x lies between possible values.",
+      "X only takes 0,1,2,3, so 1.5 is impossible as an exact value."
+    ],
+    "steps": [
+      {
+        "title": "Find the completed PMF",
+        "why": "The on-time probability is c = 0.25.",
+        "math": "0.10 + 3c + 0.15 = 1 → c = 0.25",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 5,
+            "label": "Find the completed PMF"
+          }
+        ]
+      },
+      {
+        "title": "Interpret F(1.5)",
+        "why": "It asks for X ≤ 1.5, which includes allowed values 0 and 1.",
+        "math": "F(1.5) = P(X ≤ 1.5) = 0.10 + 0.25 = 0.35",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 9,
+            "label": "Interpret F(1.5)"
+          }
+        ]
+      },
+      {
+        "title": "Interpret the point probability",
+        "why": "There is no PMF mass at a value outside the support.",
+        "math": "P(X = 1.5) = 0",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 5,
+            "label": "Interpret the point probability"
+          }
+        ]
+      }
+    ],
+    "answerText": "F(1.5) = 0.35, but P(X = 1.5) = 0.",
+    "pitfalls": [
+      "A flat CDF between jumps can be positive even though point probabilities there are zero."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "Find the completed PMF"
+      },
+      {
+        "doc": "week3",
+        "page": 9,
+        "label": "Interpret F(1.5)"
+      },
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "Interpret the point probability"
+      }
+    ]
+  },
+  {
+    "id": "w3-tut-2ab",
+    "week": 3,
+    "title": "Twenty test runs: model and exactly two detections",
+    "topic": "Binomial exact count",
+    "method": "w3-binomial",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Tutorial",
+      "title": "Week 3 Tutorial 2026",
+      "page": 2,
+      "question": "Q2 parts 1–2",
+      "adapted": true
+    },
+    "prompt": "Each run of an automated test suite independently detects a hidden bug with probability 0.08, constant from run to run. N is the number of detections among the next 20 runs, and T is the number of runs required for the first detection. Which gives the correct model for N and P(N = 2)?",
+    "options": [
+      "N ~ Bin(20,0.08); P(N = 2) = C(20,2)(0.08)²(0.92)¹⁸ ≈ 0.271091",
+      "N ~ Geom(0.08); P(N = 2) = 0.92 × 0.08",
+      "N ~ Bin(20,0.08); P(N = 2) = (0.08)²(0.92)¹⁸",
+      "N ~ Pois(0.08); P(N = 2) = e^(−0.08)(0.08)²/2!"
+    ],
+    "answer": 0,
+    "recognize": [
+      "N counts detections in a fixed 20 runs, unlike T which waits for the first.",
+      "The independence and constant-p assumptions are stated."
+    ],
+    "steps": [
+      {
+        "title": "Check the binomial assumptions",
+        "why": "There are 20 fixed trials, detect/no-detect outcomes, independence, and common detection chance 0.08.",
+        "math": "N ~ Bin(20,0.08)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 17,
+            "label": "Check the binomial assumptions"
+          }
+        ]
+      },
+      {
+        "title": "Write one sequence probability",
+        "why": "A sequence with two detections and eighteen nondetections has the product probability below.",
+        "math": "(0.08)²(0.92)¹⁸",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 18,
+            "label": "Write one sequence probability"
+          }
+        ]
+      },
+      {
+        "title": "Count all positions for the detections",
+        "why": "The two detecting runs could occupy any pair of positions among 20.",
+        "math": "C(20,2) = 20×19/2 = 190",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 18,
+            "label": "Count all positions for the detections"
+          }
+        ]
+      },
+      {
+        "title": "Multiply and calculate",
+        "why": "The coefficient combines every disjoint detection sequence.",
+        "math": "P(N = 2) = 190(0.08)²(0.92)¹⁸ ≈ 0.271091",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 18,
+            "label": "Multiply and calculate"
+          }
+        ]
+      }
+    ],
+    "answerText": "N ~ Bin(20,0.08), with P(N = 2) ≈ 0.271091.",
+    "pitfalls": [
+      "Do not use geometric for the number of detections in a fixed set of runs.",
+      "Omitting C(20,2) counts only one pattern."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 17,
+        "label": "Check the binomial assumptions"
+      },
+      {
+        "doc": "week3",
+        "page": 18,
+        "label": "Write one sequence probability"
+      },
+      {
+        "doc": "week3",
+        "page": 18,
+        "label": "Count all positions for the detections"
+      },
+      {
+        "doc": "week3",
+        "page": 18,
+        "label": "Multiply and calculate"
+      }
+    ]
+  },
+  {
+    "id": "w3-tut-2c",
+    "week": 3,
+    "title": "At least one bug detection",
+    "topic": "Binomial complement",
+    "method": "w3-binomial",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Tutorial",
+      "title": "Week 3 Tutorial 2026",
+      "page": 2,
+      "question": "Q2 part 3",
+      "adapted": true
+    },
+    "prompt": "Each run of an automated test suite independently detects a hidden bug with probability 0.08, constant from run to run. N is the number of detections among the next 20 runs, and T is the number of runs required for the first detection. What is the probability of detecting the bug at least once in the next 20 runs?",
+    "options": [
+      "1 − 0.92²⁰ ≈ 0.811307",
+      "0.92²⁰ ≈ 0.188693",
+      "20 × 0.08 = 1.6",
+      "20(0.08)(0.92)¹⁹"
+    ],
+    "answer": 0,
+    "recognize": [
+      "At least one has a short complement: zero detections."
+    ],
+    "steps": [
+      {
+        "title": "Name the complement",
+        "why": "The opposite of at least one detection is no detection at all.",
+        "math": "P(N ≥ 1) = 1 − P(N = 0)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 19,
+            "label": "Name the complement"
+          }
+        ]
+      },
+      {
+        "title": "Compute zero detections",
+        "why": "No detections requires twenty independent failures.",
+        "math": "P(N = 0) = (1 − 0.08)²⁰ = 0.92²⁰",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 18,
+            "label": "Compute zero detections"
+          }
+        ]
+      },
+      {
+        "title": "Subtract from 1",
+        "why": "This includes exactly one, exactly two, and every higher detection count.",
+        "math": "1 − 0.92²⁰ ≈ 0.811307",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 19,
+            "label": "Subtract from 1"
+          }
+        ]
+      }
+    ],
+    "answerText": "1 − 0.92²⁰ ≈ 0.811307, about an 81.1% chance.",
+    "pitfalls": [
+      "20p is the mean count, not a probability.",
+      "Exactly one is only one part of at least one."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 19,
+        "label": "Name the complement"
+      },
+      {
+        "doc": "week3",
+        "page": 18,
+        "label": "Compute zero detections"
+      },
+      {
+        "doc": "week3",
+        "page": 19,
+        "label": "Subtract from 1"
+      }
+    ]
+  },
+  {
+    "id": "w3-tut-2d",
+    "week": 3,
+    "title": "Waiting beyond twenty test runs",
+    "topic": "Geometric survival probability",
+    "method": "w3-geometric",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Tutorial",
+      "title": "Week 3 Tutorial 2026",
+      "page": 2,
+      "question": "Q2 part 4",
+      "adapted": true
+    },
+    "prompt": "Each run of an automated test suite independently detects a hidden bug with probability 0.08, constant from run to run. N is the number of detections among the next 20 runs, and T is the number of runs required for the first detection. Which gives the correct model for T and P(T > 20), and relates it to at least one detection in 20 runs?",
+    "options": [
+      "T ~ Geom(0.08); P(T > 20) = 0.92²⁰ = 1 − P(N ≥ 1)",
+      "T ~ Bin(20,0.08); P(T > 20) = 0",
+      "T ~ Geom(0.08); P(T > 20) = 0.92¹⁹ × 0.08",
+      "T ~ Geom(0.08); P(T > 20) = 1 − 0.92²⁰"
+    ],
+    "answer": 0,
+    "recognize": [
+      "T counts attempts until the first detection, so it is geometric under the stated assumptions.",
+      "T > 20 means all twenty runs fail to detect the bug."
+    ],
+    "steps": [
+      {
+        "title": "Choose the first-success model",
+        "why": "Each run has the same independent success chance, and the successful run is included in T.",
+        "math": "T ~ Geom(0.08), with T = 1,2,3,…",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 23,
+            "label": "Choose the first-success model"
+          }
+        ]
+      },
+      {
+        "title": "Describe the survival event",
+        "why": "To require more than twenty runs, there must be no success in the first twenty.",
+        "math": "P(T > 20) = (0.92)²⁰ ≈ 0.188693",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 24,
+            "label": "Describe the survival event"
+          }
+        ]
+      },
+      {
+        "title": "Connect the two questions",
+        "why": "N = 0 and T > 20 describe the same twenty failures. Their complement is at least one detection.",
+        "math": "P(T > 20) = P(N = 0) = 1 − P(N ≥ 1)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 19,
+            "label": "Connect the two questions"
+          }
+        ]
+      }
+    ],
+    "answerText": "T ~ Geom(0.08). P(T > 20) = 0.92²⁰ ≈ 0.188693.",
+    "pitfalls": [
+      "T is not restricted to 20 merely because N counts a 20-run window."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 23,
+        "label": "Choose the first-success model"
+      },
+      {
+        "doc": "week3",
+        "page": 24,
+        "label": "Describe the survival event"
+      },
+      {
+        "doc": "week3",
+        "page": 19,
+        "label": "Connect the two questions"
+      }
+    ]
+  },
+  {
+    "id": "w3-tut-2e",
+    "week": 3,
+    "title": "Improving tests after every failure",
+    "topic": "Geometric model assumptions",
+    "method": "w3-geometric",
+    "difficulty": "Foundation",
+    "source": {
+      "kind": "Tutorial",
+      "title": "Week 3 Tutorial 2026",
+      "page": 2,
+      "question": "Q2 part 5",
+      "adapted": true
+    },
+    "prompt": "Each run of an automated test suite initially detects a hidden bug with probability 0.08. After every failed run, engineers modify the suite and increase the next run’s detection probability. Why is the original geometric model for runs until first detection no longer appropriate?",
+    "options": [
+      "The success probability is no longer constant across attempts",
+      "Geometric variables require a fixed number of trials",
+      "Geometric variables cannot describe software tests",
+      "A detection probability of 0.08 is too small"
+    ],
+    "answer": 0,
+    "recognize": [
+      "Geometric waiting requires the same success probability on every attempt.",
+      "The question explicitly changes p after failures."
+    ],
+    "steps": [
+      {
+        "title": "Recall the model assumptions",
+        "why": "First-success waiting is geometric only with independent attempts and one constant success chance.",
+        "math": "T ~ Geom(p) requires the same p each run",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 23,
+            "label": "Recall the model assumptions"
+          }
+        ]
+      },
+      {
+        "title": "Compare the changed experiment",
+        "why": "Modifications raise the next detection probability, so later failures have different chances.",
+        "math": "p₁ = 0.08; p₂,p₃,… increase after failures",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 25,
+            "label": "Compare the changed experiment"
+          }
+        ]
+      },
+      {
+        "title": "See what breaks in the formula",
+        "why": "You must multiply the actual failure probabilities, which are no longer repeated copies of one q.",
+        "math": "P(T > n) = ∏ from i=1 to n (1 − pᵢ), rather than (1 − 0.08)ⁿ",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 24,
+            "label": "See what breaks in the formula"
+          }
+        ]
+      }
+    ],
+    "answerText": "The constant-success-probability assumption is violated.",
+    "pitfalls": [
+      "Geometric waiting does not have a fixed trial count; it stops at first success."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 23,
+        "label": "Recall the model assumptions"
+      },
+      {
+        "doc": "week3",
+        "page": 25,
+        "label": "Compare the changed experiment"
+      },
+      {
+        "doc": "week3",
+        "page": 24,
+        "label": "See what breaks in the formula"
+      }
+    ]
+  },
+  {
+    "id": "w3-tut-3a",
+    "week": 3,
+    "title": "Security alerts: the interval mean",
+    "topic": "Poisson rate scaling",
+    "method": "w3-poisson",
+    "difficulty": "Foundation",
+    "source": {
+      "kind": "Tutorial",
+      "title": "Week 3 Tutorial 2026",
+      "page": 3,
+      "question": "Q3 part 1",
+      "adapted": true
+    },
+    "prompt": "Critical security alerts follow a Poisson model at an average rate of 1.8 alerts per hour. Y counts alerts during the next 30 minutes. What is the correct Poisson parameter λ for Y?",
+    "options": [
+      "0.9",
+      "1.8",
+      "3.6",
+      "54"
+    ],
+    "answer": 0,
+    "recognize": [
+      "The parameter is an expected count for 30 minutes, while the rate is per hour."
+    ],
+    "steps": [
+      {
+        "title": "Match time units",
+        "why": "Thirty minutes is half an hour.",
+        "math": "t = 30/60 = 0.5 hour",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 30,
+            "label": "Match time units"
+          }
+        ]
+      },
+      {
+        "title": "Multiply rate by time",
+        "why": "A shorter interval has proportionally fewer expected events under a constant-rate model.",
+        "math": "λ = 1.8 alerts/hour × 0.5 hour = 0.9 alerts",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 30,
+            "label": "Multiply rate by time"
+          }
+        ]
+      },
+      {
+        "title": "State the interval distribution",
+        "why": "The count for this 30-minute window uses the newly scaled mean.",
+        "math": "Y ~ Pois(0.9)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 29,
+            "label": "State the interval distribution"
+          }
+        ]
+      }
+    ],
+    "answerText": "λ = 0.9.",
+    "pitfalls": [
+      "Using 1.8 directly would describe a full hour."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 30,
+        "label": "Match time units"
+      },
+      {
+        "doc": "week3",
+        "page": 30,
+        "label": "Multiply rate by time"
+      },
+      {
+        "doc": "week3",
+        "page": 29,
+        "label": "State the interval distribution"
+      }
+    ]
+  },
+  {
+    "id": "w3-tut-3b",
+    "week": 3,
+    "title": "No security alert in half an hour",
+    "topic": "Poisson zero-count probability",
+    "method": "w3-poisson",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Tutorial",
+      "title": "Week 3 Tutorial 2026",
+      "page": 3,
+      "question": "Q3 part 2",
+      "adapted": true
+    },
+    "prompt": "Critical security alerts follow a Poisson model at an average rate of 1.8 alerts per hour. Y counts alerts during the next 30 minutes. Find P(Y = 0) and interpret it.",
+    "options": [
+      "e^(−0.9) ≈ 0.406570: about a 40.7% chance of no critical alert in 30 minutes",
+      "e^(−1.8) ≈ 0.165299: about a 16.5% chance of no critical alert in 30 minutes",
+      "1 − e^(−0.9) ≈ 0.593430: about a 59.3% chance of no critical alert",
+      "0 because a positive rate guarantees an alert"
+    ],
+    "answer": 0,
+    "recognize": [
+      "For a Poisson zero count, λ⁰ = 1 and 0! = 1.",
+      "The interval still needs to be scaled first."
+    ],
+    "steps": [
+      {
+        "title": "Compute the interval mean",
+        "why": "The requested window is half an hour.",
+        "math": "λ = 1.8 × 0.5 = 0.9",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 30,
+            "label": "Compute the interval mean"
+          }
+        ]
+      },
+      {
+        "title": "Use the Poisson PMF at zero",
+        "why": "The power and factorial both simplify to 1.",
+        "math": "P(Y = 0) = e^(−0.9)(0.9)⁰/0! = e^(−0.9)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 29,
+            "label": "Use the Poisson PMF at zero"
+          }
+        ]
+      },
+      {
+        "title": "Interpret the probability",
+        "why": "A positive mean does not guarantee an event in each window.",
+        "math": "e^(−0.9) ≈ 0.406570 → 40.7% probability of zero alerts in 30 minutes",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 31,
+            "label": "Interpret the probability"
+          }
+        ]
+      }
+    ],
+    "answerText": "P(Y = 0) ≈ 0.406570.",
+    "pitfalls": [
+      "A rate is an average; it does not force an arrival in every interval."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 30,
+        "label": "Compute the interval mean"
+      },
+      {
+        "doc": "week3",
+        "page": 29,
+        "label": "Use the Poisson PMF at zero"
+      },
+      {
+        "doc": "week3",
+        "page": 31,
+        "label": "Interpret the probability"
+      }
+    ]
+  },
+  {
+    "id": "w3-tut-3c",
+    "week": 3,
+    "title": "At least two security alerts",
+    "topic": "Poisson complement",
+    "method": "w3-poisson",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Tutorial",
+      "title": "Week 3 Tutorial 2026",
+      "page": 3,
+      "question": "Q3 part 3",
+      "adapted": true
+    },
+    "prompt": "Critical security alerts follow a Poisson model at an average rate of 1.8 alerts per hour. Y counts alerts during the next 30 minutes. Find P(Y ≥ 2) using a complement.",
+    "options": [
+      "1 − 1.9e^(−0.9) ≈ 0.227518",
+      "1 − e^(−0.9) ≈ 0.593430",
+      "1.9e^(−0.9) ≈ 0.772482",
+      "1 − 2.8e^(−1.8) ≈ 0.537163"
+    ],
+    "answer": 0,
+    "recognize": [
+      "At least two excludes exactly zero or one.",
+      "An infinite upper-tail sum is avoided by a two-term complement."
+    ],
+    "steps": [
+      {
+        "title": "Scale the interval",
+        "why": "Use the mean count for 30 minutes.",
+        "math": "λ = 1.8 × 30/60 = 0.9",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 30,
+            "label": "Scale the interval"
+          }
+        ]
+      },
+      {
+        "title": "List counts in the complement",
+        "why": "The only integer counts below 2 are 0 and 1.",
+        "math": "P(Y ≥ 2) = 1 − P(Y = 0) − P(Y = 1)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 31,
+            "label": "List counts in the complement"
+          }
+        ]
+      },
+      {
+        "title": "Evaluate and simplify",
+        "why": "Both terms share the factor e^(−0.9).",
+        "math": "1 − e^(−0.9)(1 + 0.9) = 1 − 1.9e^(−0.9) ≈ 0.227518",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 29,
+            "label": "Evaluate and simplify"
+          }
+        ]
+      }
+    ],
+    "answerText": "1 − 1.9e^(−0.9) ≈ 0.227518.",
+    "pitfalls": [
+      "At least two includes exactly two; only 0 and 1 are subtracted."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 30,
+        "label": "Scale the interval"
+      },
+      {
+        "doc": "week3",
+        "page": 31,
+        "label": "List counts in the complement"
+      },
+      {
+        "doc": "week3",
+        "page": 29,
+        "label": "Evaluate and simplify"
+      }
+    ]
+  },
+  {
+    "id": "w3-tut-3de",
+    "week": 3,
+    "title": "Six-second intervals: exact model and approximation",
+    "topic": "Poisson approximation to binomial",
+    "method": "w3-approximation",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Tutorial",
+      "title": "Week 3 Tutorial 2026",
+      "page": 3,
+      "question": "Q3 parts 4–5",
+      "adapted": true
+    },
+    "prompt": "One hour is divided into 600 equal six-second intervals. Each interval independently contains a critical security alert with probability 0.003, and at most one alert is counted per interval. Z is the number of alerts in one hour. Which gives the exact distribution and a reasonable Poisson approximation to P(Z ≤ 1)?",
+    "options": [
+      "Z ~ Bin(600,0.003); P(Z ≤ 1) ≈ 2.8e^(−1.8)",
+      "Z ~ Pois(0.003) exactly; P(Z ≤ 1) = 1.003e^(−0.003)",
+      "Z ~ Bin(600,0.003); P(Z ≤ 1) ≈ 1 − 2.8e^(−1.8)",
+      "Z ~ Geom(0.003); P(Z ≤ 1) = 0.003"
+    ],
+    "answer": 0,
+    "recognize": [
+      "The interval indicators are 600 independent equal-probability binary trials.",
+      "n = 600 is large and p = 0.003 is small, so Poisson(np) is reasonable."
+    ],
+    "steps": [
+      {
+        "title": "Choose the exact model",
+        "why": "Each of 600 intervals contributes 0 or 1 alert and all interval indicators are independent with common p.",
+        "math": "Z ~ Bin(600,0.003)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 17,
+            "label": "Choose the exact model"
+          }
+        ]
+      },
+      {
+        "title": "Check and parameterize the approximation",
+        "why": "This fits the lecture large-n, small-p guideline, with a modest expected count.",
+        "math": "λ = np = 600 × 0.003 = 1.8",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 34,
+            "label": "Check and parameterize the approximation"
+          }
+        ]
+      },
+      {
+        "title": "Add counts zero and one",
+        "why": "At most one is a short sum of two Poisson masses.",
+        "math": "P(Z ≤ 1) ≈ e^(−1.8) + 1.8e^(−1.8) = 2.8e^(−1.8) ≈ 0.462837",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 29,
+            "label": "Add counts zero and one"
+          }
+        ]
+      },
+      {
+        "title": "Keep exact and approximate claims separate",
+        "why": "The trial-based model is exact under the stated assumptions; Poisson provides a simpler calculation.",
+        "math": "Binomial exact model; Poisson approximate probability",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 33,
+            "label": "Keep exact and approximate claims separate"
+          }
+        ]
+      }
+    ],
+    "answerText": "Z ~ Bin(600,0.003), with P(Z ≤ 1) ≈ 0.462837.",
+    "pitfalls": [
+      "At most one alert per interval creates a binary trial, not a Poisson count within each interval.",
+      "Do not use λ = 0.003."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 17,
+        "label": "Choose the exact model"
+      },
+      {
+        "doc": "week3",
+        "page": 34,
+        "label": "Check and parameterize the approximation"
+      },
+      {
+        "doc": "week3",
+        "page": 29,
+        "label": "Add counts zero and one"
+      },
+      {
+        "doc": "week3",
+        "page": 33,
+        "label": "Keep exact and approximate claims separate"
+      }
+    ]
+  },
+  {
+    "id": "w3-tut-3f",
+    "week": 3,
+    "title": "When alert arrivals challenge Poisson",
+    "topic": "Poisson model assumptions",
+    "method": "w3-poisson",
+    "difficulty": "Foundation",
+    "source": {
+      "kind": "Tutorial",
+      "title": "Week 3 Tutorial 2026",
+      "page": 3,
+      "question": "Q3 part 6",
+      "adapted": true
+    },
+    "prompt": "A monitoring system models security-alert arrivals as a Poisson process with constant rate 1.8 per hour. Which realistic feature would make that model unreliable?",
+    "options": [
+      "A single attack triggers a burst of many related alerts",
+      "Some 30-minute windows contain no alerts",
+      "Alert counts are nonnegative integers",
+      "The expected count for half an hour is 0.9"
+    ],
+    "answer": 0,
+    "recognize": [
+      "Check the constant-rate and independent-arrival assumptions, not merely whether the variable counts events.",
+      "Related bursts can create dependence and extra clustering."
+    ],
+    "steps": [
+      {
+        "title": "State what the model assumes",
+        "why": "The Poisson arrival model uses a steady average rate with independent arrivals or counts in disjoint intervals.",
+        "math": "Constant-rate independent-arrival model",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 29,
+            "label": "State what the model assumes"
+          }
+        ]
+      },
+      {
+        "title": "Inspect the proposed feature",
+        "why": "Alerts caused by one attack can be closely linked rather than independent events.",
+        "math": "One triggering event → a cluster of related alerts",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 29,
+            "label": "Inspect the proposed feature"
+          }
+        ]
+      },
+      {
+        "title": "Distinguish normal model behavior",
+        "why": "Zero-count windows, integer counts, and a mean proportional to time are all consistent with the stated model.",
+        "math": "P(no alerts in 30 min) = e^(−0.9) > 0; λ₃₀min = 0.9",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 30,
+            "label": "Distinguish normal model behavior"
+          }
+        ]
+      }
+    ],
+    "answerText": "A burst of dependent alerts from one attack can make the constant-rate Poisson model unreliable.",
+    "pitfalls": [
+      "Observing zero alerts in a window does not by itself invalidate a Poisson model."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 29,
+        "label": "State what the model assumes"
+      },
+      {
+        "doc": "week3",
+        "page": 29,
+        "label": "Inspect the proposed feature"
+      },
+      {
+        "doc": "week3",
+        "page": 30,
+        "label": "Distinguish normal model behavior"
+      }
+    ]
+  },
+  {
+    "id": "w3-quiz1-4",
+    "week": 3,
+    "title": "Distance from 1 using CDF jumps",
+    "topic": "CDF transformation and conditioning",
+    "method": "w3-transformation",
+    "difficulty": "Stretch",
+    "source": {
+      "kind": "Quiz",
+      "title": "Quiz 1 Afternoon",
+      "page": 3,
+      "question": "Q4"
+    },
+    "prompt": "The CDF of X is 0 for x < −2; 0.10 for −2 ≤ x < 0; 0.33 for 0 ≤ x < 3; 0.61 for 3 ≤ x < 7; 1 for x ≥ 7. Define Y = |X − 1|. Find P(Y ≤ 2 | X ≥ 0), to three decimal places.",
+    "options": [
+      "0.567",
+      "0.433",
+      "0.510",
+      "0.311",
+      "None of these"
+    ],
+    "answer": 0,
+    "recognize": [
+      "Recover masses at the CDF jump locations −2,0,3,7.",
+      "Y ≤ 2 means distance from 1 is at most 2: −1 ≤ X ≤ 3."
+    ],
+    "steps": [
+      {
+        "title": "Recover each jump mass",
+        "why": "A point probability is the increase in the CDF at that point.",
+        "math": "p(−2)=0.10; p(0)=0.33−0.10=0.23; p(3)=0.61−0.33=0.28; p(7)=1−0.61=0.39",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 12,
+            "label": "Recover each jump mass"
+          }
+        ]
+      },
+      {
+        "title": "Translate the absolute-value event",
+        "why": "Solve the inequality before looking up probabilities.",
+        "math": "|X − 1| ≤ 2 → −2 ≤ X − 1 ≤ 2 → −1 ≤ X ≤ 3",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 3,
+            "label": "Translate the absolute-value event"
+          }
+        ]
+      },
+      {
+        "title": "Intersect with the condition",
+        "why": "Allowed support values satisfying both Y ≤ 2 and X ≥ 0 are 0 and 3.",
+        "math": "Numerator = p(0) + p(3) = 0.23 + 0.28 = 0.51",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Intersect with the condition"
+          }
+        ]
+      },
+      {
+        "title": "Divide by all nonnegative mass",
+        "why": "The condition includes 0,3,7, totaling 0.90.",
+        "math": "P(X ≥ 0)=1−0.10=0.90; answer = 0.51/0.90 = 0.566666… ≈ 0.567",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Divide by all nonnegative mass"
+          }
+        ]
+      }
+    ],
+    "answerText": "0.567 to three decimal places.",
+    "pitfalls": [
+      "The CDF level 0.61 includes the negative mass at −2, which must not remain in the numerator."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 12,
+        "label": "Recover each jump mass"
+      },
+      {
+        "doc": "week3",
+        "page": 3,
+        "label": "Translate the absolute-value event"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Intersect with the condition"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Divide by all nonnegative mass"
+      }
+    ]
+  },
+  {
+    "id": "w3-quiz1-6",
+    "week": 3,
+    "title": "First success within eight, but after three",
+    "topic": "Truncated geometric conditional probability",
+    "method": "w3-geometric",
+    "difficulty": "Stretch",
+    "source": {
+      "kind": "Quiz",
+      "title": "Quiz 1 Afternoon",
+      "page": 4,
+      "question": "Q6"
+    },
+    "prompt": "Independent attempts succeed with probability 0.12. X is the attempt number of the first success. Given that the first success occurs within 8 attempts, find P(X > 3 | X ≤ 8), to three decimal places.",
+    "options": [
+      "0.497",
+      "None of these",
+      "0.681",
+      "0.322",
+      "0.503"
+    ],
+    "answer": 4,
+    "recognize": [
+      "The condition X ≤ 8 truncates the geometric distribution.",
+      "The numerator must satisfy both after three and within eight: 4 ≤ X ≤ 8."
+    ],
+    "steps": [
+      {
+        "title": "Write the conditional ratio",
+        "why": "Conditioning on a success by attempt 8 changes the total probability mass considered.",
+        "math": "P(X > 3 | X ≤ 8) = P(4 ≤ X ≤ 8) / P(X ≤ 8)",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Write the conditional ratio"
+          }
+        ]
+      },
+      {
+        "title": "Use tails for the numerator",
+        "why": "At least four attempts requires three failures. Remove cases still waiting after eight failures.",
+        "math": "P(4 ≤ X ≤ 8) = P(X > 3) − P(X > 8) = 0.88³ − 0.88⁸",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 24,
+            "label": "Use tails for the numerator"
+          }
+        ]
+      },
+      {
+        "title": "Compute the denominator",
+        "why": "Success within eight attempts is the complement of eight failures.",
+        "math": "P(X ≤ 8) = 1 − 0.88⁸",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 24,
+            "label": "Compute the denominator"
+          }
+        ]
+      },
+      {
+        "title": "Divide and round",
+        "why": "The ratio is a probability within the already successful-by-8 group.",
+        "math": "(0.88³ − 0.88⁸)/(1 − 0.88⁸) ≈ 0.502584 → 0.503",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Divide and round"
+          }
+        ]
+      }
+    ],
+    "answerText": "0.503 to three decimal places.",
+    "pitfalls": [
+      "0.88³ alone ignores the condition X ≤ 8.",
+      "Memorylessness is about known past failures, not a future success deadline."
+    ],
+    "refs": [
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Write the conditional ratio"
+      },
+      {
+        "doc": "week3",
+        "page": 24,
+        "label": "Use tails for the numerator"
+      },
+      {
+        "doc": "week3",
+        "page": 24,
+        "label": "Compute the denominator"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Divide and round"
+      }
+    ]
+  },
+  {
+    "id": "w3-quiz1-7",
+    "week": 3,
+    "title": "Success on attempts six to eight after four failures",
+    "topic": "Conditional geometric range",
+    "method": "w3-geometric",
+    "difficulty": "Stretch",
+    "source": {
+      "kind": "Quiz",
+      "title": "Quiz 1 Afternoon",
+      "page": 4,
+      "question": "Q7"
+    },
+    "prompt": "Independent attempts succeed with probability 0.35. X is the attempt number of the first success. Given X > 4, find P(6 ≤ X ≤ 8 | X > 4), to three decimal places.",
+    "options": [
+      "0.244",
+      "0.725",
+      "0.471",
+      "0.375",
+      "None of these"
+    ],
+    "answer": 2,
+    "recognize": [
+      "Given X > 4 means attempts 1 through 4 failed.",
+      "Absolute attempt numbers 6 through 8 become future waiting positions 2 through 4 after those failures."
+    ],
+    "steps": [
+      {
+        "title": "Reset after the known failures",
+        "why": "Constant p and independence allow the remaining wait to be geometric again.",
+        "math": "Let U = X − 4 given X > 4; U ~ Geom(0.35)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 25,
+            "label": "Reset after the known failures"
+          }
+        ]
+      },
+      {
+        "title": "Translate the requested interval",
+        "why": "Subtract the four attempts already completed from each endpoint.",
+        "math": "6 ≤ X ≤ 8 → 2 ≤ U ≤ 4",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 25,
+            "label": "Translate the requested interval"
+          }
+        ]
+      },
+      {
+        "title": "Use the inclusive geometric range",
+        "why": "At least two future attempts requires one failure; waiting beyond four requires four.",
+        "math": "P(2 ≤ U ≤ 4) = 0.65¹ − 0.65⁴",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 24,
+            "label": "Use the inclusive geometric range"
+          }
+        ]
+      },
+      {
+        "title": "Evaluate and cross-check with a ratio",
+        "why": "The unconditional range divided by four-failure probability gives the same answer.",
+        "math": "0.65 − 0.65⁴ = 0.47149375; also (0.65⁵ − 0.65⁸)/0.65⁴",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Evaluate and cross-check with a ratio"
+          }
+        ]
+      }
+    ],
+    "answerText": "0.471 to three decimal places.",
+    "pitfalls": [
+      "Do not reset 6 through 8 to future positions 1 through 3.",
+      "Attempt 5 must fail for first success to be at least 6."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 25,
+        "label": "Reset after the known failures"
+      },
+      {
+        "doc": "week3",
+        "page": 25,
+        "label": "Translate the requested interval"
+      },
+      {
+        "doc": "week3",
+        "page": 24,
+        "label": "Use the inclusive geometric range"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Evaluate and cross-check with a ratio"
+      }
+    ]
+  },
+  {
+    "id": "w3-quiz1-9",
+    "week": 3,
+    "title": "Ninety-minute requests given at least one",
+    "topic": "Conditional Poisson range",
+    "method": "w3-poisson",
+    "difficulty": "Stretch",
+    "source": {
+      "kind": "Quiz",
+      "title": "Quiz 1 Afternoon",
+      "page": 5,
+      "question": "Q9"
+    },
+    "prompt": "Requests follow a Poisson process at rate 1.9 per hour. During 90 minutes, given that at least one request occurs, what is the probability that between two and four requests occur, inclusive? Round to three decimal places. For Z ~ Pois(λ), P(Z = k) = e^(−λ)λᵏ/k!.",
+    "options": [
+      "None of these",
+      "0.249",
+      "0.617",
+      "0.830",
+      "0.655"
+    ],
+    "answer": 4,
+    "recognize": [
+      "The requested window is 1.5 hours, so λ differs from the hourly rate.",
+      "Given at least one requires dividing by the positive-count probability."
+    ],
+    "steps": [
+      {
+        "title": "Scale to the 90-minute interval",
+        "why": "Convert the duration to the units of the given rate.",
+        "math": "λ = 1.9 × (90/60) = 2.85",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 30,
+            "label": "Scale to the 90-minute interval"
+          }
+        ]
+      },
+      {
+        "title": "Sum the desired counts",
+        "why": "The numerator includes 2,3,4, all of which already satisfy the condition.",
+        "math": "P(2 ≤ Z ≤ 4) = e^(−2.85)[2.85²/2! + 2.85³/3! + 2.85⁴/4!]",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 29,
+            "label": "Sum the desired counts"
+          }
+        ]
+      },
+      {
+        "title": "Find the given-event mass",
+        "why": "At least one excludes only zero.",
+        "math": "P(Z ≥ 1) = 1 − P(Z = 0) = 1 − e^(−2.85)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 31,
+            "label": "Find the given-event mass"
+          }
+        ]
+      },
+      {
+        "title": "Normalize and round",
+        "why": "Divide the requested positive counts by all positive-count mass.",
+        "math": "P(2 ≤ Z ≤ 4 | Z ≥ 1) ≈ 0.654994 → 0.655",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Normalize and round"
+          }
+        ]
+      }
+    ],
+    "answerText": "0.655 to three decimal places.",
+    "pitfalls": [
+      "Using λ = 1.9 describes one hour, not ninety minutes.",
+      "Do not omit the denominator just because the numerator already has positive counts."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 30,
+        "label": "Scale to the 90-minute interval"
+      },
+      {
+        "doc": "week3",
+        "page": 29,
+        "label": "Sum the desired counts"
+      },
+      {
+        "doc": "week3",
+        "page": 31,
+        "label": "Find the given-event mass"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Normalize and round"
+      }
+    ]
+  },
+  {
+    "id": "w3-quiz1-10",
+    "week": 3,
+    "title": "A binomial middle range given at least two",
+    "topic": "Conditional binomial range",
+    "method": "w3-binomial",
+    "difficulty": "Stretch",
+    "source": {
+      "kind": "Quiz",
+      "title": "Quiz 1 Afternoon",
+      "page": 6,
+      "question": "Q10"
+    },
+    "prompt": "Let X ~ Bin(12,0.37). Find P(2 ≤ X ≤ 4 | X ≥ 2), to three decimal places.",
+    "options": [
+      "None of these",
+      "0.418",
+      "0.493",
+      "0.0919",
+      "0.509"
+    ],
+    "answer": 4,
+    "recognize": [
+      "The model is given; first identify the numerator range and the given-event denominator.",
+      "The denominator X ≥ 2 has a short complement at counts 0 and 1."
+    ],
+    "steps": [
+      {
+        "title": "Set up the conditional ratio",
+        "why": "The target 2 through 4 is wholly inside the given event of at least 2.",
+        "math": "P(2 ≤ X ≤ 4 | X ≥ 2) = P(2 ≤ X ≤ 4)/P(X ≥ 2)",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Set up the conditional ratio"
+          }
+        ]
+      },
+      {
+        "title": "Evaluate the range",
+        "why": "Sum exactly the three binomial masses at 2,3,4.",
+        "math": "Numerator = Σₖ₌₂⁴ C(12,k)(0.37)ᵏ(0.63)¹²⁻ᵏ",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 18,
+            "label": "Evaluate the range"
+          }
+        ]
+      },
+      {
+        "title": "Evaluate the denominator by complement",
+        "why": "Remove counts 0 and 1 from total mass 1.",
+        "math": "Denominator = 1 − (0.63)¹² − 12(0.37)(0.63)¹¹",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 19,
+            "label": "Evaluate the denominator by complement"
+          }
+        ]
+      },
+      {
+        "title": "Divide and round",
+        "why": "The quotient is the proportion of at-least-two cases that have no more than four successes.",
+        "math": "Ratio ≈ 0.509454 → 0.509",
+        "refs": [
+          {
+            "doc": "week2",
+            "page": 3,
+            "label": "Divide and round"
+          }
+        ]
+      }
+    ],
+    "answerText": "0.509 to three decimal places.",
+    "pitfalls": [
+      "P(X ≥ 2) is not the same denominator as P(X ≤ 4)."
+    ],
+    "refs": [
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Set up the conditional ratio"
+      },
+      {
+        "doc": "week3",
+        "page": 18,
+        "label": "Evaluate the range"
+      },
+      {
+        "doc": "week3",
+        "page": 19,
+        "label": "Evaluate the denominator by complement"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Divide and round"
+      }
+    ]
+  },
+  {
+    "id": "w3-lec-severity",
+    "week": 3,
+    "title": "High-severity support tickets",
+    "topic": "PMF event probability",
+    "method": "w3-pmf",
+    "difficulty": "Foundation",
+    "source": {
+      "kind": "Lecture",
+      "title": "Week 3 Lecture 2026",
+      "page": 6,
+      "question": "Support-ticket severity example",
+      "adapted": true
+    },
+    "prompt": "A randomly selected support ticket has severity X ∈ {0,1,2,3} with respective probabilities 0.45,0.30,0.20,0.05. What is P(X ≥ 2)?",
+    "options": [
+      "0.25",
+      "0.95",
+      "0.20",
+      "0.05"
+    ],
+    "answer": 0,
+    "recognize": [
+      "A finite PMF table lets you select the allowed values directly.",
+      "The inclusive inequality X ≥ 2 retains 2 and 3."
+    ],
+    "steps": [
+      {
+        "title": "Check the PMF",
+        "why": "The masses are nonnegative and add to 1.",
+        "math": "0.45 + 0.30 + 0.20 + 0.05 = 1",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 5,
+            "label": "Check the PMF"
+          }
+        ]
+      },
+      {
+        "title": "Select the support values",
+        "why": "The high-severity event is the union of X = 2 and X = 3.",
+        "math": "{X ≥ 2} = {X = 2} ∪ {X = 3}",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 6,
+            "label": "Select the support values"
+          }
+        ]
+      },
+      {
+        "title": "Add the disjoint masses",
+        "why": "A ticket cannot have both scores, so these probabilities add.",
+        "math": "P(X ≥ 2) = 0.20 + 0.05 = 0.25",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 6,
+            "label": "Add the disjoint masses"
+          }
+        ]
+      }
+    ],
+    "answerText": "0.25: a 25% chance that severity is at least 2.",
+    "pitfalls": [
+      "Adding all masses through 2 gives P(X ≤ 2), which is a different event."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "Check the PMF"
+      },
+      {
+        "doc": "week3",
+        "page": 6,
+        "label": "Select the support values"
+      },
+      {
+        "doc": "week3",
+        "page": 6,
+        "label": "Add the disjoint masses"
+      }
+    ]
+  },
+  {
+    "id": "w3-lec-missing",
+    "week": 3,
+    "title": "Three tasks from one missing PMF",
+    "topic": "PMF normalization and set events",
+    "method": "w3-pmf",
+    "difficulty": "Foundation",
+    "source": {
+      "kind": "Lecture",
+      "title": "Week 3 Lecture 2026",
+      "page": 8,
+      "question": "Missing probability mini exercise",
+      "adapted": true
+    },
+    "prompt": "Y takes values 0,1,2,3 with PMF masses 0.18,c,2c,0.22. Which triple gives c, P(Y ≥ 2), and P(Y is even), respectively?",
+    "options": [
+      "0.20, 0.62, 0.58",
+      "0.30, 0.82, 0.78",
+      "0.20, 0.40, 0.40",
+      "0.20, 0.42, 0.22"
+    ],
+    "answer": 0,
+    "recognize": [
+      "Normalize c using the entire table, then handle each requested event separately.",
+      "Zero is an even integer and must be included in the even event."
+    ],
+    "steps": [
+      {
+        "title": "Normalize the PMF",
+        "why": "The four probability masses exhaust all possibilities.",
+        "math": "0.18 + c + 2c + 0.22 = 1 → 3c = 0.60 → c = 0.20",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 8,
+            "label": "Normalize the PMF"
+          }
+        ]
+      },
+      {
+        "title": "Select values at least 2",
+        "why": "The event includes values 2 and 3.",
+        "math": "P(Y ≥ 2) = 2c + 0.22 = 0.40 + 0.22 = 0.62",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 8,
+            "label": "Select values at least 2"
+          }
+        ]
+      },
+      {
+        "title": "Select the even values",
+        "why": "The even support values are 0 and 2.",
+        "math": "P(Y is even) = 0.18 + 2c = 0.18 + 0.40 = 0.58",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 8,
+            "label": "Select the even values"
+          }
+        ]
+      }
+    ],
+    "answerText": "c = 0.20, P(Y ≥ 2) = 0.62, P(Y is even) = 0.58.",
+    "pitfalls": [
+      "Do not forget that 0 is even.",
+      "Use c = 0.20 for both entries c and 2c."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 8,
+        "label": "Normalize the PMF"
+      },
+      {
+        "doc": "week3",
+        "page": 8,
+        "label": "Select values at least 2"
+      },
+      {
+        "doc": "week3",
+        "page": 8,
+        "label": "Select the even values"
+      }
+    ]
+  },
+  {
+    "id": "w3-lec-cdf",
+    "week": 3,
+    "title": "Read a point, interval, and tail from a CDF",
+    "topic": "Discrete CDF endpoints",
+    "method": "w3-cdf",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Lecture",
+      "title": "Week 3 Lecture 2026",
+      "page": 13,
+      "question": "Reading a CDF mini exercise",
+      "adapted": true
+    },
+    "prompt": "An integer-valued X has F(0)=0.15, F(1)=0.50, F(2)=0.85, and F(3)=1. Which triple gives P(X = 2), P(0 < X ≤ 2), and P(X ≥ 2), respectively?",
+    "options": [
+      "0.35, 0.70, 0.50",
+      "0.85, 0.70, 0.15",
+      "0.35, 0.85, 0.15",
+      "0.35, 0.35, 0.50"
+    ],
+    "answer": 0,
+    "recognize": [
+      "A point probability is a CDF jump.",
+      "An inclusive lower tail endpoint requires excluding only values below it."
+    ],
+    "steps": [
+      {
+        "title": "Find the mass at 2",
+        "why": "Since X is integer-valued, values strictly below 2 are at most 1.",
+        "math": "P(X = 2) = F(2) − F(1) = 0.85 − 0.50 = 0.35",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 12,
+            "label": "Find the mass at 2"
+          }
+        ]
+      },
+      {
+        "title": "Find the interval with strict lower endpoint",
+        "why": "Subtracting F(0) removes all values through 0, leaving just 0 < X ≤ 2.",
+        "math": "P(0 < X ≤ 2) = F(2) − F(0) = 0.85 − 0.15 = 0.70",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 12,
+            "label": "Find the interval with strict lower endpoint"
+          }
+        ]
+      },
+      {
+        "title": "Find the inclusive upper tail",
+        "why": "To include X = 2, subtract only values at most 1.",
+        "math": "P(X ≥ 2) = 1 − F(1) = 1 − 0.50 = 0.50",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 12,
+            "label": "Find the inclusive upper tail"
+          }
+        ]
+      }
+    ],
+    "answerText": "0.35, 0.70, 0.50.",
+    "pitfalls": [
+      "1 − F(2) would find X > 2, not X ≥ 2."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 12,
+        "label": "Find the mass at 2"
+      },
+      {
+        "doc": "week3",
+        "page": 12,
+        "label": "Find the interval with strict lower endpoint"
+      },
+      {
+        "doc": "week3",
+        "page": 12,
+        "label": "Find the inclusive upper tail"
+      }
+    ]
+  },
+  {
+    "id": "w3-lec-bernoulli",
+    "week": 3,
+    "title": "One feature-flag response",
+    "topic": "Bernoulli distribution",
+    "method": "w3-bernoulli",
+    "difficulty": "Foundation",
+    "source": {
+      "kind": "Lecture",
+      "title": "Week 3 Lecture 2026",
+      "page": 16,
+      "question": "Feature-flag response example",
+      "adapted": true
+    },
+    "prompt": "A feature flag is shown to one randomly selected user. X = 1 if the user enables it, and X = 0 otherwise. P(X = 1) = 0.35. Which states the distribution and remaining PMF value correctly?",
+    "options": [
+      "X ~ Bernoulli(0.35); P(X = 0) = 0.65",
+      "X ~ Geom(0.35); P(X = 0) = 0.65",
+      "X ~ Bernoulli(0.65); P(X = 0) = 0.35",
+      "X ~ Pois(0.35); P(X = 0) = e^(−0.35)"
+    ],
+    "answer": 0,
+    "recognize": [
+      "One binary response coded 0 or 1 is Bernoulli.",
+      "The parameter is the probability of the value coded 1."
+    ],
+    "steps": [
+      {
+        "title": "Identify the single binary trial",
+        "why": "Only one user response is recorded; there is no waiting time or multi-trial count.",
+        "math": "Support: X ∈ {0,1}",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 15,
+            "label": "Identify the single binary trial"
+          }
+        ]
+      },
+      {
+        "title": "Read the success parameter",
+        "why": "Enabling the feature is the event coded 1.",
+        "math": "p = P(X = 1) = 0.35",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 16,
+            "label": "Read the success parameter"
+          }
+        ]
+      },
+      {
+        "title": "Use the complementary mass",
+        "why": "The two mutually exclusive outcomes exhaust the experiment.",
+        "math": "P(X = 0) = 1 − p = 0.65; X ~ Bernoulli(0.35)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 15,
+            "label": "Use the complementary mass"
+          }
+        ]
+      }
+    ],
+    "answerText": "X ~ Bernoulli(0.35), and P(X = 0) = 0.65.",
+    "pitfalls": [
+      "The success label refers to X = 1; it does not imply that outcome is desirable."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 15,
+        "label": "Identify the single binary trial"
+      },
+      {
+        "doc": "week3",
+        "page": 16,
+        "label": "Read the success parameter"
+      },
+      {
+        "doc": "week3",
+        "page": 15,
+        "label": "Use the complementary mass"
+      }
+    ]
+  },
+  {
+    "id": "w3-lec-critical",
+    "week": 3,
+    "title": "At least six critical hits out of eight",
+    "topic": "Binomial upper range",
+    "method": "w3-binomial",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Lecture",
+      "title": "Week 3 Lecture 2026",
+      "page": 21,
+      "question": "Critical hits exercise part 3",
+      "adapted": true
+    },
+    "prompt": "In a game, each of eight attacks independently produces a critical hit with probability 0.60. X is the number of critical hits. Find P(X ≥ 6).",
+    "options": [
+      "0.31539456",
+      "0.20901888",
+      "0.83203840",
+      "0.01679616"
+    ],
+    "answer": 0,
+    "recognize": [
+      "Eight fixed independent attacks with constant p = 0.60 give a binomial count.",
+      "Only counts 6,7,8 satisfy the requested event, so a direct short sum is convenient."
+    ],
+    "steps": [
+      {
+        "title": "Choose the model",
+        "why": "There are fixed n = 8 binary trials with independence and common success chance.",
+        "math": "X ~ Bin(8,0.60)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 17,
+            "label": "Choose the model"
+          }
+        ]
+      },
+      {
+        "title": "List the included counts",
+        "why": "At least six critical hits means 6, 7, or 8.",
+        "math": "P(X ≥ 6) = P(X = 6) + P(X = 7) + P(X = 8)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 21,
+            "label": "List the included counts"
+          }
+        ]
+      },
+      {
+        "title": "Write each binomial term",
+        "why": "For each count, choose the successful attack positions and multiply successes and failures.",
+        "math": "28(0.60)⁶(0.40)² + 8(0.60)⁷(0.40) + (0.60)⁸",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 18,
+            "label": "Write each binomial term"
+          }
+        ]
+      },
+      {
+        "title": "Add and interpret",
+        "why": "The three possible counts are disjoint, so their probabilities add.",
+        "math": "0.20901888 + 0.08957952 + 0.01679616 = 0.31539456",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 18,
+            "label": "Add and interpret"
+          }
+        ]
+      }
+    ],
+    "answerText": "0.31539456, about a 31.5% chance of at least six critical hits.",
+    "pitfalls": [
+      "P(X = 6) alone does not include seven or eight hits."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 17,
+        "label": "Choose the model"
+      },
+      {
+        "doc": "week3",
+        "page": 21,
+        "label": "List the included counts"
+      },
+      {
+        "doc": "week3",
+        "page": 18,
+        "label": "Write each binomial term"
+      },
+      {
+        "doc": "week3",
+        "page": 18,
+        "label": "Add and interpret"
+      }
+    ]
+  },
+  {
+    "id": "w3-lec-api",
+    "week": 3,
+    "title": "API succeeds by attempt five after three failures",
+    "topic": "Geometric memorylessness",
+    "method": "w3-geometric",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Lecture",
+      "title": "Week 3 Lecture 2026",
+      "page": 26,
+      "question": "API retry example part 3",
+      "adapted": true
+    },
+    "prompt": "An API request succeeds with probability 0.25 on each independent attempt. X is the number of attempts until first success. Given that the first three attempts failed, what is the probability of success by attempt five?",
+    "options": [
+      "0.7626953125",
+      "0.4375",
+      "0.5625",
+      "0.1845703125"
+    ],
+    "answer": 1,
+    "recognize": [
+      "The three failures are known; attempts 4 and 5 are the two remaining opportunities.",
+      "Constant p makes the future wait memoryless."
+    ],
+    "steps": [
+      {
+        "title": "Count the remaining opportunities",
+        "why": "By attempt five leaves only attempts 4 and 5 after three completed failures.",
+        "math": "Remaining attempts = 5 − 3 = 2",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 26,
+            "label": "Count the remaining opportunities"
+          }
+        ]
+      },
+      {
+        "title": "Use memorylessness",
+        "why": "Conditioning on the past failures does not alter the independent future attempts.",
+        "math": "P(X ≤ 5 | X > 3) = P(new geometric wait ≤ 2)",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 25,
+            "label": "Use memorylessness"
+          }
+        ]
+      },
+      {
+        "title": "Take the complement of two failures",
+        "why": "Both remaining attempts fail with probability 0.75².",
+        "math": "1 − (0.75)² = 1 − 0.5625 = 0.4375",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 24,
+            "label": "Take the complement of two failures"
+          }
+        ]
+      }
+    ],
+    "answerText": "0.4375.",
+    "pitfalls": [
+      "1 − 0.75⁵ ignores the known failures and counts five future opportunities."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 26,
+        "label": "Count the remaining opportunities"
+      },
+      {
+        "doc": "week3",
+        "page": 25,
+        "label": "Use memorylessness"
+      },
+      {
+        "doc": "week3",
+        "page": 24,
+        "label": "Take the complement of two failures"
+      }
+    ]
+  },
+  {
+    "id": "w3-lec-server",
+    "week": 3,
+    "title": "No server alerts over two hours",
+    "topic": "Poisson interval scaling",
+    "method": "w3-poisson",
+    "difficulty": "Standard",
+    "source": {
+      "kind": "Lecture",
+      "title": "Week 3 Lecture 2026",
+      "page": 31,
+      "question": "Critical server alerts example part 4",
+      "adapted": true
+    },
+    "prompt": "A server receives an average of 2.5 critical alerts per hour under a Poisson model. What is the probability of no alerts during a two-hour period?",
+    "options": [
+      "e⁻⁵ ≈ 0.006738",
+      "e^(−2.5) ≈ 0.082085",
+      "1 − e⁻⁵ ≈ 0.993262",
+      "2e^(−2.5) ≈ 0.164170"
+    ],
+    "answer": 0,
+    "recognize": [
+      "The count window is twice the one-hour rate interval.",
+      "No alerts is a Poisson zero-count event."
+    ],
+    "steps": [
+      {
+        "title": "Scale the rate",
+        "why": "A two-hour window has twice the expected count under the same constant rate.",
+        "math": "λ = 2.5 × 2 = 5",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 30,
+            "label": "Scale the rate"
+          }
+        ]
+      },
+      {
+        "title": "Evaluate the PMF at zero",
+        "why": "At k = 0, the power and factorial factors equal 1.",
+        "math": "P(X = 0) = e⁻⁵ × 5⁰ / 0! = e⁻⁵",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 29,
+            "label": "Evaluate the PMF at zero"
+          }
+        ]
+      },
+      {
+        "title": "Interpret the result",
+        "why": "With a mean of five alerts, a zero-alert interval is possible but uncommon.",
+        "math": "e⁻⁵ ≈ 0.006738 → about a 0.674% chance of no alerts in two hours",
+        "refs": [
+          {
+            "doc": "week3",
+            "page": 31,
+            "label": "Interpret the result"
+          }
+        ]
+      }
+    ],
+    "answerText": "e⁻⁵ ≈ 0.006738.",
+    "pitfalls": [
+      "Do not double a probability: double λ, then evaluate the new PMF."
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 30,
+        "label": "Scale the rate"
+      },
+      {
+        "doc": "week3",
+        "page": 29,
+        "label": "Evaluate the PMF at zero"
+      },
+      {
+        "doc": "week3",
+        "page": 31,
+        "label": "Interpret the result"
+      }
+    ]
+  }
+]

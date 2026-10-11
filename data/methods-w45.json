@@ -1,0 +1,1320 @@
+[
+  {
+    "id": "w45-pdf-normalize",
+    "title": "Check and normalize a probability density",
+    "week": 4,
+    "description": "A continuous PDF must be nonnegative and have total area 1. Find the constant by integrating across its support.",
+    "recognize": [
+      "A function f(x) with an unknown multiplier c is proposed as a density.",
+      "A question asks whether a function is a valid PDF: both sign and total area matter."
+    ],
+    "recipe": [
+      {
+        "title": "Identify the support",
+        "body": "The support is the interval where the density can be nonzero. Use it as the integration limits.",
+        "formula": "f(x)=0 outside the stated interval"
+      },
+      {
+        "title": "Check the sign",
+        "body": "Show that every factor is nonnegative on the support. A total area of 1 alone is insufficient.",
+        "formula": "f(x) ≥ 0"
+      },
+      {
+        "title": "Set total area to 1",
+        "body": "Pull a constant outside the integral. Find an antiderivative, evaluate upper minus lower, and solve for c.",
+        "formula": "1=∫ f(x) dx=c∫ h(x) dx; c=1/∫ h(x) dx"
+      },
+      {
+        "title": "Check the result",
+        "body": "Substitute c back and verify sign and total area.",
+        "formula": "∫ f(x) dx=1"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week4",
+        "page": 6,
+        "label": "The two PDF conditions"
+      },
+      {
+        "doc": "week3",
+        "page": 39,
+        "label": "Essential antiderivatives"
+      }
+    ],
+    "pitfalls": [
+      "A density height can exceed 1. Only its total area must equal 1.",
+      "Use upper-limit evaluation minus lower-limit evaluation."
+    ]
+  },
+  {
+    "id": "w45-pdf-area",
+    "title": "Find continuous probability as area",
+    "week": 4,
+    "description": "Integrate the density only over the requested interval, clipped to the support. A single point has zero area.",
+    "recognize": [
+      "A PDF is given and the question asks P(a < X ≤ b).",
+      "A point probability P(X=x) for a continuous variable is always zero."
+    ],
+    "recipe": [
+      {
+        "title": "Write the event as an interval",
+        "body": "Translate words such as between, more than, and within into inequalities.",
+        "formula": "a < X ≤ b"
+      },
+      {
+        "title": "Intersect with support",
+        "body": "Values outside the support contribute no probability. Split at changes in the PDF if needed.",
+        "formula": "[a,b] ∩ support"
+      },
+      {
+        "title": "Integrate the density",
+        "body": "Find area using an antiderivative H.",
+        "formula": "P(a<X≤b)=∫ₐᵇ f(x) dx=H(b)−H(a)"
+      },
+      {
+        "title": "Check the size",
+        "body": "The result must lie between 0 and 1. Endpoints do not change a continuous probability.",
+        "formula": "P(X=x)=0"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week4",
+        "page": 6,
+        "label": "Probability is area"
+      },
+      {
+        "doc": "week4",
+        "page": 7,
+        "label": "Density versus point probability"
+      }
+    ],
+    "pitfalls": [
+      "f(x) is density, not P(X=x).",
+      "Do not integrate x f(x) unless the question asks for expected value."
+    ]
+  },
+  {
+    "id": "w45-cdf",
+    "title": "Build and use a continuous CDF",
+    "week": 4,
+    "description": "A CDF accumulates probability from the far left. Integrate a PDF to get a CDF; differentiate a smooth CDF to recover a PDF.",
+    "recognize": [
+      "F(x)=P(X≤x) is supplied or requested.",
+      "Find an interval probability by subtracting two accumulated probabilities.",
+      "A median or percentile requires solving F(x)=target probability."
+    ],
+    "recipe": [
+      {
+        "title": "Include outer pieces",
+        "body": "Before the support the CDF is 0; after it the CDF is 1.",
+        "formula": "F(x)=0 below support; F(x)=1 above support"
+      },
+      {
+        "title": "Accumulate area inside",
+        "body": "Integrate from the lower support endpoint to x; use a dummy variable t.",
+        "formula": "F(x)=∫lowerˣ f(t) dt"
+      },
+      {
+        "title": "Use the correct direction",
+        "body": "Integrate f to get F. Differentiate F to get f where smooth.",
+        "formula": "f(x)=F′(x)"
+      },
+      {
+        "title": "Answer the event",
+        "body": "Subtract CDF values for intervals or set F(m)=0.5 for a median.",
+        "formula": "P(a<X≤b)=F(b)−F(a)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week4",
+        "page": 16,
+        "label": "CDF definition and properties"
+      },
+      {
+        "doc": "week4",
+        "page": 17,
+        "label": "PDF–CDF relationship"
+      },
+      {
+        "doc": "week4",
+        "page": 19,
+        "label": "Piecewise CDF outer cases"
+      }
+    ],
+    "pitfalls": [
+      "A CDF must be defined for every real x.",
+      "For continuous variables, changing < to ≤ does not add probability."
+    ]
+  },
+  {
+    "id": "w45-uniform",
+    "title": "Use lengths for a continuous uniform model",
+    "week": 4,
+    "description": "Equal-length intervals have equal probability. Divide favorable length by total eligible length, including conditioning if given.",
+    "recognize": [
+      "Equally likely anywhere in a fixed interval signals Uniform(a,b).",
+      "A uniform arrival that has not occurred yet restricts the remaining interval."
+    ],
+    "recipe": [
+      {
+        "title": "Identify the full interval",
+        "body": "Express the endpoints in matching units.",
+        "formula": "X∼Uniform(a,b); f(x)=1/(b−a)"
+      },
+      {
+        "title": "Restrict if conditioned",
+        "body": "Given information removes impossible values from the sample space.",
+        "formula": "P(A|B)=length(A∩B)/length(B)"
+      },
+      {
+        "title": "Measure favorable length",
+        "body": "For disjoint favorable intervals add their lengths.",
+        "formula": "P(c≤X≤d)=(d−c)/(b−a)"
+      },
+      {
+        "title": "Interpret",
+        "body": "The ratio lies between 0 and 1 and represents the eligible fraction.",
+        "formula": "0≤P≤1"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week4",
+        "page": 26,
+        "label": "Uniform probability by length"
+      },
+      {
+        "doc": "week4",
+        "page": 27,
+        "label": "Uniform CDF"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Conditional probability"
+      }
+    ],
+    "pitfalls": [
+      "Uniform waits are not generally memoryless.",
+      "For a conditional uniform event, use the remaining eligible length as denominator."
+    ]
+  },
+  {
+    "id": "w45-normal-prob",
+    "title": "Standardize and read a normal probability",
+    "week": 4,
+    "description": "Convert every endpoint to a z-score, read left-tail probabilities Φ(z), then subtract or complement for the requested event.",
+    "recognize": [
+      "The variable is Normal(μ,σ²).",
+      "A probability is requested for above, below, or between numerical thresholds."
+    ],
+    "recipe": [
+      {
+        "title": "Read μ and σ",
+        "body": "The second normal parameter is variance. Take its square root if it is supplied as a number.",
+        "formula": "σ=√(σ²)"
+      },
+      {
+        "title": "Standardize every boundary",
+        "body": "Subtract the mean and divide by standard deviation.",
+        "formula": "z=(x−μ)/σ"
+      },
+      {
+        "title": "Read the left-tail table",
+        "body": "The supplied table is Φ(z)=P(Z≤z). For negative z, use symmetry.",
+        "formula": "Φ(−z)=1−Φ(z)"
+      },
+      {
+        "title": "Match the event",
+        "body": "Use the left tail, its complement, or the difference of two left tails.",
+        "formula": "P(X>b)=1−Φ(z_b); P(a<X<b)=Φ(z_b)−Φ(z_a)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week4",
+        "page": 35,
+        "label": "Standardization"
+      },
+      {
+        "doc": "week4",
+        "page": 34,
+        "label": "Standard normal and symmetry"
+      },
+      {
+        "doc": "formula",
+        "page": 2,
+        "label": "Standard normal left-tail table"
+      }
+    ],
+    "pitfalls": [
+      "Divide by standard deviation, not variance.",
+      "An upper tail needs 1−Φ(z).",
+      "Round z only when necessary for the table."
+    ]
+  },
+  {
+    "id": "w45-normal-percentile",
+    "title": "Reverse a normal probability to find a threshold",
+    "week": 4,
+    "description": "A percentile gives a probability and asks for a value. Find the matching standard normal z, then reverse standardization.",
+    "recognize": [
+      "Only a specified percentage exceeds the unknown threshold.",
+      "At least a specified percentage must finish before an unknown time limit."
+    ],
+    "recipe": [
+      {
+        "title": "Convert to a left-tail probability",
+        "body": "A right-tail fraction α means the left-tail fraction is 1−α.",
+        "formula": "P(X≤x)=p"
+      },
+      {
+        "title": "Find the matching z",
+        "body": "Locate p in the table body; its row and column give z. Interpolation or a supplied z may be used.",
+        "formula": "Φ(z_p)=p"
+      },
+      {
+        "title": "Undo standardization",
+        "body": "Multiply z by σ and add μ to return to the original units.",
+        "formula": "x=μ+σ z_p"
+      },
+      {
+        "title": "Check its position",
+        "body": "A percentile above 50% should lie above the mean. If rounding a guaranteed time limit, round upward.",
+        "formula": "p>0.5 ⇒ x>μ"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week4",
+        "page": 40,
+        "label": "Finding a percentile"
+      },
+      {
+        "doc": "week4",
+        "page": 41,
+        "label": "Reverse standardization"
+      },
+      {
+        "doc": "formula",
+        "page": 2,
+        "label": "Normal table"
+      }
+    ],
+    "pitfalls": [
+      "Exceedance percentage is a right tail, not Φ(z).",
+      "The threshold has the same units as the original variable."
+    ]
+  },
+  {
+    "id": "w45-exponential",
+    "title": "Use exponential waiting-time probabilities",
+    "week": 4,
+    "description": "Constant-rate Poisson arrivals give exponential waiting times. Match time units, then choose the survival function, CDF, or interval difference.",
+    "recognize": [
+      "Time until the next event at a stable rate is requested.",
+      "Exponential(rate λ) is supplied."
+    ],
+    "recipe": [
+      {
+        "title": "Match units",
+        "body": "Convert rate or duration so λt is dimensionless.",
+        "formula": "λ per minute = λ per hour /60"
+      },
+      {
+        "title": "Choose the event formula",
+        "body": "More than is survival; within is a CDF.",
+        "formula": "P(T>t)=e^(−λt); P(T≤t)=1−e^(−λt)"
+      },
+      {
+        "title": "For between, subtract tails",
+        "body": "The probability surviving a minus surviving b is the interval area.",
+        "formula": "P(a<T≤b)=e^(−λa)−e^(−λb)"
+      },
+      {
+        "title": "Connect waiting and counts",
+        "body": "No arrival during t is the same event as waiting past t.",
+        "formula": "N(t)∼Poisson(λt); P(N(t)=0)=P(T>t)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week4",
+        "page": 45,
+        "label": "Exponential model"
+      },
+      {
+        "doc": "week4",
+        "page": 46,
+        "label": "CDF and survival"
+      },
+      {
+        "doc": "week4",
+        "page": 47,
+        "label": "Rate and time units"
+      },
+      {
+        "doc": "week4",
+        "page": 54,
+        "label": "Poisson counts and waits"
+      }
+    ],
+    "pitfalls": [
+      "Use a rate, not the mean waiting time, as λ.",
+      "Do not multiply a rate per hour by minutes without converting."
+    ]
+  },
+  {
+    "id": "w45-memoryless",
+    "title": "Reset an exponential waiting clock",
+    "week": 4,
+    "description": "Given that an exponential wait has already lasted s, the probability of surviving another t is unchanged from a fresh wait of length t.",
+    "recognize": [
+      "Given T>s and asking for T>s+t, or at least another t units.",
+      "A constant-rate exponential model is stated."
+    ],
+    "recipe": [
+      {
+        "title": "Separate elapsed and additional time",
+        "body": "The total threshold is s+t; the new wait is t.",
+        "formula": "t=(total target)−s"
+      },
+      {
+        "title": "Apply memorylessness",
+        "body": "Elapsed time does not alter the additional exponential wait.",
+        "formula": "P(T>s+t|T>s)=P(T>t)"
+      },
+      {
+        "title": "Evaluate the new survival probability",
+        "body": "Keep the rate and extra duration in matching units.",
+        "formula": "e^(−λt)"
+      },
+      {
+        "title": "Check assumptions",
+        "body": "Aging or time-varying rates can invalidate memorylessness.",
+        "formula": "Constant event rate is required"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week4",
+        "page": 50,
+        "label": "Memoryless property"
+      },
+      {
+        "doc": "week4",
+        "page": 53,
+        "label": "Worked memoryless wait"
+      }
+    ],
+    "pitfalls": [
+      "Use the extra time, not the total time, in the final exponent.",
+      "Do not apply this rule to uniform or normal variables."
+    ]
+  },
+  {
+    "id": "w45-model-choice",
+    "title": "Choose a model by support, shape, and assumptions",
+    "week": 4,
+    "description": "A model is useful only if its assumptions describe the situation. Uniform is flat and bounded, normal is symmetric, exponential is a memoryless nonnegative wait.",
+    "recognize": [
+      "The question asks which distribution or scenario is suitable.",
+      "Strong skew, clustering, or aging suggests checking assumptions before computing."
+    ],
+    "recipe": [
+      {
+        "title": "Check support",
+        "body": "Ask whether outcomes are counts, real measurements, bounded locations, or nonnegative waiting times.",
+        "formula": "Uniform: [a,b]; Normal: ℝ; Exponential: [0,∞)"
+      },
+      {
+        "title": "Check shape",
+        "body": "Flat, symmetric, or right-skewed shapes suggest different models.",
+        "formula": "Uniform flat; normal bell-shaped; exponential decreasing"
+      },
+      {
+        "title": "Check assumptions",
+        "body": "Equal lengths, small additive effects, or constant independent arrival rates must be plausible.",
+        "formula": "Model assumptions must match the context"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week4",
+        "page": 42,
+        "label": "When normal modeling is reasonable"
+      },
+      {
+        "doc": "week4",
+        "page": 50,
+        "label": "Constant rate and memorylessness"
+      },
+      {
+        "doc": "week4",
+        "page": 55,
+        "label": "Choosing a continuous distribution"
+      }
+    ],
+    "pitfalls": [
+      "A long right tail alone does not prove an exponential model.",
+      "A normal model may assign impossible negative times."
+    ]
+  },
+  {
+    "id": "w45-discrete-mean",
+    "title": "Compute a weighted discrete mean",
+    "week": 5,
+    "description": "Multiply every possible value by its probability and add. Subtract entry costs to turn gross reward into net gain.",
+    "recognize": [
+      "A table of possible values and their probabilities is given.",
+      "Expected reward, cost, profit, or long-run average is requested."
+    ],
+    "recipe": [
+      {
+        "title": "Build a valid table",
+        "body": "List all values and probabilities; probabilities must sum to 1.",
+        "formula": "Σp(x)=1"
+      },
+      {
+        "title": "Weight each value",
+        "body": "More likely values contribute more to the average.",
+        "formula": "x × p(x)"
+      },
+      {
+        "title": "Add the contributions",
+        "body": "Include negative values and any entry cost.",
+        "formula": "E[X]=Σ x p(x)"
+      },
+      {
+        "title": "Interpret the mean",
+        "body": "The mean is a long-run average, not necessarily a possible or guaranteed outcome.",
+        "formula": "E[a+bX]=a+bE[X]"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week5",
+        "page": 6,
+        "label": "Discrete expected value"
+      },
+      {
+        "doc": "week5",
+        "page": 7,
+        "label": "Interpretation of a mean"
+      },
+      {
+        "doc": "week5",
+        "page": 18,
+        "label": "Linearity of expectation"
+      }
+    ],
+    "pitfalls": [
+      "Do not average the listed values without probability weights.",
+      "Gross reward and net gain differ by the entry cost."
+    ]
+  },
+  {
+    "id": "w45-continuous-mean",
+    "title": "Compute moments by integrating a density",
+    "week": 5,
+    "description": "For a continuous variable, use integrals instead of weighted sums. Normalize first, then integrate x f(x) or x² f(x).",
+    "recognize": [
+      "A continuous density is supplied and E[X] or E[X²] is requested.",
+      "An expectation is an average weighted by density, not an ordinary integral of x alone."
+    ],
+    "recipe": [
+      {
+        "title": "Normalize the density",
+        "body": "If an unknown c is present, find it using total area 1.",
+        "formula": "∫ f(x) dx=1"
+      },
+      {
+        "title": "Choose the moment",
+        "body": "For the first moment use x; for the second moment use x².",
+        "formula": "E[X]=∫x f(x)dx; E[X²]=∫x² f(x)dx"
+      },
+      {
+        "title": "Integrate over support",
+        "body": "Use the same support as the PDF and evaluate upper minus lower.",
+        "formula": "∫ₐᵇ x^k f(x) dx"
+      },
+      {
+        "title": "Check units and range",
+        "body": "E[X] lies within bounded support; E[X²] has squared units.",
+        "formula": "μ=E[X]"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week5",
+        "page": 37,
+        "label": "Continuous expectation"
+      },
+      {
+        "doc": "week5",
+        "page": 38,
+        "label": "Functions and second moments"
+      },
+      {
+        "doc": "week3",
+        "page": 39,
+        "label": "Antiderivative checklist"
+      }
+    ],
+    "pitfalls": [
+      "E[X²] generally differs from (E[X])².",
+      "Multiply by the PDF before integrating."
+    ]
+  },
+  {
+    "id": "w45-variance",
+    "title": "Compute variance and standard deviation",
+    "week": 5,
+    "description": "Find the first and second moments, then subtract the square of the mean. Standard deviation is the square root of variance.",
+    "recognize": [
+      "Spread, risk, variance, or standard deviation is requested.",
+      "A mean and second moment are available or can be calculated."
+    ],
+    "recipe": [
+      {
+        "title": "Compute the mean",
+        "body": "For discrete values use weighted sums; for continuous values use density integrals.",
+        "formula": "μ=E[X]"
+      },
+      {
+        "title": "Compute the second raw moment",
+        "body": "Square each possible value before weighting.",
+        "formula": "E[X²]=Σx²p(x) or ∫x²f(x)dx"
+      },
+      {
+        "title": "Subtract the squared mean",
+        "body": "This removes location and leaves spread around the mean.",
+        "formula": "Var(X)=E[X²]−μ²"
+      },
+      {
+        "title": "Take a square root if requested",
+        "body": "Variance has squared units; standard deviation has original units.",
+        "formula": "σ=√Var(X)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week5",
+        "page": 25,
+        "label": "Variance and standard deviation"
+      },
+      {
+        "doc": "week5",
+        "page": 26,
+        "label": "Faster variance formula"
+      },
+      {
+        "doc": "week5",
+        "page": 49,
+        "label": "Raw versus central moments"
+      }
+    ],
+    "pitfalls": [
+      "Never confuse E[X²] with variance.",
+      "Variance cannot be negative; a negative result indicates an error."
+    ]
+  },
+  {
+    "id": "w45-function-mean",
+    "title": "Average a transformed payoff or penalty",
+    "week": 5,
+    "description": "Evaluate the function at each outcome before averaging, or integrate g(x) against the original density. No new distribution is needed.",
+    "recognize": [
+      "Expected g(X), a squared penalty, or a polynomial compensation is requested.",
+      "A nonlinear function of X means substituting only the mean is usually incorrect."
+    ],
+    "recipe": [
+      {
+        "title": "Write the function",
+        "body": "Identify exactly what is being paid or measured at each outcome.",
+        "formula": "Y=g(X)"
+      },
+      {
+        "title": "Transform before averaging",
+        "body": "For a table compute g(x) at every listed x. For a density multiply g(x) by f(x).",
+        "formula": "E[g(X)]=Σg(x)p(x) or ∫g(x)f(x)dx"
+      },
+      {
+        "title": "Use linearity for polynomials",
+        "body": "Separate constant, linear, and quadratic terms into known moments.",
+        "formula": "E[a+bX+cX²]=a+bE[X]+cE[X²]"
+      },
+      {
+        "title": "Compare carefully",
+        "body": "Replacing X by its mean loses the variance contribution in a quadratic.",
+        "formula": "E[X²]=(E[X])²+Var(X)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week5",
+        "page": 14,
+        "label": "Expected value of a function"
+      },
+      {
+        "doc": "week5",
+        "page": 17,
+        "label": "Why g(E[X]) can be wrong"
+      },
+      {
+        "doc": "week5",
+        "page": 38,
+        "label": "Continuous functions"
+      }
+    ],
+    "pitfalls": [
+      "In general E[g(X)]≠g(E[X]).",
+      "A constant can leave expectation; a nonlinear function usually cannot."
+    ]
+  },
+  {
+    "id": "w45-linear",
+    "title": "Transform means and variances",
+    "week": 5,
+    "description": "Adding a constant shifts the mean but not spread. Multiplying by b scales the mean by b and variance by b².",
+    "recognize": [
+      "Y=a+bX is given, including unit conversions and score transformations.",
+      "Mean or variance of X or Y is required."
+    ],
+    "recipe": [
+      {
+        "title": "Identify the shift and scale",
+        "body": "Write the transformation as a+bX.",
+        "formula": "Y=a+bX"
+      },
+      {
+        "title": "Transform or reverse the mean",
+        "body": "Use the first power of b for expectation.",
+        "formula": "E[Y]=a+bE[X]"
+      },
+      {
+        "title": "Transform or reverse variance",
+        "body": "Use the square of b; the constant a contributes no variance.",
+        "formula": "Var(Y)=b²Var(X)"
+      },
+      {
+        "title": "If averaging squared distance",
+        "body": "Distance from a target c includes spread plus squared bias.",
+        "formula": "E[(X−c)²]=Var(X)+(E[X]−c)²"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week5",
+        "page": 30,
+        "label": "Variance of a linear transformation"
+      },
+      {
+        "doc": "week5",
+        "page": 18,
+        "label": "Linearity"
+      },
+      {
+        "doc": "week5",
+        "page": 26,
+        "label": "Variance identity"
+      }
+    ],
+    "pitfalls": [
+      "The shift a does not add to variance.",
+      "Variance uses b² even if b is negative."
+    ]
+  },
+  {
+    "id": "w45-sums",
+    "title": "Combine random variables and repeated trials",
+    "week": 5,
+    "description": "Means always add linearly. Variances need dependence information: add covariance terms or use independence to remove them.",
+    "recognize": [
+      "A total or a weighted sum aX+bY is requested.",
+      "Repeated independent outcomes or a covariance value is stated."
+    ],
+    "recipe": [
+      {
+        "title": "Combine means",
+        "body": "Independence is unnecessary for this step.",
+        "formula": "E[aX+bY]=aE[X]+bE[Y]"
+      },
+      {
+        "title": "Read dependence information",
+        "body": "Independence gives covariance 0. Otherwise retain the covariance term.",
+        "formula": "Var(aX+bY)=a²Var(X)+b²Var(Y)+2abCov(X,Y)"
+      },
+      {
+        "title": "Square weights for variance",
+        "body": "For n independent identically distributed outcomes, multiply variance by n.",
+        "formula": "E[S_n]=nμ; Var(S_n)=nσ²"
+      },
+      {
+        "title": "Compute the standard deviation last",
+        "body": "It is the square root of the total variance.",
+        "formula": "SD(S_n)=√n σ"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week5",
+        "page": 18,
+        "label": "Linearity without independence"
+      },
+      {
+        "doc": "week5",
+        "page": 32,
+        "label": "Variance of a sum"
+      },
+      {
+        "doc": "week5",
+        "page": 36,
+        "label": "Discrete distribution moments"
+      },
+      {
+        "doc": "formula",
+        "page": 1,
+        "label": "Means and variances"
+      }
+    ],
+    "pitfalls": [
+      "Do not add standard deviations to obtain the SD of a sum.",
+      "Expected counts may be fractional even when actual counts are integers."
+    ]
+  },
+  {
+    "id": "w45-ie",
+    "title": "Count a union with inclusion–exclusion",
+    "week": 1,
+    "description": "Add single-set counts, subtract pair overlaps, and add triple overlap; subtract the union from the population to count none.",
+    "recognize": [
+      "Three overlapping groups are given, including all pair and triple intersections.",
+      "How many use none means the complement of a union."
+    ],
+    "recipe": [
+      {
+        "title": "Define the union",
+        "body": "At least one means membership in A∪B∪C.",
+        "formula": "|A∪B∪C|"
+      },
+      {
+        "title": "Correct overlap counts",
+        "body": "Add singles, subtract all pair overlaps, then add the triple.",
+        "formula": "|A∪B∪C|=|A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|"
+      },
+      {
+        "title": "Take the complement",
+        "body": "Remove everyone using at least one from the full population.",
+        "formula": "none=N−|A∪B∪C|"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week1",
+        "page": 28,
+        "label": "Three-set inclusion–exclusion"
+      }
+    ],
+    "pitfalls": [
+      "Pair intersections include people in all three unless stated otherwise."
+    ]
+  },
+  {
+    "id": "w45-block",
+    "title": "Arrange distinct objects with a consecutive block",
+    "week": 1,
+    "description": "Treat the designated consecutive objects as one unit, arrange the units, then arrange objects inside that block.",
+    "recognize": [
+      "Certain distinct books must stay together but can be in any internal order.",
+      "Order matters, so use factorial arrangements rather than combinations."
+    ],
+    "recipe": [
+      {
+        "title": "Form one block",
+        "body": "Collapse k designated items into one super-item.",
+        "formula": "n−k+1 objects"
+      },
+      {
+        "title": "Arrange all units",
+        "body": "The block can occupy any unit position.",
+        "formula": "(n−k+1)!"
+      },
+      {
+        "title": "Arrange inside the block",
+        "body": "The k distinct designated items have k! orders.",
+        "formula": "total=(n−k+1)!k!"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week1",
+        "page": 57,
+        "label": "Permutations"
+      },
+      {
+        "doc": "week1",
+        "page": 52,
+        "label": "Multiplication rule"
+      },
+      {
+        "doc": "formula",
+        "page": 1,
+        "label": "Factorials and permutations"
+      }
+    ],
+    "pitfalls": [
+      "A block still needs its internal k! arrangements unless order is fixed."
+    ]
+  },
+  {
+    "id": "w45-conditional-count",
+    "title": "Count conditional samples without replacement",
+    "week": 2,
+    "description": "For equally likely unordered samples, count favorable eligible samples and divide by all samples satisfying the condition.",
+    "recognize": [
+      "Tokens are sampled without replacement, order is irrelevant, and given information restricts the sample.",
+      "Exactly r red tokens requires choosing red and other-color subsets."
+    ],
+    "recipe": [
+      {
+        "title": "Choose combinations",
+        "body": "Sampling without replacement with no order uses C(n,r).",
+        "formula": "C(n,r)=n!/[r!(n−r)!]"
+      },
+      {
+        "title": "Count the conditional denominator",
+        "body": "Subtract samples excluded by the given event.",
+        "formula": "eligible=total−excluded"
+      },
+      {
+        "title": "Count the numerator within the condition",
+        "body": "For exactly two red and one blue multiply the separate choices.",
+        "formula": "C(R,2)C(B,1)"
+      },
+      {
+        "title": "Divide",
+        "body": "All unordered samples are equally likely, so counts give the conditional ratio.",
+        "formula": "P(A|B)=count(A∩B)/count(B)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week1",
+        "page": 65,
+        "label": "Combinations"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Conditional probability"
+      }
+    ],
+    "pitfalls": [
+      "The denominator must respect the given information.",
+      "Do not use binomial probabilities for sampling without replacement."
+    ]
+  },
+  {
+    "id": "w45-bayes-two",
+    "title": "Use Bayes after two conditionally independent positives",
+    "week": 2,
+    "description": "Square positive-test probabilities only within each condition group, then normalize the two possible groups.",
+    "recognize": [
+      "Prevalence, sensitivity, false-positive rate, and two positive results are given.",
+      "Tests are independent conditional on true condition status."
+    ],
+    "recipe": [
+      {
+        "title": "Define the groups",
+        "body": "D means having the condition; Dᶜ means not having it.",
+        "formula": "P(D)=prevalence"
+      },
+      {
+        "title": "Multiply within each group",
+        "body": "Conditional independence allows two positive-test likelihoods to multiply.",
+        "formula": "P(++|D)=s²; P(++|Dᶜ)=f²"
+      },
+      {
+        "title": "Weight by prevalence",
+        "body": "Compute joint positive probabilities in both groups.",
+        "formula": "P(D∩++)=P(D)s²"
+      },
+      {
+        "title": "Normalize with Bayes",
+        "body": "Divide the condition-positive joint event by all ways of obtaining two positives.",
+        "formula": "P(D|++)=P(D)s²/[P(D)s²+P(Dᶜ)f²]"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week2",
+        "page": 24,
+        "label": "Bayes two-case form"
+      },
+      {
+        "doc": "week2",
+        "page": 17,
+        "label": "Independence"
+      }
+    ],
+    "pitfalls": [
+      "P(D|++) differs from sensitivity P(++|D).",
+      "Conditional independence does not imply unconditional independence of the test results."
+    ]
+  },
+  {
+    "id": "w45-geo-condition",
+    "title": "Condition a geometric first-success time",
+    "week": 3,
+    "description": "Geometric(p) counts trials through the first success. Use q^k for surviving k trials, and normalize or reset the remaining wait.",
+    "recognize": [
+      "Independent trials with constant success chance continue until the first success.",
+      "Given the first success has not occurred yet, geometric memorylessness can reset the trial count."
+    ],
+    "recipe": [
+      {
+        "title": "Set q=1−p",
+        "body": "Surviving k attempts means k failures.",
+        "formula": "P(X>k)=q^k"
+      },
+      {
+        "title": "Translate endpoints carefully",
+        "body": "Including attempt a means X>a−1, while excluding after b means X>b.",
+        "formula": "P(a≤X≤b)=q^(a−1)−q^b"
+      },
+      {
+        "title": "Apply the condition",
+        "body": "Divide by its probability or reset after known failures.",
+        "formula": "P(A|B)=P(A∩B)/P(B); X>s ⇒ X−s is a fresh geometric wait"
+      },
+      {
+        "title": "Check indexing",
+        "body": "The first success trial count starts at 1, not 0.",
+        "formula": "P(X=1)=p"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 23,
+        "label": "Geometric distribution"
+      },
+      {
+        "doc": "week3",
+        "page": 24,
+        "label": "Geometric cumulative probabilities"
+      },
+      {
+        "doc": "week3",
+        "page": 25,
+        "label": "Memoryless property"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Conditional probability"
+      }
+    ],
+    "pitfalls": [
+      "One-off exponent errors are common at inclusive endpoints."
+    ]
+  },
+  {
+    "id": "w45-discrete-cdf",
+    "title": "Read CDF jumps, transform values, and condition",
+    "week": 3,
+    "description": "For a discrete variable, the probability of a value is the jump in the CDF. Transform each possible value before selecting the event.",
+    "recognize": [
+      "A stepwise CDF is supplied, followed by Y=g(X) and conditional probability.",
+      "Individual points of a discrete distribution can have positive probability."
+    ],
+    "recipe": [
+      {
+        "title": "Recover masses",
+        "body": "Subtract the CDF immediately before each value from the CDF at that value.",
+        "formula": "P(X=x)=F(x)−F(x−)"
+      },
+      {
+        "title": "Apply the transformation",
+        "body": "Make a table of x and g(x) to see which x values satisfy the requested Y event.",
+        "formula": "Y=g(X)"
+      },
+      {
+        "title": "Restrict to the condition",
+        "body": "Only x values allowed by the given event enter the denominator.",
+        "formula": "P(A|B)=Σeligible favorable p(x)/Σeligible p(x)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 10,
+        "label": "Discrete CDF"
+      },
+      {
+        "doc": "week3",
+        "page": 12,
+        "label": "Probabilities from CDF"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Conditioning"
+      }
+    ],
+    "pitfalls": [
+      "Use CDF differences as masses; CDF heights are accumulated probabilities."
+    ]
+  },
+  {
+    "id": "w45-binom-condition",
+    "title": "Use a binomial PMF under a count condition",
+    "week": 3,
+    "description": "Binomial counts successes in fixed independent trials. Sum the requested counts and divide by the probability of the conditioning event.",
+    "recognize": [
+      "Fixed n independent trials with equal success probability p.",
+      "A count probability is requested given X≥k."
+    ],
+    "recipe": [
+      {
+        "title": "Identify n and p",
+        "body": "Confirm fixed trials, independent outcomes, and constant p.",
+        "formula": "X∼Binomial(n,p)"
+      },
+      {
+        "title": "Compute the favorable counts",
+        "body": "Use the binomial PMF for each requested integer value.",
+        "formula": "P(X=j)=C(n,j)p^j(1−p)^(n−j)"
+      },
+      {
+        "title": "Compute the eligible probability",
+        "body": "A lower-tail exclusion often gives a shorter calculation.",
+        "formula": "P(X≥k)=1−Σ(j<k)P(X=j)"
+      },
+      {
+        "title": "Divide",
+        "body": "The favorable event must also satisfy the condition.",
+        "formula": "P(A|B)=P(A∩B)/P(B)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 17,
+        "label": "Binomial assumptions"
+      },
+      {
+        "doc": "week3",
+        "page": 18,
+        "label": "Binomial PMF"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Conditional probability"
+      }
+    ],
+    "pitfalls": [
+      "Normalize after conditioning; an unconditional PMF alone is insufficient."
+    ]
+  },
+  {
+    "id": "w45-poisson-condition",
+    "title": "Use Poisson counts over the stated interval",
+    "week": 3,
+    "description": "Convert the rate and interval into a Poisson mean, compute favorable counts, then normalize for any given count restriction.",
+    "recognize": [
+      "Counts of requests/events at a constant rate over a duration.",
+      "A count probability is requested given at least one event."
+    ],
+    "recipe": [
+      {
+        "title": "Scale the mean",
+        "body": "Rate times duration gives expected count for this interval.",
+        "formula": "λ=rate×duration"
+      },
+      {
+        "title": "Use the count PMF",
+        "body": "Insert λ and integer count j.",
+        "formula": "P(N=j)=e^(−λ)λ^j/j!"
+      },
+      {
+        "title": "Use complements for tails",
+        "body": "At least one excludes only zero; at least three excludes 0,1,2.",
+        "formula": "P(N≥1)=1−e^(−λ)"
+      },
+      {
+        "title": "Condition if needed",
+        "body": "Divide favorable probability by eligible probability.",
+        "formula": "P(A|N≥1)=P(A∩{N≥1})/[1−e^(−λ)]"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 29,
+        "label": "Poisson PMF"
+      },
+      {
+        "doc": "week3",
+        "page": 30,
+        "label": "Interval determines the mean"
+      },
+      {
+        "doc": "formula",
+        "page": 1,
+        "label": "Poisson distribution"
+      }
+    ],
+    "pitfalls": [
+      "The hourly rate is not always the λ for the requested interval."
+    ]
+  },
+  {
+    "id": "w45-independent-fail",
+    "title": "Combine independent component failure events",
+    "week": 2,
+    "description": "Use complements for at least one and add disjoint cases for exactly one. Multiply probabilities within each independent case.",
+    "recognize": [
+      "Independent components have individual failure probabilities.",
+      "Exactly one fails given at least one fails is requested."
+    ],
+    "recipe": [
+      {
+        "title": "Find no failures",
+        "body": "Independence allows all survival probabilities to multiply.",
+        "formula": "P(none)=∏(1−p_i)"
+      },
+      {
+        "title": "Take the complement",
+        "body": "At least one is every case except none.",
+        "formula": "P(at least one)=1−P(none)"
+      },
+      {
+        "title": "Enumerate exactly one",
+        "body": "Each case has one failure and all other components surviving. These cases are disjoint.",
+        "formula": "P(exactly one)=Σ p_i∏(j≠i)(1−p_j)"
+      },
+      {
+        "title": "Condition",
+        "body": "Exactly one is a subset of at least one.",
+        "formula": "conditional=exactly-one probability / at-least-one probability"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week2",
+        "page": 17,
+        "label": "Independence"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Conditional probability"
+      },
+      {
+        "doc": "week1",
+        "page": 39,
+        "label": "Complement probability"
+      }
+    ],
+    "pitfalls": [
+      "Adding failure probabilities counts multiple failures repeatedly."
+    ]
+  },
+  {
+    "id": "w45-pmf-normalize",
+    "title": "Normalize and sum a finite PMF",
+    "week": 3,
+    "description": "A discrete PMF has nonnegative masses summing to 1. Find c using a sum, then sum the masses in the event.",
+    "recognize": [
+      "p(x)=c h(x) for integer x in a finite support.",
+      "Do not integrate because the variable is discrete."
+    ],
+    "recipe": [
+      {
+        "title": "List support values",
+        "body": "Only stated integer values have probability.",
+        "formula": "x=0,1,…,n"
+      },
+      {
+        "title": "Set total mass to 1",
+        "body": "Sum h(x) and solve for c.",
+        "formula": "1=cΣh(x)"
+      },
+      {
+        "title": "Sum the requested event",
+        "body": "Add its point probabilities, or subtract excluded ones from 1.",
+        "formula": "P(X≥k)=cΣ(x≥k)h(x)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 6,
+        "label": "PMF validity and probabilities"
+      }
+    ],
+    "pitfalls": [
+      "Discrete probabilities use sums; densities use integrals."
+    ]
+  },
+  {
+    "id": "w45-standard-moments",
+    "title": "Read standard distribution means and variances",
+    "week": 5,
+    "description": "When a named distribution is given, the formula sheet supplies its mean and variance. Check the parameter convention and units before substituting.",
+    "recognize": [
+      "A named distribution is given and only mean, variance, or SD is requested.",
+      "The exponential parameter is a rate; the geometric variable counts trials through first success."
+    ],
+    "recipe": [
+      {
+        "title": "Identify the parameter convention",
+        "body": "Read the distribution name, support, and units. For N(μ,σ²), the second parameter is variance.",
+        "formula": "Exp(λ): λ is rate; Geometric(p): X=1,2,…"
+      },
+      {
+        "title": "Choose the matching row",
+        "body": "Use the supplied formula sheet rather than integrating or summing from scratch.",
+        "formula": "U(a,b): mean=(a+b)/2, variance=(b−a)²/12; Exp(λ): mean=1/λ, variance=1/λ²"
+      },
+      {
+        "title": "Substitute and take a square root if needed",
+        "body": "Variance has squared units. SD returns to the original units.",
+        "formula": "SD=√variance"
+      },
+      {
+        "title": "Check discrete formulas",
+        "body": "Binomial counts fixed trials; geometric counts trials until first success; Poisson counts events in an interval.",
+        "formula": "Bin(n,p): mean=np, variance=np(1−p); Geom(p): mean=1/p, variance=(1−p)/p²; Pois(λ): mean=variance=λ"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week5",
+        "page": 36,
+        "label": "Common discrete moments"
+      },
+      {
+        "doc": "week5",
+        "page": 48,
+        "label": "Common continuous moments"
+      },
+      {
+        "doc": "formula",
+        "page": 1,
+        "label": "Means and variances table"
+      }
+    ],
+    "pitfalls": [
+      "Exponential mean is 1/rate, not the rate.",
+      "Standard deviation is not variance.",
+      "Geometric formulas change if the variable counts failures rather than trials."
+    ]
+  }
+]

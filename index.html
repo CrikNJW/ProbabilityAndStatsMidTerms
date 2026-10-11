@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#163e36">
+  <meta name="description" content="A guided probability and statistics study desk: source-based practice, beginner-friendly workings, lecture slides, and pen notes for the CSD3241 midterm.">
+  <title>Stat Lab — Your midterm study desk</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to study content</a>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#practice" aria-label="Stat Lab home"><span class="brand-icon">∑</span><span>stat<span class="brand-light">lab</span><small>CSD3241 · STUDY DESK</small></span></a>
+      <div class="sidebar-label">YOUR WORKSPACE</div>
+      <nav aria-label="Study workspace">
+        <a href="#practice" data-nav="practice"><span aria-hidden="true">▦</span> Question bank <span id="bank-count" class="nav-count">…</span></a>
+        <a href="#methods" data-nav="methods"><span aria-hidden="true">↗</span> Method playbook</a>
+        <a href="#slides" data-nav="slides"><span aria-hidden="true">▤</span> Lecture library</a>
+        <a href="#exam" data-nav="exam"><span aria-hidden="true">◷</span> Mock midterm</a>
+        <a href="#progress" data-nav="progress"><span aria-hidden="true">◴</span> My progress</a>
+      </nav>
+      <div class="sidebar-label week-label">LECTURE WEEKS</div>
+      <div class="week-nav" id="week-nav">
+        <button data-week="1"><span>01</span> Counting & probability</button>
+        <button data-week="2"><span>02</span> Conditional & Bayes</button>
+        <button data-week="3"><span>03</span> Discrete distributions</button>
+        <button data-week="4"><span>04</span> Continuous distributions</button>
+        <button data-week="5"><span>05</span> Expectation & variance</button>
+      </div>
+      <div class="sidebar-bottom">
+        <button class="formula-button" id="formula-button"><span>ƒ</span> Open formula sheet <span>↗</span></button>
+        <div class="exam-note"><span class="status-dot"></span> MIDTERM · 13 OCT 2026<p>1:10–2:40 p.m. · E2 lab<br>Weeks 1–5 · MGFs excluded</p></div>
+        <p class="local-note">Your answers & pen notes stay<br>in this browser. Back up in My progress.</p>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div class="breadcrumb">Your workspace <span>/</span> <strong id="page-name">Question bank</strong></div><div class="topbar-right"><span class="course-pill">PROBABILITY & STATISTICS</span><button id="focus-button" class="icon-button" aria-label="Toggle focused study layout" title="Focus layout">⛶</button></div></header>
+      <main id="main" tabindex="-1"><div class="loading-state"><span class="loader"></span><h1>Opening your study desk…</h1><p>Loading questions and lecture references.</p></div></main>
+      <footer>Made for understanding, one step at a time. <span>CSD3241 · Weeks 1–5</span></footer>
+    </div>
+  </div>
+  <dialog id="slide-panel" class="slide-panel" aria-labelledby="slide-panel-title">
+    <div class="panel-top"><div><span class="eyebrow">LECTURE REFERENCE</span><h2 id="slide-panel-title">Lecture slide</h2></div><button id="close-panel" class="icon-button" aria-label="Close slide panel">✕</button></div>
+    <div class="slide-controls"><button id="prev-slide" class="small-button" aria-label="Previous slide">←</button><label>PDF page <input id="slide-page" type="number" min="1" value="1" aria-label="PDF page number"></label><span id="slide-total"></span><button id="next-slide" class="small-button" aria-label="Next slide">→</button><button id="zoom-slide" class="small-button">Zoom +</button></div>
+    <p id="slide-scope-note" class="scope-note" hidden></p>
+    <div class="slide-image-wrap"><img id="slide-image" alt="Lecture slide" src="assets/favicon.svg"></div>
+    <div class="panel-bottom"><span id="slide-caption"></span><a id="slide-image-link" href="assets/favicon.svg" target="_blank" rel="noopener">Open full-size ↗</a></div>
+  </dialog>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

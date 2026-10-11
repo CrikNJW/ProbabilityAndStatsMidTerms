@@ -1,0 +1,481 @@
+[
+  {
+    "id": "w3-pmf",
+    "title": "PMF: normalize, select, add",
+    "week": 3,
+    "description": "A probability mass function gives a separate probability to each allowed discrete value. Total probability is 1.",
+    "recognize": [
+      "A table of P(X = x) or a formula with an unknown constant c.",
+      "The question asks for a set of values, such as X ≥ 3 or X being even."
+    ],
+    "recipe": [
+      {
+        "title": "List the support",
+        "body": "The support is the list of values X can actually take. Values outside it have probability 0.",
+        "formula": "S = {x : P(X = x) > 0}"
+      },
+      {
+        "title": "Find any missing constant",
+        "body": "Add all masses and set their sum equal to 1. Check every mass is nonnegative.",
+        "formula": "Σ p(x) = 1"
+      },
+      {
+        "title": "Translate the event",
+        "body": "Write the allowed values satisfying the requested inequality before adding anything.",
+        "formula": "X ≥ a → retain each support value x ≥ a"
+      },
+      {
+        "title": "Add their masses",
+        "body": "Different values of one random variable cannot happen together, so their probabilities add.",
+        "formula": "P(X ∈ A) = Σ over x ∈ A of p(x)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "PMF definition and total probability"
+      },
+      {
+        "doc": "week3",
+        "page": 8,
+        "label": "Normalize a missing PMF value"
+      }
+    ],
+    "pitfalls": [
+      "A formula with c is not a finished PMF until c is determined.",
+      "The number of selected values is not the probability unless all masses are equal."
+    ]
+  },
+  {
+    "id": "w3-cdf",
+    "title": "Discrete CDF: accumulate and subtract jumps",
+    "week": 3,
+    "description": "F(x) means P(X ≤ x), including all mass at x. A point probability is the jump in F at that point.",
+    "recognize": [
+      "A staircase or piecewise constant F(x).",
+      "Strict and inclusive endpoints matter because individual discrete points can have positive probability."
+    ],
+    "recipe": [
+      {
+        "title": "Read the CDF carefully",
+        "body": "For F(x), choose the piece whose interval contains x. At a jump use the value on the right because the CDF includes X = x.",
+        "formula": "F(x) = P(X ≤ x)"
+      },
+      {
+        "title": "Recover point masses if useful",
+        "body": "Subtract the cumulative probability just before a jump from the value at the jump.",
+        "formula": "P(X = x) = F(x) − F(x⁻)"
+      },
+      {
+        "title": "Match the endpoints",
+        "body": "Exclude a lower endpoint with F(a); include it by subtracting F(a⁻).",
+        "formula": "P(a < X ≤ b) = F(b) − F(a); P(a ≤ X ≤ b) = F(b) − F(a⁻)"
+      },
+      {
+        "title": "Handle tails with a complement",
+        "body": "To include a discrete lower endpoint, subtract only the mass strictly below it. For integer X, F(a⁻) = F(a − 1).",
+        "formula": "P(X > a) = 1 − F(a); P(X ≥ a) = 1 − F(a⁻)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 9,
+        "label": "CDF definition and properties"
+      },
+      {
+        "doc": "week3",
+        "page": 10,
+        "label": "Build a staircase CDF"
+      },
+      {
+        "doc": "week3",
+        "page": 12,
+        "label": "CDF jumps and endpoint formulas"
+      }
+    ],
+    "pitfalls": [
+      "F(a) is cumulative, not P(X = a).",
+      "For discrete X, P(X ≥ a) usually differs from P(X > a)."
+    ]
+  },
+  {
+    "id": "w3-transformation",
+    "title": "A function of X: find the original values",
+    "week": 3,
+    "description": "For Y = g(X), convert the event about Y into the support values of X that produce it, then add their probabilities.",
+    "recognize": [
+      "An absolute value, square, or other definition Y = g(X).",
+      "Different X values can produce the same Y value."
+    ],
+    "recipe": [
+      {
+        "title": "Write the support and masses",
+        "body": "If supplied a CDF, first recover each mass from its jump.",
+        "formula": "p(x) = F(x) − F(x⁻)"
+      },
+      {
+        "title": "Map every support value",
+        "body": "Evaluate g(x) for each possible x. Do not lose values that map to the same answer.",
+        "formula": "x → g(x)"
+      },
+      {
+        "title": "Select the requested event",
+        "body": "Retain each x whose g(x) satisfies the condition on Y.",
+        "formula": "{Y ∈ A} = {X : g(X) ∈ A}"
+      },
+      {
+        "title": "Add and, if needed, condition",
+        "body": "Add the selected X masses. If given B, keep only selected values also in B and divide by P(B).",
+        "formula": "P(Y ∈ A | B) = Σ selected masses in B / P(B)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 3,
+        "label": "Random variables assign numbers to outcomes"
+      },
+      {
+        "doc": "week3",
+        "page": 5,
+        "label": "Add PMF masses"
+      },
+      {
+        "doc": "week3",
+        "page": 12,
+        "label": "Recover CDF jumps"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Conditional probability"
+      }
+    ],
+    "pitfalls": [
+      "Squaring or taking an absolute value is not one-to-one.",
+      "Transform the event first; do not substitute a transformed number into the original CDF without justification."
+    ]
+  },
+  {
+    "id": "w3-binomial",
+    "title": "Binomial: count successes in n trials",
+    "week": 3,
+    "description": "Use a binomial model when counting successes in a fixed number of independent trials with one constant success probability.",
+    "recognize": [
+      "Fixed n, two outcomes per trial, independent trials, same p each time.",
+      "Exactly k successes, at most k, or at least k among n attempts."
+    ],
+    "recipe": [
+      {
+        "title": "Check all four assumptions",
+        "body": "Success is whichever event you are counting; it can be an undesirable event such as a defect.",
+        "formula": "X ~ Bin(n, p)"
+      },
+      {
+        "title": "Write the single-count probability",
+        "body": "Choose which k trials succeed, multiply their success probabilities, and multiply failures for the remaining trials.",
+        "formula": "b(k) = C(n,k)pᵏ(1 − p)ⁿ⁻ᵏ"
+      },
+      {
+        "title": "Translate the range",
+        "body": "Sum the masses for the integer counts in the event. For at least one, subtract zero successes.",
+        "formula": "P(a ≤ X ≤ b) = Σ from k=a to b b(k); P(X ≥ 1) = 1 − (1 − p)ⁿ"
+      },
+      {
+        "title": "Apply any given condition",
+        "body": "The denominator is the probability of the stated given event. Intersect the requested event with it before summing.",
+        "formula": "P(A | B) = P(A ∩ B) / P(B)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 17,
+        "label": "Binomial assumptions"
+      },
+      {
+        "doc": "week3",
+        "page": 18,
+        "label": "Why the binomial PMF works"
+      },
+      {
+        "doc": "week3",
+        "page": 19,
+        "label": "Exact count and at least one"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Conditional probability"
+      }
+    ],
+    "pitfalls": [
+      "Without replacement usually breaks independence and constant p.",
+      "Different success probabilities across trials are not an ordinary binomial model.",
+      "Do not forget C(n,k); it counts all possible orders."
+    ]
+  },
+  {
+    "id": "w3-geometric",
+    "title": "Geometric: first success, tails, and memorylessness",
+    "week": 3,
+    "description": "Here the geometric variable counts trials until the first success, so values start at 1. Let q = 1 − p.",
+    "recognize": [
+      "Repeated independent attempts stop at the first success.",
+      "Each attempt has the same success probability p."
+    ],
+    "recipe": [
+      {
+        "title": "Confirm what is counted",
+        "body": "This course counts the successful trial, rather than only failures before success.",
+        "formula": "T ∈ {1,2,3,…}, q = 1 − p"
+      },
+      {
+        "title": "Describe the failure sequence",
+        "body": "First success at k requires k − 1 failures then one success. Waiting beyond n requires n failures.",
+        "formula": "P(T = k) = qᵏ⁻¹p; P(T > n) = qⁿ"
+      },
+      {
+        "title": "Convert ranges to tails",
+        "body": "For an inclusive range a to b, survive through a − 1 attempts and subtract surviving through b.",
+        "formula": "P(a ≤ T ≤ b) = qᵃ⁻¹ − qᵇ"
+      },
+      {
+        "title": "Process the given event",
+        "body": "After known failures, the future is fresh if p stays constant. A condition such as T ≤ b is instead a truncation and requires a probability ratio.",
+        "formula": "P(T > s+t | T > s) = qᵗ; P(A | B) = P(A ∩ B) / P(B)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 23,
+        "label": "Geometric first-success PMF"
+      },
+      {
+        "doc": "week3",
+        "page": 24,
+        "label": "Geometric tail endpoints"
+      },
+      {
+        "doc": "week3",
+        "page": 25,
+        "label": "Memoryless property"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Conditional probability"
+      }
+    ],
+    "pitfalls": [
+      "P(T ≥ n) = qⁿ⁻¹, while P(T > n) = qⁿ.",
+      "Do not multiply in failures already known from the condition.",
+      "Memorylessness does not apply to a changed success chance or a guaranteed final success."
+    ]
+  },
+  {
+    "id": "w3-pity",
+    "title": "Guaranteed final attempt: count only earlier failures",
+    "week": 3,
+    "description": "A guaranteed reward at attempt m changes the success probability, so the whole waiting time is not geometric. Earlier attempts still follow the first-success pattern.",
+    "recognize": [
+      "A reward is guaranteed on a specified attempt if all earlier attempts fail.",
+      "A finite maximum number of attempts."
+    ],
+    "recipe": [
+      {
+        "title": "Separate ordinary and guaranteed attempts",
+        "body": "Before the cap use p; at the cap success has probability 1.",
+        "formula": "P(T = k) = qᵏ⁻¹p for k < m"
+      },
+      {
+        "title": "Reach the guaranteed attempt",
+        "body": "The event T = m requires all m − 1 earlier ordinary attempts to fail.",
+        "formula": "P(T = m) = qᵐ⁻¹"
+      },
+      {
+        "title": "Use the given information",
+        "body": "If the first s attempts are known failures, cancel them from numerator and denominator.",
+        "formula": "P(T = m | T > s) = qᵐ⁻¹ / qˢ = qᵐ⁻¹⁻ˢ"
+      },
+      {
+        "title": "Count only failures that remain",
+        "body": "Do not multiply by p on the guaranteed attempt because its success chance is 1.",
+        "formula": "Required future failures = m − 1 − s"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 28,
+        "label": "A pity system is not geometric"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Conditional probability"
+      }
+    ],
+    "pitfalls": [
+      "Multiplying by ordinary p at the guaranteed attempt is wrong.",
+      "The failure exponent stops at m − 1, not m."
+    ]
+  },
+  {
+    "id": "w3-poisson",
+    "title": "Poisson: scale the rate to the interval",
+    "week": 3,
+    "description": "A Poisson variable counts events in an interval. λ is the expected count for that exact interval.",
+    "recognize": [
+      "A count of arrivals, requests, or alerts during a time interval.",
+      "A Poisson or constant-rate arrival model is stated."
+    ],
+    "recipe": [
+      {
+        "title": "Match the units",
+        "body": "Convert the interval into the rate units before multiplying.",
+        "formula": "λ = rate × interval length"
+      },
+      {
+        "title": "Write one count probability",
+        "body": "The count k is a nonnegative integer and 0! = 1.",
+        "formula": "P(X = k) = e⁻λ λᵏ / k!"
+      },
+      {
+        "title": "Sum a short range or use a complement",
+        "body": "For at least a small number, subtract counts below it; this avoids an infinite sum.",
+        "formula": "P(X ≥ r) = 1 − Σ from k=0 to r−1 e⁻λ λᵏ/k!"
+      },
+      {
+        "title": "Apply any condition",
+        "body": "If given X ≥ 1, divide the desired positive-count mass by 1 − e⁻λ.",
+        "formula": "P(a ≤ X ≤ b | X ≥ 1) = Σ from k=a to b P(X = k) / (1 − e⁻λ), a ≥ 1"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 29,
+        "label": "Poisson PMF"
+      },
+      {
+        "doc": "week3",
+        "page": 30,
+        "label": "The interval determines λ"
+      },
+      {
+        "doc": "week3",
+        "page": 31,
+        "label": "Poisson exact counts and complements"
+      },
+      {
+        "doc": "week2",
+        "page": 3,
+        "label": "Conditional probability"
+      }
+    ],
+    "pitfalls": [
+      "An hourly rate is not the mean for a 25-minute or 90-minute interval.",
+      "Counts that cluster strongly or a rate that changes over time may violate the model."
+    ]
+  },
+  {
+    "id": "w3-approximation",
+    "title": "Poisson approximation to rare binomial events",
+    "week": 3,
+    "description": "The exact model is binomial when there are n independent trials with common p. For large n and small p, approximate it with Poisson(np).",
+    "recognize": [
+      "Many independent items and a small defect or loss probability.",
+      "The question explicitly requests a Poisson approximation."
+    ],
+    "recipe": [
+      {
+        "title": "State the exact model",
+        "body": "Do not relabel a fixed-trial experiment as exactly Poisson.",
+        "formula": "X ~ Bin(n,p) exactly"
+      },
+      {
+        "title": "Check whether approximation is sensible",
+        "body": "The lecture gives n ≥ 50 and p ≤ 0.10 as a classroom guide, with np not too large; this is not a universal cutoff.",
+        "formula": "Large n, small p"
+      },
+      {
+        "title": "Preserve the expected count",
+        "body": "Use np for the new Poisson parameter, rather than p alone.",
+        "formula": "λ = np; Y ~ Pois(λ)"
+      },
+      {
+        "title": "Use the same event and mark approximation",
+        "body": "Evaluate the requested count or range under Y. For a conditional probability, approximate both numerator and denominator consistently.",
+        "formula": "P(X ∈ A) ≈ P(Y ∈ A)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 33,
+        "label": "Binomial to Poisson approximation"
+      },
+      {
+        "doc": "week3",
+        "page": 34,
+        "label": "Practical approximation guideline"
+      },
+      {
+        "doc": "week3",
+        "page": 35,
+        "label": "Large-batch defect example"
+      }
+    ],
+    "pitfalls": [
+      "The Poisson answer is approximate, not exact.",
+      "Do not use λ = p or forget n.",
+      "For conditional questions, approximating only one part gives an inconsistent ratio."
+    ]
+  },
+  {
+    "id": "w3-bernoulli",
+    "title": "Bernoulli: one yes-or-no trial",
+    "week": 3,
+    "description": "A Bernoulli variable encodes one outcome as 1 and its alternative as 0.",
+    "recognize": [
+      "One user, one toss, or one trial with a binary outcome.",
+      "X equals 1 for the event and 0 otherwise."
+    ],
+    "recipe": [
+      {
+        "title": "Choose the event called success",
+        "body": "Success simply means the event coded 1, whether or not it is desirable.",
+        "formula": "X = 1 for success; X = 0 for failure"
+      },
+      {
+        "title": "Assign the success probability",
+        "body": "Read p directly from the chance of the event coded 1.",
+        "formula": "P(X = 1) = p"
+      },
+      {
+        "title": "Complete the PMF",
+        "body": "There are only two values, so the other mass is its complement.",
+        "formula": "P(X = 0) = 1 − p; X ~ Bernoulli(p)"
+      }
+    ],
+    "refs": [
+      {
+        "doc": "week3",
+        "page": 15,
+        "label": "Bernoulli distribution"
+      },
+      {
+        "doc": "week3",
+        "page": 16,
+        "label": "Feature-flag response"
+      }
+    ],
+    "pitfalls": [
+      "Counting successes among several trials gives binomial, not a single Bernoulli variable."
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "week1": {
+    "id": "week1",
+    "title": "Week 1 Updated",
+    "week": 1,
+    "pages": 68,
+    "imageBase": "assets/slides/week1/"
+  },
+  "week2": {
+    "id": "week2",
+    "title": "Week2 lecture update",
+    "week": 2,
+    "pages": 52,
+    "imageBase": "assets/slides/week2/"
+  },
+  "week3": {
+    "id": "week3",
+    "title": "Week 3 Lecture 2026",
+    "week": 3,
+    "pages": 52,
+    "imageBase": "assets/slides/week3/"
+  },
+  "week4": {
+    "id": "week4",
+    "title": "Week 4 Lecture 2026",
+    "week": 4,
+    "pages": 59,
+    "imageBase": "assets/slides/week4/"
+  },
+  "week5": {
+    "id": "week5",
+    "title": "Week 5 Lecture 2026",
+    "week": 5,
+    "pages": 54,
+    "imageBase": "assets/slides/week5/"
+  },
+  "formula": {
+    "id": "formula",
+    "title": "Midterm 2026 Formula Sheet",
+    "week": 0,
+    "pages": 2,
+    "imageBase": "assets/slides/formula/"
+  },
+  "tutorial2": {
+    "id": "tutorial2",
+    "title": "Week 2 Tutorial 2026 (1)",
+    "week": 2,
+    "pages": 4,
+    "imageBase": "assets/slides/tutorial2/"
+  },
+  "tutorial3": {
+    "id": "tutorial3",
+    "title": "Week 3 Tutorial 2026 (1)",
+    "week": 3,
+    "pages": 3,
+    "imageBase": "assets/slides/tutorial3/"
+  },
+  "tutorial4": {
+    "id": "tutorial4",
+    "title": "Week 4 Tutorial 2026",
+    "week": 4,
+    "pages": 3,
+    "imageBase": "assets/slides/tutorial4/"
+  },
+  "tutorial5": {
+    "id": "tutorial5",
+    "title": "Week 5 Tutorial 2026",
+    "week": 5,
+    "pages": 3,
+    "imageBase": "assets/slides/tutorial5/"
+  },
+  "quiz4am": {
+    "id": "quiz4am",
+    "title": "Week 4 Quiz 2026 Morning Solutions Revised",
+    "week": 4,
+    "pages": 5,
+    "imageBase": "assets/slides/quiz4am/"
+  },
+  "quiz4pm": {
+    "id": "quiz4pm",
+    "title": "Week 4 Quiz 2026 Afternoon Solutions Revised",
+    "week": 4,
+    "pages": 5,
+    "imageBase": "assets/slides/quiz4pm/"
+  }
+}
